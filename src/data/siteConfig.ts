@@ -8,7 +8,7 @@ export const siteConfig: SiteConfig = {
   tagline: "Designing AI people can inspect, direct, and actually use.",
   bio: "Product designer at Microsoft working on Copilot response UX, and co-founder of Owly, a brand-aware creative system for marketing teams. I grew up in Kerala, studied Design at IIT Guwahati, and have crossed India twice on a bicycle.",
   email: "aadithva@outlook.com",
-  url: "https://aadithva.com",
+  url: "https://aadithva-portfolio.vercel.app",
   social: {
     linkedin: "https://linkedin.com/in/aadithva",
     behance: "https://behance.net/aadithanil",
