@@ -34,6 +34,17 @@ npm run build
 npm run api:test
 ```
 
+## Deployment
+
+The static frontend is deployed on Vercel's free Hobby plan at
+<https://aadithva-portfolio.vercel.app>. The `main` branch is connected for
+automatic production deployments. `vercel.json` configures the Astro build and
+`.vercelignore` excludes the Azure-only `api/` package so Vercel does not treat
+it as a collection of serverless functions.
+
+The Vercel production environment sets `PUBLIC_AADITH_CHAT_ENDPOINT`, and the
+exact production origin is included in the Container App's `ALLOWED_ORIGINS`.
+
 ### Optional Work-page gate
 
 Copy `.env.example` to `.env.local` and set `PUBLIC_WORK_GATE_PASSWORD` to enable the presentation gate on protected Work pages. Because the site is static, this is not secure access control; protected content must remain public-safe.
