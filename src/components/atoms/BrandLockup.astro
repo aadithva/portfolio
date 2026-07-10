@@ -1,0 +1,20 @@
+---
+interface Props {
+  variant?: "lockup" | "symbol" | "wordmark";
+  class?: string;
+}
+
+const {
+  variant = "lockup",
+  class: className,
+} = Astro.props;
+---
+<span class:list={["brand-lockup", `brand-lockup--${variant}`, className]}>
+  {variant !== "wordmark" && (
+    <svg class="brand-lockup__symbol" viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M3 8V3h18v18H7V7h10v10h-6v-6h3" />
+      <rect x="12.5" y="9.5" width="3" height="3" />
+    </svg>
+  )}
+  {variant !== "symbol" && <span class="brand-lockup__wordmark">AADITH</span>}
+</span>

@@ -1,0 +1,16 @@
+---
+interface Props {
+  as?: keyof HTMLElementTagNameMap;
+  class?: string;
+  /** Stagger delay in milliseconds. */
+  delay?: number;
+}
+const { as = "div", class: className, delay = 0 } = Astro.props;
+const Tag = as as any;
+---
+<Tag
+  class:list={["reveal", className]}
+  style={delay ? `--reveal-delay:${delay}ms` : undefined}
+>
+  <slot />
+</Tag>

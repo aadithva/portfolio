@@ -1,0 +1,32 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import ProjectHero from "@/components/organisms/ProjectHero.astro";
+import ProjectNav from "@/components/organisms/ProjectNav.astro";
+import WorkGate from "@/components/organisms/WorkGate.astro";
+import WorkItemIndex from "@/components/organisms/WorkItemIndex.astro";
+import CaseStudySection from "@/components/molecules/CaseStudySection.astro";
+import { projects, getAdjacentProjects } from "@/data/projects";
+import { getWorkItemsFor } from "@/data/work";
+
+export function getStaticPaths() {
+  return projects.map((project) => ({
+    params: { slug: project.slug },
+    props: { project },
+  }));
+}
+
+const { project } = Astro.props;
+const { prev, next } = getAdjacentProjects(project.slug);
+const gated = project.passwordProtected === true;
+const workItems = getWorkItemsFor(project.slug);
+---
+<BaseLayout title={project.title} description={project.description}>
+  <WorkGate enabled={gated}>
+    <ProjectHero project={project} />
+    {workItems.length > 0 && <WorkItemIndex parent={project} items={workItems} />}
+    {project.sections.map((section) => (
+      <CaseStudySection section={section} />
+    ))}
+    <ProjectNav prev={prev} next={next} />
+  </WorkGate>
+</BaseLayout>

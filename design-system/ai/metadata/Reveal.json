@@ -1,0 +1,61 @@
+{
+  "name": "Reveal",
+  "path": "src/components/atoms/Reveal.astro",
+  "tier": "atom",
+  "summary": "Semantic wrapper retained for optional restrained entrance behaviour.",
+  "what": "Outputs a configurable tag with class `reveal`; the mono editorial theme resolves it visible and static, while preserving the shared hook for future motion changes.",
+  "why": "Keeps content wrappers consistent without tying critical content visibility to JavaScript.",
+  "whenToUse": [
+    "Reveal a block on scroll.",
+    "Stagger a list by passing an increasing delay.",
+    "Change the wrapper element with `as` (e.g. h1, section)."
+  ],
+  "whenNotToUse": [
+    "Do not nest Reveal inside Reveal.",
+    "Do not use for always-visible critical content that must not depend on JS."
+  ],
+  "propsOrInputs": [
+    {
+      "name": "as",
+      "type": "keyof HTMLElementTagNameMap",
+      "required": false
+    },
+    {
+      "name": "class",
+      "type": "string",
+      "required": false
+    },
+    {
+      "name": "delay",
+      "type": "number",
+      "required": false
+    }
+  ],
+  "componentDependencies": [],
+  "dataDependencies": [],
+  "usedBy": [
+    "CaseStudySection",
+    "FeaturedWork",
+    "Hero",
+    "HoverRevealList",
+    "ProfileSignals",
+    "ProjectHero",
+    "WorkItemIndex",
+    "route /404",
+    "route /about",
+    "route /adventures",
+    "route /contact",
+    "route /lab",
+    "route /lab/[slug]",
+    "route /work",
+    "route /work/[parent]/[item]",
+    "route /writing"
+  ],
+  "a11yNotes": [
+    "Content is in the DOM regardless of JS; only opacity/transform animate.",
+    "Reduced motion resolves it visible immediately."
+  ],
+  "version": "0.3.0",
+  "lastUpdated": "2026-07-10",
+  "source": "Generated from Astro source + design-system/ai/index.json by component-metadata.py."
+}

@@ -1,0 +1,40 @@
+{
+  "name": "ProjectNav",
+  "path": "src/components/organisms/ProjectNav.astro",
+  "tier": "organism",
+  "summary": "Previous/next navigation between work case studies.",
+  "what": "Renders prev/next links (or empty slots) under a divider at the foot of a case study.",
+  "why": "Keeps users moving between projects without returning to the index.",
+  "whenToUse": [
+    "Foot of a /work/<slug> case study, fed by getAdjacentProjects."
+  ],
+  "whenNotToUse": [
+    "Do not use for Lab \u2014 the Lab detail page inlines its own equivalent nav."
+  ],
+  "propsOrInputs": [
+    {
+      "name": "prev",
+      "type": "Project | null",
+      "required": true
+    },
+    {
+      "name": "next",
+      "type": "Project | null",
+      "required": true
+    }
+  ],
+  "componentDependencies": [
+    "Line"
+  ],
+  "dataDependencies": [],
+  "usedBy": [
+    "route /work/[slug]"
+  ],
+  "a11yNotes": [
+    "Directional labels ('Previous'/'Next') precede titles.",
+    "Empty side renders a spacer, not a dead link."
+  ],
+  "version": "0.3.0",
+  "lastUpdated": "2026-07-10",
+  "source": "Generated from Astro source + design-system/ai/index.json by component-metadata.py."
+}

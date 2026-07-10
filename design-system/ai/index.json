@@ -1,0 +1,655 @@
+{
+  "components": {
+    "src/components/atoms/BrandLockup.astro": {
+      "imports": [],
+      "localComponentDependencies": [],
+      "localDataDependencies": [],
+      "name": "BrandLockup",
+      "path": "src/components/atoms/BrandLockup.astro",
+      "tier": "atom"
+    },
+    "src/components/atoms/GridBackdrop.astro": {
+      "imports": [],
+      "localComponentDependencies": [],
+      "localDataDependencies": [],
+      "name": "GridBackdrop",
+      "path": "src/components/atoms/GridBackdrop.astro",
+      "tier": "atom"
+    },
+    "src/components/atoms/Line.astro": {
+      "imports": [],
+      "localComponentDependencies": [],
+      "localDataDependencies": [],
+      "name": "Line",
+      "path": "src/components/atoms/Line.astro",
+      "tier": "atom"
+    },
+    "src/components/atoms/Reveal.astro": {
+      "imports": [],
+      "localComponentDependencies": [],
+      "localDataDependencies": [],
+      "name": "Reveal",
+      "path": "src/components/atoms/Reveal.astro",
+      "tier": "atom"
+    },
+    "src/components/atoms/SectionLabel.astro": {
+      "imports": [],
+      "localComponentDependencies": [],
+      "localDataDependencies": [],
+      "name": "SectionLabel",
+      "path": "src/components/atoms/SectionLabel.astro",
+      "tier": "atom"
+    },
+    "src/components/molecules/CaseStudySection.astro": {
+      "imports": [
+        "@/components/atoms/Line.astro",
+        "@/components/atoms/Reveal.astro",
+        "@/types",
+        "node:fs",
+        "node:path"
+      ],
+      "localComponentDependencies": [
+        "src/components/atoms/Line.astro",
+        "src/components/atoms/Reveal.astro"
+      ],
+      "localDataDependencies": [],
+      "name": "CaseStudySection",
+      "path": "src/components/molecules/CaseStudySection.astro",
+      "tier": "molecule"
+    },
+    "src/components/molecules/DottedIndiaMap.astro": {
+      "imports": [],
+      "localComponentDependencies": [],
+      "localDataDependencies": [],
+      "name": "DottedIndiaMap",
+      "path": "src/components/molecules/DottedIndiaMap.astro",
+      "tier": "molecule"
+    },
+    "src/components/molecules/HoverRevealList.astro": {
+      "imports": [
+        "@/components/atoms/Reveal.astro",
+        "@/types"
+      ],
+      "localComponentDependencies": [
+        "src/components/atoms/Reveal.astro"
+      ],
+      "localDataDependencies": [],
+      "name": "HoverRevealList",
+      "path": "src/components/molecules/HoverRevealList.astro",
+      "tier": "molecule"
+    },
+    "src/components/molecules/LabCard.astro": {
+      "imports": [
+        "@/lib/shots",
+        "@/types"
+      ],
+      "localComponentDependencies": [],
+      "localDataDependencies": [
+        "src/lib/shots.ts"
+      ],
+      "name": "LabCard",
+      "path": "src/components/molecules/LabCard.astro",
+      "tier": "molecule"
+    },
+    "src/components/organisms/FeaturedWork.astro": {
+      "imports": [
+        "@/components/atoms/Line.astro",
+        "@/components/atoms/Reveal.astro",
+        "@/components/atoms/SectionLabel.astro",
+        "@/components/molecules/HoverRevealList.astro",
+        "@/data/projects"
+      ],
+      "localComponentDependencies": [
+        "src/components/atoms/Line.astro",
+        "src/components/atoms/Reveal.astro",
+        "src/components/atoms/SectionLabel.astro",
+        "src/components/molecules/HoverRevealList.astro"
+      ],
+      "localDataDependencies": [
+        "src/data/projects.ts"
+      ],
+      "name": "FeaturedWork",
+      "path": "src/components/organisms/FeaturedWork.astro",
+      "tier": "organism"
+    },
+    "src/components/organisms/Footer.astro": {
+      "imports": [
+        "@/components/atoms/BrandLockup.astro",
+        "@/data/siteConfig"
+      ],
+      "localComponentDependencies": [
+        "src/components/atoms/BrandLockup.astro"
+      ],
+      "localDataDependencies": [
+        "src/data/siteConfig.ts"
+      ],
+      "name": "Footer",
+      "path": "src/components/organisms/Footer.astro",
+      "tier": "organism"
+    },
+    "src/components/organisms/Header.astro": {
+      "imports": [
+        "@/components/atoms/BrandLockup.astro",
+        "@/data/navigation",
+        "@/data/siteConfig"
+      ],
+      "localComponentDependencies": [
+        "src/components/atoms/BrandLockup.astro"
+      ],
+      "localDataDependencies": [
+        "src/data/navigation.ts",
+        "src/data/siteConfig.ts"
+      ],
+      "name": "Header",
+      "path": "src/components/organisms/Header.astro",
+      "tier": "organism"
+    },
+    "src/components/organisms/Hero.astro": {
+      "imports": [
+        "@/components/atoms/Reveal.astro"
+      ],
+      "localComponentDependencies": [
+        "src/components/atoms/Reveal.astro"
+      ],
+      "localDataDependencies": [],
+      "name": "Hero",
+      "path": "src/components/organisms/Hero.astro",
+      "tier": "organism"
+    },
+    "src/components/organisms/ProfileSignals.astro": {
+      "imports": [
+        "@/components/atoms/Line.astro",
+        "@/components/atoms/Reveal.astro",
+        "@/components/atoms/SectionLabel.astro"
+      ],
+      "localComponentDependencies": [
+        "src/components/atoms/Line.astro",
+        "src/components/atoms/Reveal.astro",
+        "src/components/atoms/SectionLabel.astro"
+      ],
+      "localDataDependencies": [],
+      "name": "ProfileSignals",
+      "path": "src/components/organisms/ProfileSignals.astro",
+      "tier": "organism"
+    },
+    "src/components/organisms/ProjectHero.astro": {
+      "imports": [
+        "@/components/atoms/Reveal.astro",
+        "@/types",
+        "node:fs",
+        "node:path"
+      ],
+      "localComponentDependencies": [
+        "src/components/atoms/Reveal.astro"
+      ],
+      "localDataDependencies": [],
+      "name": "ProjectHero",
+      "path": "src/components/organisms/ProjectHero.astro",
+      "tier": "organism"
+    },
+    "src/components/organisms/ProjectNav.astro": {
+      "imports": [
+        "@/components/atoms/Line.astro",
+        "@/types"
+      ],
+      "localComponentDependencies": [
+        "src/components/atoms/Line.astro"
+      ],
+      "localDataDependencies": [],
+      "name": "ProjectNav",
+      "path": "src/components/organisms/ProjectNav.astro",
+      "tier": "organism"
+    },
+    "src/components/organisms/WorkGate.astro": {
+      "imports": [],
+      "localComponentDependencies": [],
+      "localDataDependencies": [],
+      "name": "WorkGate",
+      "path": "src/components/organisms/WorkGate.astro",
+      "tier": "organism"
+    },
+    "src/components/organisms/WorkItemIndex.astro": {
+      "imports": [
+        "@/components/atoms/Reveal.astro",
+        "@/components/atoms/SectionLabel.astro",
+        "@/types"
+      ],
+      "localComponentDependencies": [
+        "src/components/atoms/Reveal.astro",
+        "src/components/atoms/SectionLabel.astro"
+      ],
+      "localDataDependencies": [],
+      "name": "WorkItemIndex",
+      "path": "src/components/organisms/WorkItemIndex.astro",
+      "tier": "organism"
+    },
+    "src/layouts/BaseLayout.astro": {
+      "imports": [
+        "@/components/atoms/GridBackdrop.astro",
+        "@/components/organisms/Footer.astro",
+        "@/components/organisms/Header.astro",
+        "@/data/siteConfig"
+      ],
+      "localComponentDependencies": [
+        "src/components/atoms/GridBackdrop.astro",
+        "src/components/organisms/Footer.astro",
+        "src/components/organisms/Header.astro"
+      ],
+      "localDataDependencies": [
+        "src/data/siteConfig.ts"
+      ],
+      "name": "BaseLayout",
+      "path": "src/layouts/BaseLayout.astro",
+      "tier": "layout"
+    }
+  },
+  "data": {
+    "src/data/lab.json": {
+      "exports": [],
+      "imports": [],
+      "path": "src/data/lab.json"
+    },
+    "src/data/lab.ts": {
+      "exports": [
+        "getAdjacentLab",
+        "getAllLabSlugs",
+        "getLabByCategory",
+        "getLabProject",
+        "getShowcaseLabProjects",
+        "labCategoryOrder",
+        "labProjects",
+        "showcaseLabProjects"
+      ],
+      "imports": [
+        "./lab.json",
+        "@/types"
+      ],
+      "path": "src/data/lab.ts"
+    },
+    "src/data/navigation.ts": {
+      "exports": [
+        "navLinks"
+      ],
+      "imports": [
+        "@/types"
+      ],
+      "path": "src/data/navigation.ts"
+    },
+    "src/data/projects.ts": {
+      "exports": [
+        "getAdjacentProjects",
+        "getAllSlugs",
+        "getFeaturedProjects",
+        "getProject",
+        "projects"
+      ],
+      "imports": [
+        "@/types"
+      ],
+      "path": "src/data/projects.ts"
+    },
+    "src/data/siteConfig.ts": {
+      "exports": [
+        "siteConfig"
+      ],
+      "imports": [
+        "@/types"
+      ],
+      "path": "src/data/siteConfig.ts"
+    },
+    "src/data/work/daolens/dao-denver/index.ts": {
+      "exports": [
+        "daoDenver"
+      ],
+      "imports": [
+        "@/types"
+      ],
+      "path": "src/data/work/daolens/dao-denver/index.ts"
+    },
+    "src/data/work/index.ts": {
+      "exports": [
+        "getAdjacentWorkItems",
+        "getWorkItem",
+        "getWorkItemsFor",
+        "workItems"
+      ],
+      "imports": [
+        "./daolens/dao-denver",
+        "./microsoft-copilot/citations",
+        "./microsoft-copilot/deep-citations",
+        "./microsoft-copilot/hackathons",
+        "./microsoft-copilot/meetings",
+        "./microsoft-copilot/system-messages",
+        "./microsoft-copilot/turn-n",
+        "@/types"
+      ],
+      "path": "src/data/work/index.ts"
+    },
+    "src/data/work/microsoft-copilot/citations/index.ts": {
+      "exports": [
+        "citations"
+      ],
+      "imports": [
+        "@/types"
+      ],
+      "path": "src/data/work/microsoft-copilot/citations/index.ts"
+    },
+    "src/data/work/microsoft-copilot/deep-citations/index.ts": {
+      "exports": [
+        "deepCitations"
+      ],
+      "imports": [
+        "@/types"
+      ],
+      "path": "src/data/work/microsoft-copilot/deep-citations/index.ts"
+    },
+    "src/data/work/microsoft-copilot/hackathons/index.ts": {
+      "exports": [
+        "hackathons"
+      ],
+      "imports": [
+        "@/types"
+      ],
+      "path": "src/data/work/microsoft-copilot/hackathons/index.ts"
+    },
+    "src/data/work/microsoft-copilot/meetings/index.ts": {
+      "exports": [
+        "meetings"
+      ],
+      "imports": [
+        "@/types"
+      ],
+      "path": "src/data/work/microsoft-copilot/meetings/index.ts"
+    },
+    "src/data/work/microsoft-copilot/system-messages/index.ts": {
+      "exports": [
+        "systemMessages"
+      ],
+      "imports": [
+        "@/types"
+      ],
+      "path": "src/data/work/microsoft-copilot/system-messages/index.ts"
+    },
+    "src/data/work/microsoft-copilot/turn-n/index.ts": {
+      "exports": [
+        "turnN"
+      ],
+      "imports": [
+        "@/types"
+      ],
+      "path": "src/data/work/microsoft-copilot/turn-n/index.ts"
+    },
+    "src/lib/shots.ts": {
+      "exports": [
+        "RouteShots",
+        "getShots",
+        "getThumb",
+        "routeLabel"
+      ],
+      "imports": [
+        "node:fs",
+        "node:path"
+      ],
+      "path": "src/lib/shots.ts"
+    }
+  },
+  "framework": "astro",
+  "generatedAt": "2026-07-10T02:55:18.641867+00:00",
+  "generator": "design-system/ai/codebase-index.py",
+  "pages": {
+    "src/pages/404.astro": {
+      "importedComponents": [
+        "src/components/atoms/Line.astro",
+        "src/components/atoms/Reveal.astro",
+        "src/components/atoms/SectionLabel.astro",
+        "src/layouts/BaseLayout.astro"
+      ],
+      "importedData": [],
+      "imports": [
+        "@/components/atoms/Line.astro",
+        "@/components/atoms/Reveal.astro",
+        "@/components/atoms/SectionLabel.astro",
+        "@/layouts/BaseLayout.astro"
+      ],
+      "kind": "page",
+      "name": "404",
+      "path": "src/pages/404.astro",
+      "route": "/404"
+    },
+    "src/pages/about.astro": {
+      "importedComponents": [
+        "src/components/atoms/Line.astro",
+        "src/components/atoms/Reveal.astro",
+        "src/components/atoms/SectionLabel.astro",
+        "src/layouts/BaseLayout.astro"
+      ],
+      "importedData": [],
+      "imports": [
+        "@/components/atoms/Line.astro",
+        "@/components/atoms/Reveal.astro",
+        "@/components/atoms/SectionLabel.astro",
+        "@/layouts/BaseLayout.astro"
+      ],
+      "kind": "page",
+      "name": "about",
+      "path": "src/pages/about.astro",
+      "route": "/about"
+    },
+    "src/pages/adventures.astro": {
+      "importedComponents": [
+        "src/components/atoms/Line.astro",
+        "src/components/atoms/Reveal.astro",
+        "src/components/molecules/DottedIndiaMap.astro",
+        "src/layouts/BaseLayout.astro"
+      ],
+      "importedData": [],
+      "imports": [
+        "@/components/atoms/Line.astro",
+        "@/components/atoms/Reveal.astro",
+        "@/components/molecules/DottedIndiaMap.astro",
+        "@/layouts/BaseLayout.astro"
+      ],
+      "kind": "page",
+      "name": "adventures",
+      "path": "src/pages/adventures.astro",
+      "route": "/adventures"
+    },
+    "src/pages/contact.astro": {
+      "importedComponents": [
+        "src/components/atoms/Line.astro",
+        "src/components/atoms/Reveal.astro",
+        "src/components/atoms/SectionLabel.astro",
+        "src/layouts/BaseLayout.astro"
+      ],
+      "importedData": [
+        "src/data/siteConfig.ts"
+      ],
+      "imports": [
+        "@/components/atoms/Line.astro",
+        "@/components/atoms/Reveal.astro",
+        "@/components/atoms/SectionLabel.astro",
+        "@/data/siteConfig",
+        "@/layouts/BaseLayout.astro"
+      ],
+      "kind": "page",
+      "name": "contact",
+      "path": "src/pages/contact.astro",
+      "route": "/contact"
+    },
+    "src/pages/index.astro": {
+      "importedComponents": [
+        "src/components/organisms/FeaturedWork.astro",
+        "src/components/organisms/Hero.astro",
+        "src/components/organisms/ProfileSignals.astro",
+        "src/layouts/BaseLayout.astro"
+      ],
+      "importedData": [],
+      "imports": [
+        "@/components/organisms/FeaturedWork.astro",
+        "@/components/organisms/Hero.astro",
+        "@/components/organisms/ProfileSignals.astro",
+        "@/layouts/BaseLayout.astro"
+      ],
+      "kind": "page",
+      "name": "index",
+      "path": "src/pages/index.astro",
+      "route": "/"
+    },
+    "src/pages/lab.astro": {
+      "importedComponents": [
+        "src/components/atoms/Reveal.astro",
+        "src/components/molecules/LabCard.astro",
+        "src/layouts/BaseLayout.astro"
+      ],
+      "importedData": [
+        "src/data/lab.ts"
+      ],
+      "imports": [
+        "@/components/atoms/Reveal.astro",
+        "@/components/molecules/LabCard.astro",
+        "@/data/lab",
+        "@/layouts/BaseLayout.astro"
+      ],
+      "kind": "page",
+      "name": "lab",
+      "path": "src/pages/lab.astro",
+      "route": "/lab"
+    },
+    "src/pages/lab/[slug].astro": {
+      "importedComponents": [
+        "src/components/atoms/Line.astro",
+        "src/components/atoms/Reveal.astro",
+        "src/components/atoms/SectionLabel.astro",
+        "src/layouts/BaseLayout.astro"
+      ],
+      "importedData": [
+        "src/data/lab.ts",
+        "src/lib/shots.ts"
+      ],
+      "imports": [
+        "@/components/atoms/Line.astro",
+        "@/components/atoms/Reveal.astro",
+        "@/components/atoms/SectionLabel.astro",
+        "@/data/lab",
+        "@/layouts/BaseLayout.astro",
+        "@/lib/shots"
+      ],
+      "kind": "dynamic-page",
+      "name": "[slug]",
+      "path": "src/pages/lab/[slug].astro",
+      "route": "/lab/[slug]"
+    },
+    "src/pages/work.astro": {
+      "importedComponents": [
+        "src/components/atoms/Reveal.astro",
+        "src/components/molecules/HoverRevealList.astro",
+        "src/layouts/BaseLayout.astro"
+      ],
+      "importedData": [
+        "src/data/projects.ts"
+      ],
+      "imports": [
+        "@/components/atoms/Reveal.astro",
+        "@/components/molecules/HoverRevealList.astro",
+        "@/data/projects",
+        "@/layouts/BaseLayout.astro"
+      ],
+      "kind": "page",
+      "name": "work",
+      "path": "src/pages/work.astro",
+      "route": "/work"
+    },
+    "src/pages/work/[parent]/[item].astro": {
+      "importedComponents": [
+        "src/components/atoms/Line.astro",
+        "src/components/atoms/Reveal.astro",
+        "src/components/molecules/CaseStudySection.astro",
+        "src/components/organisms/WorkGate.astro",
+        "src/layouts/BaseLayout.astro"
+      ],
+      "importedData": [
+        "src/data/projects.ts",
+        "src/data/work/index.ts"
+      ],
+      "imports": [
+        "@/components/atoms/Line.astro",
+        "@/components/atoms/Reveal.astro",
+        "@/components/molecules/CaseStudySection.astro",
+        "@/components/organisms/WorkGate.astro",
+        "@/data/projects",
+        "@/data/work",
+        "@/layouts/BaseLayout.astro"
+      ],
+      "kind": "dynamic-page",
+      "name": "[item]",
+      "path": "src/pages/work/[parent]/[item].astro",
+      "route": "/work/[parent]/[item]"
+    },
+    "src/pages/work/[slug].astro": {
+      "importedComponents": [
+        "src/components/molecules/CaseStudySection.astro",
+        "src/components/organisms/ProjectHero.astro",
+        "src/components/organisms/ProjectNav.astro",
+        "src/components/organisms/WorkGate.astro",
+        "src/components/organisms/WorkItemIndex.astro",
+        "src/layouts/BaseLayout.astro"
+      ],
+      "importedData": [
+        "src/data/projects.ts",
+        "src/data/work/index.ts"
+      ],
+      "imports": [
+        "@/components/molecules/CaseStudySection.astro",
+        "@/components/organisms/ProjectHero.astro",
+        "@/components/organisms/ProjectNav.astro",
+        "@/components/organisms/WorkGate.astro",
+        "@/components/organisms/WorkItemIndex.astro",
+        "@/data/projects",
+        "@/data/work",
+        "@/layouts/BaseLayout.astro"
+      ],
+      "kind": "dynamic-page",
+      "name": "[slug]",
+      "path": "src/pages/work/[slug].astro",
+      "route": "/work/[slug]"
+    },
+    "src/pages/writing.astro": {
+      "importedComponents": [
+        "src/components/atoms/Line.astro",
+        "src/components/atoms/Reveal.astro",
+        "src/components/atoms/SectionLabel.astro",
+        "src/layouts/BaseLayout.astro"
+      ],
+      "importedData": [],
+      "imports": [
+        "@/components/atoms/Line.astro",
+        "@/components/atoms/Reveal.astro",
+        "@/components/atoms/SectionLabel.astro",
+        "@/layouts/BaseLayout.astro"
+      ],
+      "kind": "page",
+      "name": "writing",
+      "path": "src/pages/writing.astro",
+      "route": "/writing"
+    }
+  },
+  "stats": {
+    "approxJsonTokens": 4824,
+    "componentCount": 19,
+    "dataFileCount": 14,
+    "duplicatePageFilenamesPreserved": [
+      "[slug].astro"
+    ],
+    "pageCount": 11,
+    "pageRouteCount": 11,
+    "tierCounts": {
+      "atom": 5,
+      "layout": 1,
+      "molecule": 4,
+      "organism": 9
+    }
+  },
+  "tokenEfficiencyNote": "This index summarizes 19 components and 11 routes using full relative path keys, so an AI can retrieve structure and dependencies in a few thousand tokens instead of reading every source file.",
+  "uniqueKeyPolicy": "All maps are keyed by full repository-relative path; filename stems are never used as unique keys.",
+  "version": "0.2.0"
+}

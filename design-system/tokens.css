@@ -1,0 +1,102 @@
+/* AI-ready design tokens for the Aadith V A portfolio. */
+:root {
+  /* Color — cool paper, carbon ink, one signal orange */
+  --ds-color-background: #cfd4d8;
+  --ds-color-foreground: #1f2224;
+  --ds-color-muted: #c4c9cd;
+  --ds-color-muted-fg: rgb(31 34 36 / 0.56);
+  --ds-color-border: rgb(31 34 36 / 0.20);
+  --ds-color-overlay-foreground-10: rgb(31 34 36 / 0.12);
+  --ds-color-header-surface: rgb(207 212 216 / 0.92);
+  --ds-color-accent: #ed5b2a;
+  --ds-color-accent-ink: #8f2c10;
+
+  /* Typography */
+  --ds-font-heading: "IBM Plex Mono", "SFMono-Regular", Menlo, Monaco, Consolas, monospace;
+  --ds-font-body: "IBM Plex Mono", "SFMono-Regular", Menlo, Monaco, Consolas, monospace;
+  --ds-font-display-serif: "IBM Plex Mono", "SFMono-Regular", Menlo, Monaco, Consolas, monospace;
+  --ds-font-size-xs: 0.625rem; /* 10px */
+  --ds-font-size-sm: 0.75rem; /* 12px */
+  --ds-font-size-base: 0.8125rem; /* 13px */
+  --ds-font-size-lg: 0.9375rem; /* 15px */
+  --ds-font-size-xl: 1.25rem; /* 20px */
+  --ds-font-size-display-sm: clamp(1.75rem, 4vw, 2.5rem);
+  --ds-font-size-display-md: clamp(1.65rem, 3.2vw, 2rem);
+  --ds-font-size-display-lg: clamp(2rem, 5vw, 3rem);
+  --ds-line-height-body: 1.65;
+  --ds-line-height-body-loose: 1.78;
+  --ds-line-height-heading: 1.2;
+  --ds-line-height-display: 1.2;
+  --ds-font-weight-regular: 400;
+  --ds-font-weight-medium: 500;
+  --ds-letter-spacing-heading: -0.015em;
+  --ds-letter-spacing-display: -0.025em;
+  --ds-letter-spacing-wide: 0.015em;
+  --ds-letter-spacing-uppercase: 0.10em;
+
+  /* Spacing */
+  --ds-space-0: 0;
+  --ds-space-1: 0.25rem;
+  --ds-space-2: 0.5rem;
+  --ds-space-3: 0.75rem;
+  --ds-space-4: 1rem;
+  --ds-space-5: 1.25rem;
+  --ds-space-6: 1.5rem;
+  --ds-space-8: 2rem;
+  --ds-space-10: 2.5rem;
+  --ds-space-12: 3rem;
+  --ds-space-14: 3.5rem;
+  --ds-space-16: 4rem;
+  --ds-space-20: 5rem;
+  --ds-space-24: 6rem;
+  --ds-space-28: 7rem;
+  --ds-space-32: 8rem;
+  --ds-space-section-sm: clamp(3rem, 5vw, 4.5rem);
+  --ds-space-section-md: clamp(5rem, 8vw, 7.5rem);
+  --ds-space-section-lg: clamp(6rem, 10vw, 9rem);
+
+  /* Radius */
+  --ds-radius-none: 0;
+  --ds-radius-sm: 0;
+  --ds-radius-md: 0;
+  --ds-radius-lg: 0;
+  --ds-radius-pill: 0;
+
+  /* Container and layout */
+  --ds-container-max-width: 1140px;
+  --ds-container-padding-sm: 12px;
+  --ds-container-padding-md: 24px;
+  --ds-container-padding-lg: 32px;
+  --ds-header-height-sm: 96px;
+  --ds-header-height-md: 144px;
+
+  /* Breakpoints */
+  --ds-breakpoint-sm: 640px;
+  --ds-breakpoint-md: 768px;
+  --ds-breakpoint-lg: 1024px;
+  --ds-breakpoint-xl: 1280px;
+  --ds-breakpoint-2xl: 1536px;
+
+  /* Motion — restrained and mostly interaction-led */
+  --ds-duration-fast: 120ms;
+  --ds-duration-medium: 180ms;
+  --ds-duration-slow: 320ms;
+  --ds-duration-reveal: 220ms;
+  --ds-duration-line: 320ms;
+  --ds-ease-standard: cubic-bezier(0.2, 0, 0, 1);
+  --ds-ease-emphasized: cubic-bezier(0.22, 1, 0.36, 1);
+  --ds-ease-quiet: cubic-bezier(0.16, 1, 0.3, 1);
+  --ds-ease-power3-out: cubic-bezier(0.215, 0.61, 0.355, 1);
+  --ds-ease-power3-in-out: cubic-bezier(0.645, 0.045, 0.355, 1);
+  --ds-reveal-y: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --ds-duration-fast: 1ms;
+    --ds-duration-medium: 1ms;
+    --ds-duration-slow: 1ms;
+    --ds-duration-reveal: 1ms;
+    --ds-duration-line: 1ms;
+  }
+}

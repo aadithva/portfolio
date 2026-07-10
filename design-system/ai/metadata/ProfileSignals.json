@@ -1,0 +1,32 @@
+{
+  "name": "ProfileSignals",
+  "path": "src/components/organisms/ProfileSignals.astro",
+  "tier": "organism",
+  "summary": "Homepage proof section connecting enterprise AI, founder work, and design-to-code practice.",
+  "what": "Renders an editorial statement and three linked evidence areas between the homepage hero and featured work.",
+  "why": "Gives hiring managers and founder/investor readers a fast, credible explanation of Aadith's differentiated range before they enter a case study.",
+  "whenToUse": [
+    "Show the homepage positioning summary below Hero."
+  ],
+  "whenNotToUse": [
+    "Do not reuse as a generic feature grid.",
+    "Do not duplicate its claims on the Work index."
+  ],
+  "propsOrInputs": [],
+  "componentDependencies": [
+    "Line",
+    "Reveal",
+    "SectionLabel"
+  ],
+  "dataDependencies": [],
+  "usedBy": [
+    "route /"
+  ],
+  "a11yNotes": [
+    "Uses a labelled section with real h2/h3 hierarchy.",
+    "Every signal includes a descriptive text link."
+  ],
+  "version": "0.3.0",
+  "lastUpdated": "2026-07-10",
+  "source": "Generated from Astro source + design-system/ai/index.json by component-metadata.py."
+}

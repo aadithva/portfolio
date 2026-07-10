@@ -1,0 +1,33 @@
+{
+  "name": "FeaturedWork",
+  "path": "src/components/organisms/FeaturedWork.astro",
+  "tier": "organism",
+  "summary": "Homepage 'Selected Work' organism: section label plus the featured project list.",
+  "what": "Renders a SectionLabel and HoverRevealList of featured projects with an 'All projects' link.",
+  "why": "Composes the home work teaser from smaller parts so ordering/copy live in one place.",
+  "whenToUse": [
+    "Show featured work on the homepage."
+  ],
+  "whenNotToUse": [
+    "Do not reuse on the Work index \u2014 that page lists all projects directly."
+  ],
+  "propsOrInputs": [],
+  "componentDependencies": [
+    "HoverRevealList",
+    "Line",
+    "Reveal",
+    "SectionLabel"
+  ],
+  "dataDependencies": [
+    "projects"
+  ],
+  "usedBy": [
+    "route /"
+  ],
+  "a11yNotes": [
+    "Inherits list semantics from HoverRevealList."
+  ],
+  "version": "0.3.0",
+  "lastUpdated": "2026-07-10",
+  "source": "Generated from Astro source + design-system/ai/index.json by component-metadata.py."
+}

@@ -1,0 +1,29 @@
+{
+  "name": "Hero",
+  "path": "src/components/organisms/Hero.astro",
+  "tier": "organism",
+  "summary": "Homepage hero: compact mono positioning and role line.",
+  "what": "Renders Aadith's AI-product positioning with a technical eyebrow and role context, leaving the landing page intentionally free of project screenshots.",
+  "why": "Sets the research-lab tone without prematurely privileging one Lab project.",
+  "whenToUse": [
+    "Top of the homepage only."
+  ],
+  "whenNotToUse": [
+    "Do not reuse as a generic page header \u2014 use the page-header pattern."
+  ],
+  "propsOrInputs": [],
+  "componentDependencies": [
+    "Reveal"
+  ],
+  "dataDependencies": [],
+  "usedBy": [
+    "route /"
+  ],
+  "a11yNotes": [
+    "Headline is a real h1.",
+    "Motion is opacity/transform only."
+  ],
+  "version": "0.3.0",
+  "lastUpdated": "2026-07-10",
+  "source": "Generated from Astro source + design-system/ai/index.json by component-metadata.py."
+}

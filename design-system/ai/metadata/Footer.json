@@ -1,0 +1,32 @@
+{
+  "name": "Footer",
+  "path": "src/components/organisms/Footer.astro",
+  "tier": "organism",
+  "summary": "Global footer with an interactive network diagram, identity, social links, and secondary nav.",
+  "what": "Renders a linked working model where context branches into questions and evidence, converges in a prototype, moves through testing, and loops back as learning.",
+  "why": "Keeps the original network-like visual character while making every relationship and destination meaningful.",
+  "whenToUse": [
+    "Rendered automatically by BaseLayout."
+  ],
+  "whenNotToUse": [
+    "Do not import directly into pages.",
+    "Hidden on bare/gated layouts by design."
+  ],
+  "propsOrInputs": [],
+  "componentDependencies": [
+    "BrandLockup"
+  ],
+  "dataDependencies": [
+    "siteConfig"
+  ],
+  "usedBy": [
+    "BaseLayout"
+  ],
+  "a11yNotes": [
+    "Uses contentinfo landmark via <footer>.",
+    "Links have discernible text."
+  ],
+  "version": "0.3.0",
+  "lastUpdated": "2026-07-10",
+  "source": "Generated from Astro source + design-system/ai/index.json by component-metadata.py."
+}

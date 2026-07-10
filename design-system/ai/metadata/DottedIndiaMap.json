@@ -1,0 +1,28 @@
+{
+  "name": "DottedIndiaMap",
+  "path": "src/components/molecules/DottedIndiaMap.astro",
+  "tier": "molecule",
+  "summary": "Accurate dotted India map with the Kashmir-to-Kanyakumari cycling route.",
+  "what": "Uses the verified India silhouette as an SVG pattern-filled dot field, then layers the simplified animated route, endpoints, and labels.",
+  "why": "Keeps the Adventures map geographically grounded while matching the portfolio's technical diagram language.",
+  "whenToUse": [
+    "Render the Ride for Unity route on the Adventures page."
+  ],
+  "whenNotToUse": [
+    "Do not use as a turn-by-turn route or claim GPS accuracy.",
+    "Do not duplicate the SVG inline in a page."
+  ],
+  "propsOrInputs": [],
+  "componentDependencies": [],
+  "dataDependencies": [],
+  "usedBy": [
+    "route /adventures"
+  ],
+  "a11yNotes": [
+    "Includes a descriptive title and description.",
+    "Start and finish remain visible as text, not colour alone."
+  ],
+  "version": "0.3.0",
+  "lastUpdated": "2026-07-10",
+  "source": "Generated from Astro source + design-system/ai/index.json by component-metadata.py."
+}

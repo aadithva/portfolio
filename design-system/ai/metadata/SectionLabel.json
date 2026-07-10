@@ -1,0 +1,41 @@
+{
+  "name": "SectionLabel",
+  "path": "src/components/atoms/SectionLabel.astro",
+  "tier": "atom",
+  "summary": "Small uppercase eyebrow label for section headings.",
+  "what": "Renders slotted text with the `.section-label` token style (uppercase, tracked, muted).",
+  "why": "Consistent section eyebrows ('Selected Work', 'Timeline') without re-declaring type styles.",
+  "whenToUse": [
+    "Label a section above a heading or grid.",
+    "Tag editorial groupings."
+  ],
+  "whenNotToUse": [
+    "Do not use as a primary heading (not semantic h-level).",
+    "Do not use for body copy."
+  ],
+  "propsOrInputs": [
+    {
+      "name": "class",
+      "type": "string",
+      "required": false
+    }
+  ],
+  "componentDependencies": [],
+  "dataDependencies": [],
+  "usedBy": [
+    "FeaturedWork",
+    "ProfileSignals",
+    "WorkItemIndex",
+    "route /404",
+    "route /about",
+    "route /contact",
+    "route /lab/[slug]",
+    "route /writing"
+  ],
+  "a11yNotes": [
+    "Plain paragraph; pair with a real heading for structure."
+  ],
+  "version": "0.3.0",
+  "lastUpdated": "2026-07-10",
+  "source": "Generated from Astro source + design-system/ai/index.json by component-metadata.py."
+}

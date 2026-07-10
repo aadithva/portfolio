@@ -1,0 +1,41 @@
+{
+  "name": "WorkGate",
+  "path": "src/components/organisms/WorkGate.astro",
+  "tier": "organism",
+  "summary": "Reusable password gate for protected Microsoft work pages.",
+  "what": "Wraps parent and nested work content with an optional environment-configured, session-scoped presentation gate, inline validation, and shared unlock state.",
+  "why": "Keeps the protected-page behaviour consistent across the Microsoft overview and its focused child case studies without duplicating gate markup and script.",
+  "whenToUse": [
+    "Wrap work content whose Project or WorkItem is marked passwordProtected.",
+    "Reuse the default storage key so one unlock opens the full Microsoft chapter."
+  ],
+  "whenNotToUse": [
+    "Do not treat this client-side gate as server-grade access control.",
+    "Do not wrap public case studies."
+  ],
+  "propsOrInputs": [
+    {
+      "name": "enabled",
+      "type": "boolean",
+      "required": false
+    },
+    {
+      "name": "storageKey",
+      "type": "string",
+      "required": false
+    }
+  ],
+  "componentDependencies": [],
+  "dataDependencies": [],
+  "usedBy": [
+    "route /work/[parent]/[item]",
+    "route /work/[slug]"
+  ],
+  "a11yNotes": [
+    "Uses a real form, labelled password input placeholder, submit button, and inline error text.",
+    "Protected content remains in the document but is hidden until unlock."
+  ],
+  "version": "0.3.0",
+  "lastUpdated": "2026-07-10",
+  "source": "Generated from Astro source + design-system/ai/index.json by component-metadata.py."
+}

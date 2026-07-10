@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Crunch project placeholder</title>
+  <desc id="desc">A cool grey editorial grid with a simple orange data plot and project label.</desc>
+  <defs>
+    <pattern id="grid" width="200" height="150" patternUnits="userSpaceOnUse">
+      <path d="M 200 0 L 0 0 0 150" fill="none" stroke="#aab2b7" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="1600" height="900" fill="#d8dde0"/>
+  <rect width="1600" height="900" fill="url(#grid)" opacity=".58"/>
+  <path d="M160 530 L390 420 L610 470 L840 280 L1070 350 L1290 205 L1440 255" fill="none" stroke="#ed5b2a" stroke-width="10"/>
+  <g fill="#ed5b2a">
+    <rect x="153" y="523" width="14" height="14"/>
+    <rect x="383" y="413" width="14" height="14"/>
+    <rect x="603" y="463" width="14" height="14"/>
+    <rect x="833" y="273" width="14" height="14"/>
+    <rect x="1063" y="343" width="14" height="14"/>
+    <rect x="1283" y="198" width="14" height="14"/>
+    <rect x="1433" y="248" width="14" height="14"/>
+  </g>
+  <text x="160" y="690" fill="#1f2224" font-family="IBM Plex Mono, monospace" font-size="82" font-weight="500">CRUNCH</text>
+  <text x="160" y="760" fill="#687177" font-family="IBM Plex Mono, monospace" font-size="24" letter-spacing="3">DASHBOARDS / INFORMATION DESIGN</text>
+</svg>

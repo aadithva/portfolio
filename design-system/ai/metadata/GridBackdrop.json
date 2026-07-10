@@ -1,0 +1,28 @@
+{
+  "name": "GridBackdrop",
+  "path": "src/components/atoms/GridBackdrop.astro",
+  "tier": "atom",
+  "summary": "Fixed large-cell grid behind the entire portfolio.",
+  "what": "Renders one decorative hook; editorial-mono.css draws an original 2041px CSS grid plane with broad 408\u00d7261 cells and very low-contrast rules.",
+  "why": "Adds the missing research-lab background structure while keeping the page readable and avoiding a copied image asset.",
+  "whenToUse": [
+    "Render once inside BaseLayout behind all non-bare and bare page content."
+  ],
+  "whenNotToUse": [
+    "Do not place it inside individual sections.",
+    "Do not add text or interactive content to the backdrop."
+  ],
+  "propsOrInputs": [],
+  "componentDependencies": [],
+  "dataDependencies": [],
+  "usedBy": [
+    "BaseLayout"
+  ],
+  "a11yNotes": [
+    "Hidden from assistive technology.",
+    "Pointer events are disabled."
+  ],
+  "version": "0.3.0",
+  "lastUpdated": "2026-07-10",
+  "source": "Generated from Astro source + design-system/ai/index.json by component-metadata.py."
+}

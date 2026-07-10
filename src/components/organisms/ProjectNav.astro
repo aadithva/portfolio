@@ -1,0 +1,27 @@
+---
+import type { Project } from "@/types";
+import Line from "@/components/atoms/Line.astro";
+
+interface Props {
+  prev: Project | null;
+  next: Project | null;
+}
+const { prev, next } = Astro.props;
+---
+<nav class="project-nav container">
+  <Line />
+  <div class="project-nav__row">
+    {prev ? (
+      <a href={`/work/${prev.slug}`}>
+        <p class="project-nav__dir">Previous</p>
+        <p class="project-nav__title">{prev.title}</p>
+      </a>
+    ) : <div />}
+    {next ? (
+      <a href={`/work/${next.slug}`} class="text-right">
+        <p class="project-nav__dir">Next</p>
+        <p class="project-nav__title">{next.title}</p>
+      </a>
+    ) : <div />}
+  </div>
+</nav>

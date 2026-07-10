@@ -1,0 +1,83 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import Reveal from "@/components/atoms/Reveal.astro";
+import Line from "@/components/atoms/Line.astro";
+import DottedIndiaMap from "@/components/molecules/DottedIndiaMap.astro";
+
+const stats = [
+  { value: "4,000 km", label: "One very long ride" },
+  { value: "16 days", label: "Days on the road" },
+  { value: "~150", label: "Riders in the expedition" },
+  { value: "2× India", label: "Long-distance crossings" },
+];
+---
+<BaseLayout title="Adventures" description="Two India-scale cycling journeys, including a government-supported Kashmir-to-Kanyakumari ride in 2025.">
+  <div class="page container">
+    <Reveal>
+      <h1 class="page-header__title">Adventures</h1>
+      <p class="page-header__intro">Long rides, questionable decisions, and stories that improve slightly every time I tell them.</p>
+    </Reveal>
+
+    <div class="spacer-xl"></div>
+
+    <section>
+      <Reveal>
+        <p class="adv-display">4,000 km</p>
+        <p class="adv-sub">Kashmir to Kanyakumari. 16 days. One bicycle. Not enough sleep.</p>
+      </Reveal>
+
+      <div class="spacer-xl"></div>
+
+      <Reveal class="prose" delay={50}>
+        <p>I've cycled across India twice. The first was a more independent journey from Kerala toward Kashmir while I was younger. The second, in 2025, was Kashmir to Kanyakumari — roughly 4,000 km in 16 days — as part of the government-supported Ride for Unity expedition. I represented Kerala among about 150 riders, with several stages stretching past 200 km.</p>
+        <p>At that distance, every day becomes surprisingly practical: eat, pedal, solve the next small problem, repeat. I learned how long a headwind can feel, how quickly confidence disappears when a climb appears around the corner, and how an impossible-looking route eventually becomes a collection of very ordinary kilometres.</p>
+        <p>I used to tell this story as proof of discipline. These days I think it is also proof that I am stubborn and had a good team around me. Design is not cycling, but both reward the same habit: stop dramatizing the whole distance and solve the next bit well.</p>
+      </Reveal>
+
+      <div class="spacer-xl"></div>
+      <Line />
+      <div style="height:3rem"></div>
+
+      <div class="stat-grid">
+        {stats.map((s, i) => (
+          <Reveal delay={i * 80}>
+            <p class="stat__value">{s.value}</p>
+            <p class="stat__label">{s.label}</p>
+          </Reveal>
+        ))}
+      </div>
+    </section>
+
+    <div class="spacer-xl"></div>
+
+    <section class="route-card">
+      <div class="route-card__copy">
+        <p class="section-label">Route, simplified</p>
+        <h2 class="route-card__title">From Kashmir to the country’s southern tip.</h2>
+        <p class="route-card__body">This is a geographic overview, not a turn-by-turn GPS trace. The line follows a simplified north-to-south corridor through mainland India.</p>
+        <dl class="route-card__facts">
+          <div>
+            <dt>Start</dt>
+            <dd>Kashmir</dd>
+          </div>
+          <div>
+            <dt>Finish</dt>
+            <dd>Kanyakumari</dd>
+          </div>
+          <div>
+            <dt>Distance</dt>
+            <dd>4,000 km</dd>
+          </div>
+          <div>
+            <dt>Time</dt>
+            <dd>16 days</dd>
+          </div>
+        </dl>
+      </div>
+
+      <div class="routemap">
+        <DottedIndiaMap />
+      </div>
+    </section>
+  </div>
+</BaseLayout>

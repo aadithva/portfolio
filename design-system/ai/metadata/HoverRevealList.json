@@ -1,0 +1,43 @@
+{
+  "name": "HoverRevealList",
+  "path": "src/components/molecules/HoverRevealList.astro",
+  "tier": "molecule",
+  "summary": "Numbered, hover-aware list of work projects linking to case studies.",
+  "what": "Maps `projects` to numbered rows (index, title, category, year) each linking to /work/<slug>, with reveal stagger.",
+  "why": "The shared 'selected work' / work-index list, so the homepage and Work page stay identical.",
+  "whenToUse": [
+    "List work projects on the home and Work pages.",
+    "Show a compact, scannable index of case studies."
+  ],
+  "whenNotToUse": [
+    "Do not use for Lab projects \u2014 use LabCard grid.",
+    "Do not duplicate the row markup elsewhere."
+  ],
+  "propsOrInputs": [
+    {
+      "name": "projects",
+      "type": "Project[]",
+      "required": true
+    },
+    {
+      "name": "showViewAll",
+      "type": "boolean",
+      "required": false
+    }
+  ],
+  "componentDependencies": [
+    "Reveal"
+  ],
+  "dataDependencies": [],
+  "usedBy": [
+    "FeaturedWork",
+    "route /work"
+  ],
+  "a11yNotes": [
+    "Each row is a single anchor with readable text order.",
+    "Numbers are decorative context, not list semantics."
+  ],
+  "version": "0.3.0",
+  "lastUpdated": "2026-07-10",
+  "source": "Generated from Astro source + design-system/ai/index.json by component-metadata.py."
+}

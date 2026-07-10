@@ -1,0 +1,42 @@
+{
+  "name": "BrandLockup",
+  "path": "src/components/atoms/BrandLockup.astro",
+  "tier": "atom",
+  "summary": "Aadith's reusable nested-frame symbol and mono wordmark.",
+  "what": "Renders the original open-frame inspection mark, the uppercase AADITH wordmark in IBM Plex Mono, or both through symbol/wordmark/lockup variants.",
+  "why": "Creates a personal identity that reflects layered inspection and avoids employer-like four-square marks or a generic initials monogram.",
+  "whenToUse": [
+    "Use the lockup in Header and Footer identity areas.",
+    "Use wordmark-only for the oversized clipped footer signature.",
+    "Use symbol-only for future compact branded controls."
+  ],
+  "whenNotToUse": [
+    "Do not recreate the nested-frame SVG inline.",
+    "Do not pair it with unrelated display fonts or multiple accent colours."
+  ],
+  "propsOrInputs": [
+    {
+      "name": "variant",
+      "type": "\"lockup\" | \"symbol\" | \"wordmark\"",
+      "required": false
+    },
+    {
+      "name": "class",
+      "type": "string",
+      "required": false
+    }
+  ],
+  "componentDependencies": [],
+  "dataDependencies": [],
+  "usedBy": [
+    "Footer",
+    "Header"
+  ],
+  "a11yNotes": [
+    "The symbol is decorative; surrounding links or visible wordmark provide the accessible name.",
+    "The footer display wordmark is hidden from assistive technology as repeated decoration."
+  ],
+  "version": "0.3.0",
+  "lastUpdated": "2026-07-10",
+  "source": "Generated from Astro source + design-system/ai/index.json by component-metadata.py."
+}

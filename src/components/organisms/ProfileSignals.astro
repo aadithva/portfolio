@@ -1,0 +1,53 @@
+---
+import Line from "@/components/atoms/Line.astro";
+import Reveal from "@/components/atoms/Reveal.astro";
+import SectionLabel from "@/components/atoms/SectionLabel.astro";
+
+const signals = [
+  {
+    title: "Enterprise AI, without the magic fog",
+    body: "At Microsoft, I work on Copilot response UX — sources, hierarchy, quality evaluation, accessibility, and the details that help an answer earn trust.",
+    href: "/work/microsoft-copilot",
+    link: "See the Microsoft work",
+  },
+  {
+    title: "Founder context, not founder theatre",
+    body: "At Owly, I move between customer conversations, product strategy, design, demos, and the practical work of turning a creative pipeline into work customers find worth paying for.",
+    href: "/work/owly-studio",
+    link: "See the Owly story",
+  },
+  {
+    title: "From Figma into the thing itself",
+    body: "I prototype in code, build small tools, and sometimes close the last-mile interface gap directly — with engineering review and fewer ceremonial handoffs.",
+    href: "/lab",
+    link: "Open the lab",
+  },
+];
+---
+
+<section class="profile-signals container" aria-labelledby="profile-signals-heading">
+  <Line />
+  <div class="profile-signals__intro">
+    <Reveal>
+      <SectionLabel>The short version</SectionLabel>
+    </Reveal>
+    <Reveal delay={80}>
+      <h2 id="profile-signals-heading" class="profile-signals__statement">
+        I’m most useful when the problem is ambiguous, the system has many owners, and a polished mockup is not enough.
+      </h2>
+    </Reveal>
+  </div>
+
+  <div class="profile-signals__grid">
+    {signals.map((signal, i) => (
+      <Reveal class="profile-signal" delay={i * 80}>
+        <span class="profile-signal__index" aria-hidden="true">{String(i + 1).padStart(2, "0")}</span>
+        <div>
+          <h3 class="profile-signal__title">{signal.title}</h3>
+          <p class="profile-signal__body">{signal.body}</p>
+          <a class="text-link profile-signal__link" href={signal.href}>{signal.link} &rarr;</a>
+        </div>
+      </Reveal>
+    ))}
+  </div>
+</section>

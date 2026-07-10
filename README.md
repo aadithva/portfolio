@@ -1,36 +1,57 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Aadith V A — Portfolio
 
-## Getting Started
+An evidence-led portfolio for Aadith V A: AI product designer at Microsoft, co-founder of Owly, and design-tool builder.
 
-First, run the development server:
+## What is inside
+
+- Six selected Work chapters spanning enterprise AI, founder work, fintech, early-stage products, Web3, and information design.
+- Focused subpages for Microsoft Copilot work and the DaoLens DAO Denver case study.
+- A five-project AI Lab covering evaluation, agent behaviour, conversation design, and Figma tooling.
+- An AI-ready design system with a generated codebase index and per-component metadata.
+- Static, accessible Astro pages with vanilla CSS and minimal client-side JavaScript.
+
+## Run locally
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Build the static site:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm run build
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Optional Work-page gate
 
-## Learn More
+Copy `.env.example` to `.env.local` and set `PUBLIC_WORK_GATE_PASSWORD` to enable the presentation gate on protected Work pages. Because the site is static, this is not secure access control; protected content must remain public-safe.
 
-To learn more about Next.js, take a look at the following resources:
+## Project structure
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```text
+src/
+  components/     Astro UI components
+  data/           Work, Lab, navigation, and nested case-study data
+  layouts/        Shared page shell
+  pages/          Static routes
+  styles/         Global and editorial visual system
+design-system/
+  ai/             Generated index, metadata, and component-selection guidance
+public/
+  images/         Work imagery and placeholders
+  shots/          Lab and product screenshots
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Design-system regeneration
 
-## Deploy on Vercel
+After changing components or routes:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```bash
+python3 design-system/ai/codebase-index.py
+python3 design-system/ai/component-metadata.py
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Publication boundary
+
+Microsoft case studies are intentionally public-safe. Confidential product visuals, internal links, customer data, implementation details, metrics, and colleague information are not included.

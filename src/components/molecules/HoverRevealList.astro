@@ -1,0 +1,33 @@
+---
+import type { Project } from "@/types";
+import Reveal from "@/components/atoms/Reveal.astro";
+
+interface Props {
+  projects: Project[];
+  showViewAll?: boolean;
+}
+const { projects, showViewAll = false } = Astro.props;
+---
+<div class="work-list">
+  {projects.map((project, i) => (
+    <Reveal delay={i * 55}>
+      <a class="work-row" href={`/work/${project.slug}`}>
+        <span class="work-row__left">
+          <span class="work-row__index">{String(i + 1).padStart(2, "0")}</span>
+          <span class="work-row__title">{project.title}</span>
+        </span>
+        <span class="work-row__meta">
+          <span>{project.category}</span>
+          <span class="num">{project.year}</span>
+        </span>
+      </a>
+    </Reveal>
+  ))}
+  <div class="work-list__end"></div>
+
+  {showViewAll && (
+    <div class="work-list__viewall">
+      <a class="text-link" href="/work">All projects &rarr;</a>
+    </div>
+  )}
+</div>

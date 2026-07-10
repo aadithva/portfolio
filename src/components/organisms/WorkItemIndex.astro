@@ -1,0 +1,44 @@
+---
+import type { Project, WorkItem } from "@/types";
+import Reveal from "@/components/atoms/Reveal.astro";
+import SectionLabel from "@/components/atoms/SectionLabel.astro";
+
+interface Props {
+  parent: Project;
+  items: WorkItem[];
+}
+
+const { parent, items } = Astro.props;
+const statusLabel: Record<WorkItem["status"], string> = {
+  documented: "Documented",
+  draft: "In documentation",
+  growing: "Growing collection",
+};
+---
+<section class="work-collection container">
+  <Reveal class="work-collection__intro">
+    <SectionLabel>Inside this chapter</SectionLabel>
+    <div>
+      <h2>{items.length === 1 ? "One focused case study" : `${items.length} separate bodies of work`}</h2>
+      <p>Each project has its own route, evidence, images, and room to grow without turning the {parent.title} overview into one endless page.</p>
+    </div>
+  </Reveal>
+
+  <div class="work-collection__list">
+    {items.map((item, index) => (
+      <Reveal delay={index * 55}>
+        <a class="work-item-row" href={`/work/${item.parentSlug}/${item.slug}`}>
+          <span class="work-item-row__index">{String(index + 1).padStart(2, "0")}</span>
+          <span class="work-item-row__body">
+            <span class="work-item-row__label">{item.label}</span>
+            <span class="work-item-row__title">{item.title}</span>
+            <span class="work-item-row__description">{item.description}</span>
+          </span>
+          <span class:list={["work-item-row__status", `is-${item.status}`]}>
+            {statusLabel[item.status]}
+          </span>
+        </a>
+      </Reveal>
+    ))}
+  </div>
+</section>

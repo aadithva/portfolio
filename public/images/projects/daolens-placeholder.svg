@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">DaoLens project placeholder</title>
+  <desc id="desc">A cool grey editorial grid with connected orange nodes and a DaoLens label.</desc>
+  <defs>
+    <pattern id="grid" width="200" height="150" patternUnits="userSpaceOnUse">
+      <path d="M 200 0 L 0 0 0 150" fill="none" stroke="#aab2b7" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="1600" height="900" fill="#d8dde0"/>
+  <rect width="1600" height="900" fill="url(#grid)" opacity=".58"/>
+  <g fill="none" stroke="#ed5b2a" stroke-width="7">
+    <path d="M220 420 L500 250 L800 420 L1090 240 L1380 410"/>
+    <path d="M500 250 L500 620 L800 420 L1090 650 L1380 410"/>
+  </g>
+  <g fill="#ed5b2a">
+    <rect x="208" y="408" width="24" height="24"/>
+    <rect x="488" y="238" width="24" height="24"/>
+    <rect x="488" y="608" width="24" height="24"/>
+    <rect x="788" y="408" width="24" height="24"/>
+    <rect x="1078" y="228" width="24" height="24"/>
+    <rect x="1078" y="638" width="24" height="24"/>
+    <rect x="1368" y="398" width="24" height="24"/>
+  </g>
+  <text x="160" y="765" fill="#1f2224" font-family="IBM Plex Mono, monospace" font-size="82" font-weight="500">DAOLENS</text>
+  <text x="160" y="825" fill="#687177" font-family="IBM Plex Mono, monospace" font-size="22" letter-spacing="3">PRODUCT / BRAND / GO-TO-MARKET</text>
+</svg>

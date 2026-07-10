@@ -1,0 +1,36 @@
+{
+  "name": "ProjectHero",
+  "path": "src/components/organisms/ProjectHero.astro",
+  "tier": "organism",
+  "summary": "Case-study hero: title, Role/Year/Client/Category meta, and hero image.",
+  "what": "Renders the project title, description, meta grid, optional confidentiality note, and a hero image only when the configured public asset exists.",
+  "why": "Consistent opening for every work case study.",
+  "whenToUse": [
+    "Top of a /work/<slug> case study."
+  ],
+  "whenNotToUse": [
+    "Do not use for Lab detail pages \u2014 those have their own header.",
+    "Do not duplicate the meta grid by hand."
+  ],
+  "propsOrInputs": [
+    {
+      "name": "project",
+      "type": "Project",
+      "required": true
+    }
+  ],
+  "componentDependencies": [
+    "Reveal"
+  ],
+  "dataDependencies": [],
+  "usedBy": [
+    "route /work/[slug]"
+  ],
+  "a11yNotes": [
+    "Title is the page h1.",
+    "Meta labels are readable and ordered."
+  ],
+  "version": "0.3.0",
+  "lastUpdated": "2026-07-10",
+  "source": "Generated from Astro source + design-system/ai/index.json by component-metadata.py."
+}

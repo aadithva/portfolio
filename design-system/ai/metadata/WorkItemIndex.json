@@ -1,0 +1,43 @@
+{
+  "name": "WorkItemIndex",
+  "path": "src/components/organisms/WorkItemIndex.astro",
+  "tier": "organism",
+  "summary": "Editorial child-project index for multi-part Work chapters.",
+  "what": "Lists the focused WorkItems belonging to a parent Project with number, domain label, title, description, documentation status, and a nested route.",
+  "why": "Lets Microsoft Copilot and DaoLens act as portfolio collections instead of forcing unrelated bodies of work into one long case study.",
+  "whenToUse": [
+    "Render below ProjectHero when getWorkItemsFor(project.slug) returns entries.",
+    "Add a focused work item through src/data/work/<parent>/<item>/index.ts."
+  ],
+  "whenNotToUse": [
+    "Do not use on projects with no child case studies.",
+    "Do not duplicate a child's full evidence inside the parent overview."
+  ],
+  "propsOrInputs": [
+    {
+      "name": "parent",
+      "type": "Project",
+      "required": true
+    },
+    {
+      "name": "items",
+      "type": "WorkItem[]",
+      "required": true
+    }
+  ],
+  "componentDependencies": [
+    "Reveal",
+    "SectionLabel"
+  ],
+  "dataDependencies": [],
+  "usedBy": [
+    "route /work/[slug]"
+  ],
+  "a11yNotes": [
+    "Every row is one descriptive anchor.",
+    "Documentation status is written as text rather than conveyed by colour alone."
+  ],
+  "version": "0.3.0",
+  "lastUpdated": "2026-07-10",
+  "source": "Generated from Astro source + design-system/ai/index.json by component-metadata.py."
+}

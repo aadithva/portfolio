@@ -1,0 +1,37 @@
+{
+  "name": "LabCard",
+  "path": "src/components/molecules/LabCard.astro",
+  "tier": "molecule",
+  "summary": "Ranked editorial row for a shortlisted Lab project.",
+  "what": "Shows rank, theme, status, tagline, proof-oriented metadata, and the best screenshot from lib/shots.getThumb; missing previews use a typed orange empty state.",
+  "why": "Makes the five-project Lab shortlist scannable without flattening each experiment into a generic card.",
+  "whenToUse": [
+    "Render one of the five showcase Lab projects.",
+    "Preview a project with its rank, theme, and first screenshot."
+  ],
+  "whenNotToUse": [
+    "Do not use for work case studies (use HoverRevealList).",
+    "Do not embed full screenshot galleries here \u2014 that is the detail page."
+  ],
+  "propsOrInputs": [
+    {
+      "name": "project",
+      "type": "LabProject",
+      "required": true
+    }
+  ],
+  "componentDependencies": [],
+  "dataDependencies": [
+    "shots"
+  ],
+  "usedBy": [
+    "route /lab"
+  ],
+  "a11yNotes": [
+    "Thumbnails are lazy-loaded with descriptive alt text.",
+    "Status conveyed by badge text, not colour alone."
+  ],
+  "version": "0.3.0",
+  "lastUpdated": "2026-07-10",
+  "source": "Generated from Astro source + design-system/ai/index.json by component-metadata.py."
+}

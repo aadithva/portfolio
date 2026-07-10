@@ -1,0 +1,45 @@
+{
+  "name": "Line",
+  "path": "src/components/atoms/Line.astro",
+  "tier": "atom",
+  "summary": "Tokenised 1px editorial divider.",
+  "what": "Renders a presentational full-width rule; the current mono editorial theme keeps it static and immediately visible.",
+  "why": "Provides one consistent separator across compact publishing-style sections.",
+  "whenToUse": [
+    "Separate major content sections.",
+    "Introduce stats or nav blocks with a subtle reveal."
+  ],
+  "whenNotToUse": [
+    "Do not use as a border inside dense controls.",
+    "Do not animate it manually \u2014 the observer handles it."
+  ],
+  "propsOrInputs": [
+    {
+      "name": "class",
+      "type": "string",
+      "required": false
+    }
+  ],
+  "componentDependencies": [],
+  "dataDependencies": [],
+  "usedBy": [
+    "CaseStudySection",
+    "FeaturedWork",
+    "ProfileSignals",
+    "ProjectNav",
+    "route /404",
+    "route /about",
+    "route /adventures",
+    "route /contact",
+    "route /lab/[slug]",
+    "route /work/[parent]/[item]",
+    "route /writing"
+  ],
+  "a11yNotes": [
+    "Decorative; role=presentation, no semantics.",
+    "Static when reduced motion is requested."
+  ],
+  "version": "0.3.0",
+  "lastUpdated": "2026-07-10",
+  "source": "Generated from Astro source + design-system/ai/index.json by component-metadata.py."
+}

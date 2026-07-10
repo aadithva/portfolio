@@ -1,0 +1,62 @@
+{
+  "name": "BaseLayout",
+  "path": "src/layouts/BaseLayout.astro",
+  "tier": "layout",
+  "summary": "App shell: document head, mono typography, header/footer, and global client behaviour.",
+  "what": "Wraps every page with metadata, IBM Plex Mono, the base and editorial theme stylesheets, GridBackdrop, Header/Footer, and the small observer used for route-line drawing.",
+  "why": "Centralises page chrome and the restrained vanilla-JS behaviour so individual pages only describe content.",
+  "whenToUse": [
+    "Wrap any new page.",
+    "Set per-page <title> and meta description.",
+    "Use bare=true for gated/standalone screens that should hide nav."
+  ],
+  "whenNotToUse": [
+    "Do not import inside another component \u2014 it is a top-level layout.",
+    "Do not re-implement route/reveal observers in a page; they already live here."
+  ],
+  "propsOrInputs": [
+    {
+      "name": "title",
+      "type": "string",
+      "required": false
+    },
+    {
+      "name": "description",
+      "type": "string",
+      "required": false
+    },
+    {
+      "name": "bare",
+      "type": "boolean",
+      "required": false
+    }
+  ],
+  "componentDependencies": [
+    "Footer",
+    "GridBackdrop",
+    "Header"
+  ],
+  "dataDependencies": [
+    "siteConfig"
+  ],
+  "usedBy": [
+    "route /",
+    "route /404",
+    "route /about",
+    "route /adventures",
+    "route /contact",
+    "route /lab",
+    "route /lab/[slug]",
+    "route /work",
+    "route /work/[parent]/[item]",
+    "route /work/[slug]",
+    "route /writing"
+  ],
+  "a11yNotes": [
+    "Includes a skip link.",
+    "Respects prefers-reduced-motion and keeps content visible without JavaScript."
+  ],
+  "version": "0.3.0",
+  "lastUpdated": "2026-07-10",
+  "source": "Generated from Astro source + design-system/ai/index.json by component-metadata.py."
+}

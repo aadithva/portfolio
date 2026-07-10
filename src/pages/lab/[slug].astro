@@ -1,0 +1,208 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import Reveal from "@/components/atoms/Reveal.astro";
+import Line from "@/components/atoms/Line.astro";
+import SectionLabel from "@/components/atoms/SectionLabel.astro";
+import { labProjects, getLabProject, getAllLabSlugs, getAdjacentLab } from "@/data/lab";
+import { getShots, routeLabel } from "@/lib/shots";
+
+export function getStaticPaths() {
+  return getAllLabSlugs().map((slug) => ({ params: { slug } }));
+}
+
+const { slug } = Astro.params;
+const project = getLabProject(slug!)!;
+const { prev, next } = getAdjacentLab(slug!);
+const shots = getShots(project.slug);
+const storyParas = project.story.split(/\n{2,}/).map((p) => p.trim()).filter(Boolean);
+const hasLedger = Boolean(project.evidence?.length || project.limitations?.length);
+
+const statusLabel: Record<string, string> = { working: "Working", prototype: "Prototype", wip: "Work in progress" };
+const typeLabel: Record<string, string> = {
+  web: "Web app", desktop: "Desktop app", backend: "CLI / Backend",
+  "figma-plugin": "Figma plugin", monorepo: "Full-stack",
+};
+
+const meta = [
+  { label: "When", value: project.when },
+  { label: "Built with", value: project.built_with },
+  { label: "Status", value: statusLabel[project.status] ?? project.status },
+  { label: "Type", value: typeLabel[project.ui_type] ?? project.ui_type },
+];
+
+const noShotsReason =
+  project.ui_type === "figma-plugin"
+    ? "This one lives inside Figma, so there is no standalone web page posing for screenshots."
+    : project.ui_type === "backend"
+    ? "This one prefers the terminal. No web UI, no heroic product shot."
+    : "It needs private credentials, so the screenshots are sitting this one out.";
+---
+<BaseLayout title={`${project.title} — Lab`} description={project.tagline}>
+  <div class="page container">
+    <Reveal>
+      <div class="lab-detail__eyebrow">
+        {project.rank && <span class="lab-detail__rank">{String(project.rank).padStart(2, "0")} / 05</span>}
+        <span class="badge">{project.theme ?? project.category}</span>
+        <span class:list={["badge", `badge--${project.status}`]}>{statusLabel[project.status] ?? project.status}</span>
+      </div>
+      <h1 class="lab-detail__title">{project.title}</h1>
+      <p class="lab-detail__tagline">{project.tagline}</p>
+    </Reveal>
+
+    <Reveal>
+      <div class="lab-meta">
+        {meta.map((m) => (
+          <div>
+            <p class="lab-meta__label">{m.label}</p>
+            <p class="lab-meta__value">{m.value}</p>
+          </div>
+        ))}
+      </div>
+    </Reveal>
+
+    {(project.repo_url || (project.runnable === "yes" && project.run_cmd)) && (
+      <Reveal class="lab-detail__links">
+        {project.repo_url && (
+          <a class="arrow-link inline-link" href={project.repo_url} target="_blank" rel="noopener noreferrer">
+            Peek at the source<span class="arrow-link__arrow">→</span>
+          </a>
+        )}
+        {project.runnable === "yes" && project.run_cmd && (
+          <span class="muted-note"><code>{project.run_cmd}</code></span>
+        )}
+      </Reveal>
+    )}
+
+    {project.problem && (
+      <section class="lab-section lab-section--problem">
+        <Reveal class="lab-section__label"><SectionLabel>The problem</SectionLabel></Reveal>
+        <Reveal><p class="lab-problem__body">{project.problem}</p></Reveal>
+      </section>
+    )}
+
+    {project.portfolio_signal && (
+      <Reveal as="aside" class="lab-signal">
+        <p class="section-label">Why it belongs here</p>
+        <p>{project.portfolio_signal}</p>
+      </Reveal>
+    )}
+
+    <section class="lab-section">
+      <Reveal class="lab-section__label"><SectionLabel>Why I made it</SectionLabel></Reveal>
+      <div class="lab-story">
+        {storyParas.map((p, i) => (
+          <Reveal delay={i * 40}><p>{p}</p></Reveal>
+        ))}
+      </div>
+    </section>
+
+    {hasLedger && (
+      <section class="lab-section lab-ledger">
+        {project.evidence && project.evidence.length > 0 && (
+          <div class="lab-ledger__column">
+            <Reveal class="lab-section__label"><SectionLabel>What is real</SectionLabel></Reveal>
+            <Reveal>
+              <ul class="lab-proof-list">
+                {project.evidence.map((item) => <li>{item}</li>)}
+              </ul>
+            </Reveal>
+          </div>
+        )}
+        {project.limitations && project.limitations.length > 0 && (
+          <div class="lab-ledger__column">
+            <Reveal class="lab-section__label"><SectionLabel>Where it still wobbles</SectionLabel></Reveal>
+            <Reveal>
+              <ul class="lab-proof-list lab-proof-list--muted">
+                {project.limitations.map((item) => <li>{item}</li>)}
+              </ul>
+            </Reveal>
+          </div>
+        )}
+      </section>
+    )}
+
+    {project.capabilities && project.capabilities.length > 0 && (
+      <section class="lab-section">
+        <Reveal class="lab-section__label"><SectionLabel>What it does</SectionLabel></Reveal>
+        <Reveal>
+          <ul class="cap-list">
+            {project.capabilities.map((c) => <li>{c}</li>)}
+          </ul>
+        </Reveal>
+      </section>
+    )}
+
+    {project.learning && (
+      <section class="lab-section">
+        <Reveal class="lab-section__label"><SectionLabel>What I learned</SectionLabel></Reveal>
+        <Reveal><p class="lab-learning">{project.learning}</p></Reveal>
+      </section>
+    )}
+
+    {project.tech && project.tech.length > 0 && (
+      <section class="lab-section">
+        <Reveal class="lab-section__label"><SectionLabel>Built with</SectionLabel></Reveal>
+        <Reveal>
+          <div class="tag-row">
+            {project.tech.map((t) => <span class="tag">{t}</span>)}
+          </div>
+        </Reveal>
+      </section>
+    )}
+
+    <section class="lab-section">
+      <Reveal class="lab-section__label"><SectionLabel>Proof it exists</SectionLabel></Reveal>
+      {shots.length > 0 ? (
+        <div class="shots">
+          {shots.map((s) => (
+            <Reveal>
+              {s.mobileFull && (s.desktopFull || s.desktopHero) ? (
+                <div class="shots-pair">
+                  <figure class="shot-figure">
+                    <div class="shot-figure__frame">
+                      <img src={s.desktopFull ?? s.desktopHero} alt={`${project.title} ${routeLabel(s.route)} desktop`} loading="lazy" />
+                    </div>
+                    <figcaption>{routeLabel(s.route)} · Desktop</figcaption>
+                  </figure>
+                  <figure class="shot-figure">
+                    <div class="shot-figure__frame">
+                      <img src={s.mobileFull} alt={`${project.title} ${routeLabel(s.route)} mobile`} loading="lazy" />
+                    </div>
+                    <figcaption>{routeLabel(s.route)} · Mobile</figcaption>
+                  </figure>
+                </div>
+              ) : (
+                <figure class="shot-figure">
+                  <div class="shot-figure__frame">
+                    <img src={s.desktopFull ?? s.desktopHero ?? s.mobileFull} alt={`${project.title} ${routeLabel(s.route)}`} loading="lazy" />
+                  </div>
+                  <figcaption>{routeLabel(s.route)}</figcaption>
+                </figure>
+              )}
+            </Reveal>
+          ))}
+        </div>
+      ) : (
+        <Reveal class="note"><p>{noShotsReason}</p></Reveal>
+      )}
+    </section>
+
+    <nav class="project-nav">
+      <Line />
+      <div class="project-nav__row">
+        {prev ? (
+          <a href={`/lab/${prev.slug}`}>
+            <p class="project-nav__dir">Previous</p>
+            <p class="project-nav__title">{prev.title}</p>
+          </a>
+        ) : <div />}
+        {next ? (
+          <a href={`/lab/${next.slug}`} class="text-right">
+            <p class="project-nav__dir">Next</p>
+            <p class="project-nav__title">{next.title}</p>
+          </a>
+        ) : <div />}
+      </div>
+    </nav>
+  </div>
+</BaseLayout>

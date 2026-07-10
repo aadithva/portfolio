@@ -1,0 +1,51 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import Reveal from "@/components/atoms/Reveal.astro";
+import SectionLabel from "@/components/atoms/SectionLabel.astro";
+import Line from "@/components/atoms/Line.astro";
+---
+<BaseLayout title="Writing" description="Notes on design, AI, craft, and the questions that refuse to stay inside a FigJam board.">
+  <div class="page container">
+    <Reveal>
+      <h1 class="page-header__title">Writing</h1>
+      <p class="page-header__intro">Notes from the space between a half-formed thought and something I can actually explain.</p>
+    </Reveal>
+
+    <div class="spacer-xl"></div>
+    <Line />
+    <div class="spacer-xl"></div>
+
+    <article class="essay">
+      <Reveal>
+        <SectionLabel>Why I write</SectionLabel>
+        <div style="height:2rem"></div>
+        <h2 class="essay__title">I write to find out what I actually think.</h2>
+      </Reveal>
+
+      <Reveal delay={80}>
+        <p>Design writing can sound impressively certain. My notes usually begin in the opposite place: a question I cannot stop poking. Writing slows the thought down enough to reveal which parts are useful and which parts were merely well phrased.</p>
+      </Reveal>
+
+      <Reveal delay={100}>
+        <blockquote class="essay__pullquote">
+          <p>&ldquo;Most of my drafts are about AI UX, systems, craft, and what happens when designers move a little closer to code.&rdquo;</p>
+        </blockquote>
+      </Reveal>
+
+      <Reveal delay={120}>
+        <p>I care about the small decisions that make a product easier to understand: type, hierarchy, feedback, pacing, and the words a system uses when it is unsure. People may not name those details, but they still have to live with them.</p>
+        <p>I’m also interested in the awkward questions around AI-assisted work: what gets faster, what gets flatter, where judgment still matters, and how to use the tools without letting them do all the thinking.</p>
+      </Reveal>
+    </article>
+
+    <div class="spacer-xl"></div>
+    <Line />
+    <div style="height:3rem"></div>
+
+    <Reveal>
+      <p class="muted-note">
+        More essays are still in the drafts folder, bravely avoiding publication.&nbsp;&nbsp;<a class="inline-link" href="https://x.com/aadithva" target="_blank" rel="noopener noreferrer">Follow on X</a>&nbsp;if you’d like to watch one escape.
+      </p>
+    </Reveal>
+  </div>
+</BaseLayout>

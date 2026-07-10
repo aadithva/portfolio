@@ -1,0 +1,33 @@
+{
+  "name": "Header",
+  "path": "src/components/organisms/Header.astro",
+  "tier": "organism",
+  "summary": "Static mono editorial header with Aadith's custom brand lockup and wrapping primary navigation.",
+  "what": "Renders the nested-frame BrandLockup and nav from data/navigation; links wrap directly on small screens instead of opening a menu overlay.",
+  "why": "Single source for navigation across the site.",
+  "whenToUse": [
+    "Rendered automatically by BaseLayout."
+  ],
+  "whenNotToUse": [
+    "Do not import directly into pages.",
+    "Do not hard-code nav links \u2014 edit data/navigation."
+  ],
+  "propsOrInputs": [],
+  "componentDependencies": [
+    "BrandLockup"
+  ],
+  "dataDependencies": [
+    "navigation",
+    "siteConfig"
+  ],
+  "usedBy": [
+    "BaseLayout"
+  ],
+  "a11yNotes": [
+    "Uses banner and navigation landmarks.",
+    "Active links expose aria-current=page."
+  ],
+  "version": "0.3.0",
+  "lastUpdated": "2026-07-10",
+  "source": "Generated from Astro source + design-system/ai/index.json by component-metadata.py."
+}

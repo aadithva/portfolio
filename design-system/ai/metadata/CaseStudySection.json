@@ -1,0 +1,39 @@
+{
+  "name": "CaseStudySection",
+  "path": "src/components/molecules/CaseStudySection.astro",
+  "tier": "molecule",
+  "summary": "Data-driven renderer for case-study blocks: text, image-full, image-grid, stats, quote, and editorial frameworks.",
+  "what": "Branches on `section.type` from project data to emit the matching layout; framework sections render a structured ordered model and missing images fall back to `.placeholder-image` blocks.",
+  "why": "Turns `Project.sections` and `WorkItem.sections` data into consistent editorial sections so project pages never hand-code layouts.",
+  "whenToUse": [
+    "Render each section of a work project or nested work item.",
+    "Add case-study content by editing data when a section type fits."
+  ],
+  "whenNotToUse": [
+    "Do not hand-write raw markup for supported section types.",
+    "Do not invent a new type if text/image/stats/quote/framework already fits."
+  ],
+  "propsOrInputs": [
+    {
+      "name": "section",
+      "type": "CaseStudySection",
+      "required": true
+    }
+  ],
+  "componentDependencies": [
+    "Line",
+    "Reveal"
+  ],
+  "dataDependencies": [],
+  "usedBy": [
+    "route /work/[parent]/[item]",
+    "route /work/[slug]"
+  ],
+  "a11yNotes": [
+    "Uses semantic blockquote/cite for quotes and an ordered list for framework steps.",
+    "Placeholder blocks carry the section title as visible text."
+  ],
+  "version": "0.3.0",
+  "lastUpdated": "2026-07-10",
+  "source": "Generated from Astro source + design-system/ai/index.json by component-metadata.py."
+}

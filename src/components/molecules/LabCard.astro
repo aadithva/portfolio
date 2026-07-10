@@ -1,0 +1,42 @@
+---
+import type { LabProject } from "@/types";
+import { getThumb } from "@/lib/shots";
+
+interface Props {
+  project: LabProject;
+}
+const { project } = Astro.props;
+const thumb = getThumb(project.slug);
+const statusLabel: Record<string, string> = {
+  working: "Working",
+  prototype: "Prototype",
+  wip: "WIP",
+};
+---
+<a class="lab-card" href={`/lab/${project.slug}`}>
+  <div class="lab-card__thumb">
+    {thumb ? (
+      <img src={thumb} alt={`${project.title} screenshot`} loading="lazy" />
+    ) : (
+      <div class="lab-card__thumb--empty">{project.ui_type === "backend" ? "CLI / Backend" : project.ui_type === "figma-plugin" ? "Figma Plugin" : "No preview"}</div>
+    )}
+  </div>
+  <div class="lab-card__head">
+    <div>
+      {(project.rank || project.theme) && (
+        <p class="lab-card__eyebrow">
+          {project.rank && `${String(project.rank).padStart(2, "0")} / `}
+          {project.theme}
+        </p>
+      )}
+      <h3 class="lab-card__title">{project.title}</h3>
+    </div>
+    <span class:list={["badge", `badge--${project.status}`]}>{statusLabel[project.status] ?? project.status}</span>
+  </div>
+  <p class="lab-card__tagline">{project.tagline}</p>
+  <div class="lab-card__foot">
+    <span>{project.when}</span>
+    <span class="lab-card__dot"></span>
+    <span>{project.built_with}</span>
+  </div>
+</a>

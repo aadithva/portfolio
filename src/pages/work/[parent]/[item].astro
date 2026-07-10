@@ -1,0 +1,96 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import Reveal from "@/components/atoms/Reveal.astro";
+import Line from "@/components/atoms/Line.astro";
+import CaseStudySection from "@/components/molecules/CaseStudySection.astro";
+import WorkGate from "@/components/organisms/WorkGate.astro";
+import { getProject } from "@/data/projects";
+import { workItems, getAdjacentWorkItems } from "@/data/work";
+
+export function getStaticPaths() {
+  return workItems.map((item) => ({
+    params: { parent: item.parentSlug, item: item.slug },
+    props: { item },
+  }));
+}
+
+const { item } = Astro.props;
+const parent = getProject(item.parentSlug);
+if (!parent) throw new Error(`Missing parent project: ${item.parentSlug}`);
+
+const { prev, next } = getAdjacentWorkItems(item);
+const gated = parent.passwordProtected === true || item.passwordProtected === true;
+const statusLabel = {
+  documented: "Documented",
+  draft: "In documentation",
+  growing: "Growing collection",
+}[item.status];
+---
+<BaseLayout title={`${item.title} — ${parent.title}`} description={item.description}>
+  <WorkGate enabled={gated}>
+    <article class="work-item-detail">
+      <section class="project-hero work-item-hero">
+        <div class="container">
+          <Reveal>
+            <a class="work-item-back text-link" href={`/work/${parent.slug}`}>&larr; {parent.title}</a>
+          </Reveal>
+          <Reveal class="work-item-hero__label" delay={35}>
+            <p class="section-label">{item.label}</p>
+          </Reveal>
+          <Reveal as="h1" class="project-hero__title" delay={70}>{item.title}</Reveal>
+          <Reveal as="p" class="project-hero__description" delay={105}>
+            {item.description}
+          </Reveal>
+          <Reveal class="project-hero__meta" delay={140}>
+            <div>
+              <p class="meta__label">Parent</p>
+              <p class="meta__value">{parent.title}</p>
+            </div>
+            <div>
+              <p class="meta__label">Period</p>
+              <p class="meta__value">{item.year}</p>
+            </div>
+            <div>
+              <p class="meta__label">Status</p>
+              <p class="meta__value">{statusLabel}</p>
+            </div>
+            <div>
+              <p class="meta__label">Format</p>
+              <p class="meta__value">Focused case study</p>
+            </div>
+          </Reveal>
+          {item.confidentialityNote && (
+            <Reveal class="project-hero__note" delay={170}>
+              <p>{item.confidentialityNote}</p>
+            </Reveal>
+          )}
+        </div>
+      </section>
+
+      {item.sections.map((section) => (
+        <CaseStudySection section={section} />
+      ))}
+
+      <nav class="project-nav container work-item-nav">
+        <Line />
+        <a class="work-item-nav__parent text-link" href={`/work/${parent.slug}`}>
+          All {parent.title} work
+        </a>
+        <div class="project-nav__row">
+          {prev ? (
+            <a href={`/work/${prev.parentSlug}/${prev.slug}`}>
+              <p class="project-nav__dir">Previous</p>
+              <p class="project-nav__title">{prev.title}</p>
+            </a>
+          ) : <div />}
+          {next ? (
+            <a href={`/work/${next.parentSlug}/${next.slug}`} class="text-right">
+              <p class="project-nav__dir">Next</p>
+              <p class="project-nav__title">{next.title}</p>
+            </a>
+          ) : <div />}
+        </div>
+      </nav>
+    </article>
+  </WorkGate>
+</BaseLayout>

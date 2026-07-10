@@ -1,0 +1,67 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import Reveal from "@/components/atoms/Reveal.astro";
+import SectionLabel from "@/components/atoms/SectionLabel.astro";
+import Line from "@/components/atoms/Line.astro";
+
+const elsewhere = [
+  { label: "Home", href: "/" },
+  { label: "Work", href: "/work" },
+  { label: "Lab", href: "/lab" },
+  { label: "About", href: "/about" },
+  { label: "Contact", href: "/contact" },
+];
+---
+<BaseLayout title="Not Found" description="This page wandered off. The rest of the portfolio is still behaving.">
+  <div class="page container not-found">
+    <Reveal>
+      <SectionLabel>Error 404</SectionLabel>
+    </Reveal>
+
+    <div style="height:2rem"></div>
+
+    <Reveal as="h1" class="not-found__title">
+      Well, this is awkward.
+    </Reveal>
+
+    <Reveal class="not-found__intro" delay={120}>
+      <p>I moved the page, mistyped a link, or the internet is doing improv. Pick a safer route below and we’ll pretend this never happened.</p>
+    </Reveal>
+
+    <div class="spacer-xl"></div>
+    <Line />
+    <div style="height:3rem"></div>
+
+    <Reveal>
+      <SectionLabel>Where to next</SectionLabel>
+      <div style="height:2rem"></div>
+      <div class="not-found__links">
+        {elsewhere.map((l, i) => (
+          <a class="elsewhere-link" href={l.href} style={`--reveal-delay:${i * 60}ms`}>
+            {l.label}<span class="elsewhere-link__arrow">&rarr;</span>
+          </a>
+        ))}
+      </div>
+    </Reveal>
+  </div>
+</BaseLayout>
+
+<style>
+  .not-found__title {
+    font-size: clamp(2rem, 5vw, 2.75rem);
+    line-height: 1.15;
+    letter-spacing: var(--ds-letter-spacing-display);
+    max-width: 24ch;
+  }
+  .not-found__intro {
+    margin-top: 1.5rem;
+    max-width: 36rem;
+    color: var(--ds-color-muted-fg);
+    line-height: 1.7;
+  }
+  .not-found__links {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+</style>
