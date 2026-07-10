@@ -25,20 +25,61 @@ INDEX_PATH = AI_ROOT / "index.json"
 # Curated reasoning per component. Keyed by component name (file stem).
 CONTENT: Dict[str, dict] = {
     "BaseLayout": {
-        "summary": "App shell: document head, mono typography, header/footer, and global client behaviour.",
-        "what": "Wraps every page with metadata, IBM Plex Mono, the base and editorial theme stylesheets, GridBackdrop, Header/Footer, and the small observer used for route-line drawing.",
-        "why": "Centralises page chrome and the restrained vanilla-JS behaviour so individual pages only describe content.",
-        "whenToUse": ["Wrap any new page.", "Set per-page <title> and meta description.", "Use bare=true for gated/standalone screens that should hide nav."],
-        "whenNotToUse": ["Do not import inside another component — it is a top-level layout.", "Do not re-implement route/reveal observers in a page; they already live here."],
-        "a11yNotes": ["Includes a skip link.", "Respects prefers-reduced-motion and keeps content visible without JavaScript."],
+        "summary": "App shell: document head, mono typography, route-aware companion, header/footer, and global client behaviour.",
+        "what": "Wraps every page with metadata, IBM Plex Mono, the base and editorial theme stylesheets, GridBackdrop, Header/Footer, and AadithCompanion on overview routes while keeping Work and Lab detail routes full-width.",
+        "why": "Centralises page chrome, companion visibility, and restrained vanilla-JS behaviour so individual pages only describe content.",
+        "whenToUse": ["Wrap any new page.", "Set per-page <title> and meta description.", "Use bare=true for gated/standalone screens that should hide nav and the companion.", "Override companion only when a future route needs behavior different from the route-aware default."],
+        "whenNotToUse": ["Do not import inside another component - it is a top-level layout.", "Do not re-implement route/reveal observers or companion route checks in a page; they already live here."],
+        "a11yNotes": ["Includes a skip link.", "Respects prefers-reduced-motion and keeps content visible without JavaScript.", "Project detail routes retain the full reading canvas without an adjacent chat rail."],
     },
     "BrandLockup": {
-        "summary": "Aadith's reusable nested-frame symbol and mono wordmark.",
-        "what": "Renders the original open-frame inspection mark, the uppercase AADITH wordmark in IBM Plex Mono, or both through symbol/wordmark/lockup variants.",
-        "why": "Creates a personal identity that reflects layered inspection and avoids employer-like four-square marks or a generic initials monogram.",
-        "whenToUse": ["Use the lockup in Header and Footer identity areas.", "Use wordmark-only for the oversized clipped footer signature.", "Use symbol-only for future compact branded controls."],
-        "whenNotToUse": ["Do not recreate the nested-frame SVG inline.", "Do not pair it with unrelated display fonts or multiple accent colours."],
-        "a11yNotes": ["The symbol is decorative; surrounding links or visible wordmark provide the accessible name.", "The footer display wordmark is hidden from assistive technology as repeated decoration."],
+        "summary": "Aadith's reusable Digibop wordmark.",
+        "what": "Renders the uppercase AADITH wordmark in Adobe Fonts' Digibop face with an optional class passthrough.",
+        "why": "Keeps the personal identity direct and typographic without introducing a separate logo symbol.",
+        "whenToUse": ["Use the wordmark in Header and Footer identity areas.", "Use it for the oversized clipped footer signature."],
+        "whenNotToUse": ["Do not add a separate logo symbol beside it.", "Do not pair it with unrelated display fonts or multiple accent colours."],
+        "a11yNotes": ["The visible wordmark provides the identity label inside the home link.", "The footer display wordmark is hidden from assistive technology as repeated decoration."],
+    },
+    "DecryptedText": {
+        "summary": "React Bits decryption-text atom for newly resolved companion answers.",
+        "what": "Scrambles visible characters for a short reveal, keeps the stable original text available to assistive technology, and resolves immediately when reduced motion is requested.",
+        "why": "Gives completed AI answers a clear state-change moment without making the transcript continuously animated.",
+        "whenToUse": ["Animate only a newly returned companion answer.", "Use animateOn=view so the reveal begins when the appended answer is visible."],
+        "whenNotToUse": ["Do not animate restored conversation history, user messages, errors, labels, or long-lived page copy.", "Do not bypass the reduced-motion fallback."],
+        "a11yNotes": ["The scrambled visual layer is aria-hidden while the stable original answer remains available to screen readers.", "prefers-reduced-motion shows the final text immediately."],
+        "propsOrInputs": [
+            {"name": "text", "type": "string", "required": False},
+            {"name": "speed", "type": "number", "required": False},
+            {"name": "maxIterations", "type": "number", "required": False},
+            {"name": "sequential", "type": "boolean", "required": False},
+            {"name": "revealDirection", "type": "\"start\" | \"end\" | \"center\"", "required": False},
+            {"name": "useOriginalCharsOnly", "type": "boolean", "required": False},
+            {"name": "characters", "type": "string", "required": False},
+            {"name": "className", "type": "string", "required": False},
+            {"name": "parentClassName", "type": "string", "required": False},
+            {"name": "encryptedClassName", "type": "string", "required": False},
+            {"name": "animateOn", "type": "\"view\" | \"hover\" | \"inViewHover\" | \"click\"", "required": False},
+            {"name": "clickMode", "type": "\"once\" | \"toggle\"", "required": False},
+        ],
+    },
+    "TrueFocus": {
+        "summary": "React Bits focus-frame atom for selected words in the homepage statement.",
+        "what": "Moves a token-coloured corner frame between selected words, softly blurs only the other focus words, and keeps the surrounding sentence stable.",
+        "why": "Emphasises inspect, direct, and use as a connected product-design loop without turning the full hero into continuous motion.",
+        "whenToUse": ["Use once inside the homepage Hero for a short set of meaningful words.", "Pass focusWords when connective copy should remain sharp."],
+        "whenNotToUse": ["Do not apply to paragraphs, navigation, or multiple competing areas in one viewport.", "Do not bypass the reduced-motion fallback or introduce a second accent colour."],
+        "a11yNotes": ["Includes a stable screen-reader sentence while the animated word layer is hidden from assistive technology.", "Reduced motion removes blur and hides the moving frame."],
+        "propsOrInputs": [
+            {"name": "sentence", "type": "string", "required": False},
+            {"name": "separator", "type": "string", "required": False},
+            {"name": "manualMode", "type": "boolean", "required": False},
+            {"name": "blurAmount", "type": "number", "required": False},
+            {"name": "borderColor", "type": "string", "required": False},
+            {"name": "glowColor", "type": "string", "required": False},
+            {"name": "animationDuration", "type": "number", "required": False},
+            {"name": "pauseBetweenAnimations", "type": "number", "required": False},
+            {"name": "focusWords", "type": "string[]", "required": False},
+        ],
     },
     "Line": {
         "summary": "Tokenised 1px editorial divider.",
@@ -55,6 +96,22 @@ CONTENT: Dict[str, dict] = {
         "whenToUse": ["Render once inside BaseLayout behind all non-bare and bare page content."],
         "whenNotToUse": ["Do not place it inside individual sections.", "Do not add text or interactive content to the backdrop."],
         "a11yNotes": ["Hidden from assistive technology.", "Pointer events are disabled."],
+    },
+    "LetterGlitch": {
+        "summary": "Tokenised canvas field of smoothly scrambling monospace characters.",
+        "what": "Renders a responsive, decorative character grid with configurable palette, speed, vignettes, smoothing, and character set; it pauses outside the viewport and when the document is hidden.",
+        "why": "Provides the footer with a distinctive coded signal texture without adding React or another animation dependency to the static Astro runtime.",
+        "whenToUse": ["Use as a bounded decorative layer inside an organism such as the Footer signal panel.", "Use orange design-system tokens for the portfolio treatment."],
+        "whenNotToUse": ["Do not place behind body copy or interactive controls.", "Do not use as meaningful content because the canvas is hidden from assistive technology.", "Do not introduce a second competing accent palette."],
+        "a11yNotes": ["Always hidden from assistive technology.", "Renders a static field when prefers-reduced-motion is enabled.", "Animation pauses when off-screen or when the document is hidden."],
+    },
+    "PixelTransition": {
+        "summary": "Dependency-free pixel-cover transition for swapping two visual layers.",
+        "what": "Builds a configurable square grid and reveals or hides pixel cells in randomized order before swapping the default and active layers; it supports controlled use, an initially active layer, keyboard/touch activation, and reduced motion.",
+        "why": "Recreates the React Bits pixel transition in the portfolio's static Astro runtime without adding React or GSAP, while keeping the orange transition reusable.",
+        "whenToUse": ["Use for bounded image or visual swaps where pixelation adds meaning.", "Use controlled mode inside HoverRevealList for project thumbnails."],
+        "whenNotToUse": ["Do not apply to body text or essential content.", "Do not stack multiple pixel transitions in the same viewport.", "Do not introduce colors outside the design-system accent family."],
+        "a11yNotes": ["Controlled decorative previews remain hidden from assistive technology.", "Standalone mode supports focus and touch activation.", "Reduced motion swaps content immediately without animating pixels."],
     },
     "Reveal": {
         "summary": "Semantic wrapper retained for optional restrained entrance behaviour.",
@@ -81,12 +138,12 @@ CONTENT: Dict[str, dict] = {
         "a11yNotes": ["Uses semantic blockquote/cite for quotes and an ordered list for framework steps.", "Placeholder blocks carry the section title as visible text."],
     },
     "HoverRevealList": {
-        "summary": "Numbered, hover-aware list of work projects linking to case studies.",
-        "what": "Maps `projects` to numbered rows (index, title, category, year) each linking to /work/<slug>, with reveal stagger.",
-        "why": "The shared 'selected work' / work-index list, so the homepage and Work page stay identical.",
-        "whenToUse": ["List work projects on the home and Work pages.", "Show a compact, scannable index of case studies."],
+        "summary": "Numbered work index with a persistent left thumbnail and orange pixel swaps.",
+        "what": "Maps `projects` to linked rows (index, title, category, year) beside a static media column; fine-pointer hover or keyboard focus updates that thumbnail while PixelTransition covers each image swap in orange.",
+        "why": "Keeps the homepage and Work index scannable while giving imagery a stable grid position instead of letting previews float over content.",
+        "whenToUse": ["List work projects on the home and Work pages.", "Show an image-led index that rewards hover without depending on it."],
         "whenNotToUse": ["Do not use for Lab projects — use LabCard grid.", "Do not duplicate the row markup elsewhere."],
-        "a11yNotes": ["Each row is a single anchor with readable text order.", "Numbers are decorative context, not list semantics."],
+        "a11yNotes": ["Each row remains a single anchor with readable text order.", "The persistent preview is decorative; coarse pointers retain the first static thumbnail.", "Missing thumbnails use an explicit visual placeholder until the configured asset arrives."],
     },
     "LabCard": {
         "summary": "Ranked editorial row for a shortlisted Lab project.",
@@ -95,6 +152,14 @@ CONTENT: Dict[str, dict] = {
         "whenToUse": ["Render one of the five showcase Lab projects.", "Preview a project with its rank, theme, and first screenshot."],
         "whenNotToUse": ["Do not use for work case studies (use HoverRevealList).", "Do not embed full screenshot galleries here — that is the detail page."],
         "a11yNotes": ["Thumbnails are lazy-loaded with descriptive alt text.", "Status conveyed by badge text, not colour alone."],
+    },
+    "WorkingLoopMap": {
+        "summary": "Linked working-loop diagram for the Lab overview.",
+        "what": "Maps context into questions and evidence, converges them in a prototype, then moves through testing and learning with links to relevant portfolio examples.",
+        "why": "Explains the reasoning loop behind the Lab experiments without making the global footer carry page-specific process content.",
+        "whenToUse": ["Place once on the Lab overview between the summary and shortlisted projects."],
+        "whenNotToUse": ["Do not duplicate it in the global footer.", "Do not use it as generic navigation on unrelated pages."],
+        "a11yNotes": ["The SVG has a descriptive title and description.", "Every node is a labelled link with visible text."],
     },
     "FeaturedWork": {
         "summary": "Homepage 'Selected Work' organism: section label plus the featured project list.",
@@ -105,16 +170,24 @@ CONTENT: Dict[str, dict] = {
         "a11yNotes": ["Inherits list semantics from HoverRevealList."],
     },
     "Footer": {
-        "summary": "Global footer with an interactive network diagram, identity, social links, and secondary nav.",
-        "what": "Renders a linked working model where context branches into questions and evidence, converges in a prototype, moves through testing, and loops back as learning.",
-        "why": "Keeps the original network-like visual character while making every relationship and destination meaningful.",
+        "summary": "Global footer with a full-canvas orange glitch signature, identity, social links, and secondary nav.",
+        "what": "Renders a borderless LetterGlitch field across the footer canvas behind the oversized AADITH signature, followed by compact identity, social links, and secondary navigation.",
+        "why": "Closes every route with one memorable coded signal while keeping the page-specific working-loop diagram in Lab.",
         "whenToUse": ["Rendered automatically by BaseLayout."],
         "whenNotToUse": ["Do not import directly into pages.", "Hidden on bare/gated layouts by design."],
-        "a11yNotes": ["Uses contentinfo landmark via <footer>.", "Links have discernible text."],
+        "a11yNotes": ["Uses contentinfo landmark via <footer>.", "Links have discernible text.", "The animated signature is decorative, hidden from assistive technology, and static under reduced motion."],
+    },
+    "AadithCompanion": {
+        "summary": "Playful public-context portfolio sidekick with a responsive drawer fallback.",
+        "what": "Renders the persistent desktop sidekick, mobile Ask about Aadith trigger, transcript, grounded source links, prompt suggestions, composer, loading state, and sessionStorage-backed client behavior.",
+        "why": "Lets recruiters, collaborators, and investors ask focused questions without interrupting full-width Work and Lab case-study reading.",
+        "whenToUse": ["Render through BaseLayout on overview and editorial routes.", "Keep answers grounded through the configured secure Azure endpoint."],
+        "whenNotToUse": ["Do not render directly inside pages.", "Do not show it on Work or Lab detail routes.", "Do not place Azure credentials or private context in PUBLIC environment variables."],
+        "a11yNotes": ["Uses an aside landmark and aria-live transcript.", "The mobile drawer supports Escape, focus containment, explicit labels, and reduced motion.", "Model output is rendered as text and links come only from validated server sources."],
     },
     "Header": {
-        "summary": "Static mono editorial header with Aadith's custom brand lockup and wrapping primary navigation.",
-        "what": "Renders the nested-frame BrandLockup and nav from data/navigation; links wrap directly on small screens instead of opening a menu overlay.",
+        "summary": "Static mono editorial header with Aadith's wordmark and wrapping primary navigation.",
+        "what": "Renders the AADITH wordmark and nav from data/navigation; links wrap directly on small screens instead of opening a menu overlay.",
         "why": "Single source for navigation across the site.",
         "whenToUse": ["Rendered automatically by BaseLayout."],
         "whenNotToUse": ["Do not import directly into pages.", "Do not hard-code nav links — edit data/navigation."],
@@ -122,11 +195,11 @@ CONTENT: Dict[str, dict] = {
     },
     "Hero": {
         "summary": "Homepage hero: compact mono positioning and role line.",
-        "what": "Renders Aadith's AI-product positioning with a technical eyebrow and role context, leaving the landing page intentionally free of project screenshots.",
+        "what": "Renders Aadith's AI-product positioning with a technical eyebrow and role context, using TrueFocus to connect inspect, direct, and use while leaving the landing page free of project screenshots.",
         "why": "Sets the research-lab tone without prematurely privileging one Lab project.",
         "whenToUse": ["Top of the homepage only."],
         "whenNotToUse": ["Do not reuse as a generic page header — use the page-header pattern."],
-        "a11yNotes": ["Headline is a real h1.", "Motion is opacity/transform only."],
+        "a11yNotes": ["Headline is a real h1 with stable screen-reader and no-JavaScript text.", "The focus effect removes blur and its moving frame when reduced motion is requested."],
     },
     "DottedIndiaMap": {
         "summary": "Accurate dotted India map with the Kashmir-to-Kanyakumari cycling route.",
@@ -183,9 +256,10 @@ PROP_LINE_RE = re.compile(r"^\s*(?:/\*\*.*?\*/\s*)?([A-Za-z_][A-Za-z0-9_]*)(\??)
 
 def find_source(name: str) -> Path | None:
     for sub in ("components/atoms", "components/molecules", "components/organisms", "layouts"):
-        p = SRC_ROOT / sub / f"{name}.astro"
-        if p.exists():
-            return p
+        for extension in (".astro", ".tsx", ".jsx", ".js"):
+            p = SRC_ROOT / sub / f"{name}{extension}"
+            if p.exists():
+                return p
     return None
 
 
@@ -243,6 +317,7 @@ def main() -> None:
         info = comps.get(path, {})
         dep_names = [Path(d).stem for d in info.get("localComponentDependencies", [])]
         data_deps = [Path(d).stem for d in info.get("localDataDependencies", [])]
+        source_kind = "React" if Path(path).suffix in {".js", ".jsx", ".tsx"} else "Astro"
         meta = {
             "name": name,
             "path": path,
@@ -252,14 +327,14 @@ def main() -> None:
             "why": content["why"],
             "whenToUse": content["whenToUse"],
             "whenNotToUse": content["whenNotToUse"],
-            "propsOrInputs": props,
+            "propsOrInputs": content.get("propsOrInputs", props),
             "componentDependencies": sorted(set(dep_names)),
             "dataDependencies": sorted(set(data_deps)),
             "usedBy": sorted(set(used_by.get(path, []))),
             "a11yNotes": content["a11yNotes"],
             "version": "0.3.0",
             "lastUpdated": today,
-            "source": "Generated from Astro source + design-system/ai/index.json by component-metadata.py.",
+            "source": f"Generated from {source_kind} source + design-system/ai/index.json by component-metadata.py.",
         }
         (META_ROOT / f"{name}.json").write_text(json.dumps(meta, indent=2) + "\n", encoding="utf-8")
         written += 1

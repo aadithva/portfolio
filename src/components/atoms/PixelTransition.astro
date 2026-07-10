@@ -1,0 +1,340 @@
+---
+interface Props {
+  gridSize?: number;
+  pixelColor?: string;
+  animationStepDuration?: number;
+  aspectRatio?: string;
+  once?: boolean;
+  controlled?: boolean;
+  initiallyActive?: boolean;
+  class?: string;
+  ariaLabel?: string;
+}
+
+const {
+  gridSize = 7,
+  pixelColor = "currentColor",
+  animationStepDuration = 0.3,
+  aspectRatio = "1 / 1",
+  once = false,
+  controlled = false,
+  initiallyActive = false,
+  class: className,
+  ariaLabel = "Toggle preview",
+} = Astro.props;
+
+const safeGridSize = Number.isFinite(gridSize)
+  ? Math.min(16, Math.max(2, Math.round(gridSize)))
+  : 7;
+const safeDuration = Number.isFinite(animationStepDuration)
+  ? Math.max(0.08, animationStepDuration)
+  : 0.3;
+---
+
+<div
+  class:list={["pixel-transition", className]}
+  data-pixel-transition
+  data-grid-size={safeGridSize}
+  data-pixel-color={pixelColor}
+  data-duration={safeDuration}
+  data-once={String(once)}
+  data-controlled={String(controlled)}
+  data-initially-active={String(initiallyActive)}
+  data-aspect-ratio={aspectRatio}
+  role={controlled ? undefined : "button"}
+  tabindex={controlled ? undefined : "0"}
+  aria-label={controlled ? undefined : ariaLabel}
+>
+  <div
+    class="pixel-transition__default"
+    data-pixel-default
+    aria-hidden={String(initiallyActive)}
+  >
+    <slot name="first" />
+  </div>
+  <div
+    class="pixel-transition__active"
+    data-pixel-active
+    aria-hidden={String(!initiallyActive)}
+  >
+    <slot name="second" />
+  </div>
+  <div
+    class="pixel-transition__pixels"
+    data-pixel-grid
+    aria-hidden="true"
+  ></div>
+</div>
+
+<style>
+  .pixel-transition {
+    position: relative;
+    width: 100%;
+    aspect-ratio: var(--pixel-aspect-ratio, 1 / 1);
+    overflow: hidden;
+    background: var(--ds-color-muted);
+    color: var(--ds-color-foreground);
+  }
+
+  .pixel-transition__default,
+  .pixel-transition__active,
+  .pixel-transition__pixels {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .pixel-transition__active {
+    z-index: 1;
+    display: none;
+  }
+
+  .pixel-transition[data-initially-active="true"] .pixel-transition__default {
+    display: none;
+  }
+
+  .pixel-transition[data-initially-active="true"] .pixel-transition__active {
+    display: block;
+  }
+
+  .pixel-transition__pixels {
+    z-index: 2;
+    display: grid;
+    grid-template-columns: repeat(var(--pixel-grid-size, 7), minmax(0, 1fr));
+    grid-template-rows: repeat(var(--pixel-grid-size, 7), minmax(0, 1fr));
+    pointer-events: none;
+  }
+
+  :global(.pixel-transition__pixel) {
+    background: var(--pixel-color, currentColor);
+    opacity: 0;
+  }
+</style>
+
+<script>
+  interface PixelTransitionController {
+    show: () => Promise<void>;
+    hide: () => Promise<void>;
+    swap: (update: () => void) => Promise<void>;
+    isActive: () => boolean;
+  }
+
+  interface PixelTransitionRoot extends HTMLElement {
+    pixelTransition?: PixelTransitionController;
+    pixelTransitionCleanup?: () => void;
+  }
+
+  const shuffle = <Item,>(items: Item[]) => {
+    const shuffled = [...items];
+    for (let index = shuffled.length - 1; index > 0; index -= 1) {
+      const swapIndex = Math.floor(Math.random() * (index + 1));
+      [shuffled[index], shuffled[swapIndex]] = [
+        shuffled[swapIndex],
+        shuffled[index],
+      ];
+    }
+    return shuffled;
+  };
+
+  const initializePixelTransition = (root: PixelTransitionRoot) => {
+    if (root.dataset.pixelTransitionReady === "true") return;
+
+    const defaultLayer = root.querySelector<HTMLElement>(
+      "[data-pixel-default]"
+    );
+    const activeLayer = root.querySelector<HTMLElement>("[data-pixel-active]");
+    const pixelGrid = root.querySelector<HTMLElement>("[data-pixel-grid]");
+    if (!defaultLayer || !activeLayer || !pixelGrid) return;
+
+    root.dataset.pixelTransitionReady = "true";
+
+    const gridSize = Math.max(2, Number(root.dataset.gridSize) || 7);
+    const duration = Math.max(80, (Number(root.dataset.duration) || 0.3) * 1000);
+    const pixelColor = root.dataset.pixelColor || "currentColor";
+    const aspectRatio = root.dataset.aspectRatio || "1 / 1";
+    const once = root.dataset.once === "true";
+    const controlled = root.dataset.controlled === "true";
+    const reduceMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)"
+    );
+
+    root.style.setProperty("--pixel-grid-size", String(gridSize));
+    root.style.setProperty("--pixel-color", pixelColor);
+    root.style.setProperty("--pixel-aspect-ratio", aspectRatio);
+
+    pixelGrid.replaceChildren();
+    const fragment = document.createDocumentFragment();
+    for (let index = 0; index < gridSize * gridSize; index += 1) {
+      const pixel = document.createElement("span");
+      pixel.className = "pixel-transition__pixel";
+      fragment.appendChild(pixel);
+    }
+    pixelGrid.appendChild(fragment);
+
+    const pixels = Array.from(
+      pixelGrid.querySelectorAll<HTMLElement>(".pixel-transition__pixel")
+    );
+    const listeners = new AbortController();
+    let active = root.dataset.initiallyActive === "true";
+    let transitionToken = 0;
+    let animations: Animation[] = [];
+
+    const cancelAnimations = () => {
+      animations.forEach((animation) => animation.cancel());
+      animations = [];
+    };
+
+    const setLayers = (activate: boolean) => {
+      active = activate;
+      activeLayer.style.display = activate ? "block" : "none";
+      activeLayer.setAttribute("aria-hidden", String(!activate));
+      defaultLayer.setAttribute("aria-hidden", String(activate));
+    };
+
+    setLayers(active);
+
+    const runPixelPhase = async (
+      revealPixels: boolean,
+      token: number
+    ): Promise<boolean> => {
+      const orderedPixels = shuffle(pixels);
+      const stagger = duration / Math.max(1, orderedPixels.length);
+      const from = revealPixels ? 0 : 1;
+      const to = revealPixels ? 1 : 0;
+
+      orderedPixels.forEach((pixel) => {
+        pixel.style.opacity = String(from);
+      });
+
+      animations = orderedPixels.map((pixel, index) =>
+        pixel.animate([{ opacity: from }, { opacity: to }], {
+          duration: 1,
+          delay: index * stagger,
+          fill: "forwards",
+          easing: "steps(1, end)",
+        })
+      );
+
+      await Promise.allSettled(
+        animations.map((animation) => animation.finished)
+      );
+      if (token !== transitionToken) return false;
+
+      orderedPixels.forEach((pixel) => {
+        pixel.style.opacity = String(to);
+      });
+      cancelAnimations();
+      return true;
+    };
+
+    const transition = async (
+      activate: boolean,
+      update?: () => void
+    ): Promise<void> => {
+      if (!update && activate === active) return;
+      if (!activate && once && active) return;
+
+      transitionToken += 1;
+      const token = transitionToken;
+      cancelAnimations();
+
+      if (reduceMotion.matches) {
+        update?.();
+        setLayers(activate);
+        pixels.forEach((pixel) => {
+          pixel.style.opacity = "0";
+        });
+        return;
+      }
+
+      const covered = await runPixelPhase(true, token);
+      if (!covered) return;
+
+      update?.();
+      setLayers(activate);
+
+      const uncovered = await runPixelPhase(false, token);
+      if (!uncovered) return;
+
+      root.dispatchEvent(
+        new CustomEvent("pixel-transition:complete", {
+          detail: { active },
+        })
+      );
+    };
+
+    root.pixelTransition = {
+      show: () => transition(true),
+      hide: () => transition(false),
+      swap: (update) => transition(true, update),
+      isActive: () => active,
+    };
+
+    if (!controlled) {
+      const coarsePointer = window.matchMedia(
+        "(pointer: coarse), (hover: none)"
+      );
+
+      root.addEventListener(
+        "pointerenter",
+        () => {
+          if (!coarsePointer.matches) void root.pixelTransition?.show();
+        },
+        { signal: listeners.signal }
+      );
+      root.addEventListener(
+        "pointerleave",
+        () => {
+          if (!coarsePointer.matches) void root.pixelTransition?.hide();
+        },
+        { signal: listeners.signal }
+      );
+      root.addEventListener(
+        "click",
+        () => {
+          if (!coarsePointer.matches) return;
+          if (active) {
+            void root.pixelTransition?.hide();
+          } else {
+            void root.pixelTransition?.show();
+          }
+        },
+        { signal: listeners.signal }
+      );
+      root.addEventListener(
+        "focus",
+        () => void root.pixelTransition?.show(),
+        { signal: listeners.signal }
+      );
+      root.addEventListener(
+        "blur",
+        () => void root.pixelTransition?.hide(),
+        { signal: listeners.signal }
+      );
+    }
+
+    root.pixelTransitionCleanup = () => {
+      transitionToken += 1;
+      cancelAnimations();
+      listeners.abort();
+      delete root.pixelTransition;
+      delete root.pixelTransitionCleanup;
+      delete root.dataset.pixelTransitionReady;
+    };
+  };
+
+  const initializeAllPixelTransitions = () => {
+    document
+      .querySelectorAll<PixelTransitionRoot>("[data-pixel-transition]")
+      .forEach(initializePixelTransition);
+  };
+
+  initializeAllPixelTransitions();
+  document.addEventListener("astro:page-load", initializeAllPixelTransitions);
+  document.addEventListener("astro:before-swap", () => {
+    document
+      .querySelectorAll<PixelTransitionRoot>("[data-pixel-transition]")
+      .forEach((root) => root.pixelTransitionCleanup?.());
+  });
+</script>

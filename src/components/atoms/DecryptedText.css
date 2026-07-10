@@ -1,0 +1,14 @@
+.decrypted-text {
+  display: inline;
+  white-space: pre-wrap;
+  font-variant-ligatures: none;
+}
+
+.decrypted-text__revealed {
+  color: inherit;
+}
+
+.decrypted-text__encrypted {
+  color: var(--ds-color-accent-ink);
+  opacity: 0.72;
+}

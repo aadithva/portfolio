@@ -1,0 +1,28 @@
+{
+  "name": "WorkingLoopMap",
+  "path": "src/components/molecules/WorkingLoopMap.astro",
+  "tier": "molecule",
+  "summary": "Linked working-loop diagram for the Lab overview.",
+  "what": "Maps context into questions and evidence, converges them in a prototype, then moves through testing and learning with links to relevant portfolio examples.",
+  "why": "Explains the reasoning loop behind the Lab experiments without making the global footer carry page-specific process content.",
+  "whenToUse": [
+    "Place once on the Lab overview between the summary and shortlisted projects."
+  ],
+  "whenNotToUse": [
+    "Do not duplicate it in the global footer.",
+    "Do not use it as generic navigation on unrelated pages."
+  ],
+  "propsOrInputs": [],
+  "componentDependencies": [],
+  "dataDependencies": [],
+  "usedBy": [
+    "route /lab"
+  ],
+  "a11yNotes": [
+    "The SVG has a descriptive title and description.",
+    "Every node is a labelled link with visible text."
+  ],
+  "version": "0.3.0",
+  "lastUpdated": "2026-07-10",
+  "source": "Generated from Astro source + design-system/ai/index.json by component-metadata.py."
+}

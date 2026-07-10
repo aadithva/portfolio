@@ -1,0 +1,99 @@
+.true-focus-mount {
+  display: block;
+}
+
+.true-focus {
+  position: relative;
+  display: flex;
+  width: fit-content;
+  max-width: 100%;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.08em 0.34em;
+  outline: none;
+  user-select: none;
+}
+
+.true-focus__word {
+  position: relative;
+  display: inline-block;
+  cursor: default;
+  will-change: filter;
+}
+
+.true-focus__word--manual {
+  cursor: pointer;
+}
+
+.true-focus__frame {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  box-sizing: border-box;
+  border: 0;
+  pointer-events: none;
+  will-change: transform, width, height, opacity;
+}
+
+.true-focus__corner {
+  position: absolute;
+  width: 0.52em;
+  height: 0.52em;
+  border: 2px solid var(--border-color, currentColor);
+  border-radius: 1px;
+  filter:
+    drop-shadow(0 0 3px var(--glow-color, currentColor))
+    drop-shadow(0 0 1px var(--border-color, currentColor));
+}
+
+.true-focus__corner--top-left {
+  top: -0.22em;
+  left: -0.22em;
+  border-right: 0;
+  border-bottom: 0;
+}
+
+.true-focus__corner--top-right {
+  top: -0.22em;
+  right: -0.22em;
+  border-bottom: 0;
+  border-left: 0;
+}
+
+.true-focus__corner--bottom-left {
+  bottom: -0.22em;
+  left: -0.22em;
+  border-top: 0;
+  border-right: 0;
+}
+
+.true-focus__corner--bottom-right {
+  right: -0.22em;
+  bottom: -0.22em;
+  border-top: 0;
+  border-left: 0;
+}
+
+.true-focus__sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .true-focus__word {
+    filter: none !important;
+    transition: none !important;
+  }
+
+  .true-focus__frame {
+    display: none;
+  }
+}

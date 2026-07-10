@@ -3,13 +3,11 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
 import Reveal from "@/components/atoms/Reveal.astro";
 import Line from "@/components/atoms/Line.astro";
 import DottedIndiaMap from "@/components/molecules/DottedIndiaMap.astro";
-
-const stats = [
-  { value: "4,000 km", label: "One very long ride" },
-  { value: "16 days", label: "Days on the road" },
-  { value: "~150", label: "Riders in the expedition" },
-  { value: "2× India", label: "Long-distance crossings" },
-];
+import {
+  adventureRoute,
+  adventureStats,
+  adventureStory,
+} from "@/data/adventures";
 ---
 <BaseLayout title="Adventures" description="Two India-scale cycling journeys, including a government-supported Kashmir-to-Kanyakumari ride in 2025.">
   <div class="page container">
@@ -29,9 +27,7 @@ const stats = [
       <div class="spacer-xl"></div>
 
       <Reveal class="prose" delay={50}>
-        <p>I've cycled across India twice. The first was a more independent journey from Kerala toward Kashmir while I was younger. The second, in 2025, was Kashmir to Kanyakumari — roughly 4,000 km in 16 days — as part of the government-supported Ride for Unity expedition. I represented Kerala among about 150 riders, with several stages stretching past 200 km.</p>
-        <p>At that distance, every day becomes surprisingly practical: eat, pedal, solve the next small problem, repeat. I learned how long a headwind can feel, how quickly confidence disappears when a climb appears around the corner, and how an impossible-looking route eventually becomes a collection of very ordinary kilometres.</p>
-        <p>I used to tell this story as proof of discipline. These days I think it is also proof that I am stubborn and had a good team around me. Design is not cycling, but both reward the same habit: stop dramatizing the whole distance and solve the next bit well.</p>
+        {adventureStory.map((paragraph) => <p>{paragraph}</p>)}
       </Reveal>
 
       <div class="spacer-xl"></div>
@@ -39,7 +35,7 @@ const stats = [
       <div style="height:3rem"></div>
 
       <div class="stat-grid">
-        {stats.map((s, i) => (
+        {adventureStats.map((s, i) => (
           <Reveal delay={i * 80}>
             <p class="stat__value">{s.value}</p>
             <p class="stat__label">{s.label}</p>
@@ -58,19 +54,19 @@ const stats = [
         <dl class="route-card__facts">
           <div>
             <dt>Start</dt>
-            <dd>Kashmir</dd>
+            <dd>{adventureRoute.start}</dd>
           </div>
           <div>
             <dt>Finish</dt>
-            <dd>Kanyakumari</dd>
+            <dd>{adventureRoute.finish}</dd>
           </div>
           <div>
             <dt>Distance</dt>
-            <dd>4,000 km</dd>
+            <dd>{adventureRoute.distance}</dd>
           </div>
           <div>
             <dt>Time</dt>
-            <dd>16 days</dd>
+            <dd>{adventureRoute.time}</dd>
           </div>
         </dl>
       </div>

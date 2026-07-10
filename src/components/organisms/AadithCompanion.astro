@@ -1,0 +1,630 @@
+---
+import { companionSuggestions } from "@/data/companion";
+
+const productionEndpoint =
+  "https://ca-flowsense-processor.nicepond-68f95730.eastus.azurecontainerapps.io/api/aadith-chat";
+const endpointOverride =
+  import.meta.env.PUBLIC_AADITH_CHAT_ENDPOINT?.trim() || "";
+const usesProductionFallback = !endpointOverride && import.meta.env.PROD;
+const endpoint =
+  endpointOverride || (usesProductionFallback ? productionEndpoint : "");
+---
+
+<aside
+  class="aadith-companion"
+  aria-label="Ask about Aadith"
+  data-companion
+  data-endpoint={endpoint}
+  data-default-endpoint={usesProductionFallback ? "true" : undefined}
+>
+  <button
+    class="companion-trigger"
+    type="button"
+    aria-label="Ask about Aadith"
+    aria-expanded="false"
+    aria-controls="aadith-companion-panel"
+    data-companion-open
+  >
+    <span class="companion-trigger__full">Ask about Aadith</span>
+    <span class="companion-trigger__compact" aria-hidden="true">Ask</span>
+  </button>
+
+  <button
+    class="companion-scrim"
+    type="button"
+    tabindex="-1"
+    aria-label="Close Aadith companion"
+    aria-hidden="true"
+    data-companion-scrim
+  ></button>
+
+  <div
+    class="companion-panel"
+    id="aadith-companion-panel"
+    aria-hidden="false"
+    data-companion-panel
+  >
+    <header class="companion-header">
+      <div>
+        <p class="companion-kicker">Aadith's sidekick</p>
+        <h2 class="companion-title">Ask about Aadith</h2>
+      </div>
+      <button
+        class="companion-close"
+        type="button"
+        aria-label="Close companion"
+        data-companion-close
+      >
+        Close
+      </button>
+    </header>
+
+    <div
+      class="companion-transcript"
+      role="log"
+      aria-live="polite"
+      aria-relevant="additions"
+      data-companion-transcript
+    >
+      <article class="companion-message companion-message--assistant">
+        <p class="companion-message__role">Companion</p>
+        <p class="companion-message__body">
+          Hey, I know this portfolio pretty well. Ask me what Aadith builds, how
+          he thinks, or which rabbit hole to open first. I stick to the public
+          evidence here.
+        </p>
+      </article>
+    </div>
+
+    <div class="companion-suggestions" data-companion-suggestions>
+      <p class="companion-suggestions__label">Try asking</p>
+      {companionSuggestions.map((suggestion) => (
+        <button
+          class="companion-suggestion"
+          type="button"
+          data-companion-suggestion
+          data-question={suggestion}
+        >
+          {suggestion}
+        </button>
+      ))}
+    </div>
+
+    <form class="companion-form" data-companion-form>
+      <label class="companion-form__label" for="aadith-companion-question">
+        Your question
+      </label>
+      <textarea
+        class="companion-input"
+        id="aadith-companion-question"
+        name="question"
+        rows="2"
+        maxlength="600"
+        autocomplete="off"
+        placeholder="Ask about his work, process, or projects"
+        data-companion-input
+      ></textarea>
+      <div class="companion-form__footer">
+        <p class="companion-form__status" data-companion-status>
+          Public portfolio context only
+        </p>
+        <button class="companion-submit" type="submit" data-companion-submit>
+          Send
+        </button>
+      </div>
+    </form>
+  </div>
+</aside>
+
+<script>
+  const STORAGE_KEY = "aadith-companion-session-v1";
+  const MAX_STORED_MESSAGES = 10;
+  const MAX_REQUEST_MESSAGES = 8;
+  const MAX_REQUEST_CHARS = 3600;
+  const TRUNCATION_MARKER = "\n[Earlier answer shortened]\n";
+
+  const companion = document.querySelector("[data-companion]");
+
+  if (companion instanceof HTMLElement) {
+    const fallbackOrigins = new Set([
+      "https://aadithva.com",
+      "https://www.aadithva.com",
+      "http://localhost:4321",
+      "http://127.0.0.1:4321",
+    ]);
+    const usesDefaultEndpoint = companion.dataset.defaultEndpoint === "true";
+    const endpoint =
+      usesDefaultEndpoint && !fallbackOrigins.has(window.location.origin)
+        ? ""
+        : companion.dataset.endpoint ?? "";
+    const panel = companion.querySelector("[data-companion-panel]");
+    const transcript = companion.querySelector("[data-companion-transcript]");
+    const suggestions = companion.querySelector("[data-companion-suggestions]");
+    const form = companion.querySelector("[data-companion-form]");
+    const input = companion.querySelector("[data-companion-input]");
+    const submit = companion.querySelector("[data-companion-submit]");
+    const status = companion.querySelector("[data-companion-status]");
+    const openButton = companion.querySelector("[data-companion-open]");
+    const closeButton = companion.querySelector("[data-companion-close]");
+    const scrim = companion.querySelector("[data-companion-scrim]");
+    const backgroundElements = Array.from(
+      document.querySelectorAll("[data-companion-background]")
+    ).filter((element) => element instanceof HTMLElement);
+    const mobileQuery = window.matchMedia("(max-width: 1179px)");
+
+    const initialMessage = {
+      role: "assistant",
+      content:
+        "Hey, I know this portfolio pretty well. Ask me what Aadith builds, how he thinks, or which rabbit hole to open first. I stick to the public evidence here.",
+      sources: [],
+      includeInRequest: false,
+    };
+
+    let messages = [initialMessage];
+    let pending = false;
+    let animationRoots = [];
+    let decryptRuntime;
+
+    const loadDecryptRuntime = () => {
+      decryptRuntime ??= Promise.all([
+        import("react"),
+        import("react-dom/client"),
+        import("@/components/atoms/DecryptedText.js"),
+      ]);
+      return decryptRuntime;
+    };
+
+    const mountDecryptedAnswer = async (body, text) => {
+      const [
+        { createElement },
+        { createRoot },
+        { default: DecryptedText },
+      ] = await loadDecryptRuntime();
+
+      if (!body.isConnected) return;
+      body.replaceChildren();
+
+      const root = createRoot(body);
+      animationRoots.push(root);
+      root.render(
+        createElement(DecryptedText, {
+          text,
+          speed: 28,
+          maxIterations: 9,
+          sequential: false,
+          revealDirection: "start",
+          characters: "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789<>/{}[]",
+          parentClassName: "decrypted-text",
+          className: "decrypted-text__revealed",
+          encryptedClassName: "decrypted-text__encrypted",
+          animateOn: "view",
+        })
+      );
+    };
+
+    const setStatus = (message) => {
+      if (status) status.textContent = message;
+    };
+
+    const setPending = (value) => {
+      pending = value;
+      if (input instanceof HTMLTextAreaElement) {
+        input.readOnly = value;
+        input.setAttribute("aria-busy", String(value));
+      }
+      if (submit instanceof HTMLButtonElement) submit.disabled = value;
+      companion.toggleAttribute("data-pending", value);
+      setStatus(value ? "Digging through the public portfolio" : "Public portfolio context only");
+    };
+
+    const saveMessages = () => {
+      try {
+        sessionStorage.setItem(
+          STORAGE_KEY,
+          JSON.stringify(
+            messages
+              .slice(-MAX_STORED_MESSAGES)
+              .map(({ role, content, sources, includeInRequest }) => ({
+                role,
+                content,
+                sources,
+                includeInRequest,
+              }))
+          )
+        );
+      } catch {
+        setStatus("This browser could not save the conversation");
+      }
+    };
+
+    const isValidSource = (source) =>
+      source &&
+      typeof source.id === "string" &&
+      typeof source.title === "string" &&
+      typeof source.path === "string" &&
+      source.path.startsWith("/") &&
+      typeof source.category === "string";
+
+    const isValidStoredMessage = (message) =>
+      message &&
+      (message.role === "user" || message.role === "assistant") &&
+      typeof message.content === "string" &&
+      message.content.length > 0 &&
+      (message.includeInRequest === undefined ||
+        typeof message.includeInRequest === "boolean") &&
+      (!message.sources ||
+        (Array.isArray(message.sources) && message.sources.every(isValidSource)));
+
+    const shortenAssistantMessage = (content, limit) => {
+      if (content.length <= limit) return content;
+      if (limit <= TRUNCATION_MARKER.length) return content.slice(0, limit);
+
+      const available = limit - TRUNCATION_MARKER.length;
+      const headLength = Math.ceil(available * 0.6);
+      const tailLength = available - headLength;
+      return `${content.slice(0, headLength)}${TRUNCATION_MARKER}${content.slice(-tailLength)}`;
+    };
+
+    const buildRequestMessages = () => {
+      const eligible = messages.filter(
+        (message) =>
+          (message.role === "user" || message.role === "assistant") &&
+          message.includeInRequest !== false
+      );
+      const selected = [];
+      let remaining = MAX_REQUEST_CHARS;
+
+      for (
+        let index = eligible.length - 1;
+        index >= 0 && selected.length < MAX_REQUEST_MESSAGES;
+        index -= 1
+      ) {
+        const message = eligible[index];
+        const content = message.content.trim();
+        if (!content) continue;
+
+        if (content.length <= remaining) {
+          selected.unshift({ role: message.role, content });
+          remaining -= content.length;
+          continue;
+        }
+
+        if (message.role === "assistant" && remaining > 0) {
+          selected.unshift({
+            role: message.role,
+            content: shortenAssistantMessage(content, remaining),
+          });
+        }
+        break;
+      }
+
+      return selected;
+    };
+
+    const restoreMessages = () => {
+      try {
+        const raw = sessionStorage.getItem(STORAGE_KEY);
+        if (!raw) return;
+        const stored = JSON.parse(raw);
+        if (!Array.isArray(stored)) return;
+        const valid = stored.filter(isValidStoredMessage).slice(-MAX_STORED_MESSAGES);
+        if (valid.length > 0) messages = valid;
+      } catch {
+        sessionStorage.removeItem(STORAGE_KEY);
+      }
+    };
+
+    const createMessageElement = (message) => {
+      const article = document.createElement("article");
+      article.className = `companion-message companion-message--${message.role}`;
+
+      const role = document.createElement("p");
+      role.className = "companion-message__role";
+      role.textContent = message.role === "user" ? "You" : "Companion";
+
+      const body = document.createElement("p");
+      body.className = "companion-message__body";
+
+      if (message.role === "assistant" && message.animate === true) {
+        body.textContent = message.content;
+        void mountDecryptedAnswer(body, message.content);
+      } else {
+        body.textContent = message.content;
+      }
+
+      article.append(role, body);
+
+      if (Array.isArray(message.sources) && message.sources.length > 0) {
+        const sourceList = document.createElement("div");
+        sourceList.className = "companion-sources";
+
+        const sourceLabel = document.createElement("p");
+        sourceLabel.className = "companion-sources__label";
+        sourceLabel.textContent = "Related";
+        sourceList.append(sourceLabel);
+
+        message.sources.filter(isValidSource).slice(0, 3).forEach((source) => {
+          const link = document.createElement("a");
+          link.className = "companion-source";
+          link.href = source.path;
+          link.textContent = source.title;
+          sourceList.append(link);
+        });
+
+        article.append(sourceList);
+      }
+
+      return article;
+    };
+
+    const renderMessages = () => {
+      if (!(transcript instanceof HTMLElement)) return;
+      animationRoots.forEach((root) => root.unmount());
+      animationRoots = [];
+      const elements = messages.map(createMessageElement);
+      transcript.replaceChildren(...elements);
+      messages.forEach((message) => {
+        message.animate = false;
+      });
+      transcript.scrollTop = transcript.scrollHeight;
+      if (suggestions instanceof HTMLElement) {
+        suggestions.hidden = messages.some((message) => message.role === "user");
+      }
+    };
+
+    const renderLoading = () => {
+      if (!(transcript instanceof HTMLElement)) return null;
+      const loading = document.createElement("article");
+      loading.className =
+        "companion-message companion-message--assistant companion-message--loading";
+      loading.setAttribute("aria-label", "Companion is preparing an answer");
+
+      const role = document.createElement("p");
+      role.className = "companion-message__role";
+      role.textContent = "Companion";
+
+      const lines = document.createElement("div");
+      lines.className = "companion-loading";
+      lines.setAttribute("aria-hidden", "true");
+      lines.append(
+        document.createElement("span"),
+        document.createElement("span"),
+        document.createElement("span")
+      );
+
+      loading.append(role, lines);
+      transcript.append(loading);
+      transcript.scrollTop = transcript.scrollHeight;
+      return loading;
+    };
+
+    const setBackgroundInert = (value) => {
+      backgroundElements.forEach((element) => {
+        element.toggleAttribute("inert", value);
+        if (value) element.setAttribute("aria-hidden", "true");
+        else element.removeAttribute("aria-hidden");
+      });
+    };
+
+    const openDrawer = () => {
+      if (!mobileQuery.matches) return;
+      companion.setAttribute("data-open", "");
+      document.body.classList.add("companion-drawer-open");
+      setBackgroundInert(true);
+      openButton?.setAttribute("aria-expanded", "true");
+      openButton?.setAttribute("aria-hidden", "true");
+      if (openButton instanceof HTMLButtonElement) openButton.tabIndex = -1;
+      scrim?.setAttribute("aria-hidden", "false");
+      panel?.setAttribute("aria-hidden", "false");
+      window.setTimeout(() => {
+        if (input instanceof HTMLTextAreaElement) input.focus();
+      }, 180);
+    };
+
+    const closeDrawer = () => {
+      companion.removeAttribute("data-open");
+      document.body.classList.remove("companion-drawer-open");
+      setBackgroundInert(false);
+      openButton?.setAttribute("aria-expanded", "false");
+      openButton?.setAttribute("aria-hidden", "false");
+      if (openButton instanceof HTMLButtonElement) openButton.tabIndex = 0;
+      scrim?.setAttribute("aria-hidden", "true");
+      panel?.setAttribute("aria-hidden", mobileQuery.matches ? "true" : "false");
+      if (mobileQuery.matches && openButton instanceof HTMLButtonElement) {
+        openButton.focus();
+      }
+    };
+
+    const sendQuestion = async (question) => {
+      const content = question.trim();
+      if (!content || pending) return;
+
+      messages.push({ role: "user", content, sources: [] });
+      messages = messages.slice(-MAX_STORED_MESSAGES);
+      saveMessages();
+      renderMessages();
+
+      if (input instanceof HTMLTextAreaElement) {
+        input.value = "";
+        input.style.height = "";
+      }
+
+      setPending(true);
+      if (input instanceof HTMLTextAreaElement) {
+        input.focus({ preventScroll: true });
+      }
+      const loading = renderLoading();
+
+      if (!endpoint) {
+        loading?.remove();
+        messages.push({
+          role: "assistant",
+          content:
+            "The companion interface is ready, but its Azure endpoint has not been connected yet.",
+          sources: [],
+          includeInRequest: false,
+        });
+        saveMessages();
+        renderMessages();
+        setPending(false);
+        setStatus("Azure endpoint not configured");
+        return;
+      }
+
+      try {
+        const response = await fetch(endpoint, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            messages: buildRequestMessages(),
+          }),
+        });
+
+        const payload = await response.json().catch(() => null);
+
+        if (!response.ok) {
+          const fallback =
+            response.status === 429
+              ? "The companion has received several questions at once. Please try again shortly."
+              : "The companion could not reach its model just now. Please try again.";
+          throw new Error(
+            payload && typeof payload.error === "string" ? payload.error : fallback
+          );
+        }
+
+        if (!payload || typeof payload.answer !== "string") {
+          throw new Error("The companion returned an incomplete answer.");
+        }
+
+        const sources = Array.isArray(payload.sources)
+          ? payload.sources.filter(isValidSource).slice(0, 3)
+          : [];
+
+        loading?.remove();
+        messages.push({
+          role: "assistant",
+          content: payload.answer.trim(),
+          sources,
+          animate: true,
+        });
+        messages = messages.slice(-MAX_STORED_MESSAGES);
+        saveMessages();
+        renderMessages();
+        setPending(false);
+      } catch (error) {
+        loading?.remove();
+        messages.push({
+          role: "assistant",
+          content:
+            error instanceof Error
+              ? error.message
+              : "The companion could not answer just now. Please try again.",
+          sources: [],
+          includeInRequest: false,
+        });
+        messages = messages.slice(-MAX_STORED_MESSAGES);
+        saveMessages();
+        renderMessages();
+        setPending(false);
+        setStatus("Connection failed");
+      }
+    };
+
+    restoreMessages();
+    renderMessages();
+    panel?.setAttribute("aria-hidden", mobileQuery.matches ? "true" : "false");
+
+    form?.addEventListener("submit", (event) => {
+      event.preventDefault();
+      if (input instanceof HTMLTextAreaElement) {
+        void sendQuestion(input.value);
+      }
+    });
+
+    input?.addEventListener("keydown", (event) => {
+      if (
+        event instanceof KeyboardEvent &&
+        event.key === "Enter" &&
+        !event.shiftKey
+      ) {
+        event.preventDefault();
+        if (input instanceof HTMLTextAreaElement) {
+          void sendQuestion(input.value);
+        }
+      }
+    });
+
+    input?.addEventListener("input", () => {
+      if (!(input instanceof HTMLTextAreaElement)) return;
+      input.style.height = "";
+      input.style.height = `${Math.min(input.scrollHeight, 144)}px`;
+    });
+
+    companion.querySelectorAll("[data-companion-suggestion]").forEach((button) => {
+      button.addEventListener("click", () => {
+        if (!(button instanceof HTMLElement)) return;
+        const question = button.dataset.question;
+        if (question) void sendQuestion(question);
+      });
+    });
+
+    openButton?.addEventListener("click", openDrawer);
+    closeButton?.addEventListener("click", closeDrawer);
+    scrim?.addEventListener("click", closeDrawer);
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && companion.hasAttribute("data-open")) {
+        closeDrawer();
+        return;
+      }
+
+      if (
+        event.key !== "Tab" ||
+        !mobileQuery.matches ||
+        !companion.hasAttribute("data-open") ||
+        !(panel instanceof HTMLElement)
+      ) {
+        return;
+      }
+
+      const focusable = Array.from(
+        panel.querySelectorAll(
+          'button:not([disabled]), textarea:not([disabled]), a[href], [tabindex]:not([tabindex="-1"])'
+        )
+      ).filter((element) => element instanceof HTMLElement);
+
+      if (focusable.length === 0) return;
+      const first = focusable[0];
+      const last = focusable[focusable.length - 1];
+
+      if (!panel.contains(document.activeElement)) {
+        event.preventDefault();
+        (event.shiftKey ? last : first).focus();
+      } else if (event.shiftKey && document.activeElement === first) {
+        event.preventDefault();
+        last.focus();
+      } else if (!event.shiftKey && document.activeElement === last) {
+        event.preventDefault();
+        first.focus();
+      }
+    });
+
+    mobileQuery.addEventListener("change", (event) => {
+      if (!event.matches) {
+        companion.removeAttribute("data-open");
+        document.body.classList.remove("companion-drawer-open");
+        setBackgroundInert(false);
+        panel?.setAttribute("aria-hidden", "false");
+        openButton?.setAttribute("aria-hidden", "true");
+        if (openButton instanceof HTMLButtonElement) openButton.tabIndex = -1;
+        scrim?.setAttribute("aria-hidden", "true");
+      } else {
+        panel?.setAttribute("aria-hidden", "true");
+        openButton?.setAttribute("aria-expanded", "false");
+        openButton?.setAttribute("aria-hidden", "false");
+        if (openButton instanceof HTMLButtonElement) openButton.tabIndex = 0;
+        scrim?.setAttribute("aria-hidden", "true");
+      }
+    });
+  }
+</script>

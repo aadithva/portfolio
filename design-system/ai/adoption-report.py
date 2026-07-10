@@ -78,7 +78,7 @@ def build_inventory(index: dict, meta: Dict[str, dict], used_by: Dict[str, List[
     lines.append("")
     lines.append("- **Source**: `design-system/tokens.css` / `design-system/tokens.json` (`--ds-*` custom properties).")
     lines.append("- **Color**: background `#fff`, foreground `#0a0a0a`, muted `#f7f6f3`, muted-fg `#787774`, border `#eaeaea`.")
-    lines.append("- **Type**: heading `Space Grotesk`, body `General Sans`; loose body rhythm, medium-weight headings.")
+    lines.append("- **Type**: IBM Plex Mono for the interface and Digibop exclusively for the AADITH wordmark.")
     lines.append("- **Layout**: `.container` max-width 1440px with responsive side padding (20 / 48 / 80px).")
     lines.append("- **Motion**: entrance reveals via the global IntersectionObserver (`.reveal`/`.line`/`.routemap` → `.is-visible`), with reduced-motion fallbacks.")
     lines.append("")

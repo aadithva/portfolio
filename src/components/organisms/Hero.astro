@@ -1,14 +1,30 @@
 ---
 import Reveal from "@/components/atoms/Reveal.astro";
+
+const heroStatement =
+  "I design AI products people can inspect, direct, and actually use.";
+const heroFocusWords = ["inspect", "direct", "use"];
+const heroStatementWords = heroStatement.split(" ");
 ---
 <section class="hero container">
   <div class="hero__inner">
     <Reveal as="p" class="hero__label">
       Product design / AI systems / founder work
     </Reveal>
-
     <Reveal as="h1" class="hero__statement">
-      I design AI products people can inspect, direct, and actually use.
+      <span
+        class="true-focus-mount"
+        data-true-focus
+        data-sentence={heroStatement}
+        data-focus-words={heroFocusWords.join("|")}
+      >
+        <span class="true-focus">
+          <span class="true-focus__sr-only">{heroStatement}</span>
+          {heroStatementWords.map((word) => (
+            <span class="true-focus__word" aria-hidden="true">{word}</span>
+          ))}
+        </span>
+      </span>
     </Reveal>
 
     <Reveal class="hero__byline" delay={250}>
@@ -20,3 +36,37 @@ import Reveal from "@/components/atoms/Reveal.astro";
     </Reveal>
   </div>
 </section>
+
+<script>
+  import { createElement } from "react";
+  import { createRoot } from "react-dom/client";
+  import TrueFocus from "@/components/atoms/TrueFocus.jsx";
+
+  document.querySelectorAll("[data-true-focus]").forEach((mount) => {
+    if (
+      !(mount instanceof HTMLElement) ||
+      mount.dataset.trueFocusMounted === "true"
+    ) {
+      return;
+    }
+
+    const sentence = mount.dataset.sentence;
+    if (!sentence) return;
+
+    mount.dataset.trueFocusMounted = "true";
+    createRoot(mount).render(
+      createElement(TrueFocus, {
+        sentence,
+        focusWords: (mount.dataset.focusWords ?? "")
+          .split("|")
+          .filter(Boolean),
+        manualMode: false,
+        blurAmount: 1.5,
+        borderColor: "var(--ds-color-accent, #ed5b2a)",
+        glowColor: "rgb(237 91 42 / 0.34)",
+        animationDuration: 0.55,
+        pauseBetweenAnimations: 0.8,
+      })
+    );
+  });
+</script>

@@ -1,5 +1,8 @@
 ---
+import { existsSync } from "node:fs";
+import { join } from "node:path";
 import type { Project } from "@/types";
+import PixelTransition from "@/components/atoms/PixelTransition.astro";
 import Reveal from "@/components/atoms/Reveal.astro";
 
 interface Props {
@@ -7,27 +10,268 @@ interface Props {
   showViewAll?: boolean;
 }
 const { projects, showViewAll = false } = Astro.props;
----
-<div class="work-list">
-  {projects.map((project, i) => (
-    <Reveal delay={i * 55}>
-      <a class="work-row" href={`/work/${project.slug}`}>
-        <span class="work-row__left">
-          <span class="work-row__index">{String(i + 1).padStart(2, "0")}</span>
-          <span class="work-row__title">{project.title}</span>
-        </span>
-        <span class="work-row__meta">
-          <span>{project.category}</span>
-          <span class="num">{project.year}</span>
-        </span>
-      </a>
-    </Reveal>
-  ))}
-  <div class="work-list__end"></div>
 
-  {showViewAll && (
-    <div class="work-list__viewall">
-      <a class="text-link" href="/work">All projects &rarr;</a>
+const transparentPixel =
+  "data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=";
+const previewProjects = projects.map((project, index) => {
+  const thumbnail = project.thumbnail?.trim() ?? "";
+  const thumbnailAvailable =
+    /^https?:\/\//.test(thumbnail) ||
+    (thumbnail.length > 0 &&
+      existsSync(join(process.cwd(), "public", thumbnail.replace(/^\/+/, ""))));
+
+  return {
+    project,
+    index: String(index + 1).padStart(2, "0"),
+    thumbnail,
+    thumbnailAvailable,
+  };
+});
+const initialPreview = previewProjects[0];
+---
+<div class="work-list" data-work-list>
+  {initialPreview && (
+    <div class="work-list__preview" data-work-preview aria-hidden="true">
+      <PixelTransition
+        class="work-preview__pixel-transition"
+        gridSize={10}
+        pixelColor="var(--ds-color-accent)"
+        animationStepDuration={0.32}
+        aspectRatio="16 / 10"
+        controlled={true}
+        initiallyActive={true}
+      >
+        <div slot="first" class="work-preview__idle">
+          <span aria-hidden="true"></span>
+        </div>
+        <div slot="second" class="work-preview__active">
+          <img
+            src={initialPreview.thumbnailAvailable
+              ? initialPreview.thumbnail
+              : transparentPixel}
+            alt=""
+            data-work-preview-image
+            hidden={!initialPreview.thumbnailAvailable}
+          />
+          <div
+            class="work-preview__missing"
+            data-work-preview-missing
+            hidden={initialPreview.thumbnailAvailable}
+          >
+            <span>Preview incoming</span>
+          </div>
+        </div>
+      </PixelTransition>
+      <p class="work-preview__caption">
+        <span>
+          <span data-work-preview-index>{initialPreview.index}</span>
+          <span aria-hidden="true"> / </span>
+          <span data-work-preview-title>{initialPreview.project.title}</span>
+        </span>
+        <span>Pixel transition preview</span>
+      </p>
     </div>
   )}
+
+  <div class="work-list__rows">
+    {previewProjects.map(({ project, index, thumbnail, thumbnailAvailable }, i) => (
+      <Reveal delay={i * 55}>
+        <a
+          class="work-row"
+          href={`/work/${project.slug}`}
+          data-work-row
+          data-preview-src={thumbnailAvailable ? thumbnail : undefined}
+          data-preview-index={index}
+          data-preview-title={project.title}
+        >
+          <span class="work-row__left">
+            <span class="work-row__index">{index}</span>
+            <span class="work-row__title">{project.title}</span>
+          </span>
+          <span class="work-row__meta">
+            <span>{project.category}</span>
+            <span class="num">{project.year}</span>
+          </span>
+        </a>
+      </Reveal>
+    ))}
+    <div class="work-list__end"></div>
+
+    {showViewAll && (
+      <div class="work-list__viewall">
+        <a class="text-link" href="/work">All projects &rarr;</a>
+      </div>
+    )}
+  </div>
 </div>
+
+<script>
+  interface PixelTransitionController {
+    show: () => Promise<void>;
+    hide: () => Promise<void>;
+    swap: (update: () => void) => Promise<void>;
+    isActive: () => boolean;
+  }
+
+  interface PixelTransitionRoot extends HTMLElement {
+    pixelTransition?: PixelTransitionController;
+  }
+
+  interface WorkListRoot extends HTMLElement {
+    workListCleanup?: () => void;
+  }
+
+  const initializeWorkPreview = (list: WorkListRoot) => {
+    if (list.dataset.workListReady === "true") return;
+
+    const preview = list.querySelector<HTMLElement>("[data-work-preview]");
+    const pixelTransition = preview?.querySelector<PixelTransitionRoot>(
+      "[data-pixel-transition]"
+    );
+    const image =
+      preview?.querySelector<HTMLImageElement>("[data-work-preview-image]");
+    const missing = preview?.querySelector<HTMLElement>(
+      "[data-work-preview-missing]"
+    );
+    const previewIndex = preview?.querySelector<HTMLElement>(
+      "[data-work-preview-index]"
+    );
+    const previewTitle = preview?.querySelector<HTMLElement>(
+      "[data-work-preview-title]"
+    );
+    const rows = Array.from(
+      list.querySelectorAll<HTMLAnchorElement>("[data-work-row]")
+    );
+
+    if (
+      !preview ||
+      !pixelTransition ||
+      !image ||
+      !missing ||
+      !previewIndex ||
+      !previewTitle ||
+      rows.length === 0
+    ) {
+      return;
+    }
+
+    list.dataset.workListReady = "true";
+
+    const listeners = new AbortController();
+    const previewQuery = window.matchMedia(
+      "(hover: hover) and (pointer: fine)"
+    );
+    let activeRow = rows[0] ?? null;
+
+    rows.forEach((row) => {
+      const source = row.dataset.previewSrc;
+      if (!source) return;
+      const preload = new Image();
+      preload.src = source;
+    });
+
+    const setActiveRow = (row: HTMLAnchorElement | null) => {
+      rows.forEach((candidate) => {
+        candidate.toggleAttribute(
+          "data-preview-active",
+          candidate === row
+        );
+      });
+    };
+
+    const updatePreviewContent = (row: HTMLAnchorElement) => {
+      const source = row.dataset.previewSrc ?? "";
+      const index = row.dataset.previewIndex ?? "";
+      const title = row.dataset.previewTitle ?? "";
+
+      if (source) {
+        image.src = source;
+        image.hidden = false;
+        missing.hidden = true;
+      } else {
+        image.hidden = true;
+        missing.hidden = false;
+      }
+
+      previewIndex.textContent = index;
+      previewTitle.textContent = title;
+      missing.textContent = title
+        ? `${title} preview incoming`
+        : "Preview incoming";
+    };
+
+    const activateRow = (row: HTMLAnchorElement, animate = true) => {
+      if (activeRow === row) return;
+      activeRow = row;
+      setActiveRow(row);
+
+      const update = () => updatePreviewContent(row);
+      if (animate && pixelTransition.pixelTransition) {
+        void pixelTransition.pixelTransition.swap(update);
+      } else {
+        update();
+      }
+    };
+
+    const resetPreview = () => {
+      const firstRow = rows[0];
+      if (firstRow) activateRow(firstRow);
+    };
+
+    if (activeRow) {
+      setActiveRow(activeRow);
+      updatePreviewContent(activeRow);
+    }
+
+    rows.forEach((row) => {
+      row.addEventListener(
+        "pointerenter",
+        () => {
+          if (previewQuery.matches) activateRow(row);
+        },
+        { signal: listeners.signal }
+      );
+      row.addEventListener(
+        "focus",
+        () => activateRow(row),
+        { signal: listeners.signal }
+      );
+    });
+
+    list.addEventListener("pointerleave", resetPreview, {
+      signal: listeners.signal,
+    });
+    list.addEventListener(
+      "focusout",
+      () => {
+        window.setTimeout(() => {
+          if (!list.contains(document.activeElement)) resetPreview();
+        }, 0);
+      },
+      { signal: listeners.signal }
+    );
+    previewQuery.addEventListener("change", resetPreview, {
+      signal: listeners.signal,
+    });
+
+    list.workListCleanup = () => {
+      listeners.abort();
+      delete list.workListCleanup;
+      delete list.dataset.workListReady;
+    };
+  };
+
+  const initializeAllWorkPreviews = () => {
+    document
+      .querySelectorAll<WorkListRoot>("[data-work-list]")
+      .forEach(initializeWorkPreview);
+  };
+
+  initializeAllWorkPreviews();
+  document.addEventListener("astro:page-load", initializeAllWorkPreviews);
+  document.addEventListener("astro:before-swap", () => {
+    document
+      .querySelectorAll<WorkListRoot>("[data-work-list]")
+      .forEach((list) => list.workListCleanup?.());
+  });
+</script>

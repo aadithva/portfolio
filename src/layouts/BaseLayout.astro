@@ -4,6 +4,7 @@ import "@/styles/editorial-mono.css";
 import GridBackdrop from "@/components/atoms/GridBackdrop.astro";
 import Header from "@/components/organisms/Header.astro";
 import Footer from "@/components/organisms/Footer.astro";
+import AadithCompanion from "@/components/organisms/AadithCompanion.astro";
 import { siteConfig } from "@/data/siteConfig";
 
 interface Props {
@@ -11,16 +12,23 @@ interface Props {
   description?: string;
   /** Render without the global header/footer (e.g. gated pages). */
   bare?: boolean;
+  /** Override the route-aware portfolio companion visibility. */
+  companion?: boolean;
 }
 
 const {
   title,
   description = siteConfig.description,
   bare = false,
+  companion,
 } = Astro.props;
 
 const fullTitle = title ? `${title} — ${siteConfig.name}` : siteConfig.title;
 const canonicalUrl = new URL(Astro.url.pathname, siteConfig.url).href;
+const pathname = Astro.url.pathname.replace(/\/+$/, "") || "/";
+const isDetailRoute =
+  /^\/work\/[^/]+/.test(pathname) || /^\/lab\/[^/]+/.test(pathname);
+const showCompanion = !bare && (companion ?? !isDetailRoute);
 ---
 
 <!doctype html>
@@ -49,14 +57,26 @@ const canonicalUrl = new URL(Astro.url.pathname, siteConfig.url).href;
       href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;1,400&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://use.typekit.net/wje4mxt.css" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   </head>
-  <body>
-    <a class="skip-link" href="#main">Skip to content</a>
+  <body class:list={[showCompanion && "has-companion"]}>
+    <a class="skip-link" href="#main" data-companion-background>Skip to content</a>
     <GridBackdrop />
     <div class="ambient-grain" aria-hidden="true"></div>
     {bare ? (
       <slot />
+    ) : showCompanion ? (
+      <div class="portfolio-shell portfolio-shell--companion">
+        <div class="portfolio-shell__canvas" data-companion-background>
+          <Header />
+          <main id="main">
+            <slot />
+          </main>
+          <Footer />
+        </div>
+        <AadithCompanion />
+      </div>
     ) : (
       <>
         <Header />

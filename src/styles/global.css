@@ -1,7 +1,6 @@
 @import "./tokens.css";
 
-/* Fonts: General Sans (body) + Space Grotesk (headings) via Fontshare,
-   loaded in the document head. tokens.css references the families. */
+/* IBM Plex Mono carries the interface; Digibop is reserved for the AADITH wordmark. */
 
 /* ------------------------------------------------------------------ *
  * Reset & base

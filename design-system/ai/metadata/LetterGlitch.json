@@ -1,0 +1,67 @@
+{
+  "name": "LetterGlitch",
+  "path": "src/components/atoms/LetterGlitch.astro",
+  "tier": "atom",
+  "summary": "Tokenised canvas field of smoothly scrambling monospace characters.",
+  "what": "Renders a responsive, decorative character grid with configurable palette, speed, vignettes, smoothing, and character set; it pauses outside the viewport and when the document is hidden.",
+  "why": "Provides the footer with a distinctive coded signal texture without adding React or another animation dependency to the static Astro runtime.",
+  "whenToUse": [
+    "Use as a bounded decorative layer inside an organism such as the Footer signal panel.",
+    "Use orange design-system tokens for the portfolio treatment."
+  ],
+  "whenNotToUse": [
+    "Do not place behind body copy or interactive controls.",
+    "Do not use as meaningful content because the canvas is hidden from assistive technology.",
+    "Do not introduce a second competing accent palette."
+  ],
+  "propsOrInputs": [
+    {
+      "name": "glitchColors",
+      "type": "string[]",
+      "required": false
+    },
+    {
+      "name": "class",
+      "type": "string",
+      "required": false
+    },
+    {
+      "name": "glitchSpeed",
+      "type": "number",
+      "required": false
+    },
+    {
+      "name": "centerVignette",
+      "type": "boolean",
+      "required": false
+    },
+    {
+      "name": "outerVignette",
+      "type": "boolean",
+      "required": false
+    },
+    {
+      "name": "smooth",
+      "type": "boolean",
+      "required": false
+    },
+    {
+      "name": "characters",
+      "type": "string",
+      "required": false
+    }
+  ],
+  "componentDependencies": [],
+  "dataDependencies": [],
+  "usedBy": [
+    "Footer"
+  ],
+  "a11yNotes": [
+    "Always hidden from assistive technology.",
+    "Renders a static field when prefers-reduced-motion is enabled.",
+    "Animation pauses when off-screen or when the document is hidden."
+  ],
+  "version": "0.3.0",
+  "lastUpdated": "2026-07-10",
+  "source": "Generated from Astro source + design-system/ai/index.json by component-metadata.py."
+}

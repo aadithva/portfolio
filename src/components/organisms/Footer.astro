@@ -1,92 +1,23 @@
 ---
 import { siteConfig } from "@/data/siteConfig";
 import BrandLockup from "@/components/atoms/BrandLockup.astro";
+import LetterGlitch from "@/components/atoms/LetterGlitch.astro";
 const year = new Date().getFullYear();
 ---
 
 <footer class="site-footer">
   <div class="container site-footer__inner">
-    <figure class="site-footer__map">
-      <div class="signal-map__head">
-        <p class="section-label">How I get unstuck</p>
-        <p>Each node opens an example.</p>
+    <div class="site-footer__signal" aria-hidden="true">
+      <LetterGlitch
+        class="site-footer__glitch"
+        glitchSpeed={60}
+        centerVignette={true}
+        outerVignette={false}
+        smooth={true}
+      />
+      <div class="site-footer__wordmark">
+        <BrandLockup />
       </div>
-      <svg viewBox="0 0 620 180" role="group" aria-labelledby="footer-map-title footer-map-desc">
-        <title id="footer-map-title">Aadith's working loop</title>
-        <desc id="footer-map-desc">Context branches into questions and evidence. They meet in a prototype, move through testing, and return as learning.</desc>
-        <g class="signal-map__lines" aria-hidden="true">
-          <path d="M128 86H180L220 43" />
-          <path d="M128 86H180L220 132" />
-          <path d="M324 43L340 105" />
-          <path d="M324 132L340 105" />
-          <path d="M440 105L460 59" />
-          <path d="M540 59V90" />
-          <path class="signal-map__return" d="M604 114C604 164 24 164 24 110" />
-        </g>
-
-        <a class="signal-map__link" href="/about" aria-label="Context: people and systems. Open About.">
-          <title>Context — people and systems</title>
-          <g class="signal-map__node">
-            <rect x="24" y="62" width="104" height="48" />
-            <text class="signal-map__label" x="36" y="81">context</text>
-            <text class="signal-map__note" x="36" y="99">people + system</text>
-          </g>
-        </a>
-
-        <a class="signal-map__link" href="/work" aria-label="Questions: what actually matters. Open Work.">
-          <title>Questions — what actually matters?</title>
-          <g class="signal-map__node">
-            <rect x="220" y="18" width="104" height="50" />
-            <text class="signal-map__label" x="232" y="37">questions</text>
-            <text class="signal-map__note" x="232" y="55">what matters?</text>
-          </g>
-        </a>
-
-        <a class="signal-map__link" href="/lab/flowsense" aria-label="Evidence: what can we verify. Open FlowSense.">
-          <title>Evidence — what can we verify?</title>
-          <g class="signal-map__node">
-            <rect x="220" y="110" width="104" height="44" />
-            <text class="signal-map__label" x="232" y="128">evidence</text>
-            <text class="signal-map__note" x="232" y="144">what is true?</text>
-          </g>
-        </a>
-
-        <a class="signal-map__link signal-map__link--active" href="/lab" aria-label="Prototype: make the behavior visible. Open Lab.">
-          <title>Prototype — make the behaviour visible</title>
-          <g class="signal-map__node">
-            <rect x="340" y="80" width="100" height="50" />
-            <text class="signal-map__label" x="352" y="99">prototype</text>
-            <text class="signal-map__note" x="352" y="117">make it visible</text>
-          </g>
-        </a>
-
-        <a class="signal-map__link" href="/lab/behavior-diff" aria-label="Test: quality and edge cases. Open Behavior Diff.">
-          <title>Test — quality and edge cases</title>
-          <g class="signal-map__node">
-            <rect x="460" y="34" width="80" height="50" />
-            <text class="signal-map__label" x="472" y="53">test</text>
-            <text class="signal-map__note" x="472" y="71">edges + quality</text>
-          </g>
-        </a>
-
-        <a class="signal-map__link" href="/writing" aria-label="Learn: keep or change. Open Writing.">
-          <title>Learn — keep, change, repeat</title>
-          <g class="signal-map__node">
-            <rect x="540" y="90" width="64" height="48" />
-            <text class="signal-map__label" x="551" y="109">learn</text>
-            <text class="signal-map__note" x="551" y="126">keep / change</text>
-          </g>
-        </a>
-
-        <text class="signal-map__repeat" x="532" y="163">repeat ↺</text>
-      </svg>
-      <figcaption>
-        Context branches into questions and evidence. They meet in a prototype, get tested, and come back as learning.
-      </figcaption>
-    </figure>
-
-    <div class="site-footer__wordmark" aria-hidden="true">
-      <BrandLockup variant="wordmark" />
     </div>
 
     <div class="site-footer__top">

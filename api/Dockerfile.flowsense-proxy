@@ -1,0 +1,31 @@
+ARG FLOWSENSE_BASE_IMAGE=crflowsense.azurecr.io/flowsense-processor@sha256:9c9a5288b33e7ca8a1761969b69b19f554568a37a0cbd2b8d03ea73dbf9a715b
+
+FROM node:22-slim AS companion-build
+WORKDIR /build
+
+COPY package*.json ./
+RUN npm ci
+
+COPY tsconfig.json ./
+COPY src ./src
+RUN npm run build
+
+FROM ${FLOWSENSE_BASE_IMAGE}
+USER root
+WORKDIR /portfolio-api
+
+COPY package*.json ./
+RUN npm ci --omit=dev --ignore-scripts
+
+COPY --from=companion-build /build/dist ./dist
+COPY context ./context
+
+ENV PORT=3003
+ENV ORIGINAL_PROCESSOR_PORT=3002
+ENV ORIGINAL_PROCESSOR_ROOT=/app
+ENV PORTFOLIO_CHAT_PATH=/api/aadith-chat
+ENV AADITH_CONTEXT_URL=file:///portfolio-api/context/aadith-context.json
+
+EXPOSE 3003
+
+CMD ["node", "dist/src/proxyServer.js"]

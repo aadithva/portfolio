@@ -1,0 +1,75 @@
+{
+  "name": "TrueFocus",
+  "path": "src/components/atoms/TrueFocus.jsx",
+  "tier": "atom",
+  "summary": "React Bits focus-frame atom for selected words in the homepage statement.",
+  "what": "Moves a token-coloured corner frame between selected words, softly blurs only the other focus words, and keeps the surrounding sentence stable.",
+  "why": "Emphasises inspect, direct, and use as a connected product-design loop without turning the full hero into continuous motion.",
+  "whenToUse": [
+    "Use once inside the homepage Hero for a short set of meaningful words.",
+    "Pass focusWords when connective copy should remain sharp."
+  ],
+  "whenNotToUse": [
+    "Do not apply to paragraphs, navigation, or multiple competing areas in one viewport.",
+    "Do not bypass the reduced-motion fallback or introduce a second accent colour."
+  ],
+  "propsOrInputs": [
+    {
+      "name": "sentence",
+      "type": "string",
+      "required": false
+    },
+    {
+      "name": "separator",
+      "type": "string",
+      "required": false
+    },
+    {
+      "name": "manualMode",
+      "type": "boolean",
+      "required": false
+    },
+    {
+      "name": "blurAmount",
+      "type": "number",
+      "required": false
+    },
+    {
+      "name": "borderColor",
+      "type": "string",
+      "required": false
+    },
+    {
+      "name": "glowColor",
+      "type": "string",
+      "required": false
+    },
+    {
+      "name": "animationDuration",
+      "type": "number",
+      "required": false
+    },
+    {
+      "name": "pauseBetweenAnimations",
+      "type": "number",
+      "required": false
+    },
+    {
+      "name": "focusWords",
+      "type": "string[]",
+      "required": false
+    }
+  ],
+  "componentDependencies": [],
+  "dataDependencies": [],
+  "usedBy": [
+    "Hero"
+  ],
+  "a11yNotes": [
+    "Includes a stable screen-reader sentence while the animated word layer is hidden from assistive technology.",
+    "Reduced motion removes blur and hides the moving frame."
+  ],
+  "version": "0.3.0",
+  "lastUpdated": "2026-07-10",
+  "source": "Generated from React source + design-system/ai/index.json by component-metadata.py."
+}

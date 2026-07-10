@@ -98,3 +98,38 @@ export interface LabProject {
   routes: string[];
   repo_url: string | null;
 }
+
+export type CompanionMessageRole = "user" | "assistant";
+
+export interface CompanionMessage {
+  role: CompanionMessageRole;
+  content: string;
+}
+
+export interface CompanionSource {
+  id: string;
+  title: string;
+  path: string;
+  category: string;
+}
+
+export interface CompanionContextChunk extends CompanionSource {
+  tags: string[];
+  body: string;
+}
+
+export interface CompanionContextDocument {
+  version: string;
+  owner: string;
+  boundary: string;
+  chunks: CompanionContextChunk[];
+}
+
+export interface CompanionChatRequest {
+  messages: CompanionMessage[];
+}
+
+export interface CompanionChatResponse {
+  answer: string;
+  sources: CompanionSource[];
+}

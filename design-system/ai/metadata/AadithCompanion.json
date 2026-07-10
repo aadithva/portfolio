@@ -1,0 +1,35 @@
+{
+  "name": "AadithCompanion",
+  "path": "src/components/organisms/AadithCompanion.astro",
+  "tier": "organism",
+  "summary": "Playful public-context portfolio sidekick with a responsive drawer fallback.",
+  "what": "Renders the persistent desktop sidekick, mobile Ask about Aadith trigger, transcript, grounded source links, prompt suggestions, composer, loading state, and sessionStorage-backed client behavior.",
+  "why": "Lets recruiters, collaborators, and investors ask focused questions without interrupting full-width Work and Lab case-study reading.",
+  "whenToUse": [
+    "Render through BaseLayout on overview and editorial routes.",
+    "Keep answers grounded through the configured secure Azure endpoint."
+  ],
+  "whenNotToUse": [
+    "Do not render directly inside pages.",
+    "Do not show it on Work or Lab detail routes.",
+    "Do not place Azure credentials or private context in PUBLIC environment variables."
+  ],
+  "propsOrInputs": [],
+  "componentDependencies": [
+    "DecryptedText"
+  ],
+  "dataDependencies": [
+    "companion"
+  ],
+  "usedBy": [
+    "BaseLayout"
+  ],
+  "a11yNotes": [
+    "Uses an aside landmark and aria-live transcript.",
+    "The mobile drawer supports Escape, focus containment, explicit labels, and reduced motion.",
+    "Model output is rendered as text and links come only from validated server sources."
+  ],
+  "version": "0.3.0",
+  "lastUpdated": "2026-07-10",
+  "source": "Generated from Astro source + design-system/ai/index.json by component-metadata.py."
+}

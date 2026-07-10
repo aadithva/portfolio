@@ -1,0 +1,77 @@
+{
+  "name": "PixelTransition",
+  "path": "src/components/atoms/PixelTransition.astro",
+  "tier": "atom",
+  "summary": "Dependency-free pixel-cover transition for swapping two visual layers.",
+  "what": "Builds a configurable square grid and reveals or hides pixel cells in randomized order before swapping the default and active layers; it supports controlled use, an initially active layer, keyboard/touch activation, and reduced motion.",
+  "why": "Recreates the React Bits pixel transition in the portfolio's static Astro runtime without adding React or GSAP, while keeping the orange transition reusable.",
+  "whenToUse": [
+    "Use for bounded image or visual swaps where pixelation adds meaning.",
+    "Use controlled mode inside HoverRevealList for project thumbnails."
+  ],
+  "whenNotToUse": [
+    "Do not apply to body text or essential content.",
+    "Do not stack multiple pixel transitions in the same viewport.",
+    "Do not introduce colors outside the design-system accent family."
+  ],
+  "propsOrInputs": [
+    {
+      "name": "gridSize",
+      "type": "number",
+      "required": false
+    },
+    {
+      "name": "pixelColor",
+      "type": "string",
+      "required": false
+    },
+    {
+      "name": "animationStepDuration",
+      "type": "number",
+      "required": false
+    },
+    {
+      "name": "aspectRatio",
+      "type": "string",
+      "required": false
+    },
+    {
+      "name": "once",
+      "type": "boolean",
+      "required": false
+    },
+    {
+      "name": "controlled",
+      "type": "boolean",
+      "required": false
+    },
+    {
+      "name": "initiallyActive",
+      "type": "boolean",
+      "required": false
+    },
+    {
+      "name": "class",
+      "type": "string",
+      "required": false
+    },
+    {
+      "name": "ariaLabel",
+      "type": "string",
+      "required": false
+    }
+  ],
+  "componentDependencies": [],
+  "dataDependencies": [],
+  "usedBy": [
+    "HoverRevealList"
+  ],
+  "a11yNotes": [
+    "Controlled decorative previews remain hidden from assistive technology.",
+    "Standalone mode supports focus and touch activation.",
+    "Reduced motion swaps content immediately without animating pixels."
+  ],
+  "version": "0.3.0",
+  "lastUpdated": "2026-07-10",
+  "source": "Generated from Astro source + design-system/ai/index.json by component-metadata.py."
+}

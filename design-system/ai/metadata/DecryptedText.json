@@ -1,0 +1,90 @@
+{
+  "name": "DecryptedText",
+  "path": "src/components/atoms/DecryptedText.js",
+  "tier": "atom",
+  "summary": "React Bits decryption-text atom for newly resolved companion answers.",
+  "what": "Scrambles visible characters for a short reveal, keeps the stable original text available to assistive technology, and resolves immediately when reduced motion is requested.",
+  "why": "Gives completed AI answers a clear state-change moment without making the transcript continuously animated.",
+  "whenToUse": [
+    "Animate only a newly returned companion answer.",
+    "Use animateOn=view so the reveal begins when the appended answer is visible."
+  ],
+  "whenNotToUse": [
+    "Do not animate restored conversation history, user messages, errors, labels, or long-lived page copy.",
+    "Do not bypass the reduced-motion fallback."
+  ],
+  "propsOrInputs": [
+    {
+      "name": "text",
+      "type": "string",
+      "required": false
+    },
+    {
+      "name": "speed",
+      "type": "number",
+      "required": false
+    },
+    {
+      "name": "maxIterations",
+      "type": "number",
+      "required": false
+    },
+    {
+      "name": "sequential",
+      "type": "boolean",
+      "required": false
+    },
+    {
+      "name": "revealDirection",
+      "type": "\"start\" | \"end\" | \"center\"",
+      "required": false
+    },
+    {
+      "name": "useOriginalCharsOnly",
+      "type": "boolean",
+      "required": false
+    },
+    {
+      "name": "characters",
+      "type": "string",
+      "required": false
+    },
+    {
+      "name": "className",
+      "type": "string",
+      "required": false
+    },
+    {
+      "name": "parentClassName",
+      "type": "string",
+      "required": false
+    },
+    {
+      "name": "encryptedClassName",
+      "type": "string",
+      "required": false
+    },
+    {
+      "name": "animateOn",
+      "type": "\"view\" | \"hover\" | \"inViewHover\" | \"click\"",
+      "required": false
+    },
+    {
+      "name": "clickMode",
+      "type": "\"once\" | \"toggle\"",
+      "required": false
+    }
+  ],
+  "componentDependencies": [],
+  "dataDependencies": [],
+  "usedBy": [
+    "AadithCompanion"
+  ],
+  "a11yNotes": [
+    "The scrambled visual layer is aria-hidden while the stable original answer remains available to screen readers.",
+    "prefers-reduced-motion shows the final text immediately."
+  ],
+  "version": "0.3.0",
+  "lastUpdated": "2026-07-10",
+  "source": "Generated from React source + design-system/ai/index.json by component-metadata.py."
+}

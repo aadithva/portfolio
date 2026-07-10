@@ -29,8 +29,8 @@ DATA_ROOT = SRC_ROOT / "data"
 LIB_ROOT = SRC_ROOT / "lib"
 OUT_PATH = REPO_ROOT / "design-system" / "ai" / "index.json"
 
-# Components/layouts/pages are .astro; data and helpers are .ts.
-COMPONENT_EXTENSIONS = {".astro"}
+# Components can be Astro or isolated React leaves; pages remain Astro routes.
+COMPONENT_EXTENSIONS = {".astro", ".js", ".jsx", ".tsx"}
 SOURCE_EXTENSIONS = {".astro", ".ts", ".tsx", ".js", ".jsx"}
 DATA_EXTENSIONS = {".ts", ".tsx", ".js", ".jsx", ".json"}
 

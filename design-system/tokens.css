@@ -10,11 +10,13 @@
   --ds-color-header-surface: rgb(207 212 216 / 0.92);
   --ds-color-accent: #ed5b2a;
   --ds-color-accent-ink: #8f2c10;
+  --ds-color-accent-soft: #f6a06f;
 
   /* Typography */
   --ds-font-heading: "IBM Plex Mono", "SFMono-Regular", Menlo, Monaco, Consolas, monospace;
   --ds-font-body: "IBM Plex Mono", "SFMono-Regular", Menlo, Monaco, Consolas, monospace;
   --ds-font-display-serif: "IBM Plex Mono", "SFMono-Regular", Menlo, Monaco, Consolas, monospace;
+  --ds-font-wordmark: "digibop", sans-serif;
   --ds-font-size-xs: 0.625rem; /* 10px */
   --ds-font-size-sm: 0.75rem; /* 12px */
   --ds-font-size-base: 0.8125rem; /* 13px */

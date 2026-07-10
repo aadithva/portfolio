@@ -2,9 +2,9 @@
   "name": "Footer",
   "path": "src/components/organisms/Footer.astro",
   "tier": "organism",
-  "summary": "Global footer with an interactive network diagram, identity, social links, and secondary nav.",
-  "what": "Renders a linked working model where context branches into questions and evidence, converges in a prototype, moves through testing, and loops back as learning.",
-  "why": "Keeps the original network-like visual character while making every relationship and destination meaningful.",
+  "summary": "Global footer with a full-canvas orange glitch signature, identity, social links, and secondary nav.",
+  "what": "Renders a borderless LetterGlitch field across the footer canvas behind the oversized AADITH signature, followed by compact identity, social links, and secondary navigation.",
+  "why": "Closes every route with one memorable coded signal while keeping the page-specific working-loop diagram in Lab.",
   "whenToUse": [
     "Rendered automatically by BaseLayout."
   ],
@@ -14,7 +14,8 @@
   ],
   "propsOrInputs": [],
   "componentDependencies": [
-    "BrandLockup"
+    "BrandLockup",
+    "LetterGlitch"
   ],
   "dataDependencies": [
     "siteConfig"
@@ -24,7 +25,8 @@
   ],
   "a11yNotes": [
     "Uses contentinfo landmark via <footer>.",
-    "Links have discernible text."
+    "Links have discernible text.",
+    "The animated signature is decorative, hidden from assistive technology, and static under reduced motion."
   ],
   "version": "0.3.0",
   "lastUpdated": "2026-07-10",

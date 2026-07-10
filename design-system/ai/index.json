@@ -8,6 +8,17 @@
       "path": "src/components/atoms/BrandLockup.astro",
       "tier": "atom"
     },
+    "src/components/atoms/DecryptedText.js": {
+      "imports": [
+        "motion/react-m",
+        "react"
+      ],
+      "localComponentDependencies": [],
+      "localDataDependencies": [],
+      "name": "DecryptedText",
+      "path": "src/components/atoms/DecryptedText.js",
+      "tier": "atom"
+    },
     "src/components/atoms/GridBackdrop.astro": {
       "imports": [],
       "localComponentDependencies": [],
@@ -16,12 +27,28 @@
       "path": "src/components/atoms/GridBackdrop.astro",
       "tier": "atom"
     },
+    "src/components/atoms/LetterGlitch.astro": {
+      "imports": [],
+      "localComponentDependencies": [],
+      "localDataDependencies": [],
+      "name": "LetterGlitch",
+      "path": "src/components/atoms/LetterGlitch.astro",
+      "tier": "atom"
+    },
     "src/components/atoms/Line.astro": {
       "imports": [],
       "localComponentDependencies": [],
       "localDataDependencies": [],
       "name": "Line",
       "path": "src/components/atoms/Line.astro",
+      "tier": "atom"
+    },
+    "src/components/atoms/PixelTransition.astro": {
+      "imports": [],
+      "localComponentDependencies": [],
+      "localDataDependencies": [],
+      "name": "PixelTransition",
+      "path": "src/components/atoms/PixelTransition.astro",
       "tier": "atom"
     },
     "src/components/atoms/Reveal.astro": {
@@ -38,6 +65,17 @@
       "localDataDependencies": [],
       "name": "SectionLabel",
       "path": "src/components/atoms/SectionLabel.astro",
+      "tier": "atom"
+    },
+    "src/components/atoms/TrueFocus.jsx": {
+      "imports": [
+        "motion/mini",
+        "react"
+      ],
+      "localComponentDependencies": [],
+      "localDataDependencies": [],
+      "name": "TrueFocus",
+      "path": "src/components/atoms/TrueFocus.jsx",
       "tier": "atom"
     },
     "src/components/molecules/CaseStudySection.astro": {
@@ -67,10 +105,14 @@
     },
     "src/components/molecules/HoverRevealList.astro": {
       "imports": [
+        "@/components/atoms/PixelTransition.astro",
         "@/components/atoms/Reveal.astro",
-        "@/types"
+        "@/types",
+        "node:fs",
+        "node:path"
       ],
       "localComponentDependencies": [
+        "src/components/atoms/PixelTransition.astro",
         "src/components/atoms/Reveal.astro"
       ],
       "localDataDependencies": [],
@@ -90,6 +132,31 @@
       "name": "LabCard",
       "path": "src/components/molecules/LabCard.astro",
       "tier": "molecule"
+    },
+    "src/components/molecules/WorkingLoopMap.astro": {
+      "imports": [],
+      "localComponentDependencies": [],
+      "localDataDependencies": [],
+      "name": "WorkingLoopMap",
+      "path": "src/components/molecules/WorkingLoopMap.astro",
+      "tier": "molecule"
+    },
+    "src/components/organisms/AadithCompanion.astro": {
+      "imports": [
+        "@/components/atoms/DecryptedText.js",
+        "@/data/companion",
+        "react",
+        "react-dom/client"
+      ],
+      "localComponentDependencies": [
+        "src/components/atoms/DecryptedText.js"
+      ],
+      "localDataDependencies": [
+        "src/data/companion.ts"
+      ],
+      "name": "AadithCompanion",
+      "path": "src/components/organisms/AadithCompanion.astro",
+      "tier": "organism"
     },
     "src/components/organisms/FeaturedWork.astro": {
       "imports": [
@@ -115,10 +182,12 @@
     "src/components/organisms/Footer.astro": {
       "imports": [
         "@/components/atoms/BrandLockup.astro",
+        "@/components/atoms/LetterGlitch.astro",
         "@/data/siteConfig"
       ],
       "localComponentDependencies": [
-        "src/components/atoms/BrandLockup.astro"
+        "src/components/atoms/BrandLockup.astro",
+        "src/components/atoms/LetterGlitch.astro"
       ],
       "localDataDependencies": [
         "src/data/siteConfig.ts"
@@ -146,10 +215,14 @@
     },
     "src/components/organisms/Hero.astro": {
       "imports": [
-        "@/components/atoms/Reveal.astro"
+        "@/components/atoms/Reveal.astro",
+        "@/components/atoms/TrueFocus.jsx",
+        "react",
+        "react-dom/client"
       ],
       "localComponentDependencies": [
-        "src/components/atoms/Reveal.astro"
+        "src/components/atoms/Reveal.astro",
+        "src/components/atoms/TrueFocus.jsx"
       ],
       "localDataDependencies": [],
       "name": "Hero",
@@ -226,12 +299,14 @@
     "src/layouts/BaseLayout.astro": {
       "imports": [
         "@/components/atoms/GridBackdrop.astro",
+        "@/components/organisms/AadithCompanion.astro",
         "@/components/organisms/Footer.astro",
         "@/components/organisms/Header.astro",
         "@/data/siteConfig"
       ],
       "localComponentDependencies": [
         "src/components/atoms/GridBackdrop.astro",
+        "src/components/organisms/AadithCompanion.astro",
         "src/components/organisms/Footer.astro",
         "src/components/organisms/Header.astro"
       ],
@@ -244,6 +319,52 @@
     }
   },
   "data": {
+    "src/data/about.ts": {
+      "exports": [
+        "aboutApproaches",
+        "aboutBio",
+        "aboutLead",
+        "aboutMilestones",
+        "aboutStats"
+      ],
+      "imports": [],
+      "path": "src/data/about.ts"
+    },
+    "src/data/adventures.ts": {
+      "exports": [
+        "adventureRoute",
+        "adventureStats",
+        "adventureStory"
+      ],
+      "imports": [],
+      "path": "src/data/adventures.ts"
+    },
+    "src/data/agentGrounding.ts": {
+      "exports": [
+        "agentGroundingChunks"
+      ],
+      "imports": [
+        "@/types"
+      ],
+      "path": "src/data/agentGrounding.ts"
+    },
+    "src/data/companion.ts": {
+      "exports": [
+        "buildCompanionContext",
+        "companionSuggestions"
+      ],
+      "imports": [
+        "@/data/about",
+        "@/data/adventures",
+        "@/data/agentGrounding",
+        "@/data/lab",
+        "@/data/projects",
+        "@/data/siteConfig",
+        "@/data/work",
+        "@/types"
+      ],
+      "path": "src/data/companion.ts"
+    },
     "src/data/lab.json": {
       "exports": [],
       "imports": [],
@@ -394,7 +515,7 @@
     }
   },
   "framework": "astro",
-  "generatedAt": "2026-07-10T02:55:18.641867+00:00",
+  "generatedAt": "2026-07-10T10:10:09.961634+00:00",
   "generator": "design-system/ai/codebase-index.py",
   "pages": {
     "src/pages/404.astro": {
@@ -423,11 +544,14 @@
         "src/components/atoms/SectionLabel.astro",
         "src/layouts/BaseLayout.astro"
       ],
-      "importedData": [],
+      "importedData": [
+        "src/data/about.ts"
+      ],
       "imports": [
         "@/components/atoms/Line.astro",
         "@/components/atoms/Reveal.astro",
         "@/components/atoms/SectionLabel.astro",
+        "@/data/about",
         "@/layouts/BaseLayout.astro"
       ],
       "kind": "page",
@@ -442,11 +566,14 @@
         "src/components/molecules/DottedIndiaMap.astro",
         "src/layouts/BaseLayout.astro"
       ],
-      "importedData": [],
+      "importedData": [
+        "src/data/adventures.ts"
+      ],
       "imports": [
         "@/components/atoms/Line.astro",
         "@/components/atoms/Reveal.astro",
         "@/components/molecules/DottedIndiaMap.astro",
+        "@/data/adventures",
         "@/layouts/BaseLayout.astro"
       ],
       "kind": "page",
@@ -499,6 +626,7 @@
       "importedComponents": [
         "src/components/atoms/Reveal.astro",
         "src/components/molecules/LabCard.astro",
+        "src/components/molecules/WorkingLoopMap.astro",
         "src/layouts/BaseLayout.astro"
       ],
       "importedData": [
@@ -507,6 +635,7 @@
       "imports": [
         "@/components/atoms/Reveal.astro",
         "@/components/molecules/LabCard.astro",
+        "@/components/molecules/WorkingLoopMap.astro",
         "@/data/lab",
         "@/layouts/BaseLayout.astro"
       ],
@@ -634,22 +763,22 @@
     }
   },
   "stats": {
-    "approxJsonTokens": 4824,
-    "componentCount": 19,
-    "dataFileCount": 14,
+    "approxJsonTokens": 5742,
+    "componentCount": 25,
+    "dataFileCount": 18,
     "duplicatePageFilenamesPreserved": [
       "[slug].astro"
     ],
     "pageCount": 11,
     "pageRouteCount": 11,
     "tierCounts": {
-      "atom": 5,
+      "atom": 9,
       "layout": 1,
-      "molecule": 4,
-      "organism": 9
+      "molecule": 5,
+      "organism": 10
     }
   },
-  "tokenEfficiencyNote": "This index summarizes 19 components and 11 routes using full relative path keys, so an AI can retrieve structure and dependencies in a few thousand tokens instead of reading every source file.",
+  "tokenEfficiencyNote": "This index summarizes 25 components and 11 routes using full relative path keys, so an AI can retrieve structure and dependencies in a few thousand tokens instead of reading every source file.",
   "uniqueKeyPolicy": "All maps are keyed by full repository-relative path; filename stems are never used as unique keys.",
   "version": "0.2.0"
 }

@@ -8,9 +8,16 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "index": "python3 design-system/ai/codebase-index.py"
+    "index": "python3 design-system/ai/codebase-index.py",
+    "api:build": "npm --prefix api run build",
+    "api:test": "npm --prefix api test",
+    "api:sync-context": "npm run build && mkdir -p api/context && cp dist/aadith-context.json api/context/aadith-context.json",
+    "api:start": "npm --prefix api start"
   },
   "dependencies": {
-    "astro": "^5.16.0"
+    "astro": "^5.16.0",
+    "motion": "^12.42.2",
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7"
   }
 }

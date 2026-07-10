@@ -2,6 +2,7 @@
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import Reveal from "@/components/atoms/Reveal.astro";
 import LabCard from "@/components/molecules/LabCard.astro";
+import WorkingLoopMap from "@/components/molecules/WorkingLoopMap.astro";
 import { getShowcaseLabProjects } from "@/data/lab";
 
 const projects = getShowcaseLabProjects();
@@ -33,6 +34,10 @@ const stats = [
           </div>
         ))}
       </div>
+    </Reveal>
+
+    <Reveal class="lab-working-loop">
+      <WorkingLoopMap />
     </Reveal>
 
     <section class="lab-category">

@@ -3,28 +3,13 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
 import Reveal from "@/components/atoms/Reveal.astro";
 import SectionLabel from "@/components/atoms/SectionLabel.astro";
 import Line from "@/components/atoms/Line.astro";
-
-const stats = [
-  { value: "AI + trust", label: "Core product territory" },
-  { value: "8+", label: "Early paid Owly customers" },
-  { value: "Figma ↔ code", label: "Working range" },
-  { value: "2× India", label: "Endurance chapters" },
-];
-
-const milestones = [
-  { year: "2020", title: "IIT Guwahati — B.Des", description: "Studied Design at IIT Guwahati. Learned that the interesting problems rarely fit inside one discipline." },
-  { year: "2022", title: "Early-stage work began early", description: "Worked across Web3 products, dashboards, identity systems, and client projects while still studying. Loose briefs and real deadlines were useful teachers." },
-  { year: "2024", title: "Microsoft — Product Designer", description: "Joined the Copilot team to work on how AI-generated responses are read, verified, and improved across Microsoft 365." },
-  { year: "2025", title: "Owly — Co-founded", description: "Started building a brand-aware creative system with two friends from school. Customer conversations became paid work, and paid work became sharper product questions." },
-  { year: "2025", title: "Ride for Unity", description: "Represented Kerala in a government-supported ride from Kashmir to Kanyakumari, covering roughly 4,000 km in 16 days with about 150 riders." },
-];
-
-const approaches = [
-  { title: "Map the system before the screen", body: "I begin with the actors, information, permissions, edge cases, and constraints. It is cheaper than beautifully polishing the wrong part of the system." },
-  { title: "Turn taste into evidence", body: "Interviews, customer conversations, examples, rubrics, and quality checks give a team something sturdier than “this feels better.” Judgment still matters; it just has to explain itself." },
-  { title: "Make the trade-off visible", body: "When a debate stays abstract, I build variants or a working prototype and attach a recommendation. The goal is not more options. It is a clearer decision." },
-  { title: "Stay for the last mile", body: "Accessibility, copy behavior, loading, spacing, and design-system fidelity often decide whether the idea survives implementation. I like being close enough to code to help." },
-];
+import {
+  aboutApproaches,
+  aboutBio,
+  aboutLead,
+  aboutMilestones,
+  aboutStats,
+} from "@/data/about";
 ---
 <BaseLayout title="About" description="Product designer at Microsoft, co-founder of Owly, and endurance cyclist from Kerala.">
   <div class="page container">
@@ -37,7 +22,7 @@ const approaches = [
 
     <Reveal>
       <div class="stat-grid">
-        {stats.map((s) => (
+        {aboutStats.map((s) => (
           <div>
             <p class="stat__value">{s.value}</p>
             <p class="stat__label">{s.label}</p>
@@ -55,10 +40,7 @@ const approaches = [
         </blockquote>
       </Reveal>
       <Reveal class="bio-body" delay={100}>
-        <p>I grew up in Kerala and spent a lot of time drawing before I knew design was a job. At IIT Guwahati, that instinct widened into research, systems, product work, and a habit of learning whichever medium made the idea easier to experience. While studying, I also worked with early-stage teams across Web3, dashboards, personal branding, and fintech. Ambiguous briefs stopped feeling unusual quite early.</p>
-        <p>In 2024, I joined Microsoft to work on Copilot response UX. I focus on the parts around an AI answer: how it is structured, where the evidence appears, how people inspect sources, and how the team evaluates quality. It is a huge system built by many disciplines, so my job is less about having every answer and more about asking useful questions early enough to improve it.</p>
-        <p>In 2025, I started Owly with two friends from school. We began with one video problem, changed the buyer, changed the product, found early paid customers, and kept the useful insight: AI creative tools work better when they understand the brand and leave the steering wheel with the person using them. Some days that means product strategy; other days it means rewriting a button, fixing a demo, or discovering that our “simple” workflow contains twelve new states. Founder life has range.</p>
-        <p>Outside work, I cycle long distances. I have crossed India twice: an earlier northbound journey and, in 2025, a government-supported Kashmir-to-Kanyakumari expedition where I represented Kerala. The second covered roughly 4,000 km in 16 days. It taught me discipline, yes, but also that stubbornness works better with food, sleep, support, and people who tell you when you are being ridiculous.</p>
+        {aboutBio.map((paragraph) => <p>{paragraph}</p>)}
       </Reveal>
     </div>
 
@@ -66,7 +48,7 @@ const approaches = [
 
     <Reveal>
       <p class="prose-lead">
-        I’m at my best when the problem is still foggy, the system has several owners, and the team needs both a clear story and something tangible to argue with.
+        {aboutLead}
       </p>
     </Reveal>
 
@@ -75,7 +57,7 @@ const approaches = [
     <Reveal><SectionLabel>Timeline</SectionLabel></Reveal>
     <div style="height:2.5rem"></div>
     <div class="timeline">
-      {milestones.map((m, i) => (
+      {aboutMilestones.map((m, i) => (
         <Reveal delay={i * 50}>
           <div class="timeline__item">
             <span class="timeline__bgyear" aria-hidden="true">{m.year}</span>
@@ -99,7 +81,7 @@ const approaches = [
     <Line />
     <div style="height:3rem"></div>
     <div class="approach-grid">
-      {approaches.map((a, i) => (
+      {aboutApproaches.map((a, i) => (
         <Reveal delay={i * 80}>
           <h3 class="approach__title">{a.title}</h3>
           <p class="approach__body">{a.body}</p>

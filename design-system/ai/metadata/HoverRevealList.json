@@ -2,12 +2,12 @@
   "name": "HoverRevealList",
   "path": "src/components/molecules/HoverRevealList.astro",
   "tier": "molecule",
-  "summary": "Numbered, hover-aware list of work projects linking to case studies.",
-  "what": "Maps `projects` to numbered rows (index, title, category, year) each linking to /work/<slug>, with reveal stagger.",
-  "why": "The shared 'selected work' / work-index list, so the homepage and Work page stay identical.",
+  "summary": "Numbered work index with a persistent left thumbnail and orange pixel swaps.",
+  "what": "Maps `projects` to linked rows (index, title, category, year) beside a static media column; fine-pointer hover or keyboard focus updates that thumbnail while PixelTransition covers each image swap in orange.",
+  "why": "Keeps the homepage and Work index scannable while giving imagery a stable grid position instead of letting previews float over content.",
   "whenToUse": [
     "List work projects on the home and Work pages.",
-    "Show a compact, scannable index of case studies."
+    "Show an image-led index that rewards hover without depending on it."
   ],
   "whenNotToUse": [
     "Do not use for Lab projects \u2014 use LabCard grid.",
@@ -26,6 +26,7 @@
     }
   ],
   "componentDependencies": [
+    "PixelTransition",
     "Reveal"
   ],
   "dataDependencies": [],
@@ -34,8 +35,9 @@
     "route /work"
   ],
   "a11yNotes": [
-    "Each row is a single anchor with readable text order.",
-    "Numbers are decorative context, not list semantics."
+    "Each row remains a single anchor with readable text order.",
+    "The persistent preview is decorative; coarse pointers retain the first static thumbnail.",
+    "Missing thumbnails use an explicit visual placeholder until the configured asset arrives."
   ],
   "version": "0.3.0",
   "lastUpdated": "2026-07-10",

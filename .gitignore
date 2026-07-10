@@ -20,6 +20,9 @@
 # astro
 /dist/
 /.astro/
+/api/dist/
+/api/node_modules/
+/api/local.settings.json
 
 # production
 /build

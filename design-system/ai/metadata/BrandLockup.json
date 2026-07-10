@@ -2,24 +2,18 @@
   "name": "BrandLockup",
   "path": "src/components/atoms/BrandLockup.astro",
   "tier": "atom",
-  "summary": "Aadith's reusable nested-frame symbol and mono wordmark.",
-  "what": "Renders the original open-frame inspection mark, the uppercase AADITH wordmark in IBM Plex Mono, or both through symbol/wordmark/lockup variants.",
-  "why": "Creates a personal identity that reflects layered inspection and avoids employer-like four-square marks or a generic initials monogram.",
+  "summary": "Aadith's reusable Digibop wordmark.",
+  "what": "Renders the uppercase AADITH wordmark in Adobe Fonts' Digibop face with an optional class passthrough.",
+  "why": "Keeps the personal identity direct and typographic without introducing a separate logo symbol.",
   "whenToUse": [
-    "Use the lockup in Header and Footer identity areas.",
-    "Use wordmark-only for the oversized clipped footer signature.",
-    "Use symbol-only for future compact branded controls."
+    "Use the wordmark in Header and Footer identity areas.",
+    "Use it for the oversized clipped footer signature."
   ],
   "whenNotToUse": [
-    "Do not recreate the nested-frame SVG inline.",
+    "Do not add a separate logo symbol beside it.",
     "Do not pair it with unrelated display fonts or multiple accent colours."
   ],
   "propsOrInputs": [
-    {
-      "name": "variant",
-      "type": "\"lockup\" | \"symbol\" | \"wordmark\"",
-      "required": false
-    },
     {
       "name": "class",
       "type": "string",
@@ -33,7 +27,7 @@
     "Header"
   ],
   "a11yNotes": [
-    "The symbol is decorative; surrounding links or visible wordmark provide the accessible name.",
+    "The visible wordmark provides the identity label inside the home link.",
     "The footer display wordmark is hidden from assistive technology as repeated decoration."
   ],
   "version": "0.3.0",
