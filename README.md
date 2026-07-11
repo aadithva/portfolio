@@ -2,6 +2,9 @@
 
 An evidence-led portfolio for Aadith V A: AI product designer at Microsoft, co-founder of Owly, and design-tool builder.
 
+Future agents should read [`AGENT_HANDOFF.md`](AGENT_HANDOFF.md) before changing
+hosting, Azure resources, companion behavior, or public grounding.
+
 ## What is inside
 
 - Six selected Work chapters spanning enterprise AI, founder work, fintech, early-stage products, Web3, and information design.
