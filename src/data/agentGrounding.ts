@@ -18,7 +18,7 @@ export const agentGroundingChunks = [
       "iit guwahati",
     ],
     body:
-      "Aadith V A is a product and interaction designer from Kerala, based in Hyderabad, and a Bachelor of Design graduate from IIT Guwahati. He joined Microsoft in August 2024 and works on Copilot response experiences involving citations, previews, references, and trust. He also co-founded Owly Studio, an AI video and creative-infrastructure venture, and has completed two India-scale cycling chapters. These practices reinforce one another: design gives him a method for observing, framing, testing, and refining; founder work adds urgency and ownership; endurance supplies a lived reference for long horizons and progress through repetition. A fair synthesis is that he is a high-agency builder who turns ambiguity into artifacts people can inspect: interfaces, prototypes, systems, stories, and working tools.",
+      "Aadith V A is a product and interaction designer from Kerala, based in Hyderabad, and a Bachelor of Design graduate from IIT Guwahati. He joined Microsoft in 2024 and works on Copilot response experiences, including citations, references, quality evaluation, accessibility, and design engineering. He also co-founded Owly, an AI video venture for marketing teams. Outside work, he has crossed India twice by bicycle. He tends to work by making a messy question concrete, then building an interface, prototype, or tool that a team can inspect together.",
   },
   {
     id: "grounding-education-formation",
@@ -37,11 +37,11 @@ export const agentGroundingChunks = [
       "fintech",
     ],
     body:
-      "Aadith studied for a Bachelor of Design at IIT Guwahati from 2020 to 2024. Double Diamond thinking became a durable foundation: widen the evidence, define the real problem, compare alternatives, prototype, and deliver. His final-year thesis explored personal financial guidance for India's middle-income population and included outreach to practicing financial advisers rather than relying only on secondary research. College already overlapped with real product work across Web3, dashboards, personal-branding products, and fintech, including public portfolio chapters for DaoLens, Crunch, Reachify, and Angel One. That early exposure to loose role boundaries helps explain why he is comfortable moving between research, interaction details, brand narrative, and implementation constraints.",
+      "Aadith studied for a Bachelor of Design at IIT Guwahati from 2020 to 2024. His final-year thesis explored personal financial guidance in India and included interviews with practising financial advisers and target users. During college, he also worked on Web3 products, dashboards, personal-branding tools, and fintech. Those early roles rarely had tidy boundaries, so he became comfortable moving between research, interaction design, brand work, and implementation details.",
   },
   {
     id: "grounding-response-ux",
-    title: "Response UX and trustworthy AI",
+    title: "Copilot response UX",
     path: "/work/microsoft-copilot",
     category: "Microsoft work",
     tags: [
@@ -58,7 +58,7 @@ export const agentGroundingChunks = [
       "trust",
     ],
     body:
-      "Aadith treats response UX as a connected system rather than one isolated feature. The design territory includes answer hierarchy, inline citations, hover or glance cards, document previews, follow-up actions, copy behavior, accessibility, and the transition from a generated claim into its source. Inline source pills make source identity recognizable near the relevant text, while the larger design tension is readability versus verifiability: evidence must be available without turning every answer into a wall of controls. Deep Citation continues the journey into the exact page or passage while preserving the user's conversational context. Related work considers whether text is an excerpt or a generated summary, how rich responses survive plain-text paste, what controls announce through a screen reader, and how local product needs align with a shared design system. Public material does not establish confidential rollout figures or impact metrics.",
+      "At Microsoft, Aadith works on Copilot response UX as part of a large team. His public work includes citation and reference patterns, response structure, UX quality evaluation, accessibility review, and low-risk design-engineering fixes. He has helped connect generated claims to source material while keeping responses readable. He also co-created reusable evaluation criteria, labeled examples, and regression checks. Public material does not include confidential screens, rollout figures, impact metrics, or implementation details.",
   },
   {
     id: "grounding-ai-native-method",
@@ -76,9 +76,10 @@ export const agentGroundingChunks = [
       "feedback",
       "evaluation",
       "judgment",
+      "analytics",
     ],
     body:
-      "Aadith uses AI across a familiar design lifecycle rather than treating it as one magic step. Research still needs primary evidence; definition still depends on product data, stakeholder context, and real constraints; ideation and prototyping become cheaper through model-assisted exploration and code; delivery still returns to detailed specifications, redlines, accessibility, and engineering review. Synthetic personas can widen a team's questions, but they cannot validate a need or replace contact with real people. He increasingly builds interactive, imperfect prototypes before polishing static specifications because experienced behavior produces more honest feedback. AI also helps cluster messy critique and generate comparable variants, but the recommendation remains a human responsibility. His central caution is that abundant output raises the value of discernment: performance, security, data protection, edge cases, and last-mile craft do not become automatic.",
+      "Aadith uses AI inside a familiar design process rather than treating it as a separate method. He still starts with context and evidence, defines the problem, builds something people can try, and checks what happens. Synthetic personas may help generate research questions, but they cannot validate a need or replace real conversations. He often moves from a rough flow to a code prototype before polishing a static specification because a working interaction exposes different problems. Security, data protection, accessibility, edge cases, and engineering review still need deliberate work.",
   },
   {
     id: "grounding-owly-evolution",
@@ -98,7 +99,7 @@ export const agentGroundingChunks = [
       "identity",
     ],
     body:
-      "Owly began with a child-focused idea for safer, more personal generated media, including parent-guided stories and visible learning context. In 2025 the team pivoted toward branded video for founders, growth teams, and larger product catalogs. The thread that survived the pivot is identity and context: generated media becomes less generic when it understands the brand and keeps an accountable human presence. The product promise is controlled acceleration, compressing a production process that can take weeks while preserving strategic and visual control. Aadith favors progressive editability: a few meaningful controls for beginners, followed by scene-level changes and selective regeneration when users need precision. The conceptual pipeline moves from brand understanding to strategy, scripts, visuals, assembly, approval, and distribution. The public portfolio reports early paid traction, but exact revenue, recurring revenue, and customer totals should not be inferred beyond the published figures.",
+      "Owly began with an idea for safer, more personal AI video for children. In 2025, the team shifted to branded video for marketing and growth teams that needed content more often. One lesson survived the change: generated media is more useful when it understands the brand and leaves people in control. The team now uses hands-on customer work to learn which repeated decisions should become software. The public portfolio reports at least eight early paid customers. It does not publish revenue or recurring-revenue figures.",
   },
   {
     id: "grounding-craft-storytelling",
@@ -119,7 +120,7 @@ export const agentGroundingChunks = [
       "variants",
     ],
     body:
-      "Aadith's toolkit spans product design, illustration, brand systems, motion, 3D, and code-based prototypes. He tends to choose the medium that makes an idea easiest to experience rather than protecting a narrow role boundary. He also thinks in scenes and sequences: hooks, transitions, scripts, product evidence, and calls to action are ways of making a complex system understandable over time. His preferred voice is direct, casual, and credible rather than polished into corporate anonymity. In collaboration, he often makes disagreement visible through concrete variants, then works toward a recommendation and decision criteria. His strongest recurring combination is synthesis, initiative, and narrative range: absorbing a foggy problem, finding a useful frame, making an artifact, and bringing it to other people early enough to improve it.",
+      "Aadith works across product design, illustration, brand systems, motion, 3D, and code prototypes. He chooses the medium based on what the team needs to understand or test. When a debate stays abstract, he makes variants or a working prototype and attaches a recommendation. His preferred writing voice is direct, casual, and specific. He often brings an artifact to the team early so other people can challenge it before the idea becomes expensive to change.",
   },
   {
     id: "grounding-endurance-chapters",
@@ -137,6 +138,6 @@ export const agentGroundingChunks = [
       "initiative",
     ],
     body:
-      "Aadith has completed two distinct India-scale cycling chapters. The first was a self-directed, multi-week journey from Kerala toward Kashmir while he was a young adult; surviving accounts disagree on the exact distance and duration, so the public-safe description emphasizes the expedition rather than one disputed number. The second was the government-supported Ride for Unity from Kashmir to Kanyakumari in late 2025, with roughly 150 riders and Aadith representing Kerala. The common public version is about 4,000 kilometres in 16 days. The second ride was a supported national event and should not be described as solo. Together the rides show two forms of endurance: youthful self-direction in the first, and a much faster, structured team expedition in the second.",
+      "Aadith has crossed India twice by bicycle. The first was a mostly self-directed journey from Kerala toward Kashmir when he was twenty. Old accounts disagree on its exact distance and duration, so the public portfolio does not give a number. The second was the government-supported Ride for Unity from Kashmir to Kanyakumari in 2025. Aadith represented Kerala alongside roughly 150 riders. The group covered about 4,000 kilometres in 16 days with a large support team. The second ride should not be described as solo.",
   },
 ] satisfies CompanionContextChunk[];

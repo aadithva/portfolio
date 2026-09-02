@@ -41,12 +41,12 @@ const endpoint =
   <div
     class="companion-panel"
     id="aadith-companion-panel"
-    aria-hidden="false"
+    aria-hidden="true"
     data-companion-panel
   >
     <header class="companion-header">
       <div>
-        <p class="companion-kicker">Aadith's sidekick</p>
+        <p class="companion-kicker">Portfolio guide</p>
         <h2 class="companion-title">Ask about Aadith</h2>
       </div>
       <button
@@ -69,9 +69,8 @@ const endpoint =
       <article class="companion-message companion-message--assistant">
         <p class="companion-message__role">Companion</p>
         <p class="companion-message__body">
-          Hey, I know this portfolio pretty well. Ask me what Aadith builds, how
-          he thinks, or which rabbit hole to open first. I stick to the public
-          evidence here.
+          Ask about Aadith's work or how he approaches a project. I answer from
+          the public material in this portfolio.
         </p>
       </article>
     </div>
@@ -101,12 +100,12 @@ const endpoint =
         rows="2"
         maxlength="600"
         autocomplete="off"
-        placeholder="Ask about his work, process, or projects"
+        placeholder="Ask about Aadith's work"
         data-companion-input
       ></textarea>
       <div class="companion-form__footer">
         <p class="companion-form__status" data-companion-status>
-          Public portfolio context only
+          Based on this portfolio
         </p>
         <button class="companion-submit" type="submit" data-companion-submit>
           Send
@@ -150,12 +149,11 @@ const endpoint =
     const backgroundElements = Array.from(
       document.querySelectorAll("[data-companion-background]")
     ).filter((element) => element instanceof HTMLElement);
-    const mobileQuery = window.matchMedia("(max-width: 1179px)");
 
     const initialMessage = {
       role: "assistant",
       content:
-        "Hey, I know this portfolio pretty well. Ask me what Aadith builds, how he thinks, or which rabbit hole to open first. I stick to the public evidence here.",
+        "Ask about Aadith's work or how he approaches a project. I answer from the public material in this portfolio.",
       sources: [],
       includeInRequest: false,
     };
@@ -214,7 +212,7 @@ const endpoint =
       }
       if (submit instanceof HTMLButtonElement) submit.disabled = value;
       companion.toggleAttribute("data-pending", value);
-      setStatus(value ? "Digging through the public portfolio" : "Public portfolio context only");
+      setStatus(value ? "Searching the portfolio" : "Based on this portfolio");
     };
 
     const saveMessages = () => {
@@ -407,7 +405,6 @@ const endpoint =
     };
 
     const openDrawer = () => {
-      if (!mobileQuery.matches) return;
       companion.setAttribute("data-open", "");
       document.body.classList.add("companion-drawer-open");
       setBackgroundInert(true);
@@ -429,8 +426,8 @@ const endpoint =
       openButton?.setAttribute("aria-hidden", "false");
       if (openButton instanceof HTMLButtonElement) openButton.tabIndex = 0;
       scrim?.setAttribute("aria-hidden", "true");
-      panel?.setAttribute("aria-hidden", mobileQuery.matches ? "true" : "false");
-      if (mobileQuery.matches && openButton instanceof HTMLButtonElement) {
+      panel?.setAttribute("aria-hidden", "true");
+      if (openButton instanceof HTMLButtonElement) {
         openButton.focus();
       }
     };
@@ -460,14 +457,14 @@ const endpoint =
         messages.push({
           role: "assistant",
           content:
-            "The companion interface is ready, but its Azure endpoint has not been connected yet.",
+            "The portfolio guide is unavailable right now.",
           sources: [],
           includeInRequest: false,
         });
         saveMessages();
         renderMessages();
         setPending(false);
-        setStatus("Azure endpoint not configured");
+        setStatus("Guide unavailable");
         return;
       }
 
@@ -485,15 +482,15 @@ const endpoint =
         if (!response.ok) {
           const fallback =
             response.status === 429
-              ? "The companion has received several questions at once. Please try again shortly."
-              : "The companion could not reach its model just now. Please try again.";
+              ? "Too many questions arrived at once. Please try again in a moment."
+              : "I could not answer that right now. Please try again.";
           throw new Error(
             payload && typeof payload.error === "string" ? payload.error : fallback
           );
         }
 
         if (!payload || typeof payload.answer !== "string") {
-          throw new Error("The companion returned an incomplete answer.");
+          throw new Error("The answer did not arrive in full. Please try again.");
         }
 
         const sources = Array.isArray(payload.sources)
@@ -518,7 +515,7 @@ const endpoint =
           content:
             error instanceof Error
               ? error.message
-              : "The companion could not answer just now. Please try again.",
+              : "I could not answer that right now. Please try again.",
           sources: [],
           includeInRequest: false,
         });
@@ -532,7 +529,7 @@ const endpoint =
 
     restoreMessages();
     renderMessages();
-    panel?.setAttribute("aria-hidden", mobileQuery.matches ? "true" : "false");
+    panel?.setAttribute("aria-hidden", "true");
 
     form?.addEventListener("submit", (event) => {
       event.preventDefault();
@@ -580,7 +577,6 @@ const endpoint =
 
       if (
         event.key !== "Tab" ||
-        !mobileQuery.matches ||
         !companion.hasAttribute("data-open") ||
         !(panel instanceof HTMLElement)
       ) {
@@ -609,22 +605,5 @@ const endpoint =
       }
     });
 
-    mobileQuery.addEventListener("change", (event) => {
-      if (!event.matches) {
-        companion.removeAttribute("data-open");
-        document.body.classList.remove("companion-drawer-open");
-        setBackgroundInert(false);
-        panel?.setAttribute("aria-hidden", "false");
-        openButton?.setAttribute("aria-hidden", "true");
-        if (openButton instanceof HTMLButtonElement) openButton.tabIndex = -1;
-        scrim?.setAttribute("aria-hidden", "true");
-      } else {
-        panel?.setAttribute("aria-hidden", "true");
-        openButton?.setAttribute("aria-expanded", "false");
-        openButton?.setAttribute("aria-hidden", "false");
-        if (openButton instanceof HTMLButtonElement) openButton.tabIndex = 0;
-        scrim?.setAttribute("aria-hidden", "true");
-      }
-    });
   }
 </script>

@@ -17,7 +17,7 @@ const active = enabled && typeof password === "string" && password.length > 0;
         <circle cx="24" cy="32" r="3" fill="currentColor" />
       </svg>
       <h1 class="gate__title">Protected project</h1>
-      <p class="gate__sub">This case study is under NDA. Enter the password to view.</p>
+      <p class="gate__sub">This case study is password protected. Enter the password to view.</p>
       <form class="gate__form" data-gate-form>
         <input class="gate__input" type="password" placeholder="Enter password" autocomplete="off" data-gate-input />
         <p class="gate__error is-hidden" data-gate-error>Incorrect password. Please try again.</p>

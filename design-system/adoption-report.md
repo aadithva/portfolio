@@ -5,7 +5,7 @@ Generated from `design-system/ai/index.json` and `design-system/ai/metadata/` by
 ## Freshness
 
 - Index version: `0.2.0` (astro)
-- Index generated at: `2026-07-10T10:10:09.961634+00:00`
+- Index generated at: `2026-09-02T06:50:38.952292+00:00`
 - Metadata files: 25 (AadithCompanion, BaseLayout, BrandLockup, CaseStudySection, DecryptedText, DottedIndiaMap, FeaturedWork, Footer, GridBackdrop, Header, Hero, HoverRevealList, LabCard, LetterGlitch, Line, PixelTransition, ProfileSignals, ProjectHero, ProjectNav, Reveal, SectionLabel, TrueFocus, WorkGate, WorkItemIndex, WorkingLoopMap)
 - Caveat: utilization is static import-based; dynamic or runtime-only references may need manual review.
 
@@ -13,8 +13,8 @@ Generated from `design-system/ai/index.json` and `design-system/ai/metadata/` by
 
 - Components scanned: **25**
 - Routes scanned: **11**
-- Data/helper files scanned: **18**
-- Approx index token size: **5742 tokens**
+- Data/helper files scanned: **19**
+- Approx index token size: **5764 tokens**
 - Duplicate page filenames preserved by full-path keys: **[slug].astro**
 
 ### Tier distribution

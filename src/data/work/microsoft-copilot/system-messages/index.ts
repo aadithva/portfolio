@@ -5,53 +5,71 @@ export const systemMessages: WorkItem = {
   slug: "system-messages",
   title: "System messages",
   description:
-    "Designing the hidden instruction layer as product behaviour: tone, boundaries, recovery, and what the system should do when the happy path runs out.",
-  label: "Agent behaviour / content systems",
-  year: "2025–Present",
+    "Notes on classifying chat messages that confirm an action or mark a change without speaking as the assistant.",
+  label: "Chat UX / content design",
+  year: "2025 to present",
   status: "draft",
   passwordProtected: true,
   confidentialityNote:
-    "Documentation in progress. No internal prompt text, policies, or confidential implementation details are published here.",
+    "I have left out internal scenarios, product policy, visual details, and implementation details.",
   sections: [
     {
       type: "text",
-      heading: "The invisible interface still has users",
+      heading: "Some chat messages belong to the system",
       content:
-        "System messages sit behind the UI, but their decisions appear everywhere: how the assistant explains limits, asks for missing context, handles uncertainty, cites evidence, and recovers after a mistake. I want this page to document that work as interaction design rather than treating it as a mysterious block of prompt text.",
+        "A system message is neither user input nor assistant output. It records an event in the chat, such as a completed action or a session change. The framework groups those events before the team chooses copy or a visual pattern.",
     },
     {
       type: "framework",
-      label: "Behaviour layer",
-      heading: "Instructions are only useful when their effects can be inspected",
+      label: "Classification system",
+      heading: "Classify the event before choosing a pattern",
       content:
-        "The eventual case study will connect authored guidance to the behaviour a user actually experiences.",
+        "We tried to give each scenario one primary job. When a scenario appeared to need two patterns, we went back and clarified the event first.",
       items: [
         {
-          title: "Intent",
+          title: "Action receipt",
           content:
-            "State the job the system is trying to do and the priorities that should survive edge cases.",
+            "A short message that confirms a completed action at that point in the conversation.",
         },
         {
-          title: "Boundaries",
+          title: "Session lifecycle",
           content:
-            "Make limits and prohibited behaviour explicit without turning every response into defensive boilerplate.",
+            "A divider that marks the beginning or end of a session or mode.",
         },
         {
-          title: "Recovery",
+          title: "Context change",
           content:
-            "Describe what the assistant should do when context is missing, tools fail, or the user corrects it.",
+            "A marker that tells the reader when the conversation context changes.",
         },
         {
-          title: "Evaluation",
+          title: "Conversation-wide notice",
           content:
-            "Pair instructions with scenarios and observable quality criteria so behaviour can be reviewed rather than merely hoped for.",
+            "A notice for a condition that applies to the conversation rather than one message.",
         },
       ],
     },
     {
       type: "image-full",
-      images: ["/images/projects/microsoft-copilot/system-messages/hero.png"],
-      caption: "System-message structure and behaviour examples — documentation in progress",
+      images: ["/shots/system-messages-site/system-messages-site__home-desktop-hero.png"],
+      caption: "Public documentation prototype for the system-message framework",
+    },
+    {
+      type: "text",
+      heading: "The framework also needed exclusions",
+      content:
+        "We excluded assistant output, service errors, and ordinary interface changes. Adding a neutral sentence to the timeline did not make those states clearer. The classification was more useful when it also told the team not to add a message.",
+    },
+    {
+      type: "text",
+      heading: "Ask what changed before styling the message",
+      content:
+        "We checked whether an event belonged at one point in the timeline or across the conversation, whether it was complete or ongoing, and whether the interface already explained it. That kept the decision focused on the event rather than a preferred component.",
+    },
+    {
+      type: "text",
+      heading: "Write like a receipt, not a speaker",
+      content:
+        "System copy should state the change in one sentence and leave out conversational filler. Links stay secondary. The message records an event; it does not join the conversation.",
     },
   ],
 };

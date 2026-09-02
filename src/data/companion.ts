@@ -5,6 +5,7 @@ import { showcaseLabProjects } from "@/data/lab";
 import { projects } from "@/data/projects";
 import { siteConfig } from "@/data/siteConfig";
 import { workItems } from "@/data/work";
+import { writingNotes } from "@/data/writing";
 import type {
   CaseStudySection,
   CompanionContextChunk,
@@ -12,9 +13,9 @@ import type {
 } from "@/types";
 
 export const companionSuggestions = [
-  "What kind of problems does Aadith solve?",
-  "What does he work on at Microsoft?",
-  "Why did he start Owly?",
+  "What does Aadith work on?",
+  "What does he do at Microsoft?",
+  "How did Owly start?",
   "Which Lab project should I open first?",
 ];
 
@@ -164,7 +165,7 @@ export function buildCompanionContext(): CompanionContextDocument {
       ],
       body: clean([
         item.description,
-        `Area: ${item.label}. Period: ${item.year}. Status: ${item.status}.`,
+        `Area: ${item.label}. Period: ${item.year}. Status: ${item.status}. Treat draft entries as incomplete notes, not documented outcomes.`,
         item.confidentialityNote,
         ...item.sections.map(sectionText),
       ]),
@@ -198,8 +199,19 @@ export function buildCompanionContext(): CompanionContextDocument {
     })
   );
 
+  const writingChunks = writingNotes.map((note) =>
+    source({
+      id: `writing-${note.id}`,
+      title: note.title,
+      path: `/writing#${note.id}`,
+      category: "Writing",
+      tags: [note.id, ...note.tags],
+      body: clean([...note.paragraphs, note.pullquote]),
+    })
+  );
+
   return {
-    version: "2",
+    version: "4",
     owner: siteConfig.name,
     boundary:
       "Public-safe portfolio and biographical material only. Never disclose private health, financial, relationship, family, compensation, manager, promotion, account, third-party, or unpublished Microsoft details.",
@@ -209,6 +221,7 @@ export function buildCompanionContext(): CompanionContextDocument {
       ...workChunks,
       ...workItemChunks,
       ...labChunks,
+      ...writingChunks,
     ],
   };
 }

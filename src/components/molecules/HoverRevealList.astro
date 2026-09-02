@@ -58,7 +58,7 @@ const initialPreview = previewProjects[0];
             data-work-preview-missing
             hidden={initialPreview.thumbnailAvailable}
           >
-            <span>Preview incoming</span>
+            <span>No public preview</span>
           </div>
         </div>
       </PixelTransition>
@@ -196,8 +196,8 @@ const initialPreview = previewProjects[0];
       previewIndex.textContent = index;
       previewTitle.textContent = title;
       missing.textContent = title
-        ? `${title} preview incoming`
-        : "Preview incoming";
+        ? `${title}: no public preview`
+        : "No public preview";
     };
 
     const activateRow = (row: HTMLAnchorElement, animate = true) => {

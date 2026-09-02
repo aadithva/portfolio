@@ -11,16 +11,16 @@ interface Props {
 const { parent, items } = Astro.props;
 const statusLabel: Record<WorkItem["status"], string> = {
   documented: "Documented",
-  draft: "In documentation",
-  growing: "Growing collection",
+  draft: "Draft",
+  growing: "In progress",
 };
 ---
 <section class="work-collection container">
   <Reveal class="work-collection__intro">
     <SectionLabel>Inside this chapter</SectionLabel>
     <div>
-      <h2>{items.length === 1 ? "One focused case study" : `${items.length} separate bodies of work`}</h2>
-      <p>Each project has its own route, evidence, images, and room to grow without turning the {parent.title} overview into one endless page.</p>
+      <h2>{items.length === 1 ? "One focused case study" : `${items.length} notes and case studies`}</h2>
+      <p>Each piece has its own page, so this overview can stay short.</p>
     </div>
   </Reveal>
 

@@ -22,11 +22,11 @@ const { prev, next } = getAdjacentWorkItems(item);
 const gated = parent.passwordProtected === true || item.passwordProtected === true;
 const statusLabel = {
   documented: "Documented",
-  draft: "In documentation",
-  growing: "Growing collection",
+  draft: "Draft",
+  growing: "In progress",
 }[item.status];
 ---
-<BaseLayout title={`${item.title} — ${parent.title}`} description={item.description}>
+<BaseLayout title={`${item.title} | ${parent.title}`} description={item.description}>
   <WorkGate enabled={gated}>
     <article class="work-item-detail">
       <section class="project-hero work-item-hero">
@@ -56,7 +56,7 @@ const statusLabel = {
             </div>
             <div>
               <p class="meta__label">Format</p>
-              <p class="meta__value">Focused case study</p>
+              <p class="meta__value">{item.status === "documented" ? "Focused case study" : "Draft outline"}</p>
             </div>
           </Reveal>
           {item.confidentialityNote && (

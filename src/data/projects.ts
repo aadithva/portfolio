@@ -5,9 +5,9 @@ const projectArchive: Project[] = [
     slug: "owly-studio",
     title: "Owly",
     description:
-      "I’m building Owly with two long-time friends: a brand-aware creative system that helps marketing teams reach a controllable video draft without sanding every brand down into the same AI look.",
-    role: "Co-founder & CEO",
-    year: "2025–Present",
+      "I'm building Owly with two friends I've known since school. It uses brand context to help marketing teams make video drafts they can direct, without sanding every brand down into the same AI look.",
+    role: "Co-founder, product & design",
+    year: "2025 to present",
     client: "Owly",
     category: "AI / Startup",
     thumbnail: "/shots/owly-studio/owly-studio__home-desktop-hero.png",
@@ -16,32 +16,32 @@ const projectArchive: Project[] = [
     sections: [
       {
         type: "text",
-        heading: "Three friends, one very large idea",
+        heading: "Building Owly with friends from school",
         content:
-          "I started Owly with Adi and Hari, two friends I have known since school. I lead product, design, and much of the customer story; Adi works on the AI systems; Hari builds the backend and operational spine. The roles are complementary, even when the daily task list is not. We are building a creative system for marketing teams: bring in brand context, shape an idea, make a first video draft, refine it without starting over, and learn from what ships.",
+          "I started Owly with Adi and Hari, two friends I have known since school. I lead product, design, and customer storytelling. Adi works on the AI systems, and Hari builds the backend and runs operations. The roles are complementary, even when the daily task list is not. Owly brings in brand context, helps shape an idea into a video draft, and lets the marketer revise it without starting over.",
       },
       {
         type: "image-full",
         images: ["/shots/owly-website/owly-website__home-desktop-hero.png"],
-        caption: "owly.studio — public marketing site",
+        caption: "Owly's public marketing site",
       },
       {
         type: "text",
         heading: "The product did not begin here",
         content:
-          "Owly first explored safer, more personal AI video for children. The emotional idea was strong, but the buyer, feedback loop, and economics were slow. In 2025, we moved toward brands and growth teams, where the need for frequent video was immediate and budgeted. The pivot changed the customer, not the useful insight: generated media becomes more valuable when it carries familiar identity, clear context, and meaningful control.",
+          "Owly first explored safer, more personal AI video for children. We cared about the idea, but finding buyers and getting frequent feedback was difficult. In 2025, we shifted to brands and growth teams that needed video more often and had budgets for it. One lesson carried over. Generated media is more useful when it reflects a familiar identity and gives people control over the result.",
       },
       {
         type: "text",
-        heading: "The relay race between brief and live",
+        heading: "Producing enough usable video",
         content:
-          "Creative teams often work on a slower clock than the platforms they feed. Ads fatigue, formats multiply, and a good brief gets stuck in a relay race across strategy, production, edits, approvals, and publishing. We kept seeing the same gap: the idea was not always the bottleneck; turning it into enough usable creative was.",
+          "Ads wear out, formats multiply, and a brief passes through strategy, production, edits, approvals, and publishing before it goes live. We kept seeing that the idea was not always the bottleneck. Producing enough usable versions of it was.",
       },
       {
         type: "text",
         heading: "A first draft you can actually direct",
         content:
-          "Owly reads a brand’s website and past creative, then uses that context to help generate a video draft. The useful part is not a shiny Generate button; it is what happens next. A marketer can respond in plain language, and the editor makes changes to the work on screen. We are still improving the loop, but the goal stays simple: make the first draft faster without taking direction away from the person responsible for the brand.",
+          "Owly reads a brand's website and past creative, then uses that context to generate a video draft. A marketer can ask for changes in plain language, and the editor applies them to the work on screen. We are still improving that loop. We want to speed up the first draft without taking direction away from the person responsible for the brand.",
       },
       {
         type: "image-grid",
@@ -49,25 +49,25 @@ const projectArchive: Project[] = [
           "/shots/owly-studio/owly-studio__home-desktop-hero.png",
           "/shots/owly-studio/owly-studio__login-desktop-hero.png",
         ],
-        caption: "Studio app — dashboard and auth",
+        caption: "Studio dashboard and sign-in",
         columns: 2,
       },
       {
         type: "framework",
-        label: "The product thesis",
-        heading: "Context first. Control second. Generation somewhere in the middle.",
+        label: "Product principles",
+        heading: "Start with context and keep the marketer in control",
         content:
-          "The system we are working toward is less a model wrapper and more a repeatable creative workflow. Four ideas keep the product honest.",
+          "We use these four principles when deciding what to build.",
         items: [
           {
             title: "Learn the brand once",
             content:
-              "Bring the website, product catalog, tone, and past creative into a reusable context layer instead of restarting from a blank prompt.",
+              "Save the website, product catalog, tone, and past creative so the next brief does not begin with another blank prompt.",
           },
           {
             title: "Show the plan before the render",
             content:
-              "Use scripts, storyboards, progress, and approval points so a long generation step never feels like a sealed box.",
+              "Show scripts, storyboards, progress, and approval points before and during a long generation step.",
           },
           {
             title: "Change a scene, not the universe",
@@ -77,15 +77,15 @@ const projectArchive: Project[] = [
           {
             title: "Make the next brief smarter",
             content:
-              "Carry customer feedback and performance context forward so repeat production improves instead of merely repeating.",
+              "Use customer feedback and performance data from earlier work to inform the next production.",
           },
         ],
       },
       {
         type: "text",
-        heading: "The bet we’re making",
+        heading: "What should carry into the next project",
         content:
-          "Our long-term bet is that brand context, product catalogs, past creative, and performance history become reusable infrastructure. The hands-on service layer helps us learn and earn now; the company becomes more interesting when each customer improves a repeatable system rather than creating another bespoke workflow. We are not there yet. That is the work.",
+          "We want brand context, product catalogs, past creative, and performance history to carry from one project to the next. For now, hands-on customer work shows us which decisions repeat. Those are the parts we can turn into software. We have not built all of that yet.",
       },
       {
         type: "image-grid",
@@ -94,14 +94,14 @@ const projectArchive: Project[] = [
           "/shots/owly-website/owly-website__pricing-desktop-hero.png",
           "/shots/owly-website/owly-website__about-desktop-hero.png",
         ],
-        caption: "Marketing site — features, pricing, about",
+        caption: "Features, pricing, and about pages on the marketing site",
         columns: 3,
       },
       {
         type: "text",
         heading: "Founder titles are suspiciously broad",
         content:
-          "I lead product design, brand, and founder-led storytelling, but not in a vacuum. Adi pushes the AI architecture, Hari carries backend and operational execution, customers puncture our assumptions, and the work changes weekly. My part ranges from interaction flows and prototypes to the website, sales demos, and the words an AI editor uses when it needs clarification. It is less “owning every surface” and more keeping the many surfaces in the same conversation.",
+          "I lead product design, brand, and customer storytelling. Adi works on the AI architecture, Hari handles the backend and operations, and customers regularly prove our assumptions wrong. My work ranges from interaction flows and prototypes to the website, sales demos, and the words the editor uses when it needs clarification. The job changes every week.",
       },
       {
         type: "stats",
@@ -109,7 +109,7 @@ const projectArchive: Project[] = [
           { label: "Co-founders", value: "3" },
           { label: "Early paid customers", value: "8+" },
           { label: "Company", value: "Self-funded" },
-          { label: "Service-to-software bridge", value: "Hybrid" },
+          { label: "Current model", value: "Service + software" },
         ],
       },
       {
@@ -127,7 +127,7 @@ const projectArchive: Project[] = [
       {
         type: "quote",
         quote:
-          "We are not trying to win a generation demo. We are trying to build a tool a creative team would genuinely miss when it is gone.",
+          "I want to build a tool a creative team would genuinely miss when it is gone.",
         attribution: "Aadith V A, Co-founder",
       },
     ],
@@ -136,143 +136,117 @@ const projectArchive: Project[] = [
     slug: "microsoft-copilot",
     title: "Microsoft Copilot",
     description:
-      "Making Copilot answers easier to read, question, verify, and use — through citations, response design, UX evaluation, accessibility, and the occasional detour into code.",
+      "I design and evaluate Copilot response experiences across Microsoft 365 as part of a large team. My work includes citations, response structure, accessibility, and design engineering.",
     role: "Product Designer",
-    year: "2024–Present",
+    year: "2024 to present",
     client: "Microsoft",
     category: "AI / Enterprise",
     thumbnail: "/images/projects/copilot-thumb.jpg",
     featured: true,
     passwordProtected: true,
     confidentialityNote:
-      "Public-safe version: I’ve kept the thinking and left out confidential product visuals, metrics, and implementation details.",
+      "This public version leaves out confidential product visuals, metrics, and implementation details.",
     sections: [
       {
         type: "text",
-        heading: "AI can sound certain. People still deserve receipts.",
+        heading: "An AI answer is only part of the experience",
         content:
-          "My role is one small part of a very large team effort: shaping the experience around an AI-generated answer. I work with designers, product managers, engineers, researchers, quality specialists, and accessibility partners to make those answers easier to scan, trace back to evidence, evaluate, and improve. I do not make Copilot alone — thankfully. I focus on the moments where the model meets a person, because that is often where trust is earned or lost.",
+          "My part in a much larger team is shaping the experience around AI-generated responses. I work with product, engineering, research, quality, and accessibility partners on response structure, source presentation, and review. Most of my attention goes to the small interface decisions between a generated answer and the person reading it.",
       },
       {
         type: "framework",
-        label: "My part of the puzzle",
-        heading: "Less magic. More clarity.",
+        label: "What I work on",
+        heading: "The work is mostly small decisions",
         content:
-          "I keep returning to four practical habits. None is flashy on its own, but together they help an AI response feel less like a polished black box and more like something a person can understand, question, and use.",
+          "These parts of the role show up in reviews, prototypes, and quality evaluation rather than as one standalone feature.",
         items: [
           {
-            title: "Make it scannable",
+            title: "Clarify the response",
             content:
-              "Give complex responses a clear rhythm so the answer, evidence, and next action do not compete for attention.",
+              "Use hierarchy so the answer, its sources, and available actions do not compete for attention.",
           },
           {
-            title: "Bring receipts",
+            title: "Keep sources close",
             content:
-              "Keep source evidence close enough to a claim that verification feels natural, not like a second task.",
+              "Place source identity near the relevant claim, with more context available when the reader needs it.",
           },
           {
             title: "Turn taste into a test",
             content:
-              "Convert “something feels off” into criteria, examples, and checks a wider team can actually reuse.",
+              "Translate a design concern into reusable criteria and examples the team can review together.",
           },
           {
-            title: "Mind the last 10%",
+            title: "Stay close to implementation",
             content:
-              "Use prototypes and small code fixes to protect the accessibility and craft that can disappear during handoff.",
+              "Use prototypes and low-risk presentation-layer fixes to check accessibility and visual fidelity.",
           },
-        ],
-      },
-      {
-        type: "stats",
-        stats: [
-          { label: "Product world", value: "Microsoft 365" },
-          { label: "My lane", value: "Response UX" },
-          { label: "Recurring question", value: "Can I verify this?" },
-          { label: "Often between", value: "Figma ↔ code" },
         ],
       },
       {
         type: "text",
-        heading: "01 — “Nice answer. Where did that come from?”",
+        heading: "01. Where did that answer come from?",
         content:
-          "Generated answers arrive quickly; trust usually takes another beat. I worked on citation and reference patterns that connect claims to source material without turning every response into a legal appendix. The goal was quiet confidence: show evidence near the claim, reveal enough context to judge it, and keep the full source one step away.",
+          "I designed citation and reference patterns with the wider team to help people trace generated responses back to source material. We worked through how much source identity and context to show without crowding the answer. The aim was to keep the response readable while making its basis easier to inspect.",
       },
       {
         type: "framework",
-        label: "A verification ladder",
-        heading: "Let the evidence deepen only when the person asks.",
+        label: "Citation flow",
+        heading: "Start compact, then offer more source context",
         content:
-          "A citation is not one component. It is a sequence that should preserve reading flow while giving someone a credible path from a claim to its basis.",
+          "We treated a citation as a path from the claim to enough source context for the reader to judge it, while keeping the answer readable.",
         items: [
           {
-            title: "Recognize the source",
+            title: "Show the source",
             content:
-              "Keep a compact, readable source identity near the relevant claim so the answer does not become a field of controls.",
+              "Place a readable source label near the relevant claim without filling the answer with controls.",
           },
           {
-            title: "Inspect useful context",
+            title: "Preview the context",
             content:
-              "Reveal an excerpt or preview that helps someone judge relevance without abandoning the answer.",
+              "Show a short excerpt or preview so the reader can judge relevance before opening the source.",
           },
           {
-            title: "Open the exact evidence",
+            title: "Open the source",
             content:
-              "When the stakes are higher, carry the person into the source context instead of making them search a long document again.",
-          },
-          {
-            title: "Keep meaning after reuse",
-            content:
-              "Preserve structure, source clarity, and accessible semantics when content is copied, read aloud, or moved into a less capable surface.",
+              "Let the reader continue into the source when the preview is not enough.",
           },
         ],
       },
       {
         type: "text",
-        heading: "02 — AI responses collect a lot of furniture",
+        heading: "02. Useful parts can still crowd an answer",
         content:
-          "Citations, actions, cards, previews, artifacts — useful pieces can still become a crowded room. I contributed to a wider team effort to modernize how those pieces fit together, simplifying layout and hierarchy so people could find the answer, the evidence, and the next action without decoding the interface first. Most of the work happened in critique, edge cases, and the stubborn details that only appear when a concept meets a real product.",
+          "I contributed to a wider team effort to modernize Copilot responses across layout, source hierarchy, actions, and visual clarity. Much of my part happened in critique and edge-case review, where we worked through how those pieces sat together in the product.",
       },
       {
         type: "text",
-        heading: "03 — Taste is useful. A repeatable quality bar is better.",
+        heading: "03. Giving 'something feels off' a clearer name",
         content:
-          "Designers are good at saying, “Something feels off.” That does not scale especially well. As a named designer on a UX evaluation initiative, I helped turn qualitative judgment into reusable criteria, labeled examples, rubrics, and prompt-based checks. The framework became operational and surfaced quality issues across multiple response experiences — giving the team a way to catch problems earlier and discuss them with more than vibes.",
+          "Designers often begin with 'something feels off.' I co-created a UX quality-evaluation framework with the team to turn that reaction into reusable criteria, labeled examples, and regression checks. The framework became operational and surfaced quality issues across multiple response experiences.",
       },
       {
         type: "text",
-        heading: "04 — Pixels have a habit of wandering",
+        heading: "04. Some details need a running prototype",
         content:
-          "Even a careful specification can arrive in the product slightly… sideways. I use code and near-production prototypes to test interactions and contribute small, low-risk presentation-layer fixes. Accessibility, spacing, typography, and component behavior are not always glamorous, but they are often the difference between a design that looks complete and one that feels considered.",
+          "Even a careful specification leaves questions once the interaction is running. I use code and near-production prototypes to check those details, then contribute small, low-risk presentation-layer fixes alongside engineering and accessibility partners. The work has included spacing, typography, accessibility, and design-system fidelity.",
       },
       {
         type: "text",
-        heading: "Good work survives a lot of questions",
+        heading: "Review is part of the work",
         content:
-          "Formal accessibility reviews, design-spec reviews, critique, and cross-functional checks rarely produce a dramatic portfolio thumbnail. They do produce better decisions. I contribute to those review layers, raise questions early, and lean on partners who see risks or constraints I do not. The point is not to be the person with every answer; it is to help the team notice the right problems.",
+          "I contribute to formal accessibility and design-spec reviews. The wider process includes recurring critique and cross-functional checks, where partners can raise constraints I may not see. That work is quieter than the final screen, but it belongs in the account of how the team worked.",
       },
       {
         type: "text",
-        heading: "Sharing the messy middle",
+        heading: "Sharing methods as we tested them",
         content:
-          "Outside feature work, I helped run an internal design-enablement initiative about using AI across research, synthesis, prototyping, evaluation, and implementation. I organized recurring sessions, demos, and supporting website work — not as a guru with a perfect method, but as a curious practitioner documenting what worked, what did not, and what others might borrow.",
+          "I helped run an internal initiative that documented how designers were using AI in their work. I organized recurring sessions and demos, and contributed to the supporting website. We shared methods the team had tried, including what still needed work, rather than presenting one finished process.",
       },
       {
         type: "text",
         heading: "What I am still figuring out",
         content:
-          "Plenty. How much evidence is reassuring before it becomes clutter? When should an evaluation automate a check, and when should a person keep the final say? How do patterns stay coherent across products without becoming rigid? I am still working through those questions with people who know different parts of the system better than I do. That uncertainty is not a footnote to the work; it is the interesting part.",
-      },
-      {
-        type: "text",
-        heading: "How I tend to show up",
-        content:
-          "I ask a lot of small questions: Is the evidence close enough to the claim? Can someone scan this in five seconds? What happens with an odd source? Did the accessible version keep the same meaning? Can we test this judgment instead of debating it forever? I work best in the messy middle between design, research, quality, and engineering, where the answer usually gets better when nobody pretends to know everything.",
-      },
-      {
-        type: "quote",
-        quote:
-          "I’m not trying to make AI look all-knowing. I’m trying to make it easier for people to know when it’s useful.",
-        attribution: "Aadith V A",
+          "I am still working through how much source context is useful before it becomes clutter and which quality checks should remain a human judgment. In reviews, I bring concrete examples and ask what breaks with an unusual source or in the accessible version. I work through those questions with teammates who know other parts of the system better than I do.",
       },
     ],
   },
@@ -280,40 +254,40 @@ const projectArchive: Project[] = [
     slug: "angel-one",
     title: "Angel One",
     description:
-      "A short fintech design role near the end of college — and my first close look at how trust, legibility, and hesitation behave inside a large financial product.",
+      "A six-month UX role near the end of college, working inside a large retail-finance product.",
     role: "UX Design",
-    year: "Jan–Jun 2024",
+    year: "Jan to Jun 2024",
     client: "Angel One",
     category: "Fintech / Product",
     thumbnail: "/images/projects/angel-one-placeholder.svg",
     featured: true,
     passwordProtected: false,
     confidentialityNote:
-      "Public-safe role summary: detailed product artifacts are not included here, and I am not attaching a shipped metric or feature claim that I cannot verify.",
+      "This public summary leaves out detailed product artifacts, metrics, and feature claims I cannot verify.",
     sections: [
       {
         type: "text",
-        heading: "A short role, and a useful change of scale",
+        heading: "Six months at Angel One",
         content:
-          "Near the end of my final year, I spent roughly six months doing UX work in Angel One’s product environment. I do not have a polished Behance board for this one, and the surviving public artifacts are thinner than the work itself, so I am keeping the story appropriately modest. What I can stand behind is the context: a large financial-services product, high-stakes information, and people who need to understand what they are doing before they tap.",
+          "Near the end of my final year, I spent roughly six months doing UX work at Angel One. It was my first experience designing inside a large financial-services product, where people need to understand what they are doing before they tap. I do not have enough public material to describe individual features or outcomes here.",
       },
       {
         type: "image-full",
         images: ["/images/projects/angel-one-placeholder.svg"],
-        caption: "Project visuals will be added after a public-safe artifact pass",
+        caption: "Detailed product visuals are not included in this public summary",
       },
       {
         type: "text",
-        heading: "The useful overlap with my thesis",
+        heading: "Working on finance while researching it",
         content:
-          "The role overlapped with my final academic semester and research around financial advising. That made the work feel less like a sudden domain switch and more like theory meeting a product with real scale. Finance interfaces do not get to hide uncertainty behind a cheerful button. Labels, hierarchy, confirmation, and edge cases carry more weight because the cost of misunderstanding is not abstract.",
+          "The role overlapped with my final semester and academic research into financial advice. The same questions appeared in both. What does someone need to understand before acting? How should an interface explain risk, cost, and uncertainty? Finance interfaces do not get to hide uncertainty behind a cheerful button.",
       },
       {
         type: "framework",
-        label: "What the context sharpened",
-        heading: "Trust is usually made from small, unglamorous decisions",
+        label: "What I learned",
+        heading: "Small decisions matter in finance interfaces",
         content:
-          "I am not presenting these as patented fintech principles. They are the practical habits the environment reinforced.",
+          "These are the habits the work reinforced for me.",
         items: [
           {
             title: "Make the decision legible",
@@ -328,7 +302,7 @@ const projectArchive: Project[] = [
           {
             title: "Keep hierarchy honest",
             content:
-              "Primary actions should look primary, but risk, cost, and constraints should not be visually negotiated into fine print.",
+              "Primary actions can stand out without hiding risk, cost, or constraints in fine print.",
           },
           {
             title: "Hand off the edge cases",
@@ -338,24 +312,17 @@ const projectArchive: Project[] = [
         ],
       },
       {
-        type: "text",
-        heading: "No inflated impact slide",
-        content:
-          "I could make this page sound larger by borrowing the language of shipped impact, but I do not have the primary material to support that claim here. The honest value of Angel One in my story is the bridge it created: from early startup work and academic finance research into a much larger, more consequential product system.",
-      },
-      {
         type: "stats",
         stats: [
           { label: "Timeline", value: "6 months" },
           { label: "Domain", value: "Retail finance" },
           { label: "Context", value: "Final semester" },
-          { label: "Public claim", value: "Intentionally narrow" },
         ],
       },
       {
         type: "quote",
         quote:
-          "High-stakes products do not reward decorative certainty. They reward interfaces that help people understand what happens next.",
+          "The question I kept returning to was simple: can someone tell what will happen before they tap?",
         attribution: "Aadith V A",
       },
     ],
@@ -367,7 +334,7 @@ const projectArchive: Project[] = [
       "An AI writing and scheduling companion built for one job: helping busy professionals show up consistently on LinkedIn without spending their evenings on it.",
     role: "Freelance Product Designer",
     year: "2023",
-    client: "Reachify — early-stage startup",
+    client: "Reachify, early-stage startup",
     category: "AI / Product",
     thumbnail: "/images/projects/reachify-cover.png",
     featured: true,
@@ -377,25 +344,25 @@ const projectArchive: Project[] = [
         type: "text",
         heading: "A personal brand is a lot of small, repeated effort",
         content:
-          "Reachify started from a familiar problem: people know they should post on LinkedIn, then reach the end of a full workday with no idea what to say. Over four months, I worked solo across research, information architecture, UI, and a working AI-assisted prototype. The aim was not to manufacture a personal brand overnight. It was to make the small, recurring work of finding an idea, writing it well, scheduling it, and learning from it feel manageable.",
+          "Reachify started from a familiar problem: people know they should post on LinkedIn, then reach the end of a full workday with no idea what to say. Over four months, I worked solo across research, information architecture, UI, and a working AI-assisted prototype. I focused the product on the recurring work of finding an idea, writing it, scheduling it, and learning from it.",
       },
       {
         type: "image-full",
         images: ["/images/projects/reachify-cover.png"],
-        caption: "Reachify — an AI-assisted LinkedIn writing and scheduling product",
+        caption: "Reachify, an AI-assisted LinkedIn writing and scheduling product",
       },
       {
         type: "text",
         heading: "First, find the people already doing the work",
         content:
-          "I screened for active LinkedIn creators with roughly 2,000–10,000 followers — enough experience to have real habits, but not so much that a team was already doing the work for them. More than 100 cold messages led to 15–20 interviews. The themes were practical rather than glamorous: inconsistent ideas, uncertainty about the algorithm, too many disconnected tools, limited time, and a vague hope that expertise might eventually turn into income.",
+          "I screened for active LinkedIn creators with roughly 2,000 to 10,000 followers. They had enough experience to have real posting habits, but usually not a team doing the work for them. More than 100 cold messages led to 15 to 20 interviews. People described inconsistent ideas, uncertainty about the algorithm, disconnected tools, limited time, and a hope that their expertise might eventually earn money.",
       },
       {
         type: "framework",
         label: "Product structure",
         heading: "One product, four recurring jobs",
         content:
-          "The research became a product organised around the work people repeated every week, rather than a dashboard full of impressive-looking AI buttons.",
+          "The research led to four product areas based on the work participants repeated each week.",
         items: [
           {
             title: "Create",
@@ -403,17 +370,17 @@ const projectArchive: Project[] = [
               "Generate an idea, shape the writing with tone and category controls, add hashtags, and schedule the finished post.",
           },
           {
-            title: "Engage",
+            title: "Engagement",
             content:
               "Understand who is responding, where a conversation is growing, and which relationships may be worth continuing.",
           },
           {
-            title: "Measure",
+            title: "Analytics",
             content:
               "Read follower, impression, and post-level trends without turning every creative decision into a spreadsheet.",
           },
           {
-            title: "Return",
+            title: "Dashboard",
             content:
               "Use one dashboard to pick up the next small task instead of rebuilding the workflow across several tools.",
           },
@@ -432,7 +399,7 @@ const projectArchive: Project[] = [
         type: "text",
         heading: "Two days is not a lot of time",
         content:
-          "Partway through the project, the investor timeline compressed into a two-day MVP sprint for onboarding and the Create module. Analytics and Engagement became honest “coming soon” states while the core flow had to work. It was not the process I would plan on purpose, but it clarified the product quickly: if idea → write → schedule was not useful, the rest of the roadmap was decoration.",
+          "Partway through the project, the investor timeline left two days for an MVP of onboarding and the Create module. I marked Analytics and Engagement as 'coming soon' and spent the sprint on the path from idea to scheduled post.",
       },
       {
         type: "image-full",
@@ -443,14 +410,14 @@ const projectArchive: Project[] = [
         type: "text",
         heading: "Doing the job the product was built for",
         content:
-          "Alongside the product, I wrote and designed content for Reachify’s own LinkedIn page — hooks, carousel posts, storytelling formats, and practical templates. The page grew to 2,000 followers. I liked the symmetry of that: the fastest way to understand a tool for consistent posting was to become one of the people consistently posting.",
+          "Alongside the product, I wrote and designed hooks, carousel posts, storytelling formats, and practical templates for Reachify's LinkedIn page. The page grew to 2,000 followers. Posting regularly gave me first-hand experience of the job Reachify was meant to help with.",
       },
       {
         type: "stats",
         stats: [
           { label: "Timeline", value: "4 months" },
           { label: "Screens", value: "30+" },
-          { label: "Interviews", value: "15–20" },
+          { label: "Interviews", value: "15 to 20" },
           { label: "LinkedIn growth", value: "2,000" },
         ],
       },
@@ -683,9 +650,9 @@ const projectArchive: Project[] = [
     slug: "daolens",
     title: "DaoLens",
     description:
-      "Early startup design across product, brand, and go-to-market — with a two-week DAO Denver sprint as the clearest surviving public artifact.",
+      "Early startup work across product, brand, and marketing, including a documented two-week sprint for DAO Denver.",
     role: "Product, brand & marketing design",
-    year: "2022–2023",
+    year: "2022 to 2023",
     client: "DaoLens",
     category: "Web3 / Startup",
     thumbnail: "/images/projects/daolens-placeholder.svg",
@@ -696,56 +663,56 @@ const projectArchive: Project[] = [
         type: "text",
         heading: "The startup where the brief rarely stayed in one lane",
         content:
-          "I joined DaoLens at around twenty and worked across a young Web3 company where product, brand, and go-to-market problems regularly arrived in the same week. The surviving records point to onboarding, contributor dashboards, governance-oriented experiences, marketing, and visual systems. My exact title changes across old drafts, so I prefer the less dramatic truth: I was an early designer doing whatever the product and company needed, often before the boundaries were tidy.",
+          "I joined DaoLens when I was about twenty and worked across product, brand, and marketing. The surviving work includes onboarding, contributor dashboards, governance-related product work, campaigns, and visual systems. Old drafts use different titles, so I describe the role by the work. I was an early designer doing whatever the product and company needed.",
       },
       {
         type: "framework",
         label: "My working range",
-        heading: "Product, brand, and go-to-market kept borrowing from one another",
+        heading: "How product, brand, and marketing overlapped",
         content:
-          "The useful lesson was not that I could do several kinds of design. It was seeing how decisions in one layer created constraints in the others.",
+          "A product decision often changed what the brand or marketing work needed to explain, and the reverse was true too.",
         items: [
           {
             title: "Product",
             content:
-              "Onboarding, contributor dashboards, access, and governance-oriented experiences had to explain unfamiliar Web3 concepts without assuming every user already spoke the language.",
+              "The onboarding and contributor work had to explain unfamiliar Web3 concepts to people who did not already know the vocabulary.",
           },
           {
             title: "Brand",
             content:
-              "The visual system needed enough technical credibility for a B2B product while remaining flexible across community and marketing moments.",
+              "The visual system had to work for a B2B product, community events, and marketing.",
           },
           {
             title: "Go-to-market",
             content:
-              "Events, social content, product explainers, and campaigns translated the product into reasons for someone to stop, understand, and continue the conversation.",
+              "I worked on event material, social posts, product explainers, and campaigns.",
           },
           {
             title: "Startup rhythm",
             content:
-              "The brief moved quickly and ownership was broad. I learned to make progress without waiting for every role boundary to become official.",
+              "Briefs changed quickly, and there was rarely time to wait for every role boundary to become official.",
           },
         ],
       },
       {
         type: "text",
-        heading: "The public record is uneven, so the structure is honest",
+        heading: "What survives publicly",
         content:
-          "The DAO Denver sprint has a complete Behance trail and now lives as its own case study above. The broader product work needs a careful artifact pass before I describe individual flows in detail. I would rather leave a clear gap than fill it with a confident reconstruction.",
+          "The DAO Denver sprint has a complete Behance case study. I do not have enough public material to describe the broader product flows in the same detail, so this page stays at role-summary level.",
       },
       {
         type: "stats",
         stats: [
-          { label: "Period", value: "2022–2023" },
+          { label: "Period", value: "2022 to 2023" },
           { label: "Environment", value: "Early startup" },
-          { label: "Working range", value: "Product → brand" },
-          { label: "Detailed chapter", value: "DAO Denver" },
+          { label: "Scope", value: "Product, brand, marketing" },
+          { label: "Detailed case study", value: "DAO Denver" },
         ],
       },
       {
         type: "quote",
         quote:
-          "DaoLens was where I learned that an early designer does not get to protect a tidy job description from the needs of the company.",
+          "My job description changed with whatever the company needed that week.",
         attribution: "Aadith V A",
       },
     ],
@@ -754,9 +721,9 @@ const projectArchive: Project[] = [
     slug: "crunch",
     title: "Crunch",
     description:
-      "Dashboard and data-visualisation work for an analytics product — and an early lesson in making complex information readable without pretending I was the data scientist.",
+      "Dashboard and data-visualisation work for an analytics product, focused on making complex information easier to read.",
     role: "Dashboard & information design",
-    year: "2022–2023",
+    year: "2022 to 2023",
     client: "CrunchIt",
     category: "Data / Product",
     thumbnail: "/images/projects/crunch-placeholder.svg",
@@ -765,27 +732,27 @@ const projectArchive: Project[] = [
     sections: [
       {
         type: "text",
-        heading: "The job was to explain the data, not invent it",
+        heading: "Making dense data easier to read",
         content:
-          "Crunch brought me into dashboard and data-visualisation work while I was still moving between college, startup, and freelance projects. The contribution sat at the interface layer: organise dense information, make comparisons easier, and help a person find the signal without flattening everything into one heroic number.",
+          "Crunch brought me into dashboard and data-visualisation work while I was juggling college, startup, and freelance projects. I organised dense information and made comparisons easier to read in the interface.",
       },
       {
         type: "image-full",
         images: ["/images/projects/crunch-placeholder.svg"],
-        caption: "Project visuals will be added after the original dashboard material is recovered",
+        caption: "Original dashboard visuals are not included in this public summary",
       },
       {
         type: "text",
-        heading: "I said the quiet part out loud",
+        heading: "I was not the data scientist",
         content:
-          "In related project conversations, I was clear that I was not deeply trained in data science. I had dashboard experience, curiosity, and the willingness to learn the domain; I did not have a reason to pretend I had built the underlying models. That boundary made the design work better. It kept my attention on the part I could own: how evidence, comparison, status, and uncertainty reached the reader.",
+          "I was clear that I did not have deep training in data science and had not built the underlying models. I brought dashboard experience and learned the domain as I worked. My responsibility was how the interface presented evidence, comparisons, status, and uncertainty.",
       },
       {
         type: "framework",
         label: "Information-design checklist",
-        heading: "A useful dashboard owes the reader four things",
+        heading: "Four questions I used in the dashboard work",
         content:
-          "The visuals may change with the domain. These questions survive surprisingly well.",
+          "The visual form changed with the data, but I kept returning to these questions.",
         items: [
           {
             title: "A starting point",
@@ -800,20 +767,20 @@ const projectArchive: Project[] = [
           {
             title: "Visible uncertainty",
             content:
-              "Incomplete or ambiguous data should look incomplete or ambiguous. Confidence is part of the information architecture.",
+              "Show when data is incomplete or ambiguous instead of presenting every value with the same certainty.",
           },
           {
             title: "A next question",
             content:
-              "A dashboard becomes more useful when it helps someone move from observation to the next sensible investigation.",
+              "Give the reader enough context to decide what to inspect next.",
           },
         ],
       },
       {
         type: "text",
-        heading: "A small project with a long afterlife",
+        heading: "What I carried into later work",
         content:
-          "The work was not as broad as Owly or as deeply documented as Reachify. Its influence is quieter. The same information-design muscle now shows up when I work on citations, source panels, evaluation reports, and AI outputs that need to communicate evidence without acting more certain than they are.",
+          "The project gave me an early set of questions about hierarchy, comparison, and uncertainty. I still use them when working on citations, source panels, and evaluation reports.",
       },
       {
         type: "stats",
@@ -821,14 +788,7 @@ const projectArchive: Project[] = [
           { label: "Focus", value: "Dashboards" },
           { label: "Contribution", value: "Visualisation" },
           { label: "Domain", value: "Analytics" },
-          { label: "Model work", value: "Not claimed" },
         ],
-      },
-      {
-        type: "quote",
-        quote:
-          "My job was not to make the data look impressive. It was to help someone read it without getting lost.",
-        attribution: "Aadith V A",
       },
     ],
   },

@@ -9,10 +9,10 @@ hosting, Azure resources, companion behavior, or public grounding.
 
 - Six selected Work chapters spanning enterprise AI, founder work, fintech, early-stage products, Web3, and information design.
 - Focused subpages for Microsoft Copilot work and the DaoLens DAO Denver case study.
-- A five-project AI Lab covering evaluation, agent behaviour, conversation design, and Figma tooling.
-- A public-context AI companion that sits beside overview pages and steps away on project detail routes.
+- A six-project AI Lab covering evaluation, agent behaviour, conversation systems, and Figma tooling.
+- A public-context AI companion minimized at the bottom right, opening as a drawer without taking space from the work.
 - An AI-ready design system with a generated codebase index and per-component metadata.
-- Static, accessible Astro pages with vanilla CSS, one small React/Motion reply effect, and a secure Azure-hosted model endpoint.
+- Static, accessible Astro pages with IBM Plex Sans and Mono, vanilla CSS, small React/Motion effects, and a secure Azure-hosted model endpoint.
 
 ## Run locally
 

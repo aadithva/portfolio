@@ -361,6 +361,7 @@
         "@/data/projects",
         "@/data/siteConfig",
         "@/data/work",
+        "@/data/writing",
         "@/types"
       ],
       "path": "src/data/companion.ts"
@@ -438,10 +439,6 @@
         "./daolens/dao-denver",
         "./microsoft-copilot/citations",
         "./microsoft-copilot/deep-citations",
-        "./microsoft-copilot/hackathons",
-        "./microsoft-copilot/meetings",
-        "./microsoft-copilot/system-messages",
-        "./microsoft-copilot/turn-n",
         "@/types"
       ],
       "path": "src/data/work/index.ts"
@@ -500,6 +497,14 @@
       ],
       "path": "src/data/work/microsoft-copilot/turn-n/index.ts"
     },
+    "src/data/writing.ts": {
+      "exports": [
+        "WritingNote",
+        "writingNotes"
+      ],
+      "imports": [],
+      "path": "src/data/writing.ts"
+    },
     "src/lib/shots.ts": {
       "exports": [
         "RouteShots",
@@ -515,7 +520,7 @@
     }
   },
   "framework": "astro",
-  "generatedAt": "2026-07-10T10:10:09.961634+00:00",
+  "generatedAt": "2026-09-02T06:50:38.952292+00:00",
   "generator": "design-system/ai/codebase-index.py",
   "pages": {
     "src/pages/404.astro": {
@@ -749,11 +754,14 @@
         "src/components/atoms/SectionLabel.astro",
         "src/layouts/BaseLayout.astro"
       ],
-      "importedData": [],
+      "importedData": [
+        "src/data/writing.ts"
+      ],
       "imports": [
         "@/components/atoms/Line.astro",
         "@/components/atoms/Reveal.astro",
         "@/components/atoms/SectionLabel.astro",
+        "@/data/writing",
         "@/layouts/BaseLayout.astro"
       ],
       "kind": "page",
@@ -763,9 +771,9 @@
     }
   },
   "stats": {
-    "approxJsonTokens": 5742,
+    "approxJsonTokens": 5764,
     "componentCount": 25,
-    "dataFileCount": 18,
+    "dataFileCount": 19,
     "duplicatePageFilenamesPreserved": [
       "[slug].astro"
     ],

@@ -10,15 +10,15 @@ const thumb = getThumb(project.slug);
 const statusLabel: Record<string, string> = {
   working: "Working",
   prototype: "Prototype",
-  wip: "WIP",
+  wip: "Work in progress",
 };
 ---
 <a class="lab-card" href={`/lab/${project.slug}`}>
   <div class="lab-card__thumb">
     {thumb ? (
-      <img src={thumb} alt={`${project.title} screenshot`} loading="lazy" />
+      <img src={thumb} alt={`Screenshot of ${project.title}`} loading="lazy" />
     ) : (
-      <div class="lab-card__thumb--empty">{project.ui_type === "backend" ? "CLI / Backend" : project.ui_type === "figma-plugin" ? "Figma Plugin" : "No preview"}</div>
+      <div class="lab-card__thumb--empty">{project.ui_type === "backend" ? "CLI / backend" : project.ui_type === "figma-plugin" ? "Figma plugin" : "No screenshot"}</div>
     )}
   </div>
   <div class="lab-card__head">

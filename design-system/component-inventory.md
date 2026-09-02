@@ -6,9 +6,9 @@ Generated from `design-system/ai/index.json` — do not edit by hand.
 ## Tokens
 
 - **Source**: `design-system/tokens.css` / `design-system/tokens.json` (`--ds-*` custom properties).
-- **Color**: background `#fff`, foreground `#0a0a0a`, muted `#f7f6f3`, muted-fg `#787774`, border `#eaeaea`.
-- **Type**: IBM Plex Mono for the interface and Digibop exclusively for the AADITH wordmark.
-- **Layout**: `.container` max-width 1440px with responsive side padding (20 / 48 / 80px).
+- **Color**: cool-grey paper `#cfd4d8`, carbon `#1f2224`, and signal orange `#ed5b2a`.
+- **Type**: IBM Plex Sans for reading copy, IBM Plex Mono for headings and interface labels, and Digibop for the AADITH wordmark.
+- **Layout**: `.container` max-width 1140px with responsive side padding (16 / 24 / 32px).
 - **Motion**: entrance reveals via the global IntersectionObserver (`.reveal`/`.line`/`.routemap` → `.is-visible`), with reduced-motion fallbacks.
 
 ## Atoms
@@ -39,7 +39,7 @@ Generated from `design-system/ai/index.json` — do not edit by hand.
 
 | Component | Path | Purpose | Dependencies | Used by |
 |---|---|---|---|---|
-| `AadithCompanion` | `src/components/organisms/AadithCompanion.astro` | Playful public-context portfolio sidekick with a responsive drawer fallback. | `DecryptedText`, `companion` | BaseLayout |
+| `AadithCompanion` | `src/components/organisms/AadithCompanion.astro` | Minimized public-context portfolio sidekick that opens as a drawer. | `DecryptedText`, `companion` | BaseLayout |
 | `FeaturedWork` | `src/components/organisms/FeaturedWork.astro` | Homepage 'Selected Work' organism: section label plus the featured project list. | `HoverRevealList`, `Line`, `Reveal`, `SectionLabel`, `projects` | route / |
 | `Footer` | `src/components/organisms/Footer.astro` | Global footer with a full-canvas orange glitch signature, identity, social links, and secondary nav. | `BrandLockup`, `LetterGlitch`, `siteConfig` | BaseLayout |
 | `Header` | `src/components/organisms/Header.astro` | Static mono editorial header with Aadith's wordmark and wrapping primary navigation. | `BrandLockup`, `navigation`, `siteConfig` | BaseLayout |
@@ -54,7 +54,7 @@ Generated from `design-system/ai/index.json` — do not edit by hand.
 
 | Component | Path | Purpose | Dependencies | Used by |
 |---|---|---|---|---|
-| `BaseLayout` | `src/layouts/BaseLayout.astro` | App shell: document head, mono typography, route-aware companion, header/footer, and global client behaviour. | `AadithCompanion`, `Footer`, `GridBackdrop`, `Header`, `siteConfig` | route /, route /404, route /about, route /adventures, route /contact, route /lab, route /lab/[slug], route /work, route /work/[parent]/[item], route /work/[slug], route /writing |
+| `BaseLayout` | `src/layouts/BaseLayout.astro` | App shell: document head, paired Plex typography, minimized companion, header/footer, and global client behaviour. | `AadithCompanion`, `Footer`, `GridBackdrop`, `Header`, `siteConfig` | route /, route /404, route /about, route /adventures, route /contact, route /lab, route /lab/[slug], route /work, route /work/[parent]/[item], route /work/[slug], route /writing |
 
 ## Routes
 

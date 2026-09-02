@@ -28,6 +28,6 @@
     "Active links expose aria-current=page."
   ],
   "version": "0.3.0",
-  "lastUpdated": "2026-07-10",
+  "lastUpdated": "2026-09-02",
   "source": "Generated from Astro source + design-system/ai/index.json by component-metadata.py."
 }

@@ -40,21 +40,21 @@ At the end of this audit:
 ### Static portfolio
 
 - Astro 5 static output.
-- 35 generated HTML pages.
+- 31 generated HTML pages.
 - Six primary Work chapters with focused Microsoft and DaoLens subpages.
 - Curated Lab, About, Adventures, Contact, and Writing surfaces.
-- Digibop is used for the `AADITH` wordmark; IBM Plex Mono remains the
-  interface typeface.
+- Digibop is used for the `AADITH` wordmark; IBM Plex Mono handles headings
+  and interface labels while IBM Plex Sans handles reading copy.
 - Canonical and Open Graph URLs use the live Vercel production host.
 - Internal generated-link audit found zero missing internal routes or assets.
 - Vercel deploys automatically from GitHub `main`.
 
 ### Aadith companion UX
 
-- Persistent right-side companion on overview routes.
-- Hidden on `/work/...` and `/lab/...` detail routes so projects use the full
-  canvas.
-- Mobile drawer works at 320 x 568:
+- Minimized bottom-right companion on portfolio routes.
+- Opens as the same accessible drawer at every viewport size, so all overview
+  and detail routes retain the full reading canvas.
+- Drawer works at 320 x 568 and desktop sizes:
   - panel opens,
   - page background becomes inert,
   - body scrolling is locked,
@@ -80,8 +80,8 @@ Primary implementation:
 
 ### Public grounding and privacy boundary
 
-- Context document version: `2`
-- Current public chunks: 30
+- Context document version: `4`
+- Current public chunks: 29
 - Retrieval selects up to five chunks from the latest four conversation
   messages.
 - The server returns links for at most the top three selected chunks.
@@ -183,7 +183,7 @@ succeed. Aligning the dashboard preset to Astro is optional cleanup.
 ### Verified clean
 
 - `npm run api:test`: 14 tests passed.
-- `npm run build`: 35 pages built.
+- `npm run build`: 31 pages built.
 - Context feed and embedded API context matched.
 - Generated internal-link audit: zero missing internal targets.
 - Repository credential-pattern scan: no committed key material found.
@@ -192,7 +192,8 @@ succeed. Aligning the dashboard preset to Astro is optional cleanup.
 - Live context feed returned `200`.
 - Live CORS preflight from Vercel returned `204`.
 - Live companion request returned `200` with grounded sources.
-- Mobile drawer and detail-route companion visibility behaved as designed.
+- The minimized companion drawer behaved as designed on mobile and detail
+  routes.
 - Current Vercel release and GitHub deployment check are successful.
 - Azure revision `0000007` is healthy.
 

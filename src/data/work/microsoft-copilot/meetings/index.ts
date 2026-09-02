@@ -5,53 +5,55 @@ export const meetings: WorkItem = {
   slug: "meetings",
   title: "Meetings",
   description:
-    "A dedicated chapter for meeting-related response UX: recaps, highlights, source identity, and the awkward question of what still matters after the call ends.",
-  label: "Meeting intelligence / response UX",
-  year: "2025–Present",
+    "Notes on source context in meeting responses and the line between interface, capability, and model problems.",
+  label: "Meeting response UX / draft",
+  year: "2025 to present",
   status: "draft",
   passwordProtected: true,
   confidentialityNote:
-    "Documentation in progress. This page currently sets the public-safe frame; product-specific screens and internal details are not included.",
+    "I have left out internal screens, metrics, names, and implementation details.",
   sections: [
     {
       type: "text",
-      heading: "Meetings are sources with a timeline",
+      heading: "Meeting sources change over time",
       content:
-        "A document sits still. A meeting unfolds through speakers, decisions, corrections, and unfinished actions. Designing AI experiences around that material means preserving who said what, distinguishing a recap from evidence, and helping someone recover the moment that made a summary meaningful.",
+        "A document sits still. A meeting unfolds as people speak, correct themselves, and make decisions. A useful recap needs enough source context for someone to understand what happened and return to the original material when needed.",
+    },
+    {
+      type: "text",
+      heading: "First decide what kind of problem it is",
+      content:
+        "Meeting responses can fail because of the interface, a missing capability, or the model output. A quality finding does not automatically call for a new component. The team needs to name the problem before choosing who should work on it.",
     },
     {
       type: "framework",
-      label: "What belongs in this chapter",
-      heading: "From a long call to useful, inspectable context",
+      label: "Interface questions",
+      heading: "What the reader needs to understand",
       content:
-        "This folder is ready for the individual workstreams and artifacts as they are cleared for the portfolio.",
+        "For now, I am keeping this page to three questions about state, source context, and lists.",
       items: [
         {
-          title: "Recap and highlights",
+          title: "Clarify the meeting state",
           content:
-            "How the system chooses, groups, and presents the moments worth returning to.",
+            "Show enough context for someone to understand what kind of meeting source they are looking at and what it can contain.",
         },
         {
-          title: "Meeting as a source",
+          title: "Return to the source",
           content:
-            "How a meeting is identified alongside files, messages, email, and web references.",
+            "Give a meeting reference a clear route back to the source context available in the product.",
         },
         {
-          title: "Attribution",
+          title: "Explain the list",
           content:
-            "How speakers, timestamps, and surrounding conversation help a generated statement remain checkable.",
-        },
-        {
-          title: "Follow-through",
-          content:
-            "How decisions and actions survive the transition from the meeting into the next piece of work.",
+            "When several meetings appear together, explain why each result is present and what the reader can do next.",
         },
       ],
     },
     {
-      type: "image-full",
-      images: ["/images/projects/microsoft-copilot/meetings/hero.png"],
-      caption: "Meeting response UX and source states — documentation in progress",
+      type: "text",
+      heading: "Not every quality issue needs an interface change",
+      content:
+        "Some findings point to capability or model behaviour rather than presentation. Good design review includes knowing when another discipline needs to lead the next step. I am still documenting this chapter, so it stays at that high level for now.",
     },
   ],
 };

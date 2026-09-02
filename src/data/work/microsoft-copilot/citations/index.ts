@@ -5,59 +5,48 @@ export const citations: WorkItem = {
   slug: "citations",
   title: "Citations",
   description:
-    "Making source identity visible inside an AI answer without turning every paragraph into a wall of references.",
-  label: "Response UX / source grounding",
-  year: "2025–Present",
+    "Designing citation patterns that keep source identity near the relevant claim without crowding the answer.",
+  label: "Response UX / citations",
+  year: "2025 to present",
   status: "documented",
   passwordProtected: true,
   confidentialityNote:
-    "Public-safe summary: internal product visuals, metrics, names, and implementation details are intentionally omitted.",
+    "This public summary leaves out internal visuals, metrics, names, and implementation details.",
   sections: [
     {
       type: "text",
-      heading: "A tiny component with system-sized consequences",
+      heading: "A citation has to help without taking over the answer",
       content:
-        "A citation has to do several jobs at once. It should tell a reader that evidence exists, help them recognise the source, stay close to the claim, and avoid interrupting the answer so often that the answer becomes hard to read. My work explored that balance across inline references, multiple-source cases, hover states, accessibility, dark mode, and the transition into deeper source context.",
+        "A citation needs to show that a claim has a source and help the reader recognise it without interrupting the answer. My part was working through inline references and the move into more source context with the wider team. Accessibility review sat alongside the visual work.",
     },
     {
       type: "framework",
       label: "Design questions",
-      heading: "Readable enough to continue. Verifiable enough to trust.",
+      heading: "Keep the answer readable and the source easy to inspect",
       content:
-        "The useful design work lived in the trade-offs, not in decorating a pill.",
+        "Most of the work was deciding what to show beside the claim and what to leave for the next step.",
       items: [
         {
-          title: "Recognition",
+          title: "Show the source",
           content:
-            "Use a source name, type, or familiar marker so a reference means more than an abstract number.",
+            "Use a readable source name or type instead of relying on a number alone.",
         },
         {
-          title: "Proximity",
+          title: "Keep it near the claim",
           content:
-            "Keep evidence close enough to the claim that verification feels like a continuation of reading, not a separate research task.",
+            "Place the reference near the text it supports so checking the source does not become a separate hunt.",
         },
         {
-          title: "Escalation",
+          title: "Add context when asked",
           content:
-            "Let compact references open into excerpts, previews, and exact source context as the user asks for more.",
+            "Let a compact reference open into a short preview, with a route to the source when the reader needs more.",
         },
         {
-          title: "Edge cases",
+          title: "Test the awkward cases",
           content:
-            "Design for truncation, multiple sources, lists, tables, keyboard access, contrast, and narrow layouts before calling the component finished.",
+            "Review how the pattern behaves with more than one source, keyboard navigation, and limited space.",
         },
       ],
-    },
-    {
-      type: "image-full",
-      images: ["/images/projects/microsoft-copilot/citations/hero.png"],
-      caption: "Citation evolution and interaction states — public-safe visuals to be added",
-    },
-    {
-      type: "text",
-      heading: "The part I keep returning to",
-      content:
-        "The best citation is neither invisible nor dominant. It appears when confidence needs support, then gets out of the way. That sounds simple until one answer contains files, web pages, messages, meetings, mixed source mappings, and a person using only a keyboard.",
     },
   ],
 };

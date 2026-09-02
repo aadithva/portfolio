@@ -5,54 +5,54 @@ export const daoDenver: WorkItem = {
   slug: "dao-denver",
   title: "DAO Denver",
   description:
-    "A two-week sprint to turn a sleek B2B Web3 product into a booth people might actually stop at — designed together with Ans K James.",
+    "A two-week event sprint with Ans K James to adapt DaoLens's B2B Web3 identity for its DAO Denver booth.",
   label: "Event identity / go-to-market",
   year: "2023",
   status: "documented",
   sections: [
     {
       type: "text",
-      heading: "Eight deliverables. Two weeks. One trade floor.",
+      heading: "Two weeks to prepare for DAO Denver",
       content:
-        "DaoLens was sponsoring a booth at DAO Denver during ETHDenver 2023. The request covered the booth, banners, social posts, stickers, merchandise, posters, pamphlets, a website, and a paper game. The Behance project credits Ans K James and me together without splitting every deliverable by person, so I present it here as a shared build — not a solo identity project with a collaborator added in the footer.",
+        "DaoLens sponsored a booth at DAO Denver during ETHDenver 2023. The work included the booth, banners, social posts, stickers, merchandise, posters, pamphlets, a website, and a paper game. Ans K James and I are jointly credited on the Behance project, which does not document an individual role split.",
     },
     {
       type: "image-full",
       images: ["/images/projects/dao-denver-cover.png"],
-      caption: "DaoLens at DAO Denver — booth and event identity",
+      caption: "DaoLens booth and event identity at DAO Denver",
     },
     {
       type: "text",
       heading: "Loud, on purpose",
       content:
-        "DaoLens already had a futuristic, gradient-heavy identity built for a B2B product. A trade floor needed a different volume. The event direction became bolder, brighter, flatter, and more playful — Space Mono and Poppins, blocky illustrations, and a sharp yellow accent — while keeping enough of the original brand that the booth still belonged to DaoLens.",
+        "DaoLens already had a futuristic, gradient-heavy B2B identity. For the event, we kept parts of it and added Space Mono and Poppins, blocky illustrations, flat colour, and a sharp yellow accent.",
     },
     {
       type: "framework",
-      label: "Event system",
-      heading: "The same idea had to survive eight formats",
+      label: "Event identity",
+      heading: "Applying the identity across eight formats",
       content:
-        "A booth identity only works when it still behaves at the size of a sticker, a screen, a shirt, and a very large banner.",
+        "We applied the identity to stickers, screens, shirts, and large banners.",
       items: [
         {
-          title: "Stop",
+          title: "Booth and banners",
           content:
-            "A booth, banners, and a dartboard merch game gave people a visible reason to pause.",
+            "The physical set included the booth, banners, and a dartboard merchandise game.",
         },
         {
-          title: "Explain",
+          title: "Product material",
           content:
-            "Pamphlets and website mockups translated the DAO Manager product into something visitors could understand quickly.",
+            "Pamphlets and website mockups explained the DAO Manager product.",
         },
         {
-          title: "Travel",
+          title: "Merchandise",
           content:
-            "Stickers, shirts, mugs, notebooks, and tote bags let the visual language leave the booth.",
+            "We applied the visual system to stickers, shirts, mugs, notebooks, and tote bags.",
         },
         {
-          title: "Continue",
+          title: "Social posts",
           content:
-            "Social posts carried panel discussions and event activations into the wider ETHDenver conversation.",
+            "Social posts covered panel discussions and event activations.",
         },
       ],
     },
@@ -70,7 +70,7 @@ export const daoDenver: WorkItem = {
       type: "text",
       heading: "The game nobody expected at a DAO booth",
       content:
-        "Alongside the expected merch, the system included a paper fortune-teller with deliberately silly Web3 copy. The joke was not there to prove we could write jokes. It gave someone walking past a low-stakes way to touch the brand, smile, and stay for the product conversation.",
+        "Alongside the usual stickers and shirts, we made a paper fortune-teller with deliberately silly Web3 copy.",
     },
     {
       type: "image-grid",
@@ -86,7 +86,7 @@ export const daoDenver: WorkItem = {
       type: "stats",
       stats: [
         { label: "Timeline", value: "2 weeks" },
-        { label: "Event", value: "3 days" },
+        { label: "Context", value: "ETHDenver 2023" },
         { label: "Formats", value: "8" },
         { label: "Collaboration", value: "With Ans" },
       ],

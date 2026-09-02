@@ -16,10 +16,13 @@ const { prev, next } = getAdjacentLab(slug!);
 const shots = getShots(project.slug);
 const storyParas = project.story.split(/\n{2,}/).map((p) => p.trim()).filter(Boolean);
 const hasLedger = Boolean(project.evidence?.length || project.limitations?.length);
+const showcaseCountLabel = String(
+  labProjects.filter((candidate) => candidate.showcase).length
+).padStart(2, "0");
 
 const statusLabel: Record<string, string> = { working: "Working", prototype: "Prototype", wip: "Work in progress" };
 const typeLabel: Record<string, string> = {
-  web: "Web app", desktop: "Desktop app", backend: "CLI / Backend",
+  web: "Web app", desktop: "Desktop app", backend: "CLI / backend",
   "figma-plugin": "Figma plugin", monorepo: "Full-stack",
 };
 
@@ -32,16 +35,16 @@ const meta = [
 
 const noShotsReason =
   project.ui_type === "figma-plugin"
-    ? "This one lives inside Figma, so there is no standalone web page posing for screenshots."
+    ? "This project runs inside Figma, so there is no standalone page to capture."
     : project.ui_type === "backend"
-    ? "This one prefers the terminal. No web UI, no heroic product shot."
-    : "It needs private credentials, so the screenshots are sitting this one out.";
+    ? "This project runs in the terminal and has no web interface to capture."
+    : "This build depends on private credentials, so I have not included screenshots.";
 ---
-<BaseLayout title={`${project.title} — Lab`} description={project.tagline}>
+<BaseLayout title={`Lab | ${project.title}`} description={project.tagline}>
   <div class="page container">
     <Reveal>
       <div class="lab-detail__eyebrow">
-        {project.rank && <span class="lab-detail__rank">{String(project.rank).padStart(2, "0")} / 05</span>}
+        {project.rank && <span class="lab-detail__rank">{String(project.rank).padStart(2, "0")} / {showcaseCountLabel}</span>}
         <span class="badge">{project.theme ?? project.category}</span>
         <span class:list={["badge", `badge--${project.status}`]}>{statusLabel[project.status] ?? project.status}</span>
       </div>
@@ -64,7 +67,7 @@ const noShotsReason =
       <Reveal class="lab-detail__links">
         {project.repo_url && (
           <a class="arrow-link inline-link" href={project.repo_url} target="_blank" rel="noopener noreferrer">
-            Peek at the source<span class="arrow-link__arrow">→</span>
+            View source<span class="arrow-link__arrow">→</span>
           </a>
         )}
         {project.runnable === "yes" && project.run_cmd && (
@@ -75,20 +78,20 @@ const noShotsReason =
 
     {project.problem && (
       <section class="lab-section lab-section--problem">
-        <Reveal class="lab-section__label"><SectionLabel>The problem</SectionLabel></Reveal>
+        <Reveal class="lab-section__label"><SectionLabel>Starting point</SectionLabel></Reveal>
         <Reveal><p class="lab-problem__body">{project.problem}</p></Reveal>
       </section>
     )}
 
     {project.portfolio_signal && (
       <Reveal as="aside" class="lab-signal">
-        <p class="section-label">Why it belongs here</p>
+        <p class="section-label">My focus</p>
         <p>{project.portfolio_signal}</p>
       </Reveal>
     )}
 
     <section class="lab-section">
-      <Reveal class="lab-section__label"><SectionLabel>Why I made it</SectionLabel></Reveal>
+      <Reveal class="lab-section__label"><SectionLabel>How it took shape</SectionLabel></Reveal>
       <div class="lab-story">
         {storyParas.map((p, i) => (
           <Reveal delay={i * 40}><p>{p}</p></Reveal>
@@ -100,7 +103,7 @@ const noShotsReason =
       <section class="lab-section lab-ledger">
         {project.evidence && project.evidence.length > 0 && (
           <div class="lab-ledger__column">
-            <Reveal class="lab-section__label"><SectionLabel>What is real</SectionLabel></Reveal>
+            <Reveal class="lab-section__label"><SectionLabel>Current build</SectionLabel></Reveal>
             <Reveal>
               <ul class="lab-proof-list">
                 {project.evidence.map((item) => <li>{item}</li>)}
@@ -110,7 +113,7 @@ const noShotsReason =
         )}
         {project.limitations && project.limitations.length > 0 && (
           <div class="lab-ledger__column">
-            <Reveal class="lab-section__label"><SectionLabel>Where it still wobbles</SectionLabel></Reveal>
+            <Reveal class="lab-section__label"><SectionLabel>Known limits</SectionLabel></Reveal>
             <Reveal>
               <ul class="lab-proof-list lab-proof-list--muted">
                 {project.limitations.map((item) => <li>{item}</li>)}
@@ -151,7 +154,7 @@ const noShotsReason =
     )}
 
     <section class="lab-section">
-      <Reveal class="lab-section__label"><SectionLabel>Proof it exists</SectionLabel></Reveal>
+      <Reveal class="lab-section__label"><SectionLabel>Screenshots</SectionLabel></Reveal>
       {shots.length > 0 ? (
         <div class="shots">
           {shots.map((s) => (

@@ -7,12 +7,12 @@ import { getShowcaseLabProjects } from "@/data/lab";
 
 const projects = getShowcaseLabProjects();
 const stats = [
-  { value: String(projects.length).padStart(2, "0"), label: "Projects, deliberately shortlisted" },
-  { value: "Inspect → test", label: "The recurring obsession" },
-  { value: "Figma ↔ code", label: "Where the experiments live" },
+  { value: String(projects.length).padStart(2, "0"), label: "Projects in this shortlist" },
+  { value: "Inspect → test", label: "What they share" },
+  { value: "Figma ↔ code", label: "Where I prototype" },
 ];
 ---
-<BaseLayout title="Lab" description="Five evidence-backed experiments in AI evaluation, agent behavior, conversation design, and design tooling.">
+<BaseLayout title="Lab" description="Six projects for reviewing AI output, mapping agent behaviour, designing chat patterns, and connecting Figma with code.">
   <div class="page container">
     <Reveal>
       <h1 class="page-header__title">Lab</h1>
@@ -21,8 +21,8 @@ const stats = [
     <div class="spacer-md"></div>
 
     <Reveal class="lab-intro">
-      <p>Generation got cheap before evaluation got good. So most of my experiments circle the less glamorous questions: how do you specify behaviour, inspect what changed, review a user flow, and leave enough evidence for another person to disagree?</p>
-      <p>These are the five I would actually put in front of a hiring manager. Some work end to end; some are precise prototypes for tools I wish existed. Most were pair-programmed with Claude. I supplied the problem, the product judgement, and a suspicious number of tiny corrections.</p>
+      <p>I can make the first version of an AI prototype quickly. Checking whether it behaves as intended takes longer. These projects explore how to describe behaviour, compare one change, review a recorded flow, and show enough context for someone else to challenge the result.</p>
+      <p>I chose six projects for this page. Some work end to end; others test one part of a tool I wish existed. I pair-programmed most of them with Claude Code. I set the problem, made the product decisions, and checked the details.</p>
     </Reveal>
 
     <Reveal>
@@ -42,7 +42,7 @@ const stats = [
 
     <section class="lab-category">
       <Reveal class="lab-category__head">
-        <h2 class="section-label">Five worth a proper look</h2>
+        <h2 class="section-label">Selected projects</h2>
         <span class="lab-category__count">{String(projects.length).padStart(2, "0")}</span>
       </Reveal>
       <div class="lab-grid">
@@ -55,7 +55,7 @@ const stats = [
     </section>
 
     <Reveal class="lab-archive-note">
-      <p>There are smaller utilities, marketing sites, and half-finished experiments too. I left them off this page because a portfolio should be a point of view, not a downloads folder.</p>
+      <p>There are also smaller utilities, marketing sites, and unfinished experiments. I left them out here to keep the page focused on the six projects above.</p>
     </Reveal>
   </div>
 </BaseLayout>

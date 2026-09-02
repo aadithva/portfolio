@@ -1,19 +1,11 @@
 import type { WorkItem } from "@/types";
 import { citations } from "./microsoft-copilot/citations";
 import { deepCitations } from "./microsoft-copilot/deep-citations";
-import { meetings } from "./microsoft-copilot/meetings";
-import { systemMessages } from "./microsoft-copilot/system-messages";
-import { turnN } from "./microsoft-copilot/turn-n";
-import { hackathons } from "./microsoft-copilot/hackathons";
 import { daoDenver } from "./daolens/dao-denver";
 
 export const workItems: WorkItem[] = [
   citations,
   deepCitations,
-  meetings,
-  systemMessages,
-  turnN,
-  hackathons,
   daoDenver,
 ];
 

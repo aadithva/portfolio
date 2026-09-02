@@ -2,9 +2,9 @@
   "name": "BaseLayout",
   "path": "src/layouts/BaseLayout.astro",
   "tier": "layout",
-  "summary": "App shell: document head, mono typography, route-aware companion, header/footer, and global client behaviour.",
-  "what": "Wraps every page with metadata, IBM Plex Mono, the base and editorial theme stylesheets, GridBackdrop, Header/Footer, and AadithCompanion on overview routes while keeping Work and Lab detail routes full-width.",
-  "why": "Centralises page chrome, companion visibility, and restrained vanilla-JS behaviour so individual pages only describe content.",
+  "summary": "App shell: document head, paired Plex typography, minimized companion, header/footer, and global client behaviour.",
+  "what": "Wraps every page with metadata, IBM Plex Sans and Mono, the base and editorial theme stylesheets, GridBackdrop, Header/Footer, and the minimized AadithCompanion drawer.",
+  "why": "Centralises page chrome, companion visibility, and restrained vanilla-JS behaviour while preserving the same reading width across routes.",
   "whenToUse": [
     "Wrap any new page.",
     "Set per-page <title> and meta description.",
@@ -62,9 +62,9 @@
   "a11yNotes": [
     "Includes a skip link.",
     "Respects prefers-reduced-motion and keeps content visible without JavaScript.",
-    "Project detail routes retain the full reading canvas without an adjacent chat rail."
+    "The minimized companion never reserves or reduces the reading canvas."
   ],
   "version": "0.3.0",
-  "lastUpdated": "2026-07-10",
+  "lastUpdated": "2026-09-02",
   "source": "Generated from Astro source + design-system/ai/index.json by component-metadata.py."
 }

@@ -25,12 +25,12 @@ INDEX_PATH = AI_ROOT / "index.json"
 # Curated reasoning per component. Keyed by component name (file stem).
 CONTENT: Dict[str, dict] = {
     "BaseLayout": {
-        "summary": "App shell: document head, mono typography, route-aware companion, header/footer, and global client behaviour.",
-        "what": "Wraps every page with metadata, IBM Plex Mono, the base and editorial theme stylesheets, GridBackdrop, Header/Footer, and AadithCompanion on overview routes while keeping Work and Lab detail routes full-width.",
-        "why": "Centralises page chrome, companion visibility, and restrained vanilla-JS behaviour so individual pages only describe content.",
+        "summary": "App shell: document head, paired Plex typography, minimized companion, header/footer, and global client behaviour.",
+        "what": "Wraps every page with metadata, IBM Plex Sans and Mono, the base and editorial theme stylesheets, GridBackdrop, Header/Footer, and the minimized AadithCompanion drawer.",
+        "why": "Centralises page chrome, companion visibility, and restrained vanilla-JS behaviour while preserving the same reading width across routes.",
         "whenToUse": ["Wrap any new page.", "Set per-page <title> and meta description.", "Use bare=true for gated/standalone screens that should hide nav and the companion.", "Override companion only when a future route needs behavior different from the route-aware default."],
         "whenNotToUse": ["Do not import inside another component - it is a top-level layout.", "Do not re-implement route/reveal observers or companion route checks in a page; they already live here."],
-        "a11yNotes": ["Includes a skip link.", "Respects prefers-reduced-motion and keeps content visible without JavaScript.", "Project detail routes retain the full reading canvas without an adjacent chat rail."],
+        "a11yNotes": ["Includes a skip link.", "Respects prefers-reduced-motion and keeps content visible without JavaScript.", "The minimized companion never reserves or reduces the reading canvas."],
     },
     "BrandLockup": {
         "summary": "Aadith's reusable Digibop wordmark.",
@@ -148,14 +148,14 @@ CONTENT: Dict[str, dict] = {
     "LabCard": {
         "summary": "Ranked editorial row for a shortlisted Lab project.",
         "what": "Shows rank, theme, status, tagline, proof-oriented metadata, and the best screenshot from lib/shots.getThumb; missing previews use a typed orange empty state.",
-        "why": "Makes the five-project Lab shortlist scannable without flattening each experiment into a generic card.",
-        "whenToUse": ["Render one of the five showcase Lab projects.", "Preview a project with its rank, theme, and first screenshot."],
+        "why": "Makes the six-project Lab shortlist scannable without flattening each experiment into a generic card.",
+        "whenToUse": ["Render one of the six showcase Lab projects.", "Preview a project with its rank, theme, and first screenshot."],
         "whenNotToUse": ["Do not use for work case studies (use HoverRevealList).", "Do not embed full screenshot galleries here — that is the detail page."],
         "a11yNotes": ["Thumbnails are lazy-loaded with descriptive alt text.", "Status conveyed by badge text, not colour alone."],
     },
     "WorkingLoopMap": {
         "summary": "Linked working-loop diagram for the Lab overview.",
-        "what": "Maps context into questions and evidence, converges them in a prototype, then moves through testing and learning with links to relevant portfolio examples.",
+        "what": "Maps context into questions and checks, converges them in a prototype, then moves through testing and a decision about what to keep or change.",
         "why": "Explains the reasoning loop behind the Lab experiments without making the global footer carry page-specific process content.",
         "whenToUse": ["Place once on the Lab overview between the summary and shortlisted projects."],
         "whenNotToUse": ["Do not duplicate it in the global footer.", "Do not use it as generic navigation on unrelated pages."],
@@ -178,12 +178,12 @@ CONTENT: Dict[str, dict] = {
         "a11yNotes": ["Uses contentinfo landmark via <footer>.", "Links have discernible text.", "The animated signature is decorative, hidden from assistive technology, and static under reduced motion."],
     },
     "AadithCompanion": {
-        "summary": "Playful public-context portfolio sidekick with a responsive drawer fallback.",
-        "what": "Renders the persistent desktop sidekick, mobile Ask about Aadith trigger, transcript, grounded source links, prompt suggestions, composer, loading state, and sessionStorage-backed client behavior.",
-        "why": "Lets recruiters, collaborators, and investors ask focused questions without interrupting full-width Work and Lab case-study reading.",
-        "whenToUse": ["Render through BaseLayout on overview and editorial routes.", "Keep answers grounded through the configured secure Azure endpoint."],
-        "whenNotToUse": ["Do not render directly inside pages.", "Do not show it on Work or Lab detail routes.", "Do not place Azure credentials or private context in PUBLIC environment variables."],
-        "a11yNotes": ["Uses an aside landmark and aria-live transcript.", "The mobile drawer supports Escape, focus containment, explicit labels, and reduced motion.", "Model output is rendered as text and links come only from validated server sources."],
+        "summary": "Minimized public-context portfolio sidekick that opens as a drawer.",
+        "what": "Renders a fixed bottom-right Ask trigger, transcript, grounded source links, prompt suggestions, composer, loading state, and sessionStorage-backed client behavior.",
+        "why": "Lets recruiters, collaborators, and investors ask focused questions without reserving page width or interrupting case-study reading.",
+        "whenToUse": ["Render through BaseLayout on portfolio routes.", "Keep answers grounded through the configured secure Azure endpoint."],
+        "whenNotToUse": ["Do not render directly inside pages.", "Do not place Azure credentials or private context in PUBLIC environment variables."],
+        "a11yNotes": ["Uses an aside landmark and aria-live transcript.", "The drawer supports Escape, focus containment, explicit labels, and reduced motion at every viewport size.", "Model output is rendered as text and links come only from validated server sources."],
     },
     "Header": {
         "summary": "Static mono editorial header with Aadith's wordmark and wrapping primary navigation.",
