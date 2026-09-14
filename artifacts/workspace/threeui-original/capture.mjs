@@ -1,0 +1,37 @@
+import {chromium} from '@playwright/test';
+import {writeFile} from 'node:fs/promises';
+import {createHash} from 'node:crypto';
+const out='artifacts/workspace/threeui-original', report=[];
+const browser=await chromium.launch({channel:'chrome',headless:true});
+for(const [name,width,height] of [['desktop',1440,1000],['mobile',390,844]]) {
+ const context=await browser.newContext({viewport:{width,height},isMobile:name==='mobile',hasTouch:name==='mobile',deviceScaleFactor:name==='mobile'?2:1});
+ const page=await context.newPage(),errors=[];page.on('pageerror',e=>errors.push(e.message));
+ await page.goto('http://localhost:4323/');
+ await page.locator('#desk-stage[data-ready=true]').waitFor();
+ if(await page.locator('#desk-skip').isVisible())await page.locator('#desk-skip').click();
+ await page.locator('.ws-nav [data-open-section=work]').click();
+ const iframe=page.locator('#desk-paper-preview iframe');await iframe.waitFor({state:'visible'});
+ const frame=await(await iframe.elementHandle()).contentFrame();
+ await frame.waitForFunction(()=>window.__sheet?.state().intro>.97);
+ const hash=createHash('sha256').update(await iframe.getAttribute('srcdoc')).digest('hex');
+ await page.screenshot({path:`${out}/${name}-paper-content.png`});
+ await page.locator('#desk-paper-expand').click();
+ await frame.waitForFunction(()=>{const s=window.__sheet;return s.renderer.domElement.width===Math.round(innerWidth*s.renderer.getPixelRatio());});
+ await frame.evaluate(()=>new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve))));
+ await page.screenshot({path:`${out}/${name}-paper-expanded.png`});
+ const sheet=await frame.evaluate(()=>({state:window.__sheet.state(),drawCalls:window.__sheet.renderer.info.render.calls,revision:window.THREE.REVISION}));
+ await page.locator('#desk-paper-expand').click();
+ await page.locator('#desk-back').click();
+ await page.locator('#desk-stage[data-state=idle]').waitFor();
+ await page.locator('[data-room-view=desk-detail]').click();
+ await page.locator('#desk-stage[data-state=idle]').waitFor();
+ const canvas=page.locator('#desk-canvas');const box=await canvas.boundingBox();
+ const x=box.x+box.width*.65,y=box.y+box.height*.7;
+ await page.mouse.move(x,y);await page.mouse.down();await page.mouse.move(x+60,y-25,{steps:12});await page.mouse.up();
+ await page.locator('#desk-zoom-in').click();await page.mouse.move(0,0);
+ await page.waitForFunction(()=>Number(document.querySelector('#desk-canvas').dataset.cameraZoom)>1.08);
+ await page.screenshot({path:`${out}/${name}-desk-explore.png`});
+ report.push({name,hash,sheet,errors,overflow:await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),camera:await canvas.evaluate(n=>({...n.dataset}))});
+ await context.close();
+}
+await browser.close();await writeFile(`${out}/capture.json`,JSON.stringify(report,null,2));console.log(JSON.stringify(report,null,2));

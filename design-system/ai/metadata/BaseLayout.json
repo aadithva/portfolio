@@ -2,18 +2,17 @@
   "name": "BaseLayout",
   "path": "src/layouts/BaseLayout.astro",
   "tier": "layout",
-  "summary": "App shell: document head, paired Plex typography, minimized companion, header/footer, and global client behaviour.",
-  "what": "Wraps every page with metadata, IBM Plex Sans and Mono, the base and editorial theme stylesheets, GridBackdrop, Header/Footer, and the minimized AadithCompanion drawer.",
-  "why": "Centralises page chrome, companion visibility, and restrained vanilla-JS behaviour while preserving the same reading width across routes.",
+  "summary": "App shell: document head, paired Plex typography, header/footer, and global client behaviour.",
+  "what": "Wraps every page with metadata, IBM Plex Sans and Mono, the base and editorial theme stylesheets, GridBackdrop, and Header/Footer.",
+  "why": "Centralises page chrome and restrained vanilla-JS behaviour while preserving the same reading width across routes.",
   "whenToUse": [
     "Wrap any new page.",
     "Set per-page <title> and meta description.",
-    "Use bare=true for gated/standalone screens that should hide nav and the companion.",
-    "Override companion only when a future route needs behavior different from the route-aware default."
+    "Use bare=true for gated/standalone screens that should hide nav."
   ],
   "whenNotToUse": [
     "Do not import inside another component - it is a top-level layout.",
-    "Do not re-implement route/reveal observers or companion route checks in a page; they already live here."
+    "Do not re-implement route/reveal observers in a page; they already live here."
   ],
   "propsOrInputs": [
     {
@@ -30,15 +29,9 @@
       "name": "bare",
       "type": "boolean",
       "required": false
-    },
-    {
-      "name": "companion",
-      "type": "boolean",
-      "required": false
     }
   ],
   "componentDependencies": [
-    "AadithCompanion",
     "Footer",
     "GridBackdrop",
     "Header"
@@ -47,9 +40,9 @@
     "siteConfig"
   ],
   "usedBy": [
-    "route /",
     "route /404",
     "route /about",
+    "route /achievements",
     "route /adventures",
     "route /contact",
     "route /lab",
@@ -61,10 +54,9 @@
   ],
   "a11yNotes": [
     "Includes a skip link.",
-    "Respects prefers-reduced-motion and keeps content visible without JavaScript.",
-    "The minimized companion never reserves or reduces the reading canvas."
+    "Respects prefers-reduced-motion and keeps content visible without JavaScript."
   ],
   "version": "0.3.0",
-  "lastUpdated": "2026-09-02",
+  "lastUpdated": "2026-09-12",
   "source": "Generated from Astro source + design-system/ai/index.json by component-metadata.py."
 }

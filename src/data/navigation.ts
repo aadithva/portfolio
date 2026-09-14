@@ -1,10 +1,11 @@
 import type { NavLink } from "@/types";
 
-export const navLinks: NavLink[] = [
-  { label: "Work", href: "/work" },
-  { label: "Lab", href: "/lab" },
-  { label: "About", href: "/about" },
-  { label: "Adventures", href: "/adventures" },
-  { label: "Writing", href: "/writing" },
-  { label: "Contact", href: "/contact" },
+/** The same destinations and order in the room and on standalone pages. */
+export const navLinks: (NavLink & { id: string })[] = [
+  { id: "work", label: "Work", href: "/work" },
+  { id: "about", label: "About", href: "/about" },
+  { id: "writing", label: "Writing", href: "/writing" },
+  { id: "achievements", label: "Achievements", href: "/achievements" },
+  { id: "expeditions", label: "Expeditions", href: "/expeditions" },
+  { id: "contact", label: "Contact", href: "/contact" },
 ];

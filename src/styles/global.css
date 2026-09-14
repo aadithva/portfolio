@@ -1,6 +1,6 @@
 @import "./tokens.css";
 
-/* Plex Sans carries reading copy; Plex Mono carries headings and interface labels. */
+/* Plex Sans carries headings and reading copy; Plex Mono carries small metadata. */
 
 /* ------------------------------------------------------------------ *
  * Reset & base
@@ -27,12 +27,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
-
-body::-webkit-scrollbar {
-  display: none;
+  scrollbar-width: thin;
+  scrollbar-color: var(--ds-color-muted-fg) var(--ds-color-background);
 }
 
 h1, h2, h3, h4, h5, h6 {

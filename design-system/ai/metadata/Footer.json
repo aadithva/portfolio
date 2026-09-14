@@ -29,6 +29,6 @@
     "The animated signature is decorative, hidden from assistive technology, and static under reduced motion."
   ],
   "version": "0.3.0",
-  "lastUpdated": "2026-09-02",
+  "lastUpdated": "2026-09-12",
   "source": "Generated from Astro source + design-system/ai/index.json by component-metadata.py."
 }

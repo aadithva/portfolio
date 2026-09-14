@@ -1,0 +1,198 @@
+[
+  {
+    "name": "desktop",
+    "width": 1440,
+    "height": 900,
+    "errors": [],
+    "stats": {
+      "realtimeShadows": "true",
+      "view": "overview",
+      "computerMode": "false",
+      "cameraTargetY": "1.700",
+      "drawCalls": "273",
+      "triangles": "334602",
+      "pixelRatio": "1",
+      "geometryTriangles": "170370"
+    },
+    "nav": [
+      {
+        "text": "Work",
+        "href": "/work",
+        "height": 45.796875
+      },
+      {
+        "text": "About",
+        "href": "/about",
+        "height": 45.796875
+      },
+      {
+        "text": "Writing",
+        "href": "/writing",
+        "height": 45.796875
+      },
+      {
+        "text": "Achievements",
+        "href": "/achievements",
+        "height": 45.796875
+      },
+      {
+        "text": "Expeditions",
+        "href": "/expeditions",
+        "height": 45.796875
+      },
+      {
+        "text": "Contact",
+        "href": "/contact",
+        "height": 45.796875
+      }
+    ],
+    "scrollWidth": 1440
+  },
+  {
+    "name": "laptop",
+    "width": 1280,
+    "height": 800,
+    "errors": [],
+    "stats": {
+      "realtimeShadows": "true",
+      "view": "overview",
+      "computerMode": "false",
+      "cameraTargetY": "1.700",
+      "drawCalls": "273",
+      "triangles": "334602",
+      "pixelRatio": "1",
+      "geometryTriangles": "170370"
+    },
+    "nav": [
+      {
+        "text": "Work",
+        "href": "/work",
+        "height": 45.796875
+      },
+      {
+        "text": "About",
+        "href": "/about",
+        "height": 45.796875
+      },
+      {
+        "text": "Writing",
+        "href": "/writing",
+        "height": 45.796875
+      },
+      {
+        "text": "Achievements",
+        "href": "/achievements",
+        "height": 45.796875
+      },
+      {
+        "text": "Expeditions",
+        "href": "/expeditions",
+        "height": 45.796875
+      },
+      {
+        "text": "Contact",
+        "href": "/contact",
+        "height": 45.796875
+      }
+    ],
+    "scrollWidth": 1280
+  },
+  {
+    "name": "mobile",
+    "width": 390,
+    "height": 844,
+    "errors": [],
+    "stats": {
+      "realtimeShadows": "false",
+      "view": "overview",
+      "computerMode": "false",
+      "cameraTargetY": "1.840",
+      "drawCalls": "172",
+      "triangles": "170184",
+      "pixelRatio": "1.35",
+      "geometryTriangles": "170370"
+    },
+    "nav": [
+      {
+        "text": "Work",
+        "href": "/work",
+        "height": 45.796875
+      },
+      {
+        "text": "About",
+        "href": "/about",
+        "height": 45.796875
+      },
+      {
+        "text": "Writing",
+        "href": "/writing",
+        "height": 45.796875
+      },
+      {
+        "text": "Achievements",
+        "href": "/achievements",
+        "height": 45.796875
+      },
+      {
+        "text": "Expeditions",
+        "href": "/expeditions",
+        "height": 45.796875
+      },
+      {
+        "text": "Contact",
+        "href": "/contact",
+        "height": 45.796875
+      }
+    ],
+    "scrollWidth": 390
+  },
+  {
+    "name": "small-mobile",
+    "width": 320,
+    "height": 740,
+    "errors": [],
+    "stats": {
+      "realtimeShadows": "false",
+      "view": "overview",
+      "computerMode": "false",
+      "cameraTargetY": "1.840",
+      "drawCalls": "170",
+      "triangles": "169808",
+      "pixelRatio": "1",
+      "geometryTriangles": "170370"
+    },
+    "nav": [
+      {
+        "text": "Work",
+        "href": "/work",
+        "height": 45.796875
+      },
+      {
+        "text": "About",
+        "href": "/about",
+        "height": 45.796875
+      },
+      {
+        "text": "Writing",
+        "href": "/writing",
+        "height": 45.796875
+      },
+      {
+        "text": "Achievements",
+        "href": "/achievements",
+        "height": 45.796875
+      },
+      {
+        "text": "Expeditions",
+        "href": "/expeditions",
+        "height": 45.796875
+      },
+      {
+        "text": "Contact",
+        "href": "/contact",
+        "height": 45.796875
+      }
+    ],
+    "scrollWidth": 320
+  }
+]

@@ -14,7 +14,7 @@ const { section } = Astro.props;
 // gracefully fall back to the placeholder block when the asset is missing.
 const PUBLIC_DIR = path.resolve(process.cwd(), "public");
 function imageExists(src: string): boolean {
-  if (!src || !src.startsWith("/")) return false;
+  if (!src || !src.startsWith("/") || src.includes("placeholder")) return false;
   try {
     return fs.statSync(path.join(PUBLIC_DIR, src)).isFile();
   } catch {
@@ -46,7 +46,7 @@ const hasLive = liveImages.length > 0;
         ))
       : (section.images ?? []).map(() => (
           <Reveal>
-            <div class="placeholder-image aspect-16x9">{section.caption ?? section.heading ?? "Image"}</div>
+            <div class="placeholder-image aspect-16x9">Public imagery not available.</div>
           </Reveal>
         ))}
     {section.caption && (
@@ -68,7 +68,7 @@ const hasLive = liveImages.length > 0;
           ))
         : (section.images ?? []).map((_, i) => (
             <Reveal delay={i * 90}>
-              <div class="placeholder-image aspect-4x3">{section.caption ?? "Image"}</div>
+              <div class="placeholder-image aspect-4x3">Public imagery not available.</div>
             </Reveal>
           ))}
     </div>

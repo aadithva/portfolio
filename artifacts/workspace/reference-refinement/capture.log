@@ -1,0 +1,25 @@
+
+> aadithva-portfolio@1.0.0 capture:workspace
+> node scripts/capture-workspace.mjs
+
+laptop {
+  cameraTargetY: '1.770',
+  drawCalls: '163',
+  triangles: '165500',
+  pixelRatio: '1',
+  geometryTriangles: '170370'
+} []
+mobile {
+  cameraTargetY: '1.770',
+  drawCalls: '150',
+  triangles: '160908',
+  pixelRatio: '1',
+  geometryTriangles: '170370'
+} []
+desktop {
+  cameraTargetY: '1.770',
+  drawCalls: '161',
+  triangles: '164872',
+  pixelRatio: '1',
+  geometryTriangles: '170370'
+} []

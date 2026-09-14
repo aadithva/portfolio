@@ -1,0 +1,322 @@
+/* The computer uses the same materials, type, and lamp-red accent as the room. */
+.computer-desktop,
+#desk-content[data-computer="true"] {
+  --computer-screen: var(--ds-color-background);
+  --computer-panel: var(--ds-color-muted);
+  --computer-ink: var(--ds-color-foreground);
+  --computer-bright: var(--ds-color-accent-soft);
+  --computer-muted: var(--ds-color-muted-fg);
+  --computer-line: var(--ds-color-border);
+  --computer-mono: 'IBM Plex Mono', monospace;
+}
+
+.computer-desktop {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  max-width: none;
+  height: 100dvh;
+  max-height: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 5px;
+  background: var(--computer-screen);
+  color: var(--computer-ink);
+  font-family: var(--ds-font-body);
+  font-size: 14px;
+  line-height: 1.6;
+  overflow: hidden;
+  color-scheme: dark;
+  isolation: isolate;
+}
+
+.computer-desktop[open] { display: flex; flex-direction: column; animation: computer-appear 150ms ease-out; }
+.computer-desktop::backdrop { background: #191918; }
+.computer-desktop::before,
+.computer-desktop::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+  pointer-events: none;
+}
+.computer-desktop::before {
+  background: repeating-linear-gradient(0deg, #0000 0 2px, #00000006 2px 3px);
+}
+.computer-desktop::after { box-shadow: inset 0 0 100px #00000026, inset 0 0 2px #eeeae220; }
+.computer-desktop[data-effects="off"]::before,
+.computer-desktop[data-effects="off"]::after { display: none; }
+.computer-desktop [hidden] { display: none !important; }
+.computer-desktop :is(button, a) { -webkit-tap-highlight-color: transparent; }
+.computer-desktop :is(button, a):focus-visible,
+#desk-content[data-computer="true"] :is(button, a):focus-visible {
+  outline: 2px solid var(--computer-bright);
+  outline-offset: 4px;
+}
+.computer-desktop button { font: inherit; color: inherit; }
+.computer-desktop a { color: inherit; text-decoration: none; }
+
+.computer-system-bar {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  min-height: 68px;
+  padding: 10px 32px;
+  border-bottom: 1px solid var(--computer-line);
+  background: var(--computer-panel);
+}
+.computer-system-bar h2 { display: flex; align-items: center; gap: 13px; font-size: 13px; font-weight: 400; white-space: nowrap; }
+.computer-owner-mark { font-size: 28px; letter-spacing: -4px; color: var(--computer-bright); padding-right: 5px; line-height: 1; }
+.computer-system-controls { display: flex; gap: 8px; align-items: center; }
+.computer-system-controls button {
+  min-height: 44px;
+  padding: 8px 15px;
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  font-size: 11px;
+  white-space: nowrap;
+}
+.computer-system-controls button:hover,
+.computer-system-controls button:focus-visible { background: #eeeae20b; border-color: var(--computer-line); }
+.computer-system-controls .computer-exit { border-color: var(--computer-line); margin-left: 6px; }
+.computer-exit span { margin-left: 12px; }
+#computer-effects[aria-pressed="true"] { color: var(--computer-bright); }
+
+.computer-body { flex: 1; min-height: 0; position: relative; }
+.computer-workspace { height: 100%; overflow: auto; overscroll-behavior: contain; scrollbar-width: thin; scrollbar-color: #77746c transparent; }
+.computer-home-layout {
+  display: grid;
+  grid-template-columns: 264px minmax(0, 1fr);
+  align-items: start;
+  gap: clamp(40px, 6vw, 88px);
+  width: min(1320px, 100%);
+  min-height: 100%;
+  margin: 0 auto;
+  padding: 32px 48px 28px;
+}
+.computer-section-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 19px; }
+.computer-section-heading h3 { font-size: 12px; font-weight: 400; }
+.computer-section-heading > span { font-size: 9px; color: var(--computer-muted); }
+.computer-app-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px 14px; }
+.computer-app {
+  min-width: 0;
+  min-height: 112px;
+  padding: 12px 6px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 13px;
+  text-align: center;
+  border: 1px solid transparent;
+  transition: background-color 120ms, border-color 120ms;
+}
+.computer-app:hover { background: #eeeae206; border-color: var(--computer-line); }
+.computer-app-copy { display: grid; gap: 3px; min-width: 0; }
+.computer-app-copy strong { font-size: 12px; font-weight: 400; }
+.computer-app-copy > span { color: var(--computer-muted); font-size: 9px; }
+.computer-app--primary { grid-column: 1 / -1; flex-direction: row; justify-content: flex-start; min-height: 98px; gap: 22px; padding: 18px; text-align: left; border-color: var(--ds-color-border); background: #e052430b; }
+.computer-app--primary .computer-app-copy strong { color: var(--computer-bright); font-size: 15px; }
+.computer-folder-icon { position: relative; display: block; width: 48px; height: 36px; flex: 0 0 auto; color: #858079; }
+.computer-folder-icon::before { content: ''; position: absolute; inset: 7px 1px 0; border: 1px solid currentColor; background: #34312d; }
+.computer-folder-icon::after { content: ''; position: absolute; left: 1px; top: 1px; width: 20px; height: 8px; border: 1px solid currentColor; border-bottom: 0; background: #34312d; }
+.computer-folder-icon i { position: absolute; z-index: 1; inset: 14px -2px 0 4px; border: 1px solid currentColor; background: #4c4640; transform: skewX(-7deg); }
+.computer-app--primary .computer-folder-icon { color: var(--computer-bright); }
+.computer-app:hover .computer-folder-icon i { background: #5d544b; }
+
+.computer-desktop-content { min-width: 0; }
+.computer-location { color: var(--computer-muted); font-size: 11px; }
+.computer-welcome h3 { margin: 10px 0 13px; font-size: clamp(26px, 3.2vw, 40px); font-weight: 400; line-height: 1.2; letter-spacing: -1.5px; color: var(--computer-bright); }
+.computer-welcome > p:last-child { max-width: 65ch; font-size: 12px; color: var(--computer-muted); line-height: 1.8; }
+.computer-files { margin-top: 24px; border: 1px solid var(--computer-line); }
+.computer-files-bar { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 44px; padding: 0 20px; border-bottom: 1px solid var(--computer-line); background: var(--computer-panel); }
+.computer-files-bar h3 { font-size: 11px; font-weight: 400; }
+.computer-files-bar a { display: inline-flex; align-items: center; gap: 12px; min-height: 44px; font-size: 10px; }
+.computer-files-bar a:hover { text-decoration: underline; text-underline-offset: 4px; }
+.computer-featured-file { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.3fr); gap: 22px; align-items: start; padding: 20px 24px; }
+.computer-featured-file > img { width: 100%; height: auto; aspect-ratio: 16 / 10; object-fit: cover; border: 1px solid var(--ds-color-border); }
+.computer-file-meta { color: var(--computer-muted); font-size: 9px; line-height: 1.6; }
+.computer-featured-file h4 { margin: 7px 0 11px; font-size: 24px; font-weight: 400; letter-spacing: -.5px; line-height: 1.2; }
+.computer-featured-file h4 span { font-size: 18px; }
+.computer-file-description { color: var(--ds-color-muted-fg); font-size: 12px; line-height: 1.8; }
+.computer-featured-file .computer-file-year { display: block; margin-top: 16px; font-size: 9px; }
+.computer-featured-file:hover { background: #eeeae205; }
+.computer-featured-file:hover h4 { color: var(--computer-bright); }
+.computer-file-list { list-style: none; margin: 0; padding: 0 24px; }
+.computer-file-list li { border-top: 1px solid var(--ds-color-border); }
+.computer-file { display: grid; grid-template-columns: 54px minmax(0, 1fr) auto 15px; gap: 16px; align-items: center; min-height: 74px; padding: 12px 0; }
+.computer-file > img { width: 54px; height: 36px; object-fit: cover; border: 1px solid var(--ds-color-border); }
+.computer-file-copy { display: grid; min-width: 0; gap: 5px; }
+.computer-file-copy strong { font-size: 12px; font-weight: 400; }
+.computer-file-copy > span { font-size: 9px; color: var(--computer-muted); }
+.computer-file-year { color: var(--computer-muted); font-size: 9px; white-space: nowrap; }
+.computer-file-arrow { color: var(--computer-muted); font-size: 17px; }
+.computer-file:hover .computer-file-copy strong { text-decoration: underline; text-underline-offset: 4px; color: var(--computer-bright); }
+.computer-document-icon { width: 28px; height: 35px; border: 1px solid #858079; position: relative; display: grid; place-items: center; margin-left: 10px; color: var(--computer-muted); font-size: 9px; }
+.computer-document-icon::after { content: ''; position: absolute; top: -1px; right: -1px; width: 7px; height: 7px; border-left: 1px solid #858079; border-bottom: 1px solid #858079; background: var(--computer-screen); }
+.computer-index-link { display: inline-flex; align-items: center; gap: 14px; min-height: 44px; margin-top: 15px; color: var(--computer-muted) !important; font-size: 10px; }
+.computer-index-link:hover { color: var(--computer-bright) !important; text-decoration: underline; text-underline-offset: 4px; }
+
+.computer-taskbar { flex: 0 0 auto; min-height: 48px; padding: 10px 32px; display: flex; align-items: center; justify-content: space-between; gap: 24px; border-top: 1px solid var(--computer-line); background: var(--computer-panel); color: var(--computer-muted); font-size: 10px; }
+.computer-taskbar kbd { border: 1px solid var(--computer-line); border-radius: 5px; font: inherit; color: var(--computer-ink); padding: 2px 5px; margin-right: 5px; }
+.computer-boot { display: none; position: absolute; inset: 0; z-index: 3; place-items: center; padding: 36px; overflow: auto; background: var(--computer-screen); }
+.computer-desktop[data-phase="booting"] .computer-boot { display: grid; }
+.computer-desktop[data-phase="booting"] .computer-workspace { visibility: hidden; }
+.computer-desktop[data-phase="booting"] .computer-boot-lines li { animation: computer-appear 120ms ease-out both; }
+.computer-desktop[data-phase="booting"] .computer-boot-lines li:nth-child(2) { animation-delay: 150ms; }
+.computer-desktop[data-phase="booting"] .computer-boot-lines li:nth-child(3) { animation-delay: 300ms; }
+.computer-boot-content { width: min(520px, 100%); }
+.computer-boot h3 { font-size: clamp(23px, 4vw, 36px); font-weight: 400; line-height: 1.35; margin: 18px 0 30px; color: var(--computer-bright); letter-spacing: -1px; }
+.computer-boot-lines { list-style: none; margin: 0 0 36px; padding: 0; display: grid; gap: 13px; color: var(--computer-muted); font-size: 12px; }
+.computer-boot-lines span { color: var(--computer-bright); margin-right: 14px; }
+#computer-skip { display: inline-flex; align-items: center; gap: 24px; min-height: 44px; padding: 10px 16px; border: 1px solid var(--ds-color-border); background: var(--computer-panel); font-size: 12px; }
+#computer-skip:hover { border-color: var(--computer-bright); }
+
+/* Content windows share the room dialog, including type, controls, and imagery. */
+#desk-content[data-computer="true"] { width: min(1060px,calc(100vw - 80px)); height: min(850px,calc(100dvh - 88px)); }
+#desk-content[data-computer="true"]::backdrop { background: #1414138c; backdrop-filter: blur(7px); }
+
+@media (max-width: 1000px) {
+  .computer-home-layout { grid-template-columns: 226px minmax(0, 1fr); gap: 32px; padding: 32px; }
+  .computer-featured-file { grid-template-columns: 1fr; gap: 20px; }
+  .computer-featured-file > img { max-height: 190px; }
+  .computer-app--primary { padding: 16px 12px; gap: 16px; }
+  .computer-file { gap: 12px; }
+  .computer-file .computer-file-year { display: none; }
+  .computer-file { grid-template-columns: 54px minmax(0, 1fr) 15px; }
+}
+@media (max-width: 640px) {
+  .computer-system-bar { display: grid; grid-template-columns: 1fr; gap: 8px; padding: 14px 18px 10px; }
+  .computer-system-bar h2 { font-size: 12px; }
+  .computer-owner-mark { font-size: 24px; }
+  .computer-system-controls { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; }
+  .computer-system-controls button { padding: 7px 6px; font-size: 10.5px; }
+  .computer-system-controls .computer-exit { margin-left: 0; }
+  .computer-exit span { display: none; }
+  .computer-home-layout { grid-template-columns: 1fr; gap: 30px; padding: 24px 20px 30px; }
+  .computer-app-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px 7px; }
+  .computer-app, .computer-app--primary { grid-column: auto; min-height: 102px; flex-direction: column; gap: 13px; padding: 12px 4px; text-align: center; }
+  .computer-app-copy strong, .computer-app--primary .computer-app-copy strong { font-size: 11px; }
+  .computer-app-copy > span { display: none; }
+  .computer-folder-icon { width: 43px; height: 33px; }
+  .computer-welcome h3 { font-size: 29px; letter-spacing: -1px; }
+  .computer-welcome > p:last-child { font-size: 11px; }
+  .computer-files { margin-top: 25px; }
+  .computer-files-bar { padding: 0 16px; }
+  .computer-featured-file { padding: 18px 16px; }
+  .computer-featured-file > img { max-height: none; }
+  .computer-file-list { padding: 0 16px; }
+  .computer-file { min-height: 82px; }
+  .computer-file-copy strong { font-size: 11px; }
+  .computer-index-link { font-size: 10px; line-height: 1.7; }
+  .computer-taskbar { min-height: 47px; padding: 10px 18px; font-size: 9px; gap: 14px; }
+  .computer-taskbar > p:last-child { display: none; }
+  .computer-boot { padding: 28px; }
+  .computer-boot-lines { font-size: 11px; }
+  .computer-boot-lines span { margin-right: 8px; }
+  #desk-content[data-computer="true"] { width: calc(100vw - 16px); height: calc(100dvh - 24px); }
+  #desk-content[data-computer="true"] .ws-content-scroll { padding: 26px 22px 32px; }
+  #desk-content[data-computer="true"] .ws-dialog-bar { padding-left: 16px; padding-right: 12px; gap: 12px; }
+}
+@media (max-width: 379px) {
+  .computer-app-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .computer-home-layout { padding-left: 18px; padding-right: 18px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .computer-desktop *, #desk-content[data-computer="true"] * { transition: none !important; scroll-behavior: auto !important; }
+  .computer-desktop[open], #desk-content[data-computer="true"][open], .computer-desktop[data-phase="booting"] .computer-boot-lines li { animation: none !important; }
+}
+@media (prefers-contrast: more) {
+  .computer-desktop::before, .computer-desktop::after, #desk-content[data-computer="true"]::after { display: none; }
+  .computer-desktop { --computer-muted: #d3cfc6; --computer-line: #827f77; }
+}
+@media (forced-colors: active) {
+  .computer-desktop::before, .computer-desktop::after, #desk-content[data-computer="true"]::after { display: none; }
+  .computer-app, .computer-system-controls button, .computer-files { border: 1px solid ButtonText; }
+}
+
+@keyframes computer-appear { from { opacity: 0; } to { opacity: 1; } }
+
+.computer-desktop { border-radius: 0; }
+.computer-system-bar { padding: 12px 48px; background: var(--computer-screen); border-bottom-color: var(--computer-line); min-height: 82px; }
+.computer-owner-mark { color: var(--computer-bright); font-family: var(--ds-font-body); letter-spacing: -3px; font-weight: 500; }
+.computer-system-bar h2 { font-size: 14px; }
+.computer-system-controls { background: var(--computer-panel); border: 1px solid var(--computer-line); border-radius: 8px; padding: 3px; gap: 2px; }
+.computer-system-controls button { font-size: 11px; min-height: 38px; }
+.computer-system-controls .computer-exit { border: 0; border-left: 1px solid var(--computer-line); border-radius: 0 5px 5px 0; }
+.computer-system-controls #computer-home { color: var(--computer-ink); background: var(--ds-color-raised); }
+#computer-effects[aria-pressed=true] { color: var(--computer-muted); }
+.computer-home-layout { grid-template-columns: 248px minmax(0,1fr); gap: clamp(48px,7vw,100px); padding: 40px 48px 30px; }
+.computer-section-heading h3 { font: 9px var(--computer-mono); text-transform: uppercase; letter-spacing: .06em; color: var(--computer-muted); }
+.computer-section-heading > span { font-size: 10px; }
+.computer-app { border-radius: 7px; min-height: 116px; }
+.computer-app--primary { min-height: 100px; border-color: #e0524359; background: #e0524308; }
+.computer-app-copy strong { font-size: 13px; font-weight: 400; }
+.computer-app-copy > span { font-size: 10px; }
+.computer-app--primary .computer-app-copy strong { color: var(--computer-ink); font-size: 17px; }
+.computer-folder-icon { width: 49px; height: 37px; perspective: 220px; }
+.computer-folder-icon::before,.computer-folder-icon::after { border-color: #777066; border-radius: 3px 3px 0 0; }
+.computer-folder-icon i { border-color: #8e8174; border-radius: 3px; box-shadow: inset 0 1px 0 #fff1,0 3px 7px #0003; transform: skewX(-7deg); transform-origin: bottom; transition: transform .32s var(--ds-ease-emphasized), background .25s; }
+.computer-app--primary .computer-folder-icon i { background: #b94436; border-color: #d96250; }
+.computer-app--primary .computer-folder-icon::before,.computer-app--primary .computer-folder-icon::after { background: #77352d; border-color: #b4594c; }
+.computer-app:is(:hover,:focus-visible) .computer-folder-icon i { transform: skewX(-7deg) rotateX(-30deg); }
+.computer-app--primary:hover .computer-folder-icon i { background: #ca4e3e; }
+.computer-location { font: 9px var(--computer-mono); text-transform: uppercase; letter-spacing: .08em; }
+.computer-welcome h3 { color: var(--computer-ink); font-size: clamp(38px,4.2vw,60px); line-height: 1.08; letter-spacing: -.055em; margin: 14px 0 16px; }
+.computer-welcome > p:last-child { font-size: 14px; line-height: 1.65; }
+.computer-files { border: 0; margin-top: 32px; }
+.computer-files-bar { background: transparent; padding: 0; min-height: 44px; border-bottom: 1px solid var(--computer-line); }
+.computer-files-bar h3 { font: 10px var(--computer-mono); text-transform: uppercase; letter-spacing: .06em; color: var(--computer-muted); }
+.computer-files-bar a { font-size: 12px; }
+.computer-featured-file { grid-template-columns: minmax(0,1fr) minmax(0,1.05fr); padding: 23px 0; gap: 24px; }
+.computer-featured-file > img { border-radius: 5px; border: 0; background: var(--ds-color-raised); transition: transform .3s var(--ds-ease-emphasized); }
+.computer-featured-file:hover > img { transform: translateY(-3px); }
+.computer-file-meta { font: 9px/1.6 var(--computer-mono); }
+.computer-featured-file h4 { margin: 8px 0 10px; font-size: 30px; letter-spacing: -.03em; }
+.computer-file-description { font-size: 13px; line-height: 1.7; }
+.computer-featured-file .computer-file-year { font: 9px var(--computer-mono); margin-top: 12px; }
+.computer-file-list { padding: 0; }
+.computer-file { min-height: 77px; grid-template-columns: 66px minmax(0,1fr) auto 15px; gap: 18px; }
+.computer-file > img { border: 0; border-radius: 3px; width: 66px; height: 44px; }
+.computer-file-copy strong { font-size: 14px; }
+.computer-file-copy > span { font-size: 11px; }
+.computer-file-year { font-family: var(--computer-mono); }
+.computer-index-link { font-size: 11px; }
+.computer-taskbar { background: var(--computer-screen); padding: 12px 48px; font-size: 10px; }
+.computer-boot h3 { font-family: var(--ds-font-body); color: var(--computer-ink); font-size: 45px; letter-spacing: -.04em; }
+.computer-boot-lines { font-family: var(--computer-mono); font-size: 11px; }
+.computer-boot-lines span { color: var(--computer-bright); }
+@media(max-width:1000px) and (min-width:641px) {
+  .computer-home-layout { grid-template-columns: 205px minmax(0,1fr); padding: 32px; gap: 40px; }
+  .computer-featured-file { grid-template-columns: 1fr; gap: 18px; }
+  .computer-file { grid-template-columns: 54px minmax(0,1fr) 15px; }
+}
+@media(max-width:640px) {
+  .computer-system-bar { padding: 16px 20px 12px; gap: 12px; }
+  .computer-system-controls { padding: 3px; }
+  .computer-system-controls button { min-height: 40px; }
+  .computer-home-layout { grid-template-columns: 1fr; gap: 28px; padding: 24px 22px 30px; }
+  .computer-app-grid { gap: 8px; }
+  .computer-app,.computer-app--primary { min-height: 95px; padding: 10px 4px; gap: 12px; }
+  .computer-app-copy strong,.computer-app--primary .computer-app-copy strong { font-size: 12px; }
+  .computer-welcome h3 { font-size: 41px; }
+  .computer-welcome > p:last-child { font-size: 13px; }
+  .computer-section-heading { margin-bottom: 14px; }
+  .computer-section-heading > span { font-size: 9px; }
+  .computer-featured-file { grid-template-columns: 1fr; gap: 18px; padding: 22px 0; }
+  .computer-files { margin-top: 24px; }
+  .computer-file { grid-template-columns: 54px minmax(0,1fr) 15px; gap: 14px; }
+  .computer-file > img { width: 54px; height: 36px; }
+  .computer-file-copy strong { font-size: 13px; }
+  .computer-file-copy > span { font-size: 10px; }
+  .computer-taskbar { padding: 12px 22px; }
+  #desk-content[data-computer=true] { width: calc(100vw - 16px); height: calc(100dvh - 24px); }
+}
+@media(prefers-reduced-motion:reduce) {
+  .computer-app:is(:hover,:focus-visible) .computer-folder-icon i { transform: skewX(-7deg); }
+  .computer-featured-file:hover > img { transform: none; }
+}

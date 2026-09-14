@@ -1,0 +1,231 @@
+---
+import DottedIndiaMap from "@/components/molecules/DottedIndiaMap.astro";
+import {
+  expeditions,
+  expeditionRouteCaption,
+  expeditionsMissingMedia,
+} from "@/data/expeditions";
+import {
+  workspaceAbout,
+  workspaceAchievements,
+  workspaceAchievementsMissing,
+  workspaceContact,
+  workspaceDesignExperiments,
+  workspaceExperiments,
+  workspaceMilestones,
+  workspaceProjects,
+  workspaceReadingMissing,
+  workspaceSections,
+  workspaceWriting,
+} from "@/data/workspace";
+---
+
+{workspaceSections.map((section) => (
+  <section
+    class="wc-section"
+    data-content-section={section.id}
+    aria-labelledby={`wc-${section.id}-title`}
+    hidden
+  >
+    <p class="wc-eyebrow">{section.kicker}</p>
+    <h2 class="wc-title" id={`wc-${section.id}-title`}>{section.title}</h2>
+    <p class="wc-description">{section.description}</p>
+
+    {section.id === "work" && (
+      <>
+        <div class="wc-project-grid">
+          {workspaceProjects.map((project) => (
+            <a class="wc-project" href={project.href}>
+              {project.image ? (
+                <img class="wc-image" src={project.image} alt="" loading="lazy" decoding="async" width="800" height="500" />
+              ) : (
+                <div class="wc-image wc-image--typographic" aria-hidden="true">
+                  <span>Microsoft</span>
+                  <strong>Copilot</strong>
+                  <span>Response experiences</span>
+                </div>
+              )}
+              <div class="wc-project-body">
+                <p class="wc-meta">{project.category} <span aria-hidden="true">·</span> {project.year}</p>
+                <h3>{project.title}<span aria-hidden="true"> ↗</span></h3>
+                <p>{project.description}</p>
+              </div>
+            </a>
+          ))}
+        </div>
+        <a class="wc-link" href="/work">View all work <span aria-hidden="true">↗</span></a>
+      </>
+    )}
+
+    {section.id === "about" && (
+      <>
+        <div class="wc-text">
+          <p>{workspaceAbout.lead}</p>
+          {workspaceAbout.paragraphs.map((paragraph) => <p>{paragraph}</p>)}
+        </div>
+        <div class="wc-list">
+          <a class="wc-link" href="/about">More about me <span aria-hidden="true">↗</span></a>
+          <a class="wc-link" href="/adventures">The cycling stories <span aria-hidden="true">↗</span></a>
+        </div>
+      </>
+    )}
+
+    {section.id === "writing" && (
+      <>
+        <div class="wc-list">
+          {workspaceWriting.map((note) => (
+            <article class="wc-text">
+              <p class="wc-meta">{note.label}</p>
+              <h3><a href={`/writing#${note.id}`}>{note.title}</a></h3>
+              <p>{note.paragraphs[0]}</p>
+              <a class="wc-link" href={`/writing#${note.id}`}>Read the note <span aria-hidden="true">↗</span></a>
+            </article>
+          ))}
+        </div>
+        <p class="wc-empty">{workspaceReadingMissing}</p>
+        <a class="wc-link" href="/writing">All writing <span aria-hidden="true">↗</span></a>
+      </>
+    )}
+
+    {section.id === "achievements" && (
+      <>
+        {workspaceAchievements.length ? (
+          <div class="wc-list">
+            {workspaceAchievements.map((achievement) => (
+              <article class="wc-text" data-achievement-id={achievement.id}>
+                {achievement.image && <img class:list={["wc-image", "wc-achievement-image", { "wc-certificate": achievement.certificate }]} src={achievement.image} alt={achievement.title} data-paper-document={achievement.certificate || undefined} loading="lazy" decoding="async" width={achievement.imageWidth || 800} height={achievement.imageHeight || 500} />}
+                <p class="wc-meta">{achievement.year}</p>
+                <h3>{achievement.title}</h3>
+                <p>{achievement.description}</p>
+                {achievement.href && <a class="wc-link" href={achievement.href} target={achievement.certificate ? "_blank" : undefined} rel={achievement.certificate ? "noopener" : undefined}>{achievement.certificate ? "View full-size certificate" : "Read more"} <span aria-hidden="true">↗</span></a>}
+              </article>
+            ))}
+          </div>
+        ) : <p class="wc-empty">{workspaceAchievementsMissing}</p>}
+        <div class="wc-list">
+          {workspaceMilestones.map((milestone) => (
+            <article class="wc-text">
+              <p class="wc-meta">{milestone.year}</p>
+              <h3>{milestone.title}</h3>
+              <p>{milestone.description}</p>
+            </article>
+          ))}
+        </div>
+        <a class="wc-link" href="/about">Read the full timeline <span aria-hidden="true">↗</span></a>
+      </>
+    )}
+
+    {section.id === "expeditions" && (
+      <>
+        <div class="wc-list">
+          {expeditions.map((expedition) => (
+            <article class="wc-expedition" aria-labelledby={`wc-expedition-${expedition.id}`}>
+              <div class:list={["wc-expedition-overview", { "wc-expedition-overview--mapped": expedition.showRouteMap }]}>
+                <div>
+                  <p class="wc-meta">{expedition.dateLabel}</p>
+                  <h3 id={`wc-expedition-${expedition.id}`}>{expedition.title}</h3>
+                  <p>{expedition.route}</p>
+                  {expedition.facts.length > 0 && (
+                    <dl class="wc-expedition-facts">
+                      {expedition.facts.map((fact) => <div><dt>{fact.label}</dt><dd>{fact.value}</dd></div>)}
+                    </dl>
+                  )}
+                </div>
+                {expedition.showRouteMap && (
+                  <figure class="wc-expedition-map">
+                    <DottedIndiaMap />
+                    <figcaption>{expeditionRouteCaption}</figcaption>
+                  </figure>
+                )}
+              </div>
+              <div class="wc-text">
+                {expedition.paragraphs.map((paragraph) => <p>{paragraph}</p>)}
+              </div>
+              {expedition.images.map((image) => (
+                <figure class="wc-expedition-photo">
+                  <img class="wc-image" src={image.src} alt={image.alt} width={image.width} height={image.height} loading="lazy" decoding="async" />
+                  <figcaption class="wc-meta">{image.caption}</figcaption>
+                </figure>
+              ))}
+              {expedition.missingDetails && <p class="wc-expedition-note">{expedition.missingDetails}</p>}
+            </article>
+          ))}
+        </div>
+        <p class="wc-empty">{expeditionsMissingMedia}</p>
+        <a class="wc-link" href="/expeditions">Read the expedition notes <span aria-hidden="true">↗</span></a>
+        <a class="wc-link wc-expedition-original" href="/adventures">Original cycling stories <span aria-hidden="true">↗</span></a>
+      </>
+    )}
+
+    {(section.id === "experiments" || section.id === "design") && (
+      <>
+        <div class="wc-project-grid">
+          {(section.id === "design" ? workspaceDesignExperiments : workspaceExperiments).map((project) => (
+            <a class="wc-project" href={project.href}>
+              {project.image && <img class="wc-image" src={project.image} alt="" loading="lazy" decoding="async" width="800" height="500" />}
+              <div class="wc-project-body">
+                <p class="wc-meta">{project.category} <span aria-hidden="true">·</span> {project.year}</p>
+                <h3>{project.title}<span aria-hidden="true"> ↗</span></h3>
+                <p>{project.description}</p>
+              </div>
+            </a>
+          ))}
+        </div>
+        <a class="wc-link" href="/lab">Visit the Lab <span aria-hidden="true">↗</span></a>
+      </>
+    )}
+
+    {section.id === "contact" && (
+      <div class="wc-contact">
+        <a class="wc-link" href={`mailto:${workspaceContact.email}`}>{workspaceContact.email}</a>
+        <button class="wc-link" type="button" data-copy-email={workspaceContact.email}>Copy email address</button>
+        <p class="wc-meta" data-copy-status aria-live="polite"></p>
+        <p class="wc-text">Hyderabad, India · IST</p>
+        <div class="wc-list">
+          <a class="wc-link" href={workspaceContact.linkedin} target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span><span class="sr-only">, opens in a new tab</span></a>
+          <a class="wc-link" href={workspaceContact.behance} target="_blank" rel="noopener noreferrer">Behance <span aria-hidden="true">↗</span><span class="sr-only">, opens in a new tab</span></a>
+          <a class="wc-link" href="/contact">Contact page <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    )}
+
+    {section.id === "play" && (
+      <>
+        <div class="wc-text">
+          <p>Two stickers on the laptop have something tucked behind them. Select each one to find it. No timer, no score to beat.</p>
+          <p>You can also use the keyboard. Tab through the desk objects and press Enter to select a sticker.</p>
+          <p class="wc-meta" aria-live="polite"><span data-sticker-count>0</span> of 2 discovered</p>
+        </div>
+        <button class="wc-link" type="button" data-sticker-start>Take a closer look at the laptop</button>
+        <button class="wc-link" type="button" data-sticker-reset>Reset the sticker hunt</button>
+      </>
+    )}
+  </section>
+))}
+
+<style>
+  .wc-expedition + .wc-expedition { border-top: 1px solid var(--ws-line); padding-top: 28px; }
+  .wc-expedition-overview--mapped { display: grid; grid-template-columns: minmax(0, 1fr) minmax(180px, .9fr); gap: 28px; align-items: start; }
+  .wc-expedition-facts { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px 14px; margin-top: 24px; }
+  .wc-expedition-facts dt { color: var(--ws-muted); font: 10px var(--ws-mono); margin-bottom: 6px; }
+  .wc-expedition-facts dd { font-size: 13px; line-height: 1.6; margin: 0; }
+  .wc-expedition-map { max-width: 260px; margin: 0 0 0 auto; }
+  .wc-expedition-map :global(svg) { width: 100%; height: auto; display: block; }
+  .wc-expedition-map :global(.india-dot) { fill: var(--ws-ink); opacity: .42; }
+  .wc-expedition-map :global(.route-halo), .wc-expedition-map :global(.route-path) { fill: none; stroke-linecap: round; stroke-linejoin: round; }
+  .wc-expedition-map :global(.route-halo) { stroke: var(--ws-panel); stroke-width: 10; }
+  .wc-expedition-map :global(.route-path) { stroke: var(--ws-accent); stroke-width: 4; }
+  .wc-expedition-map :global(.route-marker--start), .wc-expedition-map :global(.route-marker__core) { fill: var(--ws-accent); }
+  .wc-expedition-map :global(.route-marker--end) { fill: var(--ws-panel); stroke: var(--ws-accent); stroke-width: 3; }
+  .wc-expedition-map :global(.route-label__eyebrow) { fill: var(--ws-muted); font: 11px var(--ws-mono); }
+  .wc-expedition-map :global(.route-label__name) { fill: var(--ws-ink); font-size: 20px; }
+  .wc-expedition-map figcaption { color: var(--ws-muted); font-size: 11px; line-height: 1.6; margin-top: 10px; }
+  .wc-expedition p.wc-expedition-note { margin-top: 16px; font-size: 11px; }
+  .wc-expedition-photo { margin: 24px 0 0; }
+  .wc-expedition-original { margin-left: 22px; }
+  @media (max-width: 580px) {
+    .wc-expedition-overview--mapped { grid-template-columns: 1fr; gap: 20px; }
+    .wc-expedition-map { max-width: 270px; margin: 0 auto; }
+    .wc-expedition-original { margin-left: 0; margin-right: 22px; }
+  }
+</style>

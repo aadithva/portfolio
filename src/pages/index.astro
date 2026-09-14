@@ -1,11 +1,133 @@
 ---
-import BaseLayout from "@/layouts/BaseLayout.astro";
-import Hero from "@/components/organisms/Hero.astro";
-import ProfileSignals from "@/components/organisms/ProfileSignals.astro";
-import FeaturedWork from "@/components/organisms/FeaturedWork.astro";
+import { siteConfig } from '@/data/siteConfig';
+import { navLinks as links } from '@/data/navigation';
+import WorkspaceContent from '@/components/workspace/WorkspaceContent.astro';
+import ComputerDesktop from '@/components/workspace/ComputerDesktop.astro';
+import { workspaceProjects } from '@/data/workspace';
+import '@/styles/workspace.css';
+import '@/styles/paper-panel.css';
+import '@fontsource/ibm-plex-sans/400.css';
+import '@fontsource/ibm-plex-sans/500.css';
+import '@fontsource/ibm-plex-sans/600.css';
+import '@fontsource/ibm-plex-mono/400.css';
 ---
-<BaseLayout>
-  <Hero />
-  <ProfileSignals />
-  <FeaturedWork />
-</BaseLayout>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{siteConfig.title}</title>
+    <meta name="description" content={siteConfig.description} />
+    <meta name="theme-color" content="#191918" />
+    <link rel="canonical" href={siteConfig.url + '/'} />
+    <meta property="og:title" content={siteConfig.title} />
+    <meta property="og:description" content={siteConfig.description} />
+    <meta property="og:type" content="website" />
+    <link rel="stylesheet" href="https://use.typekit.net/wje4mxt.css" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  </head>
+  <body class="workspace-page" data-period="night">
+    <a class="ws-skip" href="#workspace-navigation">Skip to navigation</a>
+    <header class="ws-header">
+      <a class="ws-wordmark" href="/" aria-label="Aadith, home">AADITH<span class="ws-wordmark-dot">.</span></a>
+      <nav class="ws-nav" id="workspace-navigation" aria-label="Portfolio" data-tactile-dock>
+        {links.map(link => <a href={link.href} data-open-section={link.id} data-dock-item>{link.label}</a>)}
+      </nav>
+      <a class="ws-plain-link ws-classic-link" href="/work">Index view <span aria-hidden="true">↗</span></a>
+    </header>
+
+    <main id="main" class="ws-main">
+      <section class="ws-intro" aria-labelledby="workspace-title">
+        <p class="ws-eyebrow"><span class="ws-state-dot" aria-hidden="true"></span> PRODUCT DESIGNER & BUILDER</p>
+        <h1 id="workspace-title">Aadith's <br />corner<span>.</span></h1>
+        <p class="ws-intro-copy">I design Copilot at Microsoft and build Owly with friends. Welcome to my desk.</p>
+        <div class="ws-intro-actions">
+          <a class="ws-primary" href="/work" data-open-computer>Enter my computer <span aria-hidden="true">↗</span></a>
+          <a class="ws-browse-link" href="/work" data-open-section="work">Or browse the work <span aria-hidden="true">→</span></a>
+        </div>
+      </section>
+
+      <nav class="ws-view-rail" aria-label="Guided desk views">
+        <p class="ws-eyebrow">TAKE A LOOK AROUND</p>
+        <button data-room-view="overview" aria-pressed="true"><span>01</span> The room <i aria-hidden="true"></i></button>
+        <button data-room-view="desk-detail" aria-pressed="false"><span>02</span> On the desk <i aria-hidden="true"></i></button>
+        <button data-room-view="shelf-detail" aria-pressed="false"><span>03</span> Collected things <i aria-hidden="true"></i></button>
+      </nav>
+
+      <div class="ws-stage" id="desk-stage" aria-label="An interactive 3D recreation of Aadith's desk">
+        <div id="desk-canvas" class="ws-canvas" aria-hidden="true"></div>
+        <div id="desk-hotspots" class="ws-hotspots" aria-label="Objects on the desk"></div>
+        <div class="ws-loader" id="desk-loader" role="status">
+          <span class="ws-loader-title" id="desk-load-title">Setting the desk</span>
+          <progress id="desk-progress" max="100" value="0" aria-label="Desk loading progress"></progress>
+          <span id="desk-load-detail">Loading the room and its little details.</span>
+          <a href="/work" data-open-section="work">Browse the work while you wait ↗</a>
+        </div>
+        <div class="ws-failure" id="desk-failure" hidden>
+          <p class="ws-eyebrow">The desk is taking a break</p>
+          <h2>The work is still here.</h2>
+          <p id="desk-error-message">Your browser couldn't open the 3D room. Everything is available through the navigation.</p>
+          <div><a class="ws-primary" href="/work" data-open-section="work">Explore my work ↗</a><button class="ws-text-button" id="desk-retry">Try 3D again</button></div>
+        </div>
+        <button class="ws-skip-arrival" id="desk-skip" hidden>Skip arrival</button>
+        <div class="ws-tooltip" id="desk-tooltip" role="tooltip" hidden></div>
+        <div class="ws-camera-controls" id="desk-camera-controls" aria-label="Camera controls" hidden>
+          <button id="desk-zoom-in" aria-label="Zoom in on the desk" title="Zoom in" disabled>+</button>
+          <button id="desk-zoom-out" aria-label="Zoom out from the desk" title="Zoom out" disabled>−</button>
+          <button id="desk-camera-center" aria-label="Recenter this view" title="Recenter this view" disabled>↺</button>
+        </div>
+        <div class="ws-scene-caption" id="desk-caption" hidden><span class="ws-caption-marker" aria-hidden="true">↔</span> Drag to look around · Scroll to zoom</div>
+      </div>
+
+      <footer class="ws-bottom">
+        <div class="ws-bottom-note"><span class="ws-state-dot" aria-hidden="true"></span><span id="desk-scene-status">Night at the desk</span></div>
+        <div class="ws-controls" aria-label="Workspace controls">
+          <button id="desk-reset" title="Return to the overview">Reset view <span aria-hidden="true">↺</span></button>
+          <button id="desk-day" aria-pressed="false" aria-label="Switch to daytime">Night <span class="ws-toggle-track" aria-hidden="true"><i></i></span></button>
+          <button id="desk-sound" aria-pressed="false">Sound off <span class="ws-sound-icon" aria-hidden="true"><i></i><i></i><i></i></span></button>
+          <button id="desk-guide" aria-expanded="false" aria-controls="desk-guide-panel">Desk guide <span aria-hidden="true">?</span></button>
+        </div>
+      </footer>
+      <aside class="ws-guide" id="desk-guide-panel" aria-label="Desk guide" hidden>
+        <div class="ws-guide-heading"><strong>Around the desk</strong><button id="desk-guide-close" aria-label="Close desk guide">×</button></div>
+        <p>Drag across the room to look around. Scroll or pinch to zoom, or use the + and − buttons. Click an object to open it. Reset view and Escape bring you back.</p>
+        <div class="ws-guide-links">
+          <a href="/work" data-open-computer><span>Monitor</span>Enter computer ↗</a>
+          <a href="/work" data-open-section="work"><span>Projects</span>Work ↗</a>
+          <a href="/about" data-open-section="about"><span>Pegboard</span>About ↗</a>
+          <a href="/writing" data-open-section="writing"><span>Books</span>Writing ↗</a>
+          <a href="/achievements" data-open-section="achievements"><span>Trophies</span>Achievements ↗</a>
+          <a href="/expeditions" data-open-section="expeditions"><span>Cycling</span>Expeditions ↗</a>
+          <a href="/lab" data-open-section="experiments"><span>Laptop</span>Experiments ↗</a>
+          <a href="/contact" data-open-section="contact"><span>Pinned card</span>Contact ↗</a>
+        </div>
+        <p class="ws-guide-tip">Try the lamp, window, or soda can. Turn sound on if you'd like to hear the desk.</p>
+      </aside>
+      <div class="ws-toast" id="desk-toast" role="status" aria-live="polite" hidden></div>
+      <noscript><div class="ws-noscript"><p>The interactive desk needs JavaScript. The whole portfolio is available here.</p><a href="/work">Work</a><a href="/about">About</a><a href="/writing">Writing</a><a href="/lab">Lab</a><a href="/expeditions">Expeditions</a><a href="/contact">Contact</a></div><style>.ws-loader{display:none}</style></noscript>
+    </main>
+
+    <ComputerDesktop />
+    <dialog class="ws-dialog" id="desk-content" aria-labelledby="desk-dialog-title">
+      <div class="ws-paper-sheet" id="desk-paper">
+        <div class="ws-dialog-bar"><button id="desk-back" class="ws-back"><span aria-hidden="true">←</span> Back to desk</button><span id="desk-dialog-title">Work</span><button id="desk-close" class="ws-close" aria-label="Close and return to desk">×</button></div>
+        <div class="ws-paper-preview" id="desk-paper-preview"></div>
+        <div class="ws-content-scroll" id="desk-content-scroll"><WorkspaceContent /></div>
+        <div class="ws-dialog-footer">
+          <span id="desk-paper-status" role="status"></span>
+          <nav class="ws-paper-paging" aria-label="Paper pages"><button id="desk-paper-prev" aria-label="Previous paper page" disabled>←</button><span id="desk-paper-page" aria-live="polite">01 / 01</span><button id="desk-paper-next" aria-label="Next paper page" disabled>→</button></nav>
+          <button id="desk-paper-reader" aria-pressed="false" aria-controls="desk-content-scroll">Read text</button>
+          <span class="ws-content-return"><kbd>esc</kbd> to return</span>
+        </div>
+      </div>
+    </dialog>
+    <script id="workspace-projects" type="application/json" set:html={JSON.stringify(workspaceProjects).replace(/</g, '\\u003c')} />
+    <script>
+      import { initWorkspace } from '@/lib/workspace/controller';
+      import { initTactileDocks } from '@/lib/ui/tactile-dock';
+      initWorkspace();
+      const disposeDock = initTactileDocks();
+      window.addEventListener('pagehide', event => { if (!event.persisted) disposeDock(); });
+    </script>
+  </body>
+</html>

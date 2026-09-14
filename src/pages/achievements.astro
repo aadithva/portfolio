@@ -1,0 +1,20 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { workspaceAchievements, workspaceMilestones } from '@/data/workspace';
+---
+<BaseLayout title="Achievements" description="Documented milestones from Aadith's work and education.">
+  <div class="page container">
+    <h1 class="page-header__title">Achievements</h1>
+    <p class="page-header__intro">Certificates and documented milestones from my work and education.</p>
+    <div class="spacer-md"></div>
+    {workspaceAchievements.map(item => <article class="graduation-certificate" id={item.id}>
+      <a href={item.href} target={item.certificate?"_blank":undefined} rel={item.certificate?"noopener":undefined} aria-label={item.certificate?`View full-size ${item.title} certificate`:`Read about ${item.title}`}><img src={item.image} alt={item.title} width={item.imageWidth} height={item.imageHeight} loading="lazy" /></a>
+      <div><p>{item.year}</p><h2>{item.title}</h2><p>{item.description}</p><a href={item.href} target={item.certificate?"_blank":undefined} rel={item.certificate?"noopener":undefined} class="inline-link">{item.certificate?"View full-size certificate":"Read the expedition story"} ↗</a></div>
+    </article>)}
+    <ul class="milestone-list">
+      {workspaceMilestones.map(item => <li><h2>{item.title}</h2><p>{item.year}</p><p>{item.description}</p></li>)}
+    </ul>
+    <a href="/" class="inline-link">Back to the desk</a>
+  </div>
+</BaseLayout>
+<style>.graduation-certificate{display:grid;grid-template-columns:minmax(180px,340px) 1fr;gap:40px;align-items:center;margin:32px 0 64px}.graduation-certificate img{width:100%;height:auto}.graduation-certificate h2{font-size:28px;margin:12px 0}.graduation-certificate p{line-height:1.7;margin-bottom:20px}.milestone-list{list-style:none;padding:0;display:grid;gap:32px;margin:32px 0 48px}.milestone-list h2{font-size:22px;margin-bottom:12px}.milestone-list p{max-width:680px;line-height:1.7;margin-top:8px}@media(max-width:640px){.graduation-certificate{grid-template-columns:1fr;gap:24px}.graduation-certificate img{max-width:340px}}</style>

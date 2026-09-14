@@ -1,0 +1,35 @@
+{
+  "errors": [],
+  "desktop": {
+    "realtimeShadows": "true",
+    "view": "desk-detail",
+    "computerMode": "false",
+    "cameraNavigation": "enabled",
+    "cameraDragging": "false",
+    "cameraModified": "true",
+    "cameraTargetY": "1.680",
+    "cameraYaw": "-0.15625",
+    "cameraPitch": "-0.03906",
+    "cameraZoom": "1.00000",
+    "drawCalls": "146",
+    "triangles": "160900",
+    "pixelRatio": "1",
+    "geometryTriangles": "170370"
+  },
+  "mobile": {
+    "realtimeShadows": "false",
+    "view": "overview",
+    "computerMode": "false",
+    "cameraNavigation": "enabled",
+    "cameraDragging": "false",
+    "cameraModified": "true",
+    "cameraTargetY": "1.840",
+    "cameraYaw": "-0.18329",
+    "cameraPitch": "-0.06110",
+    "cameraZoom": "1.00000",
+    "drawCalls": "166",
+    "triangles": "168288",
+    "pixelRatio": "1.35",
+    "geometryTriangles": "170370"
+  }
+}

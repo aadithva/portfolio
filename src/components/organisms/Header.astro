@@ -1,7 +1,6 @@
 ---
 import { navLinks } from "@/data/navigation";
 import { siteConfig } from "@/data/siteConfig";
-import BrandLockup from "@/components/atoms/BrandLockup.astro";
 
 const path = Astro.url.pathname;
 const isActive = (href: string) =>
@@ -11,15 +10,17 @@ const isActive = (href: string) =>
 <header class="site-header">
   <div class="container site-header__inner">
     <a href="/" class="site-header__brand" aria-label={`${siteConfig.name}, home`}>
-      <BrandLockup class="site-header__lockup" />
+      <span class="site-header__wordmark" aria-hidden="true">AADITH<span class="site-header__mark">.</span></span>
+      <span class="site-header__home">The room <span aria-hidden="true">↗</span></span>
     </a>
 
-    <nav class="nav" aria-label="Primary">
+    <nav class="nav" aria-label="Primary" data-tactile-dock>
       {navLinks.map((link) => (
         <a
           href={link.href}
           class:list={["nav__link", { "is-active": isActive(link.href) }]}
           aria-current={isActive(link.href) ? "page" : undefined}
+          data-dock-item
         >
           {link.label}
         </a>

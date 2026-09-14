@@ -9,15 +9,30 @@
     "build": "astro build",
     "preview": "astro preview",
     "index": "python3 design-system/ai/codebase-index.py",
-    "api:build": "npm --prefix api run build",
-    "api:test": "npm --prefix api test",
-    "api:sync-context": "npm run build && mkdir -p api/context && cp dist/aadith-context.json api/context/aadith-context.json",
-    "api:start": "npm --prefix api start"
+    "check:workspace": "tsc -p tsconfig.workspace.json",
+    "test:workspace": "playwright test -c playwright.workspace.config.ts",
+    "capture:workspace": "node scripts/capture-workspace.mjs",
+    "export:workspace": "\"/Applications/Blender.app/Contents/MacOS/Blender\" --background --python-exit-code 1 --python scripts/blender/export_workspace.py",
+    "bake:workspace": "\"/Applications/Blender.app/Contents/MacOS/Blender\" --background --python-exit-code 1 --python scripts/blender/bake_saved_workspace.py --",
+    "refine:workspace": "python3 scripts/blender/prepare_reference_texture.py && \"/Applications/Blender.app/Contents/MacOS/Blender\" --background --python scripts/blender/refine_workspace.py",
+    "render:workspace": "\"/Applications/Blender.app/Contents/MacOS/Blender\" --background --python scripts/blender/render_workspace.py",
+    "encode:workspace": "python3 scripts/blender/encode_workspace.py",
+    "assets:workspace": "\"/Applications/Blender.app/Contents/MacOS/Blender\" --background --python scripts/blender/build_workspace.py -- --render"
   },
   "dependencies": {
+    "@designcodeio/threeui": "file:vendor/threeui",
+    "@fontsource/ibm-plex-mono": "^5.3.0",
+    "@fontsource/ibm-plex-sans": "^5.3.0",
     "astro": "^5.16.0",
     "motion": "^12.42.2",
     "react": "^19.2.7",
-    "react-dom": "^19.2.7"
+    "react-dom": "^19.2.7",
+    "three": "^0.185.1"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.63.0",
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.7",
+    "@types/three": "^0.185.4"
   }
 }

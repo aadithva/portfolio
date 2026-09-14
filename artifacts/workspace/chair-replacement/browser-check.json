@@ -1,0 +1,86 @@
+[
+  {
+    "name": "desktop",
+    "errors": [],
+    "requests": [
+      {
+        "url": "http://127.0.0.1:4323/models/workspace-saved.glb?v=9a8ee8624624",
+        "status": 200
+      },
+      {
+        "url": "http://127.0.0.1:4323/textures/workspace/saved-bake/objects-indirect.webp?v=9a8ee8624624",
+        "status": 200
+      },
+      {
+        "url": "http://127.0.0.1:4323/textures/workspace/saved-bake/room-indirect.webp?v=9a8ee8624624",
+        "status": 200
+      }
+    ],
+    "data": {
+      "realtimeShadows": "true",
+      "view": "overview",
+      "computerMode": "false",
+      "cameraNavigation": "enabled",
+      "cameraDragging": "false",
+      "cameraModified": "false",
+      "cameraTargetY": "1.700",
+      "cameraYaw": "0.00000",
+      "cameraPitch": "0.00000",
+      "cameraZoom": "1.00000",
+      "drawCalls": "252",
+      "triangles": "377996",
+      "pixelRatio": "1",
+      "geometryTriangles": "181974"
+    },
+    "chairAccessible": true,
+    "chairInteraction": true,
+    "chairBounds": {
+      "x": 625.96875,
+      "y": 633.453125,
+      "width": 44,
+      "height": 44
+    }
+  },
+  {
+    "name": "mobile",
+    "errors": [],
+    "requests": [
+      {
+        "url": "http://127.0.0.1:4323/models/workspace-saved.glb?v=9a8ee8624624",
+        "status": 200
+      },
+      {
+        "url": "http://127.0.0.1:4323/textures/workspace/saved-bake/objects-indirect.webp?v=9a8ee8624624",
+        "status": 200
+      },
+      {
+        "url": "http://127.0.0.1:4323/textures/workspace/saved-bake/room-indirect.webp?v=9a8ee8624624",
+        "status": 200
+      }
+    ],
+    "data": {
+      "realtimeShadows": "false",
+      "view": "overview",
+      "computerMode": "false",
+      "cameraNavigation": "enabled",
+      "cameraDragging": "false",
+      "cameraModified": "false",
+      "cameraTargetY": "1.840",
+      "cameraYaw": "0.00000",
+      "cameraPitch": "0.00000",
+      "cameraZoom": "1.00000",
+      "drawCalls": "164",
+      "triangles": "187788",
+      "pixelRatio": "1",
+      "geometryTriangles": "181974"
+    },
+    "chairAccessible": true,
+    "chairInteraction": true,
+    "chairBounds": {
+      "x": 35.3125,
+      "y": 608.21875,
+      "width": 44,
+      "height": 44
+    }
+  }
+]

@@ -1,0 +1,4385 @@
+{
+  "source": "/Users/aadith/Projects/Portfolio/Website/artifacts/workspace/workspace.blend",
+  "lights": [
+    {
+      "name": "Monitor bounce",
+      "type": "AREA",
+      "energy": 180.99998474121094,
+      "color": [
+        0.36979392170906067,
+        0.5249282121658325,
+        0.8899965286254883
+      ],
+      "matrix": [
+        [
+          -0.9968316555023193,
+          0.07803024351596832,
+          -0.015423827804625034,
+          0.02629605494439602
+        ],
+        [
+          -0.011005591601133347,
+          0.05673855543136597,
+          0.9983283877372742,
+          0.23355525732040405
+        ],
+        [
+          0.07877492904663086,
+          0.9953351020812988,
+          -0.055700019001960754,
+          2.3021605014801025
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "Red lamp practical",
+      "type": "SPOT",
+      "energy": 112.99999237060547,
+      "color": [
+        1.0,
+        0.31566527485847473,
+        0.054276466369628906
+      ],
+      "matrix": [
+        [
+          0.32979944348335266,
+          -0.11587239801883698,
+          0.9369129538536072,
+          2.2899999618530273
+        ],
+        [
+          0.9440510272979736,
+          0.040479350835084915,
+          -0.32730579376220703,
+          -0.44999998807907104
+        ],
+        [
+          8.116575145322713e-08,
+          0.9924389123916626,
+          0.1227395236492157,
+          1.7200000286102295
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "Red lamp practical.001",
+      "type": "AREA",
+      "energy": 42.0,
+      "color": [
+        1.0,
+        0.6899999976158142,
+        0.33000001311302185
+      ],
+      "matrix": [
+        [
+          0.3297993242740631,
+          -0.11587250977754593,
+          0.936913013458252,
+          2.2899999618530273
+        ],
+        [
+          0.9440510869026184,
+          0.0404793918132782,
+          -0.3273056745529175,
+          -0.44999998807907104
+        ],
+        [
+          6.1650993643525e-08,
+          0.9924389123916626,
+          0.12273964285850525,
+          2.6600000858306885
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "Red lamp practical.002",
+      "type": "SPOT",
+      "energy": 42.0,
+      "color": [
+        1.0,
+        0.39681971073150635,
+        0.0770018994808197
+      ],
+      "matrix": [
+        [
+          0.19219884276390076,
+          -0.792708694934845,
+          0.5785089135169983,
+          2.096914768218994
+        ],
+        [
+          0.9586658477783203,
+          0.27769407629966736,
+          0.06201468035578728,
+          -0.4915669560432434
+        ],
+        [
+          -0.20980806648731232,
+          0.5426775813102722,
+          0.813315212726593,
+          3.5163135528564453
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "Red lamp practical.003",
+      "type": "SPOT",
+      "energy": 42.0,
+      "color": [
+        1.0,
+        0.39681971073150635,
+        0.0770018994808197
+      ],
+      "matrix": [
+        [
+          0.19219884276390076,
+          -0.792708694934845,
+          0.5785089135169983,
+          2.264453649520874
+        ],
+        [
+          0.9586658477783203,
+          0.27769407629966736,
+          0.06201468035578728,
+          -1.2590694427490234
+        ],
+        [
+          -0.20980806648731232,
+          0.5426775813102722,
+          0.813315212726593,
+          1.6170156002044678
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    }
+  ],
+  "groups": {
+    "monitor": {
+      "position": [
+        0.0,
+        2.12,
+        -0.4
+      ],
+      "bounds": {
+        "min": [
+          -0.955,
+          1.3595,
+          -0.66
+        ],
+        "max": [
+          0.955,
+          2.695,
+          -0.28
+        ],
+        "size": [
+          1.91,
+          1.3355,
+          0.38
+        ]
+      },
+      "children": [
+        "Monitor outer housing",
+        "Monitor power LED",
+        "monitor \u00b7 Brushed aluminium",
+        "monitor \u00b7 Soft charcoal plastic",
+        "monitor_screen"
+      ]
+    },
+    "monitor_screen": {
+      "position": [
+        0.0,
+        0.0,
+        -0.0
+      ],
+      "bounds": {
+        "min": [
+          -0.86,
+          1.63,
+          -0.325
+        ],
+        "max": [
+          0.86,
+          2.61,
+          -0.325
+        ],
+        "size": [
+          1.72,
+          0.98,
+          0.0
+        ]
+      },
+      "children": []
+    },
+    "laptop": {
+      "position": [
+        -0.07,
+        1.411,
+        0.46
+      ],
+      "bounds": {
+        "min": [
+          -0.655,
+          1.3695,
+          0.0695
+        ],
+        "max": [
+          0.515,
+          1.44,
+          0.8435
+        ],
+        "size": [
+          1.17,
+          0.0705,
+          0.774
+        ]
+      },
+      "children": [
+        "Laptop lower shell",
+        "Laptop sticker printed lid",
+        "laptop \u00b7 Soft charcoal plastic"
+      ]
+    },
+    "controller": {
+      "position": [
+        -0.94,
+        1.42,
+        0.5
+      ],
+      "bounds": {
+        "min": [
+          -1.20388,
+          1.38303,
+          0.35601
+        ],
+        "max": [
+          -0.67612,
+          1.49395,
+          0.65648
+        ],
+        "size": [
+          0.52777,
+          0.11092,
+          0.30046
+        ]
+      },
+      "children": [
+        "controller face button",
+        "controller face button.001",
+        "controller face button.002",
+        "controller face button.003",
+        "controller home button",
+        "controller sculpted shell",
+        "controller \u00b7 Chair woven frame",
+        "controller \u00b7 Matte black rubber",
+        "controller \u00b7 Soft charcoal plastic"
+      ]
+    },
+    "chair": {
+      "position": [
+        -1.63,
+        0.0,
+        1.62
+      ],
+      "bounds": {
+        "min": [
+          -2.43894,
+          -0.10357,
+          0.94494
+        ],
+        "max": [
+          -0.69895,
+          1.82356,
+          2.33473
+        ],
+        "size": [
+          1.73999,
+          1.92713,
+          1.38979
+        ]
+      },
+      "children": [
+        "Chair breathable mesh",
+        "chair \u00b7 Brushed aluminium",
+        "chair \u00b7 Chair woven frame",
+        "chair \u00b7 Soft charcoal plastic"
+      ]
+    },
+    "speaker": {
+      "position": [
+        -0.28,
+        3.07,
+        -0.67
+      ],
+      "bounds": {
+        "min": [
+          -0.755,
+          2.955,
+          -0.855
+        ],
+        "max": [
+          0.195,
+          3.165,
+          -0.5817
+        ],
+        "size": [
+          0.95,
+          0.21,
+          0.2733
+        ]
+      },
+      "children": [
+        "Speaker brandless mark",
+        "Speaker fabric body",
+        "Speaker grille",
+        "Speaker indicator",
+        "speaker \u00b7 Chair woven frame"
+      ]
+    },
+    "books": {
+      "position": [
+        -1.22343,
+        3.17,
+        -0.49414
+      ],
+      "bounds": {
+        "min": [
+          -1.73467,
+          3.12,
+          -0.9276
+        ],
+        "max": [
+          -0.85962,
+          3.69,
+          -0.05644
+        ],
+        "size": [
+          0.87504,
+          0.57,
+          0.87116
+        ]
+      },
+      "children": [
+        "Book spine DESIGN",
+        "books \u00b7 Lamp enamel vermilion",
+        "books \u00b7 Sage green hardcover",
+        "books \u00b7 Satin brass",
+        "books \u00b7 Terracotta clay",
+        "books \u00b7 Uncoated paper",
+        "books \u00b7 Warm cream accents",
+        "books \u00b7 Washed blue hardcover",
+        "books_cover",
+        "Cloth book cover"
+      ]
+    },
+    "figma": {
+      "position": [
+        -1.21636,
+        2.69,
+        -0.40222
+      ],
+      "bounds": {
+        "min": [
+          -1.63355,
+          2.607,
+          -0.81941
+        ],
+        "max": [
+          -0.85574,
+          2.8865,
+          -0.04159
+        ],
+        "size": [
+          0.77782,
+          0.2795,
+          0.77782
+        ]
+      },
+      "children": [
+        "Figma box base",
+        "Figma box label",
+        "Figma symbol",
+        "Figma symbol.001",
+        "Figma symbol.002",
+        "Figma symbol.003",
+        "Figma symbol.004",
+        "figma_lid",
+        "Figma box lid"
+      ]
+    },
+    "trophy_1": {
+      "position": [
+        0.79917,
+        3.13,
+        -0.86184
+      ],
+      "bounds": {
+        "min": [
+          0.58381,
+          3.0975,
+          -1.17619
+        ],
+        "max": [
+          1.11352,
+          3.5868,
+          -0.64648
+        ],
+        "size": [
+          0.52971,
+          0.4893,
+          0.52971
+        ]
+      },
+      "children": [
+        "Trophy walnut plinth",
+        "trophy_1 \u00b7 Satin brass"
+      ]
+    },
+    "trophy_2": {
+      "position": [
+        1.13151,
+        3.13,
+        -0.5295
+      ],
+      "bounds": {
+        "min": [
+          0.91615,
+          3.0975,
+          -0.84385
+        ],
+        "max": [
+          1.44586,
+          3.6588,
+          -0.31414
+        ],
+        "size": [
+          0.52971,
+          0.5613,
+          0.52971
+        ]
+      },
+      "children": [
+        "Trophy walnut plinth.001",
+        "trophy_2 \u00b7 Satin brass"
+      ]
+    },
+    "trophy_3": {
+      "position": [
+        1.47092,
+        3.13,
+        -0.19009
+      ],
+      "bounds": {
+        "min": [
+          1.25556,
+          3.0975,
+          -0.50444
+        ],
+        "max": [
+          1.78527,
+          3.5772,
+          0.02527
+        ],
+        "size": [
+          0.52971,
+          0.4797,
+          0.52971
+        ]
+      },
+      "children": [
+        "Trophy walnut plinth.002",
+        "trophy_3 \u00b7 Satin brass"
+      ]
+    },
+    "plant_1": {
+      "position": [
+        -1.47092,
+        2.05,
+        -0.19009
+      ],
+      "bounds": {
+        "min": [
+          -1.65994,
+          2.05,
+          -0.452
+        ],
+        "max": [
+          -1.21514,
+          2.44255,
+          -0.02429
+        ],
+        "size": [
+          0.4448,
+          0.39255,
+          0.42771
+        ]
+      },
+      "children": [
+        "plant_1 ceramic pot",
+        "plant_1 soil",
+        "plant_1 \u00b7 Leaf jade",
+        "plant_1 \u00b7 Leaf sage",
+        "plant_1 \u00b7 Leaf shaded"
+      ]
+    },
+    "plant_2": {
+      "position": [
+        1.64062,
+        3.12,
+        -0.1618
+      ],
+      "bounds": {
+        "min": [
+          1.30183,
+          3.12,
+          -0.60521
+        ],
+        "max": [
+          2.11761,
+          3.94075,
+          0.17332
+        ],
+        "size": [
+          0.81578,
+          0.82075,
+          0.77852
+        ]
+      },
+      "children": [
+        "plant_2 ceramic pot",
+        "plant_2 soil",
+        "plant_2 \u00b7 Leaf jade",
+        "plant_2 \u00b7 Leaf sage",
+        "plant_2 \u00b7 Leaf shaded"
+      ]
+    },
+    "workspace_left_wing": {
+      "position": [
+        -1.28,
+        0.0,
+        -0.48
+      ],
+      "bounds": {
+        "min": [
+          -2.35303,
+          1.35,
+          -1.62374
+        ],
+        "max": [
+          -0.28298,
+          4.52009,
+          0.44631
+        ],
+        "size": [
+          2.07005,
+          3.17009,
+          2.07005
+        ]
+      },
+      "children": [
+        "about",
+        "About card illustration",
+        "About card pin",
+        "About card stock",
+        "books",
+        "Book spine DESIGN",
+        "books \u00b7 Lamp enamel vermilion",
+        "books \u00b7 Sage green hardcover",
+        "books \u00b7 Satin brass",
+        "books \u00b7 Terracotta clay",
+        "books \u00b7 Uncoated paper",
+        "books \u00b7 Warm cream accents",
+        "books \u00b7 Washed blue hardcover",
+        "books_cover",
+        "Cloth book cover",
+        "Colored pencil.003",
+        "contact",
+        "Contact card brass pin",
+        "Contact card paper",
+        "Contact card print",
+        "Cream clipped note",
+        "figma",
+        "Figma box base",
+        "Figma box label",
+        "Figma symbol",
+        "Figma symbol.001",
+        "Figma symbol.002",
+        "Figma symbol.003",
+        "Figma symbol.004",
+        "figma_lid",
+        "Figma box lid",
+        "Pegboard slots",
+        "plant_1",
+        "plant_1 ceramic pot",
+        "plant_1 soil",
+        "plant_1 \u00b7 Leaf jade",
+        "plant_1 \u00b7 Leaf sage",
+        "plant_1 \u00b7 Leaf shaded",
+        "Small aloe",
+        "Small aloe ceramic pot",
+        "Small aloe soil",
+        "Small aloe \u00b7 Leaf jade",
+        "Small aloe \u00b7 Leaf sage",
+        "Small aloe \u00b7 Leaf shaded",
+        "Tiny jade plant",
+        "Tiny jade plant ceramic pot",
+        "Tiny jade plant soil",
+        "Tiny jade plant \u00b7 Leaf jade",
+        "Tiny jade plant \u00b7 Leaf sage",
+        "Tiny jade plant \u00b7 Leaf shaded",
+        "workspace_left_wing \u00b7 Brushed aluminium",
+        "workspace_left_wing \u00b7 Figma ochre",
+        "workspace_left_wing \u00b7 Forest green",
+        "workspace_left_wing \u00b7 Lamp enamel vermilion",
+        "workspace_left_wing \u00b7 Matte black rubber",
+        "workspace_left_wing \u00b7 Porcelain edges",
+        "workspace_left_wing \u00b7 Sage green hardcover",
+        "workspace_left_wing \u00b7 Soft charcoal plastic",
+        "workspace_left_wing \u00b7 Warm cream accents",
+        "workspace_left_wing \u00b7 Warm powder-coated white"
+      ]
+    },
+    "workspace_right_wing": {
+      "position": [
+        1.28,
+        0.0,
+        -0.48
+      ],
+      "bounds": {
+        "min": [
+          0.53047,
+          1.35,
+          -1.76693
+        ],
+        "max": [
+          2.36894,
+          4.52,
+          0.19281
+        ],
+        "size": [
+          1.83848,
+          3.17,
+          1.95975
+        ]
+      },
+      "children": [
+        "Notebook ribbon",
+        "plant_2",
+        "plant_2 ceramic pot",
+        "plant_2 soil",
+        "plant_2 \u00b7 Leaf jade",
+        "plant_2 \u00b7 Leaf sage",
+        "plant_2 \u00b7 Leaf shaded",
+        "Print circle",
+        "Shelf lower back.001",
+        "Small abstract print",
+        "Small photo frame",
+        "toy",
+        "Robot aerial",
+        "Robot aerial tip",
+        "Tiny robot head",
+        "Tiny robot torso",
+        "toy \u00b7 Soft charcoal plastic",
+        "toy \u00b7 Terracotta clay",
+        "trophy_1",
+        "Trophy walnut plinth",
+        "trophy_1 \u00b7 Satin brass",
+        "trophy_2",
+        "Trophy walnut plinth.001",
+        "trophy_2 \u00b7 Satin brass",
+        "trophy_3",
+        "Trophy walnut plinth.002",
+        "trophy_3 \u00b7 Satin brass",
+        "window",
+        "Window deep recess",
+        "Window latch",
+        "window \u00b7 Distant warm windows",
+        "window \u00b7 Porcelain edges",
+        "window \u00b7 Warm powder-coated white",
+        "window_glass",
+        "workspace_right_wing \u00b7 Porcelain edges",
+        "workspace_right_wing \u00b7 Sage green hardcover",
+        "workspace_right_wing \u00b7 Terracotta clay",
+        "workspace_right_wing \u00b7 Uncoated paper"
+      ]
+    }
+  },
+  "meshes": [
+    {
+      "name": "Room floor",
+      "parent": null,
+      "bounds": {
+        "min": [
+          -3.32,
+          -0.185,
+          -2.6643
+        ],
+        "max": [
+          3.32,
+          -0.015,
+          2.36
+        ],
+        "size": [
+          6.64,
+          0.17,
+          5.0243
+        ]
+      },
+      "materials": [
+        "Warm limestone"
+      ]
+    },
+    {
+      "name": "_static \u00b7 Limewashed plaster",
+      "parent": null,
+      "bounds": {
+        "min": [
+          -3.22301,
+          -0.02,
+          -2.65607
+        ],
+        "max": [
+          3.22301,
+          4.58,
+          3.78996
+        ],
+        "size": [
+          6.44603,
+          4.6,
+          6.44603
+        ]
+      },
+      "materials": [
+        "Limewashed plaster"
+      ]
+    },
+    {
+      "name": "_static \u00b7 Warm powder-coated white",
+      "parent": null,
+      "bounds": {
+        "min": [
+          -3.12062,
+          0.015,
+          -2.50996
+        ],
+        "max": [
+          3.12062,
+          2.895,
+          3.73127
+        ],
+        "size": [
+          6.24123,
+          2.88,
+          6.24123
+        ]
+      },
+      "materials": [
+        "Warm powder-coated white"
+      ]
+    },
+    {
+      "name": "_static \u00b7 Tile grout",
+      "parent": null,
+      "bounds": {
+        "min": [
+          -3.3,
+          -0.0135,
+          -2.16
+        ],
+        "max": [
+          3.3,
+          -0.0105,
+          2.33
+        ],
+        "size": [
+          6.6,
+          0.003,
+          4.49
+        ]
+      },
+      "materials": [
+        "Tile grout"
+      ]
+    },
+    {
+      "name": "_static \u00b7 Porcelain edges",
+      "parent": null,
+      "bounds": {
+        "min": [
+          -2.46094,
+          0.005,
+          -2.32744
+        ],
+        "max": [
+          2.46094,
+          2.965,
+          0.98
+        ],
+        "size": [
+          4.92188,
+          2.96,
+          3.30744
+        ]
+      },
+      "materials": [
+        "Porcelain edges"
+      ]
+    },
+    {
+      "name": "workspace_left_wing \u00b7 Porcelain edges",
+      "parent": "workspace_left_wing",
+      "bounds": {
+        "min": [
+          -2.35303,
+          1.35,
+          -1.62374
+        ],
+        "max": [
+          -0.28298,
+          4.47,
+          0.44631
+        ],
+        "size": [
+          2.07005,
+          3.12,
+          2.07005
+        ]
+      },
+      "materials": [
+        "Porcelain edges"
+      ]
+    },
+    {
+      "name": "workspace_left_wing \u00b7 Warm powder-coated white",
+      "parent": "workspace_left_wing",
+      "bounds": {
+        "min": [
+          -2.06489,
+          1.425,
+          -1.48409
+        ],
+        "max": [
+          -0.66482,
+          3.54,
+          -0.08402
+        ],
+        "size": [
+          1.40007,
+          2.115,
+          1.40007
+        ]
+      },
+      "materials": [
+        "Warm powder-coated white"
+      ]
+    },
+    {
+      "name": "workspace_right_wing \u00b7 Porcelain edges",
+      "parent": "workspace_right_wing",
+      "bounds": {
+        "min": [
+          0.60719,
+          1.35,
+          -1.15281
+        ],
+        "max": [
+          1.95281,
+          3.1165,
+          0.19281
+        ],
+        "size": [
+          1.34562,
+          1.7665,
+          1.34562
+        ]
+      },
+      "materials": [
+        "Porcelain edges"
+      ]
+    },
+    {
+      "name": "Shelf lower back.001",
+      "parent": "workspace_right_wing",
+      "bounds": {
+        "min": [
+          1.09898,
+          1.425,
+          -1.12064
+        ],
+        "max": [
+          1.92064,
+          1.995,
+          -0.29898
+        ],
+        "size": [
+          0.82166,
+          0.57,
+          0.82166
+        ]
+      },
+      "materials": [
+        "Warm powder-coated white"
+      ]
+    },
+    {
+      "name": "Window deep recess",
+      "parent": "window",
+      "bounds": {
+        "min": [
+          0.81331,
+          2.85,
+          -1.75986
+        ],
+        "max": [
+          2.36187,
+          4.45,
+          -0.2113
+        ],
+        "size": [
+          1.54856,
+          1.6,
+          1.54856
+        ]
+      },
+      "materials": [
+        "Soft charcoal plastic"
+      ]
+    },
+    {
+      "name": "window_glass",
+      "parent": "window",
+      "bounds": {
+        "min": [
+          0.87129,
+          2.935,
+          -1.634
+        ],
+        "max": [
+          2.23601,
+          4.365,
+          -0.26928
+        ],
+        "size": [
+          1.36472,
+          1.43,
+          1.36472
+        ]
+      },
+      "materials": [
+        "Window glass night"
+      ]
+    },
+    {
+      "name": "window \u00b7 Warm powder-coated white",
+      "parent": "window",
+      "bounds": {
+        "min": [
+          0.64714,
+          2.8,
+          -1.73511
+        ],
+        "max": [
+          2.33712,
+          4.52,
+          -0.04513
+        ],
+        "size": [
+          1.68999,
+          1.72,
+          1.68998
+        ]
+      },
+      "materials": [
+        "Warm powder-coated white"
+      ]
+    },
+    {
+      "name": "window \u00b7 Porcelain edges",
+      "parent": "window",
+      "bounds": {
+        "min": [
+          0.53047,
+          2.7875,
+          -1.76693
+        ],
+        "max": [
+          2.36894,
+          4.445,
+          0.07154
+        ],
+        "size": [
+          1.83848,
+          1.6575,
+          1.83848
+        ]
+      },
+      "materials": [
+        "Porcelain edges"
+      ]
+    },
+    {
+      "name": "window \u00b7 Distant warm windows",
+      "parent": "window",
+      "bounds": {
+        "min": [
+          0.96532,
+          2.98213,
+          -1.52724
+        ],
+        "max": [
+          2.1589,
+          3.7651,
+          -0.33367
+        ],
+        "size": [
+          1.19358,
+          0.78297,
+          1.19358
+        ]
+      },
+      "materials": [
+        "Distant warm windows"
+      ]
+    },
+    {
+      "name": "Window latch",
+      "parent": "window",
+      "bounds": {
+        "min": [
+          1.32985,
+          3.585,
+          -0.84027
+        ],
+        "max": [
+          1.38571,
+          3.715,
+          -0.78441
+        ],
+        "size": [
+          0.05586,
+          0.13,
+          0.05586
+        ]
+      },
+      "materials": [
+        "Brushed aluminium"
+      ]
+    },
+    {
+      "name": "Pegboard slots",
+      "parent": "workspace_left_wing",
+      "bounds": {
+        "min": [
+          -2.25934,
+          3.32,
+          -1.53005
+        ],
+        "max": [
+          -0.88756,
+          4.42,
+          -0.15827
+        ],
+        "size": [
+          1.37179,
+          1.1,
+          1.37179
+        ]
+      },
+      "materials": [
+        "Pegboard printed recesses"
+      ]
+    },
+    {
+      "name": "workspace_left_wing \u00b7 Brushed aluminium",
+      "parent": "workspace_left_wing",
+      "bounds": {
+        "min": [
+          -2.21868,
+          3.372,
+          -1.48939
+        ],
+        "max": [
+          -0.76523,
+          4.42166,
+          -0.03594
+        ],
+        "size": [
+          1.45346,
+          1.04966,
+          1.45346
+        ]
+      },
+      "materials": [
+        "Brushed aluminium"
+      ]
+    },
+    {
+      "name": "About card stock",
+      "parent": "about",
+      "bounds": {
+        "min": [
+          -1.9065,
+          3.565,
+          -0.75294
+        ],
+        "max": [
+          -1.53032,
+          4.215,
+          -0.37676
+        ],
+        "size": [
+          0.37618,
+          0.65,
+          0.37618
+        ]
+      },
+      "materials": [
+        "Uncoated paper"
+      ]
+    },
+    {
+      "name": "About card illustration",
+      "parent": "about",
+      "bounds": {
+        "min": [
+          -1.89165,
+          3.57,
+          -0.73809
+        ],
+        "max": [
+          -1.53102,
+          4.21,
+          -0.37747
+        ],
+        "size": [
+          0.36062,
+          0.64,
+          0.36062
+        ]
+      },
+      "materials": [
+        "About printed card"
+      ]
+    },
+    {
+      "name": "About card pin",
+      "parent": "about",
+      "bounds": {
+        "min": [
+          -1.72371,
+          4.165,
+          -0.57016
+        ],
+        "max": [
+          -1.67068,
+          4.215,
+          -0.51712
+        ],
+        "size": [
+          0.05303,
+          0.05,
+          0.05303
+        ]
+      },
+      "materials": [
+        "Lamp enamel vermilion"
+      ]
+    },
+    {
+      "name": "Contact card paper",
+      "parent": "contact",
+      "bounds": {
+        "min": [
+          -1.38677,
+          3.445,
+          -1.32924
+        ],
+        "max": [
+          -0.93988,
+          3.855,
+          -0.88234
+        ],
+        "size": [
+          0.44689,
+          0.41,
+          0.44689
+        ]
+      },
+      "materials": [
+        "Uncoated paper"
+      ]
+    },
+    {
+      "name": "Contact card print",
+      "parent": "contact",
+      "bounds": {
+        "min": [
+          -1.37122,
+          3.45,
+          -1.31368
+        ],
+        "max": [
+          -0.93988,
+          3.85,
+          -0.88234
+        ],
+        "size": [
+          0.43134,
+          0.4,
+          0.43134
+        ]
+      },
+      "materials": [
+        "Contact printed card"
+      ]
+    },
+    {
+      "name": "Contact card brass pin",
+      "parent": "contact",
+      "bounds": {
+        "min": [
+          -1.16403,
+          3.818,
+          -1.1065
+        ],
+        "max": [
+          -1.11312,
+          3.862,
+          -1.05559
+        ],
+        "size": [
+          0.05091,
+          0.044,
+          0.05091
+        ]
+      },
+      "materials": [
+        "Satin brass"
+      ]
+    },
+    {
+      "name": "workspace_left_wing \u00b7 Lamp enamel vermilion",
+      "parent": "workspace_left_wing",
+      "bounds": {
+        "min": [
+          -1.45041,
+          3.35924,
+          -1.38587
+        ],
+        "max": [
+          -0.80928,
+          4.33,
+          -0.74474
+        ],
+        "size": [
+          0.64113,
+          0.97076,
+          0.64113
+        ]
+      },
+      "materials": [
+        "Lamp enamel vermilion"
+      ]
+    },
+    {
+      "name": "workspace_left_wing \u00b7 Warm cream accents",
+      "parent": "workspace_left_wing",
+      "bounds": {
+        "min": [
+          -1.34223,
+          4.09893,
+          -1.09227
+        ],
+        "max": [
+          -1.21644,
+          4.2263,
+          -0.96649
+        ],
+        "size": [
+          0.12579,
+          0.12736,
+          0.12579
+        ]
+      },
+      "materials": [
+        "Warm cream accents"
+      ]
+    },
+    {
+      "name": "Cream clipped note",
+      "parent": "workspace_left_wing",
+      "bounds": {
+        "min": [
+          -2.21444,
+          3.46,
+          -0.31136
+        ],
+        "max": [
+          -2.03554,
+          3.84,
+          -0.13246
+        ],
+        "size": [
+          0.1789,
+          0.38,
+          0.1789
+        ]
+      },
+      "materials": [
+        "Uncoated paper"
+      ]
+    },
+    {
+      "name": "workspace_left_wing \u00b7 Sage green hardcover",
+      "parent": "workspace_left_wing",
+      "bounds": {
+        "min": [
+          -2.17484,
+          3.5775,
+          -0.27176
+        ],
+        "max": [
+          -2.05959,
+          3.7725,
+          -0.1565
+        ],
+        "size": [
+          0.11526,
+          0.195,
+          0.11526
+        ]
+      },
+      "materials": [
+        "Sage green hardcover"
+      ]
+    },
+    {
+      "name": "workspace_left_wing \u00b7 Soft charcoal plastic",
+      "parent": "workspace_left_wing",
+      "bounds": {
+        "min": [
+          -2.18758,
+          3.8325,
+          -0.49344
+        ],
+        "max": [
+          -1.69436,
+          4.52009,
+          -0.00022
+        ],
+        "size": [
+          0.49322,
+          0.68759,
+          0.49322
+        ]
+      },
+      "materials": [
+        "Soft charcoal plastic"
+      ]
+    },
+    {
+      "name": "workspace_left_wing \u00b7 Matte black rubber",
+      "parent": "workspace_left_wing",
+      "bounds": {
+        "min": [
+          -2.14621,
+          4.03,
+          -0.46586
+        ],
+        "max": [
+          -1.69719,
+          4.27,
+          -0.01684
+        ],
+        "size": [
+          0.44901,
+          0.24,
+          0.44901
+        ]
+      },
+      "materials": [
+        "Matte black rubber"
+      ]
+    },
+    {
+      "name": "workspace_left_wing \u00b7 Figma ochre",
+      "parent": "workspace_left_wing",
+      "bounds": {
+        "min": [
+          -0.89082,
+          3.35384,
+          -1.37105
+        ],
+        "max": [
+          -0.74099,
+          3.7706,
+          -1.20523
+        ],
+        "size": [
+          0.14984,
+          0.41675,
+          0.16582
+        ]
+      },
+      "materials": [
+        "Figma ochre"
+      ]
+    },
+    {
+      "name": "workspace_left_wing \u00b7 Forest green",
+      "parent": "workspace_left_wing",
+      "bounds": {
+        "min": [
+          -0.91075,
+          3.3565,
+          -1.32711
+        ],
+        "max": [
+          -0.74893,
+          3.75731,
+          -1.16154
+        ],
+        "size": [
+          0.16181,
+          0.40081,
+          0.16557
+        ]
+      },
+      "materials": [
+        "Forest green"
+      ]
+    },
+    {
+      "name": "Colored pencil.003",
+      "parent": "workspace_left_wing",
+      "bounds": {
+        "min": [
+          -0.88069,
+          3.35935,
+          -1.22971
+        ],
+        "max": [
+          -0.83861,
+          3.69363,
+          -1.20173
+        ],
+        "size": [
+          0.04208,
+          0.33428,
+          0.02797
+        ]
+      },
+      "materials": [
+        "Washed blue hardcover"
+      ]
+    },
+    {
+      "name": "Monitor outer housing",
+      "parent": "monitor",
+      "bounds": {
+        "min": [
+          -0.955,
+          1.545,
+          -0.4635
+        ],
+        "max": [
+          0.955,
+          2.695,
+          -0.3485
+        ],
+        "size": [
+          1.91,
+          1.15,
+          0.115
+        ]
+      },
+      "materials": [
+        "Warm powder-coated white"
+      ]
+    },
+    {
+      "name": "monitor \u00b7 Soft charcoal plastic",
+      "parent": "monitor",
+      "bounds": {
+        "min": [
+          -0.9,
+          1.5785,
+          -0.355
+        ],
+        "max": [
+          0.9,
+          2.6475,
+          -0.3157
+        ],
+        "size": [
+          1.8,
+          1.069,
+          0.0393
+        ]
+      },
+      "materials": [
+        "Soft charcoal plastic"
+      ]
+    },
+    {
+      "name": "monitor_screen",
+      "parent": "monitor",
+      "bounds": {
+        "min": [
+          -0.86,
+          1.63,
+          -0.325
+        ],
+        "max": [
+          0.86,
+          2.61,
+          -0.325
+        ],
+        "size": [
+          1.72,
+          0.98,
+          0.0
+        ]
+      },
+      "materials": [
+        "Monitor idle display"
+      ]
+    },
+    {
+      "name": "monitor \u00b7 Brushed aluminium",
+      "parent": "monitor",
+      "bounds": {
+        "min": [
+          -0.89,
+          1.3595,
+          -0.66
+        ],
+        "max": [
+          0.89,
+          1.78,
+          -0.28
+        ],
+        "size": [
+          1.78,
+          0.4205,
+          0.38
+        ]
+      },
+      "materials": [
+        "Brushed aluminium"
+      ]
+    },
+    {
+      "name": "Monitor power LED",
+      "parent": "monitor",
+      "bounds": {
+        "min": [
+          0.805,
+          1.579,
+          -0.3215
+        ],
+        "max": [
+          0.815,
+          1.589,
+          -0.3165
+        ],
+        "size": [
+          0.01,
+          0.01,
+          0.005
+        ]
+      },
+      "materials": [
+        "Leaf sage"
+      ]
+    },
+    {
+      "name": "_static \u00b7 Matte black rubber",
+      "parent": null,
+      "bounds": {
+        "min": [
+          -0.86926,
+          0.01014,
+          -1.0138
+        ],
+        "max": [
+          3.00771,
+          3.02586,
+          1.01731
+        ],
+        "size": [
+          3.87697,
+          3.01572,
+          2.03111
+        ]
+      },
+      "materials": [
+        "Matte black rubber"
+      ]
+    },
+    {
+      "name": "_static \u00b7 Soft charcoal plastic",
+      "parent": null,
+      "bounds": {
+        "min": [
+          -1.735,
+          1.36314,
+          -0.442
+        ],
+        "max": [
+          1.653,
+          1.81008,
+          0.84
+        ],
+        "size": [
+          3.388,
+          0.44694,
+          1.282
+        ]
+      },
+      "materials": [
+        "Soft charcoal plastic"
+      ]
+    },
+    {
+      "name": "_static \u00b7 Brushed aluminium",
+      "parent": null,
+      "bounds": {
+        "min": [
+          -1.52,
+          1.3898,
+          -0.1592
+        ],
+        "max": [
+          1.61894,
+          1.7702,
+          0.4075
+        ],
+        "size": [
+          3.13894,
+          0.38041,
+          0.5667
+        ]
+      },
+      "materials": [
+        "Brushed aluminium"
+      ]
+    },
+    {
+      "name": "Laptop lower shell",
+      "parent": "laptop",
+      "bounds": {
+        "min": [
+          -0.655,
+          1.3695,
+          0.08
+        ],
+        "max": [
+          0.515,
+          1.4245,
+          0.84
+        ],
+        "size": [
+          1.17,
+          0.055,
+          0.76
+        ]
+      },
+      "materials": [
+        "Brushed aluminium"
+      ]
+    },
+    {
+      "name": "laptop \u00b7 Soft charcoal plastic",
+      "parent": "laptop",
+      "bounds": {
+        "min": [
+          -0.6475,
+          1.3905,
+          0.0695
+        ],
+        "max": [
+          0.5075,
+          1.4385,
+          0.8435
+        ],
+        "size": [
+          1.155,
+          0.048,
+          0.774
+        ]
+      },
+      "materials": [
+        "Soft charcoal plastic"
+      ]
+    },
+    {
+      "name": "Laptop sticker printed lid",
+      "parent": "laptop",
+      "bounds": {
+        "min": [
+          -0.626,
+          1.44,
+          0.1075
+        ],
+        "max": [
+          0.486,
+          1.44,
+          0.8125
+        ],
+        "size": [
+          1.112,
+          0.0,
+          0.705
+        ]
+      },
+      "materials": [
+        "Laptop sticker collage"
+      ]
+    },
+    {
+      "name": "sticker_1 diecut",
+      "parent": "sticker_1",
+      "bounds": {
+        "min": [
+          -0.394,
+          1.4455,
+          0.536
+        ],
+        "max": [
+          -0.286,
+          1.4485,
+          0.644
+        ],
+        "size": [
+          0.108,
+          0.003,
+          0.108
+        ]
+      },
+      "materials": [
+        "Uncoated paper"
+      ]
+    },
+    {
+      "name": "sticker_1 ink",
+      "parent": "sticker_1",
+      "bounds": {
+        "min": [
+          -0.386,
+          1.4475,
+          0.544
+        ],
+        "max": [
+          -0.294,
+          1.4505,
+          0.636
+        ],
+        "size": [
+          0.092,
+          0.003,
+          0.092
+        ]
+      },
+      "materials": [
+        "Figma ochre"
+      ]
+    },
+    {
+      "name": "sticker_1 icon",
+      "parent": "sticker_1",
+      "bounds": {
+        "min": [
+          -0.3475,
+          1.451,
+          0.5635
+        ],
+        "max": [
+          -0.3325,
+          1.453,
+          0.6165
+        ],
+        "size": [
+          0.015,
+          0.002,
+          0.053
+        ]
+      },
+      "materials": [
+        "Soft charcoal plastic"
+      ]
+    },
+    {
+      "name": "sticker_2 diecut",
+      "parent": "sticker_2",
+      "bounds": {
+        "min": [
+          0.186,
+          1.4455,
+          0.236
+        ],
+        "max": [
+          0.294,
+          1.4485,
+          0.344
+        ],
+        "size": [
+          0.108,
+          0.003,
+          0.108
+        ]
+      },
+      "materials": [
+        "Uncoated paper"
+      ]
+    },
+    {
+      "name": "sticker_2 ink",
+      "parent": "sticker_2",
+      "bounds": {
+        "min": [
+          0.194,
+          1.4475,
+          0.244
+        ],
+        "max": [
+          0.286,
+          1.4505,
+          0.336
+        ],
+        "size": [
+          0.092,
+          0.003,
+          0.092
+        ]
+      },
+      "materials": [
+        "Lamp enamel vermilion"
+      ]
+    },
+    {
+      "name": "sticker_2 icon",
+      "parent": "sticker_2",
+      "bounds": {
+        "min": [
+          0.2325,
+          1.451,
+          0.2635
+        ],
+        "max": [
+          0.2475,
+          1.453,
+          0.3165
+        ],
+        "size": [
+          0.015,
+          0.002,
+          0.053
+        ]
+      },
+      "materials": [
+        "Soft charcoal plastic"
+      ]
+    },
+    {
+      "name": "controller sculpted shell",
+      "parent": "controller",
+      "bounds": {
+        "min": [
+          -1.20388,
+          1.38303,
+          0.3782
+        ],
+        "max": [
+          -0.67612,
+          1.45697,
+          0.65648
+        ],
+        "size": [
+          0.52777,
+          0.07395,
+          0.27828
+        ]
+      },
+      "materials": [
+        "Porcelain edges"
+      ]
+    },
+    {
+      "name": "controller \u00b7 Matte black rubber",
+      "parent": "controller",
+      "bounds": {
+        "min": [
+          -1.09312,
+          1.45741,
+          0.44693
+        ],
+        "max": [
+          -0.82777,
+          1.47307,
+          0.59831
+        ],
+        "size": [
+          0.26535,
+          0.01566,
+          0.15138
+        ]
+      },
+      "materials": [
+        "Matte black rubber"
+      ]
+    },
+    {
+      "name": "controller \u00b7 Soft charcoal plastic",
+      "parent": "controller",
+      "bounds": {
+        "min": [
+          -1.1401,
+          1.42218,
+          0.35601
+        ],
+        "max": [
+          -0.7399,
+          1.4896,
+          0.58744
+        ],
+        "size": [
+          0.4002,
+          0.06742,
+          0.23142
+        ]
+      },
+      "materials": [
+        "Soft charcoal plastic"
+      ]
+    },
+    {
+      "name": "controller \u00b7 Chair woven frame",
+      "parent": "controller",
+      "bounds": {
+        "min": [
+          -1.07833,
+          1.48873,
+          0.46172
+        ],
+        "max": [
+          -0.84256,
+          1.49395,
+          0.58352
+        ],
+        "size": [
+          0.23577,
+          0.00522,
+          0.1218
+        ]
+      },
+      "materials": [
+        "Chair woven frame"
+      ]
+    },
+    {
+      "name": "controller face button",
+      "parent": "controller",
+      "bounds": {
+        "min": [
+          -0.78949,
+          1.45741,
+          0.44606
+        ],
+        "max": [
+          -0.75991,
+          1.47307,
+          0.47564
+        ],
+        "size": [
+          0.02958,
+          0.01566,
+          0.02958
+        ]
+      },
+      "materials": [
+        "Figma ochre"
+      ]
+    },
+    {
+      "name": "controller face button.001",
+      "parent": "controller",
+      "bounds": {
+        "min": [
+          -0.75904,
+          1.45741,
+          0.48086
+        ],
+        "max": [
+          -0.72946,
+          1.47307,
+          0.51044
+        ],
+        "size": [
+          0.02958,
+          0.01566,
+          0.02958
+        ]
+      },
+      "materials": [
+        "Lamp enamel vermilion"
+      ]
+    },
+    {
+      "name": "controller face button.002",
+      "parent": "controller",
+      "bounds": {
+        "min": [
+          -0.82429,
+          1.45741,
+          0.48086
+        ],
+        "max": [
+          -0.79471,
+          1.47307,
+          0.51044
+        ],
+        "size": [
+          0.02958,
+          0.01566,
+          0.02958
+        ]
+      },
+      "materials": [
+        "Washed blue hardcover"
+      ]
+    },
+    {
+      "name": "controller face button.003",
+      "parent": "controller",
+      "bounds": {
+        "min": [
+          -0.78949,
+          1.45741,
+          0.51653
+        ],
+        "max": [
+          -0.75991,
+          1.47307,
+          0.54611
+        ],
+        "size": [
+          0.02958,
+          0.01566,
+          0.02958
+        ]
+      },
+      "materials": [
+        "Forest green"
+      ]
+    },
+    {
+      "name": "controller home button",
+      "parent": "controller",
+      "bounds": {
+        "min": [
+          -0.9574,
+          1.4622,
+          0.4304
+        ],
+        "max": [
+          -0.9226,
+          1.47002,
+          0.4652
+        ],
+        "size": [
+          0.0348,
+          0.00783,
+          0.0348
+        ]
+      },
+      "materials": [
+        "Brushed aluminium"
+      ]
+    },
+    {
+      "name": "_static \u00b7 Chair woven frame",
+      "parent": null,
+      "bounds": {
+        "min": [
+          0.79234,
+          1.367,
+          -0.13256
+        ],
+        "max": [
+          1.773,
+          1.612,
+          0.123
+        ],
+        "size": [
+          0.98066,
+          0.245,
+          0.25556
+        ]
+      },
+      "materials": [
+        "Chair woven frame"
+      ]
+    },
+    {
+      "name": "Black controller face button",
+      "parent": null,
+      "bounds": {
+        "min": [
+          1.03802,
+          1.43682,
+          -0.14588
+        ],
+        "max": [
+          1.06318,
+          1.45014,
+          -0.12072
+        ],
+        "size": [
+          0.02516,
+          0.01332,
+          0.02516
+        ]
+      },
+      "materials": [
+        "Figma ochre"
+      ]
+    },
+    {
+      "name": "_static \u00b7 Lamp enamel vermilion",
+      "parent": null,
+      "bounds": {
+        "min": [
+          -1.664,
+          0.0,
+          -0.11628
+        ],
+        "max": [
+          3.04,
+          3.835,
+          0.72
+        ],
+        "size": [
+          4.704,
+          3.835,
+          0.83628
+        ]
+      },
+      "materials": [
+        "Lamp enamel vermilion"
+      ]
+    },
+    {
+      "name": "Black controller face button.002",
+      "parent": null,
+      "bounds": {
+        "min": [
+          1.00842,
+          1.43682,
+          -0.11628
+        ],
+        "max": [
+          1.03358,
+          1.45014,
+          -0.09112
+        ],
+        "size": [
+          0.02516,
+          0.01332,
+          0.02516
+        ]
+      },
+      "materials": [
+        "Washed blue hardcover"
+      ]
+    },
+    {
+      "name": "_static \u00b7 Forest green",
+      "parent": null,
+      "bounds": {
+        "min": [
+          -1.665,
+          1.43682,
+          -0.97
+        ],
+        "max": [
+          1.06318,
+          3.58215,
+          0.3525
+        ],
+        "size": [
+          2.72818,
+          2.14533,
+          1.3225
+        ]
+      },
+      "materials": [
+        "Forest green"
+      ]
+    },
+    {
+      "name": "can \u00b7 Brushed aluminium",
+      "parent": "can",
+      "bounds": {
+        "min": [
+          0.849,
+          1.372,
+          0.509
+        ],
+        "max": [
+          1.031,
+          1.728,
+          0.691
+        ],
+        "size": [
+          0.182,
+          0.356,
+          0.182
+        ]
+      },
+      "materials": [
+        "Brushed aluminium"
+      ]
+    },
+    {
+      "name": "Can label cylinder",
+      "parent": "can",
+      "bounds": {
+        "min": [
+          0.8488,
+          1.413,
+          0.5088
+        ],
+        "max": [
+          1.0312,
+          1.683,
+          0.6912
+        ],
+        "size": [
+          0.1824,
+          0.27,
+          0.1824
+        ]
+      },
+      "materials": [
+        "Diet Coke aluminium label"
+      ]
+    },
+    {
+      "name": "Can opening",
+      "parent": "can",
+      "bounds": {
+        "min": [
+          0.915,
+          1.716,
+          0.585
+        ],
+        "max": [
+          0.965,
+          1.72,
+          0.661
+        ],
+        "size": [
+          0.05,
+          0.004,
+          0.076
+        ]
+      },
+      "materials": [
+        "Soft charcoal plastic"
+      ]
+    },
+    {
+      "name": "books \u00b7 Uncoated paper",
+      "parent": "books",
+      "bounds": {
+        "min": [
+          -1.72512,
+          3.12,
+          -0.91805
+        ],
+        "max": [
+          -0.86917,
+          3.679,
+          -0.0621
+        ],
+        "size": [
+          0.85595,
+          0.559,
+          0.85595
+        ]
+      },
+      "materials": [
+        "Uncoated paper"
+      ]
+    },
+    {
+      "name": "Cloth book cover",
+      "parent": "books_cover",
+      "bounds": {
+        "min": [
+          -1.73467,
+          3.12,
+          -0.33363
+        ],
+        "max": [
+          -1.4688,
+          3.6,
+          -0.06776
+        ],
+        "size": [
+          0.26587,
+          0.48,
+          0.26587
+        ]
+      },
+      "materials": [
+        "Lamp enamel vermilion"
+      ]
+    },
+    {
+      "name": "books \u00b7 Lamp enamel vermilion",
+      "parent": "books",
+      "bounds": {
+        "min": [
+          -1.73078,
+          3.12,
+          -0.42555
+        ],
+        "max": [
+          -1.36167,
+          3.6,
+          -0.05644
+        ],
+        "size": [
+          0.36911,
+          0.48,
+          0.36911
+        ]
+      },
+      "materials": [
+        "Lamp enamel vermilion"
+      ]
+    },
+    {
+      "name": "books \u00b7 Warm cream accents",
+      "parent": "books",
+      "bounds": {
+        "min": [
+          -1.46102,
+          3.159,
+          -0.65395
+        ],
+        "max": [
+          -0.86896,
+          3.553,
+          -0.06189
+        ],
+        "size": [
+          0.59206,
+          0.394,
+          0.59206
+        ]
+      },
+      "materials": [
+        "Warm cream accents"
+      ]
+    },
+    {
+      "name": "books \u00b7 Satin brass",
+      "parent": "books",
+      "bounds": {
+        "min": [
+          -1.44083,
+          3.1665,
+          -0.63185
+        ],
+        "max": [
+          -0.87218,
+          3.6465,
+          -0.0632
+        ],
+        "size": [
+          0.56866,
+          0.48,
+          0.56866
+        ]
+      },
+      "materials": [
+        "Satin brass"
+      ]
+    },
+    {
+      "name": "books \u00b7 Sage green hardcover",
+      "parent": "books",
+      "bounds": {
+        "min": [
+          -1.6286,
+          3.12,
+          -0.54576
+        ],
+        "max": [
+          -1.24146,
+          3.67,
+          -0.15862
+        ],
+        "size": [
+          0.38714,
+          0.55,
+          0.38714
+        ]
+      },
+      "materials": [
+        "Sage green hardcover"
+      ]
+    },
+    {
+      "name": "Book spine DESIGN",
+      "parent": "books",
+      "bounds": {
+        "min": [
+          -1.19435,
+          3.38808,
+          -0.36595
+        ],
+        "max": [
+          -1.13949,
+          3.40358,
+          -0.31109
+        ],
+        "size": [
+          0.05487,
+          0.01549,
+          0.05487
+        ]
+      },
+      "materials": [
+        "Soft charcoal plastic"
+      ]
+    },
+    {
+      "name": "books \u00b7 Washed blue hardcover",
+      "parent": "books",
+      "bounds": {
+        "min": [
+          -1.36344,
+          3.12,
+          -0.80385
+        ],
+        "max": [
+          -0.98337,
+          3.56,
+          -0.42379
+        ],
+        "size": [
+          0.38007,
+          0.44,
+          0.38007
+        ]
+      },
+      "materials": [
+        "Washed blue hardcover"
+      ]
+    },
+    {
+      "name": "books \u00b7 Terracotta clay",
+      "parent": "books",
+      "bounds": {
+        "min": [
+          -1.24677,
+          3.12,
+          -0.9276
+        ],
+        "max": [
+          -0.85962,
+          3.69,
+          -0.54046
+        ],
+        "size": [
+          0.38714,
+          0.57,
+          0.38714
+        ]
+      },
+      "materials": [
+        "Terracotta clay"
+      ]
+    },
+    {
+      "name": "workspace_right_wing \u00b7 Uncoated paper",
+      "parent": "workspace_right_wing",
+      "bounds": {
+        "min": [
+          0.90523,
+          2.0515,
+          -0.74163
+        ],
+        "max": [
+          1.65477,
+          2.2145,
+          0.0079
+        ],
+        "size": [
+          0.74953,
+          0.163,
+          0.74953
+        ]
+      },
+      "materials": [
+        "Uncoated paper"
+      ]
+    },
+    {
+      "name": "workspace_right_wing \u00b7 Terracotta clay",
+      "parent": "workspace_right_wing",
+      "bounds": {
+        "min": [
+          0.90523,
+          2.043,
+          -0.74163
+        ],
+        "max": [
+          1.65477,
+          2.101,
+          0.0079
+        ],
+        "size": [
+          0.74953,
+          0.058,
+          0.74953
+        ]
+      },
+      "materials": [
+        "Terracotta clay"
+      ]
+    },
+    {
+      "name": "workspace_right_wing \u00b7 Sage green hardcover",
+      "parent": "workspace_right_wing",
+      "bounds": {
+        "min": [
+          0.90523,
+          2.165,
+          -0.74163
+        ],
+        "max": [
+          1.65477,
+          2.223,
+          0.0079
+        ],
+        "size": [
+          0.74953,
+          0.058,
+          0.74953
+        ]
+      },
+      "materials": [
+        "Sage green hardcover"
+      ]
+    },
+    {
+      "name": "Notebook ribbon",
+      "parent": "workspace_right_wing",
+      "bounds": {
+        "min": [
+          1.1407,
+          1.975,
+          -0.17665
+        ],
+        "max": [
+          1.1605,
+          2.045,
+          -0.15685
+        ],
+        "size": [
+          0.0198,
+          0.07,
+          0.0198
+        ]
+      },
+      "materials": [
+        "Lamp enamel vermilion"
+      ]
+    },
+    {
+      "name": "Figma box base",
+      "parent": "figma",
+      "bounds": {
+        "min": [
+          -1.62295,
+          2.607,
+          -0.8088
+        ],
+        "max": [
+          -0.88048,
+          2.857,
+          -0.06634
+        ],
+        "size": [
+          0.74246,
+          0.25,
+          0.74246
+        ]
+      },
+      "materials": [
+        "Figma ochre"
+      ]
+    },
+    {
+      "name": "Figma box lid",
+      "parent": "figma_lid",
+      "bounds": {
+        "min": [
+          -1.63355,
+          2.8415,
+          -0.81941
+        ],
+        "max": [
+          -0.85574,
+          2.8865,
+          -0.04159
+        ],
+        "size": [
+          0.77782,
+          0.045,
+          0.77782
+        ]
+      },
+      "materials": [
+        "Figma ochre"
+      ]
+    },
+    {
+      "name": "Figma box label",
+      "parent": "figma",
+      "bounds": {
+        "min": [
+          -1.14914,
+          2.72027,
+          -0.33651
+        ],
+        "max": [
+          -1.04165,
+          2.7697,
+          -0.22902
+        ],
+        "size": [
+          0.10749,
+          0.04943,
+          0.10749
+        ]
+      },
+      "materials": [
+        "Soft charcoal plastic"
+      ]
+    },
+    {
+      "name": "Figma symbol",
+      "parent": "figma",
+      "bounds": {
+        "min": [
+          -1.29485,
+          2.772,
+          -0.11584
+        ],
+        "max": [
+          -1.25808,
+          2.82,
+          -0.07907
+        ],
+        "size": [
+          0.03677,
+          0.048,
+          0.03677
+        ]
+      },
+      "materials": [
+        "Lamp enamel vermilion"
+      ]
+    },
+    {
+      "name": "Figma symbol.001",
+      "parent": "figma",
+      "bounds": {
+        "min": [
+          -1.25596,
+          2.772,
+          -0.15473
+        ],
+        "max": [
+          -1.21919,
+          2.82,
+          -0.11796
+        ],
+        "size": [
+          0.03677,
+          0.048,
+          0.03677
+        ]
+      },
+      "materials": [
+        "Terracotta clay"
+      ]
+    },
+    {
+      "name": "Figma symbol.002",
+      "parent": "figma",
+      "bounds": {
+        "min": [
+          -1.29485,
+          2.722,
+          -0.11584
+        ],
+        "max": [
+          -1.25808,
+          2.77,
+          -0.07907
+        ],
+        "size": [
+          0.03677,
+          0.048,
+          0.03677
+        ]
+      },
+      "materials": [
+        "Dusty pink"
+      ]
+    },
+    {
+      "name": "Figma symbol.003",
+      "parent": "figma",
+      "bounds": {
+        "min": [
+          -1.25596,
+          2.722,
+          -0.15473
+        ],
+        "max": [
+          -1.21919,
+          2.77,
+          -0.11796
+        ],
+        "size": [
+          0.03677,
+          0.048,
+          0.03677
+        ]
+      },
+      "materials": [
+        "Washed blue hardcover"
+      ]
+    },
+    {
+      "name": "Figma symbol.004",
+      "parent": "figma",
+      "bounds": {
+        "min": [
+          -1.29485,
+          2.672,
+          -0.11584
+        ],
+        "max": [
+          -1.25808,
+          2.72,
+          -0.07907
+        ],
+        "size": [
+          0.03677,
+          0.048,
+          0.03677
+        ]
+      },
+      "materials": [
+        "Forest green"
+      ]
+    },
+    {
+      "name": "Trophy walnut plinth",
+      "parent": "trophy_1",
+      "bounds": {
+        "min": [
+          0.68249,
+          3.0975,
+          -1.07751
+        ],
+        "max": [
+          1.01483,
+          3.1725,
+          -0.74517
+        ],
+        "size": [
+          0.33234,
+          0.075,
+          0.33234
+        ]
+      },
+      "materials": [
+        "Walnut"
+      ]
+    },
+    {
+      "name": "trophy_1 \u00b7 Satin brass",
+      "parent": "trophy_1",
+      "bounds": {
+        "min": [
+          0.58381,
+          3.1245,
+          -1.17619
+        ],
+        "max": [
+          1.11352,
+          3.5868,
+          -0.64648
+        ],
+        "size": [
+          0.52971,
+          0.4623,
+          0.52971
+        ]
+      },
+      "materials": [
+        "Satin brass"
+      ]
+    },
+    {
+      "name": "Trophy walnut plinth.001",
+      "parent": "trophy_2",
+      "bounds": {
+        "min": [
+          1.01483,
+          3.0975,
+          -0.74517
+        ],
+        "max": [
+          1.34718,
+          3.1725,
+          -0.41282
+        ],
+        "size": [
+          0.33234,
+          0.075,
+          0.33234
+        ]
+      },
+      "materials": [
+        "Walnut"
+      ]
+    },
+    {
+      "name": "trophy_2 \u00b7 Satin brass",
+      "parent": "trophy_2",
+      "bounds": {
+        "min": [
+          0.91615,
+          3.1245,
+          -0.84385
+        ],
+        "max": [
+          1.44586,
+          3.6588,
+          -0.31414
+        ],
+        "size": [
+          0.52971,
+          0.5343,
+          0.52971
+        ]
+      },
+      "materials": [
+        "Satin brass"
+      ]
+    },
+    {
+      "name": "Trophy walnut plinth.002",
+      "parent": "trophy_3",
+      "bounds": {
+        "min": [
+          1.35425,
+          3.0975,
+          -0.40575
+        ],
+        "max": [
+          1.68659,
+          3.1725,
+          -0.07341
+        ],
+        "size": [
+          0.33234,
+          0.075,
+          0.33234
+        ]
+      },
+      "materials": [
+        "Walnut"
+      ]
+    },
+    {
+      "name": "trophy_3 \u00b7 Satin brass",
+      "parent": "trophy_3",
+      "bounds": {
+        "min": [
+          1.25556,
+          3.1245,
+          -0.50444
+        ],
+        "max": [
+          1.78527,
+          3.5772,
+          0.02527
+        ],
+        "size": [
+          0.52971,
+          0.4527,
+          0.52971
+        ]
+      },
+      "materials": [
+        "Satin brass"
+      ]
+    },
+    {
+      "name": "plant_1 ceramic pot",
+      "parent": "plant_1",
+      "bounds": {
+        "min": [
+          -1.62664,
+          2.05,
+          -0.34581
+        ],
+        "max": [
+          -1.3152,
+          2.2229,
+          -0.03437
+        ],
+        "size": [
+          0.31144,
+          0.1729,
+          0.31144
+        ]
+      },
+      "materials": [
+        "Warm powder-coated white"
+      ]
+    },
+    {
+      "name": "plant_1 soil",
+      "parent": "plant_1",
+      "bounds": {
+        "min": [
+          -1.60605,
+          2.19415,
+          -0.32521
+        ],
+        "max": [
+          -1.33579,
+          2.20615,
+          -0.05496
+        ],
+        "size": [
+          0.27026,
+          0.012,
+          0.27026
+        ]
+      },
+      "materials": [
+        "Potting soil"
+      ]
+    },
+    {
+      "name": "plant_1 \u00b7 Leaf jade",
+      "parent": "plant_1",
+      "bounds": {
+        "min": [
+          -1.57147,
+          2.20652,
+          -0.29558
+        ],
+        "max": [
+          -1.34381,
+          2.30044,
+          -0.06792
+        ],
+        "size": [
+          0.22766,
+          0.09392,
+          0.22766
+        ]
+      },
+      "materials": [
+        "Leaf jade"
+      ]
+    },
+    {
+      "name": "plant_1 \u00b7 Leaf sage",
+      "parent": "plant_1",
+      "bounds": {
+        "min": [
+          -1.65994,
+          2.20652,
+          -0.32908
+        ],
+        "max": [
+          -1.35515,
+          2.3699,
+          -0.02429
+        ],
+        "size": [
+          0.30479,
+          0.16338,
+          0.30479
+        ]
+      },
+      "materials": [
+        "Leaf sage"
+      ]
+    },
+    {
+      "name": "plant_1 \u00b7 Leaf shaded",
+      "parent": "plant_1",
+      "bounds": {
+        "min": [
+          -1.6258,
+          2.20652,
+          -0.452
+        ],
+        "max": [
+          -1.21514,
+          2.44255,
+          -0.04134
+        ],
+        "size": [
+          0.41066,
+          0.23603,
+          0.41066
+        ]
+      },
+      "materials": [
+        "Leaf shaded"
+      ]
+    },
+    {
+      "name": "Small aloe ceramic pot",
+      "parent": "Small aloe",
+      "bounds": {
+        "min": [
+          -1.3901,
+          2.05,
+          -0.64667
+        ],
+        "max": [
+          -1.09919,
+          2.2115,
+          -0.35576
+        ],
+        "size": [
+          0.2909,
+          0.1615,
+          0.2909
+        ]
+      },
+      "materials": [
+        "Warm powder-coated white"
+      ]
+    },
+    {
+      "name": "Small aloe soil",
+      "parent": "Small aloe",
+      "bounds": {
+        "min": [
+          -1.37086,
+          2.18425,
+          -0.62743
+        ],
+        "max": [
+          -1.11843,
+          2.19625,
+          -0.37499
+        ],
+        "size": [
+          0.25244,
+          0.012,
+          0.25244
+        ]
+      },
+      "materials": [
+        "Potting soil"
+      ]
+    },
+    {
+      "name": "Small aloe \u00b7 Leaf jade",
+      "parent": "Small aloe",
+      "bounds": {
+        "min": [
+          -1.33867,
+          2.1962,
+          -0.59985
+        ],
+        "max": [
+          -1.1258,
+          2.28461,
+          -0.38698
+        ],
+        "size": [
+          0.21287,
+          0.08841,
+          0.21287
+        ]
+      },
+      "materials": [
+        "Leaf jade"
+      ]
+    },
+    {
+      "name": "Small aloe \u00b7 Leaf sage",
+      "parent": "Small aloe",
+      "bounds": {
+        "min": [
+          -1.4212,
+          2.1962,
+          -0.63107
+        ],
+        "max": [
+          -1.13643,
+          2.34892,
+          -0.3463
+        ],
+        "size": [
+          0.28477,
+          0.15272,
+          0.28477
+        ]
+      },
+      "materials": [
+        "Leaf sage"
+      ]
+    },
+    {
+      "name": "Small aloe \u00b7 Leaf shaded",
+      "parent": "Small aloe",
+      "bounds": {
+        "min": [
+          -1.38935,
+          2.1962,
+          -0.74586
+        ],
+        "max": [
+          -1.00573,
+          2.41676,
+          -0.36223
+        ],
+        "size": [
+          0.38363,
+          0.22056,
+          0.38363
+        ]
+      },
+      "materials": [
+        "Leaf shaded"
+      ]
+    },
+    {
+      "name": "Tiny jade plant ceramic pot",
+      "parent": "Tiny jade plant",
+      "bounds": {
+        "min": [
+          -1.07087,
+          2.05,
+          -0.83655
+        ],
+        "max": [
+          -0.82445,
+          2.1868,
+          -0.59014
+        ],
+        "size": [
+          0.24641,
+          0.1368,
+          0.24641
+        ]
+      },
+      "materials": [
+        "Warm powder-coated white"
+      ]
+    },
+    {
+      "name": "Tiny jade plant soil",
+      "parent": "Tiny jade plant",
+      "bounds": {
+        "min": [
+          -1.05457,
+          2.1628,
+          -0.82026
+        ],
+        "max": [
+          -0.84075,
+          2.1748,
+          -0.60643
+        ],
+        "size": [
+          0.21383,
+          0.012,
+          0.21383
+        ]
+      },
+      "materials": [
+        "Potting soil"
+      ]
+    },
+    {
+      "name": "Tiny jade plant \u00b7 Leaf jade",
+      "parent": "Tiny jade plant",
+      "bounds": {
+        "min": [
+          -1.02757,
+          2.17384,
+          -0.79715
+        ],
+        "max": [
+          -0.8467,
+          2.25039,
+          -0.61628
+        ],
+        "size": [
+          0.18088,
+          0.07655,
+          0.18088
+        ]
+      },
+      "materials": [
+        "Leaf jade"
+      ]
+    },
+    {
+      "name": "Tiny jade plant \u00b7 Leaf sage",
+      "parent": "Tiny jade plant",
+      "bounds": {
+        "min": [
+          -1.09721,
+          2.17384,
+          -0.82343
+        ],
+        "max": [
+          -0.85579,
+          2.30345,
+          -0.58201
+        ],
+        "size": [
+          0.24142,
+          0.12961,
+          0.24142
+        ]
+      },
+      "materials": [
+        "Leaf sage"
+      ]
+    },
+    {
+      "name": "Tiny jade plant \u00b7 Leaf shaded",
+      "parent": "Tiny jade plant",
+      "bounds": {
+        "min": [
+          -1.07035,
+          2.17384,
+          -0.92058
+        ],
+        "max": [
+          -0.74528,
+          2.36089,
+          -0.59551
+        ],
+        "size": [
+          0.32506,
+          0.18705,
+          0.32506
+        ]
+      },
+      "materials": [
+        "Leaf shaded"
+      ]
+    },
+    {
+      "name": "plant_2 ceramic pot",
+      "parent": "plant_2",
+      "bounds": {
+        "min": [
+          1.46608,
+          3.12,
+          -0.33634
+        ],
+        "max": [
+          1.81517,
+          3.3138,
+          0.01274
+        ],
+        "size": [
+          0.34908,
+          0.1938,
+          0.34908
+        ]
+      },
+      "materials": [
+        "Figma ochre"
+      ]
+    },
+    {
+      "name": "plant_2 soil",
+      "parent": "plant_2",
+      "bounds": {
+        "min": [
+          1.48916,
+          3.2823,
+          -0.31326
+        ],
+        "max": [
+          1.79209,
+          3.2943,
+          -0.01034
+        ],
+        "size": [
+          0.30292,
+          0.012,
+          0.30292
+        ]
+      },
+      "materials": [
+        "Potting soil"
+      ]
+    },
+    {
+      "name": "plant_2 \u00b7 Leaf shaded",
+      "parent": "plant_2",
+      "bounds": {
+        "min": [
+          1.33908,
+          3.25093,
+          -0.60521
+        ],
+        "max": [
+          2.11761,
+          3.94075,
+          0.17332
+        ],
+        "size": [
+          0.77852,
+          0.68982,
+          0.77852
+        ]
+      },
+      "materials": [
+        "Leaf shaded"
+      ]
+    },
+    {
+      "name": "plant_2 \u00b7 Leaf jade",
+      "parent": "plant_2",
+      "bounds": {
+        "min": [
+          1.41656,
+          3.4209,
+          -0.27949
+        ],
+        "max": [
+          1.8464,
+          3.5499,
+          0.15034
+        ],
+        "size": [
+          0.42984,
+          0.129,
+          0.42984
+        ]
+      },
+      "materials": [
+        "Leaf jade"
+      ]
+    },
+    {
+      "name": "plant_2 \u00b7 Leaf sage",
+      "parent": "plant_2",
+      "bounds": {
+        "min": [
+          1.30183,
+          3.477,
+          -0.54006
+        ],
+        "max": [
+          1.80586,
+          3.66202,
+          -0.03603
+        ],
+        "size": [
+          0.50403,
+          0.18502,
+          0.50403
+        ]
+      },
+      "materials": [
+        "Leaf sage"
+      ]
+    },
+    {
+      "name": "Speaker fabric body",
+      "parent": "speaker",
+      "bounds": {
+        "min": [
+          -0.755,
+          2.955,
+          -0.855
+        ],
+        "max": [
+          0.195,
+          3.165,
+          -0.605
+        ],
+        "size": [
+          0.95,
+          0.21,
+          0.25
+        ]
+      },
+      "materials": [
+        "Soft charcoal plastic"
+      ]
+    },
+    {
+      "name": "Speaker grille",
+      "parent": "speaker",
+      "bounds": {
+        "min": [
+          -0.7,
+          2.985,
+          -0.5995
+        ],
+        "max": [
+          0.14,
+          3.135,
+          -0.5925
+        ],
+        "size": [
+          0.84,
+          0.15,
+          0.007
+        ]
+      },
+      "materials": [
+        "Matte black rubber"
+      ]
+    },
+    {
+      "name": "speaker \u00b7 Chair woven frame",
+      "parent": "speaker",
+      "bounds": {
+        "min": [
+          -0.668,
+          3.006,
+          -0.5915
+        ],
+        "max": [
+          0.103,
+          3.108,
+          -0.5885
+        ],
+        "size": [
+          0.771,
+          0.102,
+          0.003
+        ]
+      },
+      "materials": [
+        "Chair woven frame"
+      ]
+    },
+    {
+      "name": "Speaker indicator",
+      "parent": "speaker",
+      "bounds": {
+        "min": [
+          0.0555,
+          3.061,
+          -0.5865
+        ],
+        "max": [
+          0.0785,
+          3.065,
+          -0.5835
+        ],
+        "size": [
+          0.023,
+          0.004,
+          0.003
+        ]
+      },
+      "materials": [
+        "Warm cream accents"
+      ]
+    },
+    {
+      "name": "Speaker brandless mark",
+      "parent": "speaker",
+      "bounds": {
+        "min": [
+          -0.58914,
+          3.02611,
+          -0.5823
+        ],
+        "max": [
+          -0.55101,
+          3.03413,
+          -0.5817
+        ],
+        "size": [
+          0.03813,
+          0.00801,
+          0.0006
+        ]
+      },
+      "materials": [
+        "Brushed aluminium"
+      ]
+    },
+    {
+      "name": "Tiny robot torso",
+      "parent": "toy",
+      "bounds": {
+        "min": [
+          1.00069,
+          2.605,
+          -0.70274
+        ],
+        "max": [
+          1.16333,
+          2.775,
+          -0.5401
+        ],
+        "size": [
+          0.16263,
+          0.17,
+          0.16263
+        ]
+      },
+      "materials": [
+        "Sage green hardcover"
+      ]
+    },
+    {
+      "name": "Tiny robot head",
+      "parent": "toy",
+      "bounds": {
+        "min": [
+          0.99009,
+          2.775,
+          -0.71335
+        ],
+        "max": [
+          1.17393,
+          2.905,
+          -0.5295
+        ],
+        "size": [
+          0.18385,
+          0.13,
+          0.18385
+        ]
+      },
+      "materials": [
+        "Warm cream accents"
+      ]
+    },
+    {
+      "name": "toy \u00b7 Soft charcoal plastic",
+      "parent": "toy",
+      "bounds": {
+        "min": [
+          0.99139,
+          2.6,
+          -0.68387
+        ],
+        "max": [
+          1.14446,
+          2.876,
+          -0.5308
+        ],
+        "size": [
+          0.15307,
+          0.276,
+          0.15307
+        ]
+      },
+      "materials": [
+        "Soft charcoal plastic"
+      ]
+    },
+    {
+      "name": "toy \u00b7 Terracotta clay",
+      "parent": "toy",
+      "bounds": {
+        "min": [
+          0.97533,
+          2.56599,
+          -0.72811
+        ],
+        "max": [
+          1.19154,
+          2.83329,
+          -0.51189
+        ],
+        "size": [
+          0.21622,
+          0.2673,
+          0.21622
+        ]
+      },
+      "materials": [
+        "Terracotta clay"
+      ]
+    },
+    {
+      "name": "Robot aerial",
+      "parent": "toy",
+      "bounds": {
+        "min": [
+          1.06928,
+          2.9125,
+          -0.63415
+        ],
+        "max": [
+          1.09474,
+          2.9975,
+          -0.60869
+        ],
+        "size": [
+          0.02546,
+          0.085,
+          0.02546
+        ]
+      },
+      "materials": [
+        "Brushed aluminium"
+      ]
+    },
+    {
+      "name": "Robot aerial tip",
+      "parent": "toy",
+      "bounds": {
+        "min": [
+          1.05231,
+          2.979,
+          -0.65112
+        ],
+        "max": [
+          1.11171,
+          3.021,
+          -0.59172
+        ],
+        "size": [
+          0.0594,
+          0.042,
+          0.0594
+        ]
+      },
+      "materials": [
+        "Lamp enamel vermilion"
+      ]
+    },
+    {
+      "name": "Small photo frame",
+      "parent": "workspace_right_wing",
+      "bounds": {
+        "min": [
+          1.38253,
+          2.605,
+          -0.36333
+        ],
+        "max": [
+          1.60173,
+          2.885,
+          -0.14412
+        ],
+        "size": [
+          0.2192,
+          0.28,
+          0.2192
+        ]
+      },
+      "materials": [
+        "Figma ochre"
+      ]
+    },
+    {
+      "name": "Small abstract print",
+      "parent": "workspace_right_wing",
+      "bounds": {
+        "min": [
+          1.39667,
+          2.63,
+          -0.31383
+        ],
+        "max": [
+          1.55224,
+          2.86,
+          -0.15827
+        ],
+        "size": [
+          0.15556,
+          0.23,
+          0.15556
+        ]
+      },
+      "materials": [
+        "Washed blue hardcover"
+      ]
+    },
+    {
+      "name": "Print circle",
+      "parent": "workspace_right_wing",
+      "bounds": {
+        "min": [
+          1.4193,
+          2.689,
+          -0.28413
+        ],
+        "max": [
+          1.52254,
+          2.831,
+          -0.18089
+        ],
+        "size": [
+          0.10324,
+          0.142,
+          0.10324
+        ]
+      },
+      "materials": [
+        "Warm cream accents"
+      ]
+    },
+    {
+      "name": "Desktop pencil",
+      "parent": "pencil",
+      "bounds": {
+        "min": [
+          1.31479,
+          1.36716,
+          0.35774
+        ],
+        "max": [
+          1.72521,
+          1.39284,
+          0.55226
+        ],
+        "size": [
+          0.41042,
+          0.02569,
+          0.19451
+        ]
+      },
+      "materials": [
+        "Figma ochre"
+      ]
+    },
+    {
+      "name": "Pencil graphite",
+      "parent": "pencil",
+      "bounds": {
+        "min": [
+          1.71782,
+          1.37413,
+          0.34855
+        ],
+        "max": [
+          1.76218,
+          1.38587,
+          0.37545
+        ],
+        "size": [
+          0.04436,
+          0.01175,
+          0.02691
+        ]
+      },
+      "materials": [
+        "Soft charcoal plastic"
+      ]
+    },
+    {
+      "name": "Pencil eraser",
+      "parent": "pencil",
+      "bounds": {
+        "min": [
+          1.27879,
+          1.36424,
+          0.52552
+        ],
+        "max": [
+          1.32621,
+          1.39576,
+          0.56948
+        ],
+        "size": [
+          0.04741,
+          0.03151,
+          0.04397
+        ]
+      },
+      "materials": [
+        "Dusty pink"
+      ]
+    },
+    {
+      "name": "Desktop pen.003",
+      "parent": null,
+      "bounds": {
+        "min": [
+          1.70301,
+          1.38953,
+          0.011
+        ],
+        "max": [
+          1.73799,
+          1.81047,
+          0.034
+        ],
+        "size": [
+          0.03499,
+          0.42094,
+          0.023
+        ]
+      },
+      "materials": [
+        "Warm cream accents"
+      ]
+    },
+    {
+      "name": "Notebook edge mark",
+      "parent": null,
+      "bounds": {
+        "min": [
+          -1.59105,
+          1.39082,
+          0.8487
+        ],
+        "max": [
+          -1.54867,
+          1.4015,
+          0.8493
+        ],
+        "size": [
+          0.04239,
+          0.01068,
+          0.0006
+        ]
+      },
+      "materials": [
+        "Satin brass"
+      ]
+    },
+    {
+      "name": "chair \u00b7 Brushed aluminium",
+      "parent": "chair",
+      "bounds": {
+        "min": [
+          -2.07129,
+          0.11,
+          1.44429
+        ],
+        "max": [
+          -1.18871,
+          1.12828,
+          1.79571
+        ],
+        "size": [
+          0.88258,
+          1.01828,
+          0.35142
+        ]
+      },
+      "materials": [
+        "Brushed aluminium"
+      ]
+    },
+    {
+      "name": "chair \u00b7 Soft charcoal plastic",
+      "parent": "chair",
+      "bounds": {
+        "min": [
+          -2.21437,
+          0.026,
+          0.98394
+        ],
+        "max": [
+          -0.95482,
+          0.8205,
+          2.28557
+        ],
+        "size": [
+          1.25955,
+          0.7945,
+          1.30163
+        ]
+      },
+      "materials": [
+        "Soft charcoal plastic"
+      ]
+    },
+    {
+      "name": "chair \u00b7 Chair woven frame",
+      "parent": "chair",
+      "bounds": {
+        "min": [
+          -2.43894,
+          -0.10357,
+          0.94494
+        ],
+        "max": [
+          -0.69895,
+          1.82356,
+          2.33473
+        ],
+        "size": [
+          1.73999,
+          1.92713,
+          1.38979
+        ]
+      },
+      "materials": [
+        "Chair woven frame"
+      ]
+    },
+    {
+      "name": "Chair breathable mesh",
+      "parent": "chair",
+      "bounds": {
+        "min": [
+          -2.03607,
+          1.08,
+          1.86658
+        ],
+        "max": [
+          -1.44642,
+          1.63,
+          2.05818
+        ],
+        "size": [
+          0.58965,
+          0.55,
+          0.19159
+        ]
+      },
+      "materials": [
+        "Chair mesh weave"
+      ]
+    },
+    {
+      "name": "_static \u00b7 Lamp edge red",
+      "parent": null,
+      "bounds": {
+        "min": [
+          2.222,
+          0.02,
+          -0.098
+        ],
+        "max": [
+          3.038,
+          3.87,
+          0.718
+        ],
+        "size": [
+          0.816,
+          3.85,
+          0.816
+        ]
+      },
+      "materials": [
+        "Lamp edge red"
+      ]
+    },
+    {
+      "name": "Lamp 1 bell",
+      "parent": "lamp_1",
+      "bounds": {
+        "min": [
+          1.77128,
+          3.1701,
+          -0.06309
+        ],
+        "max": [
+          2.54189,
+          3.92337,
+          0.74043
+        ],
+        "size": [
+          0.77061,
+          0.75328,
+          0.80352
+        ]
+      },
+      "materials": [
+        "Lamp enamel vermilion"
+      ]
+    },
+    {
+      "name": "Lamp 1 cream lining",
+      "parent": "lamp_1",
+      "bounds": {
+        "min": [
+          1.80001,
+          3.1969,
+          -0.01582
+        ],
+        "max": [
+          2.48619,
+          3.86252,
+          0.7083
+        ],
+        "size": [
+          0.68618,
+          0.66562,
+          0.72413
+        ]
+      },
+      "materials": [
+        "Warm cream accents"
+      ]
+    },
+    {
+      "name": "lamp_bulb_1",
+      "parent": "lamp_1",
+      "bounds": {
+        "min": [
+          1.99555,
+          3.37138,
+          0.24476
+        ],
+        "max": [
+          2.23966,
+          3.62362,
+          0.47635
+        ],
+        "size": [
+          0.24411,
+          0.25224,
+          0.23159
+        ]
+      },
+      "materials": [
+        "Warm lamp bulb 1"
+      ]
+    },
+    {
+      "name": "Lamp 1 rolled rim",
+      "parent": "lamp_1",
+      "bounds": {
+        "min": [
+          1.77117,
+          3.16953,
+          0.06032
+        ],
+        "max": [
+          2.32336,
+          3.64778,
+          0.73977
+        ],
+        "size": [
+          0.55219,
+          0.47825,
+          0.67945
+        ]
+      },
+      "materials": [
+        "Lamp edge red"
+      ]
+    },
+    {
+      "name": "Lamp switch",
+      "parent": "lamp_1",
+      "bounds": {
+        "min": [
+          2.24543,
+          3.66826,
+          0.23586
+        ],
+        "max": [
+          2.31567,
+          3.73839,
+          0.3023
+        ],
+        "size": [
+          0.07023,
+          0.07013,
+          0.06644
+        ]
+      },
+      "materials": [
+        "Soft charcoal plastic"
+      ]
+    },
+    {
+      "name": "Lamp 2 bell",
+      "parent": "lamp_2",
+      "bounds": {
+        "min": [
+          1.88128,
+          2.1601,
+          0.14191
+        ],
+        "max": [
+          2.65189,
+          2.91337,
+          0.94543
+        ],
+        "size": [
+          0.77061,
+          0.75328,
+          0.80352
+        ]
+      },
+      "materials": [
+        "Lamp enamel vermilion"
+      ]
+    },
+    {
+      "name": "Lamp 2 cream lining",
+      "parent": "lamp_2",
+      "bounds": {
+        "min": [
+          1.91001,
+          2.1869,
+          0.18918
+        ],
+        "max": [
+          2.59619,
+          2.85252,
+          0.9133
+        ],
+        "size": [
+          0.68618,
+          0.66562,
+          0.72413
+        ]
+      },
+      "materials": [
+        "Warm cream accents"
+      ]
+    },
+    {
+      "name": "lamp_bulb_2",
+      "parent": "lamp_2",
+      "bounds": {
+        "min": [
+          2.10555,
+          2.36138,
+          0.44976
+        ],
+        "max": [
+          2.34966,
+          2.61362,
+          0.68135
+        ],
+        "size": [
+          0.24411,
+          0.25224,
+          0.23159
+        ]
+      },
+      "materials": [
+        "Warm lamp bulb 2"
+      ]
+    },
+    {
+      "name": "Lamp 2 rolled rim",
+      "parent": "lamp_2",
+      "bounds": {
+        "min": [
+          1.88117,
+          2.15953,
+          0.26532
+        ],
+        "max": [
+          2.43336,
+          2.63778,
+          0.94477
+        ],
+        "size": [
+          0.55219,
+          0.47825,
+          0.67945
+        ]
+      },
+      "materials": [
+        "Lamp edge red"
+      ]
+    },
+    {
+      "name": "Lamp switch.001",
+      "parent": "lamp_2",
+      "bounds": {
+        "min": [
+          2.35543,
+          2.65826,
+          0.44086
+        ],
+        "max": [
+          2.42567,
+          2.72839,
+          0.5073
+        ],
+        "size": [
+          0.07023,
+          0.07013,
+          0.06644
+        ]
+      },
+      "materials": [
+        "Soft charcoal plastic"
+      ]
+    },
+    {
+      "name": "Lamp 3 bell",
+      "parent": "lamp_3",
+      "bounds": {
+        "min": [
+          1.98128,
+          1.2701,
+          0.27191
+        ],
+        "max": [
+          2.75189,
+          2.02337,
+          1.07543
+        ],
+        "size": [
+          0.77061,
+          0.75328,
+          0.80352
+        ]
+      },
+      "materials": [
+        "Lamp enamel vermilion"
+      ]
+    },
+    {
+      "name": "Lamp 3 cream lining",
+      "parent": "lamp_3",
+      "bounds": {
+        "min": [
+          2.01001,
+          1.2969,
+          0.31918
+        ],
+        "max": [
+          2.69619,
+          1.96252,
+          1.0433
+        ],
+        "size": [
+          0.68618,
+          0.66562,
+          0.72413
+        ]
+      },
+      "materials": [
+        "Warm cream accents"
+      ]
+    },
+    {
+      "name": "lamp_bulb_3",
+      "parent": "lamp_3",
+      "bounds": {
+        "min": [
+          2.20555,
+          1.47138,
+          0.57976
+        ],
+        "max": [
+          2.44966,
+          1.72362,
+          0.81135
+        ],
+        "size": [
+          0.24411,
+          0.25224,
+          0.23159
+        ]
+      },
+      "materials": [
+        "Warm lamp bulb 3"
+      ]
+    },
+    {
+      "name": "Lamp 3 rolled rim",
+      "parent": "lamp_3",
+      "bounds": {
+        "min": [
+          1.98117,
+          1.26953,
+          0.39532
+        ],
+        "max": [
+          2.53336,
+          1.74778,
+          1.07477
+        ],
+        "size": [
+          0.55219,
+          0.47825,
+          0.67945
+        ]
+      },
+      "materials": [
+        "Lamp edge red"
+      ]
+    },
+    {
+      "name": "Lamp switch.002",
+      "parent": "lamp_3",
+      "bounds": {
+        "min": [
+          2.45543,
+          1.76826,
+          0.57086
+        ],
+        "max": [
+          2.52567,
+          1.83839,
+          0.6373
+        ],
+        "size": [
+          0.07023,
+          0.07013,
+          0.06644
+        ]
+      },
+      "materials": [
+        "Soft charcoal plastic"
+      ]
+    }
+  ]
+}

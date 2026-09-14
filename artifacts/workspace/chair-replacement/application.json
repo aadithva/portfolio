@@ -1,0 +1,32 @@
+{
+  "backupSha256": "a30acb18554f7707220c5f02d2606d2ae4be96d0ad774ae3a623062f6340517e",
+  "candidateSha256": "45bdde209587b90c072ab09d43eaf74b79501850c1d0bd0ceb702cf355f98384",
+  "unrelatedObjectsUnchanged": true,
+  "chairRootPreserved": true,
+  "removedMeshes": [
+    "Chair breathable mesh",
+    "chair \u00b7 Brushed aluminium",
+    "chair \u00b7 Chair woven frame",
+    "chair \u00b7 Soft charcoal plastic"
+  ],
+  "originalTriangles": 167212,
+  "scaleFromMetres": 1.7466666666666668,
+  "worldBoundsBlender": [
+    [
+      -1.50180983543396,
+      -0.5932101607322693,
+      -0.014999992214143276
+    ],
+    [
+      -0.35727280378341675,
+      0.6033973693847656,
+      2.016108751296997
+    ]
+  ],
+  "floorHeight": -0.014999992214143276,
+  "physicalDimensionsMetres": [
+    0.67640698,
+    0.65576595,
+    1.16284859
+  ]
+}

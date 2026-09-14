@@ -1,0 +1,43 @@
+
+Running 6 tests using 1 worker
+
+(node:31756) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[1/6] tests/workspace.spec.ts:173:1 › paper: selected content replaces the certificate on the authored sheet, which responds to hover and drag
+[2/6] tests/workspace.spec.ts:234:1 › paper: pages change the sheet content, reader focus restores HTML, and a printed project link opens its case study
+[3/6] tests/workspace.spec.ts:277:1 › paper: live reduced motion freezes authored idle motion and missing WebGL preserves content
+[4/6] tests/workspace.spec.ts:321:1 › paper: section content and contact actions stay on the sheet through room and computer history
+[5/6] tests/workspace.spec.ts:624:1 › mobile has no horizontal overflow and laptop and black controller remain usable tap targets
+  1) tests/workspace.spec.ts:624:1 › mobile has no horizontal overflow and laptop and black controller remain usable tap targets 
+
+    Error: expect(received).toBeLessThan(expected)
+
+    Expected: < 180000
+    Received:   181974
+
+      639 |   await expect(page.locator('#desk-canvas')).toHaveAttribute('data-view','experiments');
+      640 |   const limits=await page.locator('#desk-canvas').evaluate(n=>({calls:Number((n as HTMLElement).dataset.drawCalls),triangles:Number((n as HTMLElement).dataset.geometryTriangles),dpr:Number((n as HTMLElement).dataset.pixelRatio)}));
+    > 641 |   expect(limits.calls).toBeLessThan(200);expect(limits.triangles).toBeLessThan(180000);expect(limits.dpr).toBeLessThanOrEqual(1.35);
+          |                                                                   ^
+      642 |   await context.close();
+      643 | });
+      644 |
+        at /Users/aadith/Projects/Portfolio/Website/tests/workspace.spec.ts:641:67
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/workspace-mobile-has-no-ho-5066e-r-remain-usable-tap-targets/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/workspace-mobile-has-no-ho-5066e-r-remain-usable-tap-targets/error-context.md
+
+
+(node:31951) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[6/6] tests/workspace.spec.ts:689:1 › Expeditions direct navigation supports keyboard, history and focus return without 3D
+  1 failed
+    tests/workspace.spec.ts:624:1 › mobile has no horizontal overflow and laptop and black controller remain usable tap targets 
+  5 passed (44.2s)

@@ -1,0 +1,14 @@
+{
+  "name": "@designcodeio/threeui",
+  "version": "0.0.0-source.8ec1b71c0dbc",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts",
+    "./style.css": "./src/shaders/threeui.css"
+  },
+  "peerDependencies": {
+    "react": ">=18",
+    "react-dom": ">=18"
+  }
+}

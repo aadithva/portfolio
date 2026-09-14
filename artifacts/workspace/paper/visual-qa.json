@@ -1,0 +1,44 @@
+[
+  {
+    "name": "desktop",
+    "errors": [],
+    "metrics": {
+      "attributes": {
+        "paper": "webgl",
+        "paperMotion": "idle",
+        "paperRendering": "idle",
+        "computer": "false",
+        "effects": "on"
+      },
+      "dialogWidth": 1000,
+      "sheetWidth": 1000,
+      "scrollWidth": 976,
+      "clientWidth": 976,
+      "canvasSize": [
+        1048,
+        888
+      ]
+    }
+  },
+  {
+    "name": "mobile",
+    "errors": [],
+    "metrics": {
+      "attributes": {
+        "paper": "webgl",
+        "paperMotion": "idle",
+        "paperRendering": "idle",
+        "computer": "false",
+        "effects": "on"
+      },
+      "dialogWidth": 358,
+      "sheetWidth": 358,
+      "scrollWidth": 342,
+      "clientWidth": 342,
+      "canvasSize": [
+        507,
+        1065
+      ]
+    }
+  }
+]

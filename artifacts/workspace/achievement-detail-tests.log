@@ -1,0 +1,50 @@
+
+> aadithva-portfolio@1.0.0 test:workspace
+> playwright test -c playwright.workspace.config.ts --grep wall certificate|design: touch|paper:
+
+
+Running 5 tests using 1 worker
+
+(node:3562) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 tests/workspace.spec.ts:194:1 › paper: achievements use the authored sheet above the desk, with hover and drag (14.1s)
+  ✓  2 tests/workspace.spec.ts:258:1 › paper: achievement pages, text reading mode, and the printed timeline link remain usable (20.2s)
+  ✓  3 tests/workspace.spec.ts:298:1 › paper: live reduced motion freezes authored idle motion and missing WebGL preserves content (20.7s)
+  ✓  4 tests/workspace.spec.ts:431:1 › design: touch guided views and navigation fit without horizontal overflow (5.5s)
+  ✘  5 tests/workspace.spec.ts:628:1 › wall certificate and medal open their own achievement content, preserve history, and retain two trophies (18.7s)
+
+
+  1) tests/workspace.spec.ts:628:1 › wall certificate and medal open their own achievement content, preserve history, and retain two trophies 
+
+    Error: expect(locator).toBeFocused() failed
+
+    Locator:  locator('[data-object=medal_1]')
+    Expected: focused
+    Received: inactive
+    Timeout:  8000ms
+
+    Call log:
+      - Expect "toBeFocused" locator('[data-object=medal_1]') with timeout 8000ms
+      - waiting for locator('[data-object=medal_1]')
+        20 × locator resolved to <button class="ws-hotspot" data-kind="content" data-object="medal_1" title="Ride for Unity medal" aria-label="Ride for Unity medal">…</button>
+           - unexpected value "inactive"
+
+
+      703 |   await page.keyboard.press('Escape');
+      704 |   await expect(page.locator('#desk-content')).not.toBeVisible();
+    > 705 |   await expect(medal).toBeFocused();
+          |                       ^
+      706 |   await expect(page).toHaveURL(/\/$/);
+      707 |   await page.locator('.ws-nav [data-open-section=achievements]').click();
+      708 |   await expect(page).toHaveURL(/#desk-achievements$/);
+        at /Users/aadith/Projects/Portfolio/Website/tests/workspace.spec.ts:705:23
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/workspace-wall-certificate-f2a53-ory-and-retain-two-trophies/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/workspace-wall-certificate-f2a53-ory-and-retain-two-trophies/error-context.md
+
+  1 failed
+    tests/workspace.spec.ts:628:1 › wall certificate and medal open their own achievement content, preserve history, and retain two trophies 
+  4 passed (1.4m)

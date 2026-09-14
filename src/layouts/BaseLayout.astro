@@ -1,10 +1,11 @@
 ---
 import "@/styles/global.css";
 import "@/styles/editorial-mono.css";
-import GridBackdrop from "@/components/atoms/GridBackdrop.astro";
+import "@fontsource/ibm-plex-sans/400.css";
+import "@fontsource/ibm-plex-sans/500.css";
+import "@fontsource/ibm-plex-mono/400.css";
 import Header from "@/components/organisms/Header.astro";
 import Footer from "@/components/organisms/Footer.astro";
-import AadithCompanion from "@/components/organisms/AadithCompanion.astro";
 import { siteConfig } from "@/data/siteConfig";
 
 interface Props {
@@ -12,20 +13,16 @@ interface Props {
   description?: string;
   /** Render without the global header/footer (e.g. gated pages). */
   bare?: boolean;
-  /** Override the portfolio companion visibility. */
-  companion?: boolean;
 }
 
 const {
   title,
   description = siteConfig.description,
   bare = false,
-  companion,
 } = Astro.props;
 
 const fullTitle = title ? `${title} | ${siteConfig.name}` : siteConfig.title;
 const canonicalUrl = new URL(Astro.url.pathname, siteConfig.url).href;
-const showCompanion = !bare && (companion ?? true);
 ---
 
 <!doctype html>
@@ -48,32 +45,14 @@ const showCompanion = !bare && (companion ?? true);
     <meta name="twitter:title" content={fullTitle} />
     <meta name="twitter:description" content={description} />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;1,400&family=IBM+Plex+Sans:ital,wght@0,400;0,500;1,400&display=swap"
-      rel="stylesheet"
-    />
+    <meta name="theme-color" content="#191918" />
     <link rel="stylesheet" href="https://use.typekit.net/wje4mxt.css" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   </head>
-  <body class:list={[showCompanion && "has-companion"]}>
-    <a class="skip-link" href="#main" data-companion-background>Skip to content</a>
-    <GridBackdrop />
-    <div class="ambient-grain" aria-hidden="true"></div>
+  <body class="portfolio-page">
+    <a class="skip-link" href="#main">Skip to content</a>
     {bare ? (
-      <slot />
-    ) : showCompanion ? (
-      <div class="portfolio-shell portfolio-shell--companion">
-        <div class="portfolio-shell__canvas" data-companion-background>
-          <Header />
-          <main id="main">
-            <slot />
-          </main>
-          <Footer />
-        </div>
-        <AadithCompanion />
-      </div>
+      <main id="main"><slot /></main>
     ) : (
       <>
         <Header />
@@ -85,6 +64,15 @@ const showCompanion = !bare && (companion ?? true);
     )}
 
     <script>
+      import { initTactileDocks } from "@/lib/ui/tactile-dock";
+
+      let releaseDocks = initTactileDocks();
+      document.addEventListener("astro:page-load", () => {
+        releaseDocks();
+        releaseDocks = initTactileDocks();
+      });
+      document.addEventListener("astro:before-swap", () => releaseDocks());
+
       // Scroll reveal + line draw via IntersectionObserver.
       const revealEls = document.querySelectorAll(".reveal, .line, .routemap");
       const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;

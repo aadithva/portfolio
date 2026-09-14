@@ -1,0 +1,118 @@
+---
+import { siteConfig } from '@/data/siteConfig';
+import { workspaceProjects, workspaceSections, type WorkspaceSection } from '@/data/workspace';
+import '@/styles/computer-desktop.css';
+
+const folderIds: WorkspaceSection[] = ['work', 'experiments', 'writing', 'about', 'expeditions', 'achievements', 'contact'];
+const folderNotes: Partial<Record<WorkspaceSection, string>> = {
+  work: 'Projects & case studies',
+  experiments: 'Prototypes',
+  writing: 'Notes & ideas',
+  about: 'My background',
+  expeditions: 'Long rides',
+  achievements: 'Milestones',
+  contact: 'Say hello',
+};
+const folders = folderIds.map(id => workspaceSections.find(section => section.id === id)!);
+const [featuredProject, ...otherProjects] = workspaceProjects;
+const selectedFiles = otherProjects.slice(0, 2);
+---
+
+<dialog id="computer-desktop" class="computer-desktop" aria-labelledby="computer-title" data-phase="ready" data-effects="on">
+  <header class="computer-system-bar">
+    <h2 id="computer-title"><span class="computer-owner-mark" aria-hidden="true">a.</span> Aadith's desktop</h2>
+    <nav class="computer-system-controls" aria-label="Computer controls" data-tactile-dock>
+      <button id="computer-home" type="button" data-dock-item>Desktop</button>
+      <button id="computer-effects" type="button" aria-pressed="true" title="Toggle the subtle, stationary screen texture" data-dock-item>Texture on</button>
+      <button id="computer-exit" class="computer-exit" type="button" data-dock-item>Back to room <span aria-hidden="true">↗</span></button>
+    </nav>
+  </header>
+
+  <div class="computer-body">
+    <div id="computer-workspace" class="computer-workspace">
+      <div class="computer-home-layout">
+        <section class="computer-folders" aria-labelledby="computer-folders-title">
+          <div class="computer-section-heading">
+            <h3 id="computer-folders-title">Folders</h3>
+            <span>Single click to open</span>
+          </div>
+          <nav class="computer-app-grid" aria-label="Portfolio folders">
+            {folders.map(folder => (
+              <a
+                class:list={['computer-app', { 'computer-app--primary': folder.id === 'work' }]}
+                id={`computer-app-${folder.id}`}
+                href={folder.id === 'achievements' ? '/achievements' : folder.href}
+                data-open-section={folder.id}
+                data-computer-folder={folder.id}
+              >
+                <span class="computer-folder-icon" aria-hidden="true"><i></i></span>
+                <span class="computer-app-copy"><strong>{folder.label}</strong><span>{folderNotes[folder.id]}</span></span>
+              </a>
+            ))}
+          </nav>
+        </section>
+
+        <div class="computer-desktop-content">
+          <section class="computer-welcome" aria-labelledby="computer-welcome-title">
+            <p class="computer-location">Personal computer / Home</p>
+            <h3 id="computer-welcome-title">Hello, I'm Aadith.</h3>
+            <p>Product designer at Microsoft. Co-founder of Owly.</p>
+          </section>
+
+          <section class="computer-files" aria-labelledby="computer-files-title">
+            <header class="computer-files-bar">
+              <h3 id="computer-files-title">Selected work</h3>
+              <a href="/work" data-open-section="work">All projects <span aria-hidden="true">↗</span></a>
+            </header>
+            {featuredProject && (
+              <a class="computer-featured-file" href={featuredProject.href}>
+                {featuredProject.image && <img src={featuredProject.image} alt="" width="800" height="500" loading="lazy" decoding="async" />}
+                <div>
+                  <p class="computer-file-meta">{featuredProject.category}</p>
+                  <h4>{featuredProject.title}<span aria-hidden="true"> ↗</span></h4>
+                  <p class="computer-file-description">{featuredProject.description}</p>
+                  <span class="computer-file-year">{featuredProject.year}</span>
+                </div>
+              </a>
+            )}
+            <ul class="computer-file-list">
+              {selectedFiles.map(project => (
+                <li>
+                  <a class="computer-file" href={project.href}>
+                    {project.image ? (
+                      <img src={project.image} alt="" width="100" height="64" loading="lazy" decoding="async" />
+                    ) : (
+                      <span class="computer-document-icon" aria-hidden="true"><span>Aa</span></span>
+                    )}
+                    <span class="computer-file-copy"><strong>{project.title}</strong><span>{project.category}</span></span>
+                    <span class="computer-file-year">{project.year}</span>
+                    <span class="computer-file-arrow" aria-hidden="true">↗</span>
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </section>
+          <a class="computer-index-link" href="/work">Prefer a page? Open the work index <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </div>
+
+    <section id="computer-boot" class="computer-boot" aria-labelledby="computer-boot-title">
+      <div class="computer-boot-content">
+        <p class="computer-location">{siteConfig.name}</p>
+        <h3 id="computer-boot-title">Opening the desktop.</h3>
+        <ul class="computer-boot-lines" aria-label="Desktop readiness">
+          <li><span aria-hidden="true">[ready]</span> Project links</li>
+          <li><span aria-hidden="true">[ready]</span> Notes and stories</li>
+          <li><span aria-hidden="true">[ready]</span> Contact details</li>
+        </ul>
+        <button id="computer-skip" type="button">Skip to desktop <span aria-hidden="true">→</span></button>
+      </div>
+    </section>
+  </div>
+
+  <footer class="computer-taskbar">
+    <p id="computer-status">Open a folder to explore</p>
+    <p><kbd>Esc</kbd> back to room</p>
+  </footer>
+</dialog>

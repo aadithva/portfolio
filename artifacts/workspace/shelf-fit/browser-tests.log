@@ -1,0 +1,33 @@
+
+> aadithva-portfolio@1.0.0 test:workspace
+> playwright test -c playwright.workspace.config.ts
+
+
+Running 22 tests using 1 worker
+
+(node:17209) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 tests/workspace.spec.ts:9:1 › design: guided views survive rapid changes, monitor entry, Escape and reset (11.9s)
+  ✓   2 tests/workspace.spec.ts:43:1 › design: room, computer, content windows and Work retain one shared palette (867ms)
+  ✓   3 tests/workspace.spec.ts:67:1 › design: tactile navigation responds to keyboard and live reduced-motion changes (1.8s)
+  ✓   4 tests/workspace.spec.ts:93:1 › design: touch guided views and navigation fit without horizontal overflow (903ms)
+  ✓   5 tests/workspace.spec.ts:119:1 › monitor enters the computer, Work opens a desktop window, Escape returns through both levels (3.7s)
+  ✓   6 tests/workspace.spec.ts:146:1 › computer folders preserve browser history and the CRT toggle (900ms)
+  ✓   7 tests/workspace.spec.ts:167:1 › computer entry can be cancelled before the camera arrives and boot can be skipped (4.2s)
+  ✓   8 tests/workspace.spec.ts:183:1 › computer deep links and folders work after WebGL asset failure (820ms)
+  ✓   9 tests/workspace.spec.ts:197:1 › direct navigation during computer entry settles into a usable desktop window (3.5s)
+  ✓  10 tests/workspace.spec.ts:209:1 › mobile computer folders, scroll and return remain usable by touch (1.0s)
+  ✓  11 tests/workspace.spec.ts:228:1 › cursor reveals upper and lower desk, reset recenters, and reduced motion stays still (5.2s)
+  ✓  12 tests/workspace.spec.ts:266:1 › all three medals open achievements by keyboard and the third trophy is removed (909ms)
+  ✓  13 tests/workspace.spec.ts:294:1 › rapid section changes, browser Back and Forward, guide and contact copy (4.4s)
+  ✓  14 tests/workspace.spec.ts:313:1 › mobile has no horizontal overflow and laptop and black controller remain usable tap targets (3.3s)
+  ✓  15 tests/workspace.spec.ts:331:1 › content works while model is loading and after a failed model request (1.3s)
+  ✓  16 tests/workspace.spec.ts:341:1 › reduced motion skips arrival, preserves navigation, and sound is opt-in (1.0s)
+  ✓  17 tests/workspace.spec.ts:352:1 › no JavaScript preserves all primary destinations (412ms)
+  ✓  18 tests/workspace.spec.ts:361:1 › a browser without WebGL still opens portfolio content (621ms)
+  ✓  19 tests/workspace.spec.ts:375:1 › Expeditions direct navigation supports keyboard, history and focus return without 3D (529ms)
+  ✓  20 tests/workspace.spec.ts:400:1 › Expeditions hash entry survives model failure and closes without a prior desk history entry (862ms)
+  ✓  21 tests/workspace.spec.ts:415:1 › Expeditions standalone page retains the documented stories and links without JavaScript (854ms)
+  ✓  22 tests/workspace.spec.ts:437:1 › Expeditions mobile content supports taps, scrolling and the standalone fallback (1.3s)
+
+  22 passed (52.9s)

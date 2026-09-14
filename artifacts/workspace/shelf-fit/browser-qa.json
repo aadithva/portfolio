@@ -1,0 +1,46 @@
+[
+  {
+    "name": "desktop",
+    "errors": [],
+    "models": [
+      {
+        "url": "http://localhost:4323/models/workspace-saved.glb?v=673c961e5e80",
+        "status": 200
+      }
+    ],
+    "canvas": {
+      "realtimeShadows": "true",
+      "view": "overview",
+      "computerMode": "false",
+      "cameraTargetY": "1.717",
+      "drawCalls": "22",
+      "triangles": "38564",
+      "pixelRatio": "1",
+      "geometryTriangles": "170370"
+    },
+    "scrollWidth": 1440,
+    "width": 1440
+  },
+  {
+    "name": "mobile",
+    "errors": [],
+    "models": [
+      {
+        "url": "http://localhost:4323/models/workspace-saved.glb?v=673c961e5e80",
+        "status": 200
+      }
+    ],
+    "canvas": {
+      "realtimeShadows": "false",
+      "view": "overview",
+      "computerMode": "false",
+      "cameraTargetY": "1.717",
+      "drawCalls": "22",
+      "triangles": "38564",
+      "pixelRatio": "1.35",
+      "geometryTriangles": "170370"
+    },
+    "scrollWidth": 390,
+    "width": 390
+  }
+]

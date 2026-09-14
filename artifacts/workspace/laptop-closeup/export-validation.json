@@ -1,0 +1,12 @@
+{
+  "image": "laptop-closeup-albedo",
+  "size": [
+    2048,
+    1429
+  ],
+  "bytes": 1051977,
+  "sha256": "925ef6ec25dac335cc5ee59ba45175c3e06e941bdc1921d2e373e0a444e84090",
+  "embeddedWithoutResampling": true,
+  "hiddenHitMeshes": 2,
+  "revision": "bd7d82546b63"
+}

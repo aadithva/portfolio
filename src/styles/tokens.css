@@ -1,19 +1,22 @@
 /* AI-ready design tokens for the Aadith V A portfolio. */
 :root {
-  /* Color: cool paper, carbon ink, one signal orange */
-  --ds-color-background: #cfd4d8;
-  --ds-color-foreground: #1f2224;
-  --ds-color-muted: #c4c9cd;
-  --ds-color-muted-fg: rgb(31 34 36 / 0.56);
-  --ds-color-border: rgb(31 34 36 / 0.20);
-  --ds-color-overlay-foreground-10: rgb(31 34 36 / 0.12);
-  --ds-color-header-surface: rgb(207 212 216 / 0.92);
-  --ds-color-accent: #ed5b2a;
-  --ds-color-accent-ink: #8f2c10;
-  --ds-color-accent-soft: #f6a06f;
+  /* One palette across the room, computer, and portfolio pages. */
+  --ds-color-background: #191918;
+  --ds-color-foreground: #eeeae2;
+  --ds-color-muted: #222220;
+  --ds-color-muted-fg: #aaa69e;
+  --ds-color-border: rgb(238 234 226 / 0.16);
+  --ds-color-overlay-foreground-10: rgb(238 234 226 / 0.08);
+  --ds-color-header-surface: rgb(25 25 24 / 0.94);
+  --ds-color-accent: #e05243;
+  --ds-color-accent-ink: #f47867;
+  --ds-color-accent-soft: #f47867;
+
+  --ds-color-raised: #2b2b28;
+  --ds-font-mono: "IBM Plex Mono", monospace;
 
   /* Typography */
-  --ds-font-heading: "IBM Plex Mono", "SFMono-Regular", Menlo, Monaco, Consolas, monospace;
+  --ds-font-heading: "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif;
   --ds-font-body: "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif;
   --ds-font-display-serif: "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif;
   --ds-font-wordmark: "digibop", sans-serif;

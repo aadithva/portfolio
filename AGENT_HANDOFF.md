@@ -1,5 +1,56 @@
 # Portfolio Agent Handoff
 
+## User-authored Blender lighting
+
+Reference refinement completed on 2026-09-13. The homepage now uses the candidate
+`artifacts/workspace/reference-refinement/workspace-refined.blend`, exported to
+`public/models/workspace-saved.glb`. The original `workspace.blend` and its backup
+are byte-identical. Authored lights are unchanged in the candidate.
+
+To export this revision after manual edits:
+`npm run bake:workspace -- --source artifacts/workspace/reference-refinement/workspace-refined.blend`.
+Do not run the refinement generator after manual candidate edits: it starts from
+the backup. Six Cycles views and desktop/mobile browser captures are in the same
+`reference-refinement` directory. See the current notes in `docs/workspace-assets.md`.
+
+The user edited `artifacts/workspace/workspace.blend` directly. Preserve it as
+the original authored source. `npm run bake:workspace` exports the saved geometry, Cycles
+indirect maps, and a light manifest to the interactive Three.js homepage. It saves
+only a separate `workspace-saved-baked.blend` export copy. Do not rerun a modeling
+generator over the user's saved file. See `docs/workspace-assets.md`.
+
+## Cycles workspace film, 2026-09-12
+
+The user reverted the Cycles video integration. The homepage opens directly into
+the realtime Three.js corner desk again. Keep the text-free, centered landing
+composition requested by the user.
+
+The editable film scene is `artifacts/workspace/workspace-cycles.blend`; the
+original `workspace.blend` is preserved. Render and asset instructions are in
+`docs/workspace-assets.md`. The film and refined Blender file are retained as
+separate experiments, not used by the landing page.
+
+## Chat removal, 2026-09-12
+
+The user requested removal of the portfolio AI chat. The current source removes
+the drawer, chat styles, answer animation, public context feed, grounding data,
+and dedicated API package, including its model configuration and build scripts.
+The portfolio now builds as a static site with no chat endpoint dependency.
+React and Motion remain in use by the homepage TrueFocus effect.
+
+The July audit below is historical. Its companion setup, verification, and
+deployment instructions no longer apply to this source tree. Do not restore
+the chat or provision GPT-6 Astra as part of routine portfolio work.
+
+No cloud resources were changed during this removal. The previously deployed
+companion shares the ca-flowsense-processor Container App with FlowSense.
+Retiring that remote route and the dedicated model deployment requires checking
+the current Azure state and preserving the original FlowSense processor.
+The frontend removal must still be deployed through the normal release process.
+Keep api/ excluded from Vercel while legacy ignored local artifacts may remain.
+
+## Historical audit
+
 Last audited: 2026-07-11 (IST)
 
 This is the operational handoff for future agents working in this repository.

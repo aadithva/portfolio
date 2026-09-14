@@ -1,0 +1,94 @@
+
+Running 30 tests using 1 worker
+
+(node:30888) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[1/30] tests/workspace-orbit.spec.ts:17:1 › camera: dragging a content hotspot rotates the room without opening it, then a tap still opens it
+[2/30] tests/workspace-orbit.spec.ts:44:1 › camera: orbit and zoom are bounded, reset and guided views restore their authored framing
+[3/30] tests/workspace-orbit.spec.ts:67:1 › camera: touch drag, pinch and cancellation preserve taps and page navigation
+[4/30] tests/workspace-orbit.spec.ts:92:1 › camera: keyboard zoom and recenter controls expose their bounds
+[5/30] tests/workspace.spec.ts:108:1 › design: guided views survive rapid changes, monitor entry, Escape and reset
+[6/30] tests/workspace.spec.ts:142:1 › design: room, computer, content windows and Work retain one shared palette
+[7/30] tests/workspace.spec.ts:172:1 › paper: selected content replaces the certificate on the authored sheet, which responds to hover and drag
+[8/30] tests/workspace.spec.ts:233:1 › paper: pages change the sheet content, reader focus restores HTML, and a printed project link opens its case study
+[9/30] tests/workspace.spec.ts:276:1 › paper: live reduced motion freezes authored idle motion and missing WebGL preserves content
+[10/30] tests/workspace.spec.ts:320:1 › paper: section content and contact actions stay on the sheet through room and computer history
+[11/30] tests/workspace.spec.ts:374:1 › design: tactile navigation responds to keyboard and live reduced-motion changes
+[12/30] tests/workspace.spec.ts:400:1 › design: touch guided views and navigation fit without horizontal overflow
+[13/30] tests/workspace.spec.ts:427:1 › monitor enters the computer, Work opens a desktop window, Escape returns through both levels
+[14/30] tests/workspace.spec.ts:454:1 › computer folders preserve browser history and the CRT toggle
+[15/30] tests/workspace.spec.ts:475:1 › computer entry can be cancelled before the camera arrives and boot can be skipped
+[16/30] tests/workspace.spec.ts:491:1 › computer deep links and folders work after WebGL asset failure
+[17/30] tests/workspace.spec.ts:505:1 › direct navigation during computer entry settles into a usable desktop window
+[18/30] tests/workspace.spec.ts:517:1 › mobile computer folders, scroll and return remain usable by touch
+[19/30] tests/workspace.spec.ts:538:1 › cursor reveals upper and lower desk, reset recenters, and reduced motion stays still
+[20/30] tests/workspace.spec.ts:576:1 › all three medals open achievements by keyboard and the third trophy is removed
+[21/30] tests/workspace.spec.ts:604:1 › rapid section changes, browser Back and Forward, guide and contact copy
+[22/30] tests/workspace.spec.ts:623:1 › mobile has no horizontal overflow and laptop and black controller remain usable tap targets
+  1) tests/workspace.spec.ts:623:1 › mobile has no horizontal overflow and laptop and black controller remain usable tap targets 
+
+    Error: expect(received).toBeLessThan(expected)
+
+    Expected: < 180000
+    Received:   181974
+
+      638 |   await expect(page.locator('#desk-canvas')).toHaveAttribute('data-view','experiments');
+      639 |   const limits=await page.locator('#desk-canvas').evaluate(n=>({calls:Number((n as HTMLElement).dataset.drawCalls),triangles:Number((n as HTMLElement).dataset.geometryTriangles),dpr:Number((n as HTMLElement).dataset.pixelRatio)}));
+    > 640 |   expect(limits.calls).toBeLessThan(200);expect(limits.triangles).toBeLessThan(180000);expect(limits.dpr).toBeLessThanOrEqual(1.35);
+          |                                                                   ^
+      641 |   await context.close();
+      642 | });
+      643 |
+        at /Users/aadith/Projects/Portfolio/Website/tests/workspace.spec.ts:640:67
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/workspace-mobile-has-no-ho-5066e-r-remain-usable-tap-targets/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/workspace-mobile-has-no-ho-5066e-r-remain-usable-tap-targets/error-context.md
+
+
+(node:31371) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[23/30] tests/workspace.spec.ts:644:1 › content works while model is loading and after a failed model request
+[24/30] tests/workspace.spec.ts:654:1 › reduced motion skips arrival, preserves navigation, and sound is opt-in
+[25/30] tests/workspace.spec.ts:665:1 › no JavaScript preserves all primary destinations
+[26/30] tests/workspace.spec.ts:674:1 › a browser without WebGL still opens portfolio content
+[27/30] tests/workspace.spec.ts:688:1 › Expeditions direct navigation supports keyboard, history and focus return without 3D
+  2) tests/workspace.spec.ts:688:1 › Expeditions direct navigation supports keyboard, history and focus return without 3D 
+
+    Error: elementHandle.contentFrame: Element is not attached to the DOM
+
+      12 |   await expect.poll(async()=>{
+      13 |     if(!await iframe.isVisible())return false;
+    > 14 |     const frame=await(await iframe.elementHandle())?.contentFrame();
+         |                                                      ^
+      15 |     if(!frame)return false;
+      16 |     try {
+      17 |       const ready=await frame.evaluate(()=>{
+        at expect.poll.message (/Users/aadith/Projects/Portfolio/Website/tests/workspace.spec.ts:14:54)
+        at paperFrame (/Users/aadith/Projects/Portfolio/Website/tests/workspace.spec.ts:12:3)
+        at /Users/aadith/Projects/Portfolio/Website/tests/workspace.spec.ts:699:30
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/workspace-Expeditions-dire-53f06-and-focus-return-without-3D/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/workspace-Expeditions-dire-53f06-and-focus-return-without-3D/error-context.md
+
+
+(node:31448) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[28/30] tests/workspace.spec.ts:715:1 › Expeditions hash entry survives model failure and closes without a prior desk history entry
+[29/30] tests/workspace.spec.ts:730:1 › Expeditions standalone page retains the documented stories and links without JavaScript
+[30/30] tests/workspace.spec.ts:752:1 › Expeditions mobile reader supports taps, scrolling and the standalone fallback
+  2 failed
+    tests/workspace.spec.ts:623:1 › mobile has no horizontal overflow and laptop and black controller remain usable tap targets 
+    tests/workspace.spec.ts:688:1 › Expeditions direct navigation supports keyboard, history and focus return without 3D 
+  28 passed (1.8m)

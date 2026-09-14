@@ -1,0 +1,51 @@
+{
+  "masterSha256": "5abd3a97927384af4f3df07c9e17e39c67f4971187dd5d9fc977a01c9d48b69d",
+  "glbSha256": "e664faaf543e29b029da92e475ec8c6a00273c936422ee99d23f5926be57a431",
+  "revision": "55c88593f256",
+  "triangles": 179562,
+  "triangleDelta": -3064,
+  "geometryBudgetPass": true,
+  "bytes": 15986732,
+  "originalPhotoSha256": "25e1e002c86362fbae856ea669d7e405d6fa7f96887fb961bd07cc36ce2db65f",
+  "photoPixelsUnchanged": true,
+  "photographedMaterials": [
+    {
+      "material": "Unity medal \u00b7 Original photographed relief",
+      "imageMime": "image/jpeg",
+      "imageBytes": 894996,
+      "metallicFactor": 0.18000000715255737,
+      "roughnessFactor": 0.6000000238418579
+    },
+    {
+      "material": "Unity medal \u00b7 Original Fit India ribbon",
+      "imageMime": "image/jpeg",
+      "imageBytes": 894996,
+      "metallicFactor": 0,
+      "roughnessFactor": 0.9399999976158142
+    }
+  ],
+  "medalRoots": [
+    "medal_1"
+  ],
+  "removedFamiliesAbsent": true,
+  "trophiesCertificateChairPreserved": true,
+  "lightingUnchanged": true,
+  "bounds": [
+    [
+      -0.0699,
+      2.086442,
+      -1.309
+    ],
+    [
+      0.0699,
+      2.392942,
+      -1.23783
+    ]
+  ],
+  "attachmentRoot": [
+    0.0,
+    2.3789422512054443,
+    -1.2829999923706055
+  ],
+  "monitorScreenClearance": 0.107425
+}

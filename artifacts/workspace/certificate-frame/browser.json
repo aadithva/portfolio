@@ -1,0 +1,40 @@
+[
+  {
+    "name": "desktop",
+    "errors": [],
+    "visibility": {
+      "rect": {
+        "x": 589.0625,
+        "y": 205.953125,
+        "width": 44,
+        "height": 44,
+        "top": 205.953125,
+        "right": 633.0625,
+        "bottom": 249.953125,
+        "left": 589.0625
+      },
+      "visibility": "visible",
+      "aria": "IIT Guwahati graduation certificate",
+      "style": "left: 323.077px; top: 137.967px;"
+    }
+  },
+  {
+    "name": "mobile",
+    "errors": [],
+    "visibility": {
+      "rect": {
+        "x": 29.015625,
+        "y": 364.0625,
+        "width": 44,
+        "height": 44,
+        "top": 364.0625,
+        "right": 73.015625,
+        "bottom": 408.0625,
+        "left": 29.015625
+      },
+      "visibility": "visible",
+      "aria": "IIT Guwahati graduation certificate",
+      "style": "left: 51.0295px; top: 80.0687px;"
+    }
+  }
+]

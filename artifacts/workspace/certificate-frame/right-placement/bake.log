@@ -1,0 +1,372 @@
+00:00.435  blend            | Read blend: "/Users/aadith/Projects/Portfolio/Website/artifacts/workspace/workspace.blend"
+/Users/aadith/Projects/Portfolio/Website/scripts/blender/bake_saved_workspace.py:44: DeprecationWarning: 'World.use_nodes' is expected to be removed in Blender 6.0
+  world_node=scene.world.node_tree.nodes.get('Background') if scene.world and scene.world.use_nodes else None
+00:02.678  render           | Saved: '/Users/aadith/Projects/Portfolio/Website/artifacts/workspace/saved-lighting-preview.png'
+/Users/aadith/Projects/Portfolio/Website/scripts/blender/bake_saved_workspace.py:89: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  shared=bpy.data.materials.new(family);shared.use_nodes=True
+/Users/aadith/Projects/Portfolio/Website/scripts/blender/bake_saved_workspace.py:123: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  if not material or not material.use_nodes:continue
+BAKE_START room indirect
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE_DONE room indirect
+BAKE_START objects indirect
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE_DONE objects indirect
+INFO Draco is available, use library at /Applications/Blender.app/Contents/Resources/5.2/scripts/addons_core/io_scene_gltf2/libbf_intern_draco_bridge.dylib
+INFO MeshOptimizer is available, use library at /Applications/Blender.app/Contents/Resources/5.2/scripts/addons_core/io_scene_gltf2/libbf_intern_meshopt_bridge.dylib
+16:31:51 | INFO: Starting glTF 2.0 export
+16:31:51 | INFO: Extracting primitive: Cylinder.105
+16:31:51 | INFO: Primitives created: 1
+16:31:51 | INFO: Extracting primitive: Torus.003
+16:31:51 | INFO: Primitives created: 0
+16:31:51 | WARNING: Mesh 'Torus.003' has no primitives and will be omitted.
+16:31:51 | INFO: Extracting primitive: Cylinder.126
+16:31:51 | INFO: Primitives created: 1
+16:31:51 | INFO: Extracting primitive: Torus.008
+16:31:51 | INFO: Primitives created: 1
+16:31:51 | INFO: Extracting primitive: Cylinder.124
+16:31:51 | INFO: Primitives created: 1
+16:31:51 | INFO: Extracting primitive: Cube
+16:31:51 | INFO: Primitives created: 1
+16:31:51 | INFO: Extracting primitive: Monitor power cable
+16:31:51 | INFO: Primitives created: 1
+16:31:51 | INFO: Extracting primitive: Corner desk sculpted top
+16:31:51 | INFO: Primitives created: 1
+16:31:51 | INFO: Extracting primitive: Loose controller cable
+16:31:51 | INFO: Primitives created: 1
+16:31:51 | INFO: Extracting primitive: Cube.004
+16:31:51 | INFO: Primitives created: 1
+16:31:51 | INFO: Extracting primitive: Cube.001
+16:31:51 | INFO: Primitives created: 1
+16:31:51 | INFO: Extracting primitive: Cylinder.128
+16:31:51 | INFO: Primitives created: 1
+16:31:51 | INFO: Extracting primitive: Sphere.004
+16:31:51 | INFO: Primitives created: 1
+16:31:51 | INFO: Extracting primitive: Can spun body
+16:31:51 | INFO: Primitives created: 1
+16:31:51 | INFO: Extracting primitive: Cube.160
+16:31:51 | INFO: Primitives created: 1
+16:31:51 | INFO: Extracting primitive: Cube.159
+16:31:51 | INFO: Primitives created: 1
+16:31:51 | INFO: Extracting primitive: certificate_iitg exact print UV mesh
+16:31:51 | INFO: Primitives created: 1
+16:31:51 | INFO: Extracting primitive: certificate_iitg exact print UV mesh.001
+16:31:51 | INFO: Primitives created: 1
+16:31:51 | INFO: Extracting primitive: Cube.158
+16:31:51 | INFO: Primitives created: 1
+16:31:51 | INFO: Extracting primitive: Cube.157
+16:31:51 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+16:31:51 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+16:31:51 | INFO: Primitives created: 2
+16:31:51 | INFO: Extracting primitive: Xbox white Y print
+16:31:51 | INFO: Primitives created: 1
+16:31:51 | INFO: Extracting primitive: Cylinder.026
+16:31:51 | INFO: Primitives created: 1
+16:31:51 | INFO: Extracting primitive: Cylinder.032
+16:31:51 | INFO: Primitives created: 1
+16:31:51 | INFO: Extracting primitive: Cylinder.023
+16:31:51 | INFO: Primitives created: 1
+16:31:51 | INFO: Extracting primitive: Xbox white casing join
+16:31:51 | INFO: Primitives created: 1
+16:31:51 | INFO: Extracting primitive: Sphere.001
+16:31:51 | INFO: Primitives created: 1
+16:31:51 | INFO: Extracting primitive: Cylinder.041
+16:31:51 | INFO: Primitives created: 1
+16:31:51 | INFO: Extracting primitive: Xbox white seamless ergonomic body
+16:31:51 | INFO: Primitives created: 1
+16:31:51 | INFO: Extracting primitive: Xbox black Y print
+16:31:51 | INFO: Primitives created: 1
+16:31:51 | INFO: Extracting primitive: Cylinder.047
+16:31:51 | INFO: Primitives created: 1
+16:31:51 | INFO: Extracting primitive: Cylinder.053
+16:31:51 | INFO: Primitives created: 1
+16:31:51 | INFO: Extracting primitive: Cylinder.044
+16:31:51 | INFO: Primitives created: 1
+16:31:51 | INFO: Extracting primitive: Xbox black casing join
+16:31:51 | INFO: Primitives created: 1
+16:31:51 | INFO: Extracting primitive: Sphere.003
+16:31:51 | INFO: Primitives created: 1
+16:31:51 | INFO: Extracting primitive: Xbox black Xbox guide glyph
+16:31:51 | INFO: Primitives created: 1
+16:31:51 | INFO: Extracting primitive: Xbox black seamless ergonomic body
+16:31:51 | INFO: Primitives created: 1
+16:31:51 | INFO: Extracting primitive: Cylinder.258
+16:31:51 | INFO: Primitives created: 0
+16:31:51 | WARNING: Mesh 'Cylinder.258' has no primitives and will be omitted.
+16:31:51 | INFO: Extracting primitive: Lamp 1 bell
+16:31:51 | INFO: Primitives created: 1
+16:31:51 | INFO: Extracting primitive: Lamp 1 cream lining
+16:31:51 | INFO: Primitives created: 1
+16:31:51 | INFO: Extracting primitive: Torus.010
+16:31:51 | INFO: Primitives created: 1
+16:31:51 | INFO: Extracting primitive: Cube.192
+16:31:51 | INFO: Primitives created: 1
+16:31:51 | INFO: Extracting primitive: Sphere.012
+16:31:51 | INFO: Primitives created: 1
+16:31:51 | INFO: Extracting primitive: Lamp 2 bell
+16:31:51 | INFO: Primitives created: 1
+16:31:51 | INFO: Extracting primitive: Lamp 2 cream lining
+16:31:51 | INFO: Primitives created: 1
+16:31:51 | INFO: Extracting primitive: Torus.012
+16:31:51 | INFO: Primitives created: 1
+16:31:51 | INFO: Extracting primitive: Cube.193
+16:31:51 | INFO: Primitives created: 1
+16:31:51 | INFO: Extracting primitive: Sphere.013
+16:31:51 | INFO: Primitives created: 1
+16:31:51 | INFO: Extracting primitive: Lamp 3 bell
+16:31:51 | INFO: Primitives created: 1
+16:31:51 | INFO: Extracting primitive: Lamp 3 cream lining
+16:31:51 | INFO: Primitives created: 1
+16:31:51 | INFO: Extracting primitive: Torus.014
+16:31:51 | INFO: Primitives created: 1
+16:31:51 | INFO: Extracting primitive: Cube.194
+16:31:51 | INFO: Primitives created: 1
+16:31:51 | INFO: Extracting primitive: Sphere.014
+16:31:51 | INFO: Primitives created: 1
+16:31:51 | INFO: Extracting primitive: Cube.089
+16:31:51 | INFO: Primitives created: 1
+16:31:51 | INFO: Extracting primitive: Laptop sticker printed lid
+16:31:51 | INFO: Primitives created: 1
+16:31:51 | INFO: Extracting primitive: Cube.090
+16:31:51 | INFO: Primitives created: 1
+16:31:51 | INFO: Extracting primitive: medal_1 shelf hook
+16:31:51 | INFO: Primitives created: 1
+16:31:51 | INFO: Extracting primitive: Cube.010
+16:31:51 | INFO: Primitives created: 1
+16:31:51 | INFO: Extracting primitive: medal_1 eyelet
+16:31:51 | INFO: Primitives created: 1
+16:31:51 | INFO: Extracting primitive: medal_2 shelf hook
+16:31:51 | INFO: Primitives created: 1
+16:31:51 | INFO: Extracting primitive: Cube.012
+16:31:51 | INFO: Primitives created: 1
+16:31:51 | INFO: Extracting primitive: medal_2 eyelet
+16:31:51 | INFO: Primitives created: 1
+16:31:51 | INFO: Extracting primitive: medal_3 shelf hook
+16:31:51 | INFO: Primitives created: 1
+16:31:51 | INFO: Extracting primitive: Cube.014
+16:31:51 | INFO: Primitives created: 1
+16:31:51 | INFO: Extracting primitive: medal_3 eyelet
+16:31:51 | INFO: Primitives created: 1
+16:31:52 | INFO: Extracting primitive: Cube.082
+16:31:52 | INFO: Primitives created: 1
+16:31:52 | INFO: Extracting primitive: Cylinder.014
+16:31:52 | INFO: Primitives created: 1
+16:31:52 | INFO: Extracting primitive: Cube.084
+16:31:52 | INFO: Primitives created: 1
+16:31:52 | INFO: Extracting primitive: Cube.083
+16:31:52 | INFO: Primitives created: 1
+16:31:52 | INFO: Extracting primitive: monitor_screen
+16:31:52 | INFO: Primitives created: 1
+16:31:52 | INFO: Extracting primitive: Notebook edge mark
+16:31:52 | INFO: Primitives created: 1
+16:31:52 | INFO: Extracting primitive: Pen pot with open rim
+16:31:52 | INFO: Primitives created: 1
+16:31:52 | INFO: Extracting primitive: Cylinder.021
+16:31:52 | INFO: Primitives created: 1
+16:31:52 | INFO: Extracting primitive: Cylinder.019
+16:31:52 | INFO: Primitives created: 1
+16:31:52 | INFO: Extracting primitive: Cylinder.252
+16:31:52 | INFO: Primitives created: 1
+16:31:52 | INFO: Extracting primitive: Cylinder.254
+16:31:52 | INFO: Primitives created: 1
+16:31:52 | INFO: Extracting primitive: Cylinder.253
+16:31:52 | INFO: Primitives created: 1
+16:31:52 | INFO: Extracting primitive: Room floor
+16:31:52 | INFO: Primitives created: 1
+16:31:52 | INFO: Extracting primitive: Speaker brandless mark
+16:31:52 | INFO: Primitives created: 1
+16:31:52 | INFO: Extracting primitive: Cube.179
+16:31:52 | INFO: Primitives created: 1
+16:31:52 | INFO: Extracting primitive: Cube.180
+16:31:52 | INFO: Primitives created: 1
+16:31:52 | INFO: Extracting primitive: Cube.181
+16:31:52 | INFO: Primitives created: 1
+16:31:52 | INFO: Extracting primitive: Cylinder.147
+16:31:52 | INFO: Primitives created: 1
+16:31:52 | INFO: Extracting primitive: Cylinder.106
+16:31:52 | INFO: Primitives created: 1
+16:31:52 | INFO: Extracting primitive: Cylinder.108
+16:31:52 | INFO: Primitives created: 1
+16:31:52 | INFO: Extracting primitive: Cube.006
+16:31:52 | INFO: Primitives created: 1
+16:31:52 | INFO: Extracting primitive: Cube.007
+16:31:52 | INFO: Primitives created: 1
+16:31:52 | INFO: Extracting primitive: Cube.008
+16:31:52 | INFO: Primitives created: 1
+16:31:52 | INFO: Extracting primitive: Cube.009
+16:31:52 | INFO: Primitives created: 1
+16:31:52 | INFO: Extracting primitive: About card illustration
+16:31:52 | INFO: Primitives created: 1
+16:31:52 | INFO: Extracting primitive: Cylinder.004
+16:31:52 | INFO: Primitives created: 1
+16:31:52 | INFO: Extracting primitive: Cube.071
+16:31:52 | INFO: Primitives created: 1
+16:31:52 | INFO: Extracting primitive: Book spine DESIGN
+16:31:52 | INFO: Primitives created: 1
+16:31:52 | INFO: Extracting primitive: Cube.108
+16:31:52 | INFO: Primitives created: 1
+16:31:52 | INFO: Extracting primitive: Cube.118
+16:31:52 | INFO: Primitives created: 1
+16:31:52 | INFO: Extracting primitive: Cube.110
+16:31:52 | INFO: Primitives created: 1
+16:31:52 | INFO: Extracting primitive: Cube.151
+16:31:52 | INFO: Primitives created: 1
+16:31:52 | INFO: Extracting primitive: Cube.106
+16:31:52 | INFO: Primitives created: 1
+16:31:52 | INFO: Extracting primitive: Book spine FORM
+16:31:52 | INFO: Primitives created: 1
+16:31:52 | INFO: Extracting primitive: Cube.140
+16:31:52 | INFO: Primitives created: 1
+16:31:52 | INFO: Extracting primitive: Cube.107
+16:31:52 | INFO: Primitives created: 1
+16:31:52 | INFO: Extracting primitive: Cylinder.010
+16:31:52 | INFO: Primitives created: 1
+16:31:52 | INFO: Extracting primitive: Cylinder.005
+16:31:52 | INFO: Primitives created: 1
+16:31:52 | INFO: Extracting primitive: Cube.072
+16:31:52 | INFO: Primitives created: 1
+16:31:52 | INFO: Extracting primitive: Contact card print
+16:31:52 | INFO: Primitives created: 1
+16:31:52 | INFO: Extracting primitive: Cube.074
+16:31:52 | INFO: Primitives created: 1
+16:31:52 | INFO: Extracting primitive: Creator Micro tray collaboration print
+16:31:52 | INFO: Primitives created: 1
+16:31:52 | INFO: Extracting primitive: Cube.205
+16:31:52 | INFO: Primitives created: 1
+16:31:52 | INFO: Extracting primitive: Cube.200
+16:31:52 | INFO: Primitives created: 1
+16:31:52 | INFO: Extracting primitive: Cube.210
+16:31:52 | INFO: Primitives created: 1
+16:31:52 | INFO: Extracting primitive: Cube.236
+16:31:52 | INFO: Primitives created: 1
+16:31:52 | INFO: Extracting primitive: Cylinder.069
+16:31:52 | INFO: Primitives created: 1
+16:31:52 | INFO: Extracting primitive: Cube.212
+16:31:52 | INFO: Primitives created: 1
+16:31:52 | INFO: Extracting primitive: Cube.211
+16:31:52 | INFO: Primitives created: 1
+16:31:52 | INFO: Extracting primitive: Cylinder.067
+16:31:52 | INFO: Primitives created: 1
+16:31:52 | INFO: Extracting primitive: Cube.213
+16:31:52 | INFO: Primitives created: 1
+16:31:52 | INFO: Extracting primitive: Creator Micro actual front Figma print
+16:31:52 | INFO: Primitives created: 1
+16:31:52 | INFO: Extracting primitive: Creator Micro actual right side print
+16:31:52 | INFO: Primitives created: 1
+16:31:52 | INFO: Extracting primitive: Creator Micro actual top printed drawing
+16:31:52 | INFO: Primitives created: 1
+16:31:52 | INFO: Extracting primitive: Creator Micro rear Work Louder print
+16:31:52 | INFO: Primitives created: 1
+16:31:52 | INFO: Extracting primitive: Cube.264
+16:31:52 | INFO: Primitives created: 1
+16:31:52 | INFO: Extracting primitive: Pegboard slots
+16:31:52 | INFO: Primitives created: 1
+16:31:52 | INFO: Extracting primitive: plant_1 ceramic pot
+16:31:52 | INFO: Primitives created: 1
+16:31:52 | INFO: Extracting primitive: Cylinder.134
+16:31:52 | INFO: Primitives created: 1
+16:31:52 | INFO: Extracting primitive: plant_1 leaf
+16:31:52 | INFO: Primitives created: 1
+16:31:52 | INFO: Extracting primitive: plant_1 leaf.001
+16:31:52 | INFO: Primitives created: 1
+16:31:52 | INFO: Extracting primitive: plant_1 leaf.002
+16:31:52 | INFO: Primitives created: 1
+16:31:52 | INFO: Extracting primitive: Small aloe ceramic pot
+16:31:52 | INFO: Primitives created: 1
+16:31:52 | INFO: Extracting primitive: Cylinder.135
+16:31:52 | INFO: Primitives created: 1
+16:31:52 | INFO: Extracting primitive: Small aloe leaf
+16:31:52 | INFO: Primitives created: 1
+16:31:52 | INFO: Extracting primitive: Small aloe leaf.001
+16:31:52 | INFO: Primitives created: 1
+16:31:52 | INFO: Extracting primitive: Small aloe leaf.002
+16:31:52 | INFO: Primitives created: 1
+16:31:52 | INFO: Extracting primitive: Tiny jade plant ceramic pot
+16:31:52 | INFO: Primitives created: 1
+16:31:52 | INFO: Extracting primitive: Cylinder.136
+16:31:52 | INFO: Primitives created: 1
+16:31:52 | INFO: Extracting primitive: Tiny jade plant leaf
+16:31:52 | INFO: Primitives created: 1
+16:31:52 | INFO: Extracting primitive: Tiny jade plant leaf.001
+16:31:52 | INFO: Primitives created: 1
+16:31:52 | INFO: Extracting primitive: Tiny jade plant leaf.002
+16:31:52 | INFO: Primitives created: 1
+16:31:52 | INFO: Extracting primitive: Cylinder
+16:31:52 | INFO: Primitives created: 1
+16:31:52 | INFO: Extracting primitive: Cylinder.008
+16:31:52 | INFO: Primitives created: 1
+16:31:52 | INFO: Extracting primitive: Cylinder.009
+16:31:52 | INFO: Primitives created: 1
+16:31:52 | INFO: Extracting primitive: Cube.073
+16:31:52 | INFO: Primitives created: 1
+16:31:52 | INFO: Extracting primitive: Sphere
+16:31:52 | INFO: Primitives created: 1
+16:31:52 | INFO: Extracting primitive: Cube.020
+16:31:52 | INFO: Primitives created: 1
+16:31:52 | INFO: Extracting primitive: Cube.075
+16:31:52 | INFO: Primitives created: 1
+16:31:52 | INFO: Extracting primitive: Cube.079
+16:31:52 | INFO: Primitives created: 1
+16:31:52 | INFO: Extracting primitive: Postcard typography
+16:31:52 | INFO: Primitives created: 1
+16:31:52 | INFO: Extracting primitive: Cube.026
+16:31:52 | INFO: Primitives created: 1
+16:31:52 | INFO: Extracting primitive: Cube.170
+16:31:52 | INFO: Primitives created: 1
+16:31:52 | INFO: Extracting primitive: plant_2 ceramic pot
+16:31:52 | INFO: Primitives created: 1
+16:31:52 | INFO: Extracting primitive: Cylinder.137
+16:31:52 | INFO: Primitives created: 1
+16:31:52 | INFO: Extracting primitive: plant_2 leaf
+16:31:52 | INFO: Primitives created: 1
+16:31:52 | INFO: Extracting primitive: plant_2 leaf.001
+16:31:52 | INFO: Primitives created: 1
+16:31:52 | INFO: Extracting primitive: Cylinder.138
+16:31:52 | INFO: Primitives created: 1
+16:31:52 | INFO: Extracting primitive: Sphere.011
+16:31:52 | INFO: Primitives created: 1
+16:31:52 | INFO: Extracting primitive: Cube.033
+16:31:52 | INFO: Primitives created: 1
+16:31:52 | INFO: Extracting primitive: Small abstract print
+16:31:52 | INFO: Primitives created: 1
+16:31:52 | INFO: Extracting primitive: Cube.184
+16:31:52 | INFO: Primitives created: 1
+16:31:52 | INFO: Extracting primitive: Cylinder.249
+16:31:52 | INFO: Primitives created: 1
+16:31:52 | INFO: Extracting primitive: Sphere.010
+16:31:52 | INFO: Primitives created: 1
+16:31:52 | INFO: Extracting primitive: Cube.183
+16:31:52 | INFO: Primitives created: 1
+16:31:52 | INFO: Extracting primitive: Cube.182
+16:31:52 | INFO: Primitives created: 1
+16:31:52 | INFO: Extracting primitive: Cylinder.243
+16:31:52 | INFO: Primitives created: 1
+16:31:52 | INFO: Extracting primitive: Cylinder.247
+16:31:52 | INFO: Primitives created: 1
+16:31:52 | INFO: Extracting primitive: Cube.037
+16:31:52 | INFO: Primitives created: 1
+16:31:52 | INFO: Extracting primitive: Cube.069
+16:31:52 | INFO: Primitives created: 1
+16:31:52 | INFO: Extracting primitive: Cube.047
+16:31:52 | INFO: Primitives created: 1
+16:31:52 | INFO: Extracting primitive: Cube.042
+16:31:52 | INFO: Primitives created: 1
+16:31:52 | INFO: Extracting primitive: Cube.038
+16:31:52 | INFO: Primitives created: 1
+16:31:52 | INFO: Extracting primitive: window_glass
+16:31:52 | INFO: Primitives created: 1
+16:31:52 | INFO: Extracting primitive: Cube.027
+16:31:52 | INFO: Primitives created: 1
+16:31:52 | INFO: Extracting primitive: Cube.168
+16:31:52 | INFO: Primitives created: 1
+16:31:52 | INFO: Extracting primitive: Cube.162
+16:31:52 | INFO: Primitives created: 1
+16:31:52 | INFO: Extracting primitive: Cube.161
+16:31:52 | INFO: Primitives created: 1
+16:31:52 | INFO: Finished glTF 2.0 export in 0.37042999267578125 s
+
+Info: Saved as "workspace-saved-baked.blend"
+SAVED_BAKE_COMPLETE {"file": "/models/workspace-saved.glb", "source": "artifacts/workspace/workspace.blend", "revision": "1d1cff6b24dc", "sourceRevision": "53f595eedf48", "lights": [{"name": "Monitor bounce", "type": "AREA", "energy": 77.21258544921875, "color": [0.36979392170906067, 0.5249282121658325, 0.8899965286254883], "position": [0.0, 1.716867, -1.348875], "direction": [-0.0, 0.0, 1.0], "size": 0.920199990272522, "sizeY": 0.5242998600006104, "shape": "RECTANGLE", "angle": 0.7853981633974483, "blend": 0.15}, {"name": "Red lamp practical", "type": "SPOT", "energy": 112.99999237060547, "color": [1.0, 0.31566527485847473, 0.054276466369628906], "position": [1.208, 1.376, -0.138], "direction": [-0.936913, -0.12274, -0.327306], "size": 0.1, "sizeY": 0.1, "shape": "DISK", "angle": 0.7853981852531433, "blend": 0.15000000596046448}, {"name": "Red lamp practical.001", "type": "AREA", "energy": 42.0, "color": [1.0, 0.6899999976158142, 0.33000001311302185], "position": [1.208, 2.128, -0.138], "direction": [-0.936913, -0.12274, -0.327306], "size": 0.41999998688697815, "sizeY": 1.0, "shape": "DISK", "angle": 0.7853981633974483, "blend": 0.15}, {"name": "Red lamp practical.002", "type": "SPOT", "energy": 42.0, "color": [1.0, 0.39681971073150635, 0.0770018994808197], "position": [1.053532, 2.813051, -0.104746], "direction": [-0.578509, -0.813315, 0.062015], "size": 0.1, "sizeY": 0.1, "shape": "DISK", "angle": 0.7853981852531433, "blend": 0.15000000596046448}, {"name": "Red lamp practical.003", "type": "SPOT", "energy": 42.0, "color": [1.0, 0.39681971073150635, 0.0770018994808197], "position": [1.187563, 1.293612, 0.509256], "direction": [-0.578509, -0.813315, 0.062015], "size": 0.1, "sizeY": 0.1, "shape": "DISK", "angle": 0.7853981852531433, "blend": 0.15000000596046448}], "world": {"color": [0.3199999928474426, 0.36000001430511475, 0.3700000047683716], "strength": 0.47999998927116394}, "exposure": 0.0, "baked": true, "bytes": 15156468, "lightmapBytes": 1009912, "triangles": 182626}
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+
+Blender quit

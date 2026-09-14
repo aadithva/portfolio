@@ -1,0 +1,50 @@
+
+> aadithva-portfolio@1.0.0 test:workspace
+> playwright test -c playwright.workspace.config.ts --grep wall certificate|design: touch|mobile has no
+
+
+Running 3 tests using 1 worker
+
+(node:97348) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 tests/workspace.spec.ts:418:1 › design: touch guided views and navigation fit without horizontal overflow (14.8s)
+(node:97471) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  2 tests/workspace.spec.ts:612:1 › wall certificate and the Ride for Unity medal open achievements by keyboard, with two trophies retained (4.0s)
+  ✓  3 tests/workspace.spec.ts:684:1 › mobile has no horizontal overflow and laptop and black controller remain usable tap targets (8.0s)
+
+
+  1) tests/workspace.spec.ts:418:1 › design: touch guided views and navigation fit without horizontal overflow 
+
+    Error: The active ThreeUI source should finish its arrival
+
+    The active ThreeUI source should finish its arrival
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: true
+    Received: false
+
+    Call Log:
+    - Timeout 8000ms exceeded while waiting on the predicate
+
+      27 |       throw error;
+      28 |     }
+    > 29 |   },{message:'The active ThreeUI source should finish its arrival',intervals:[100,200,300]}).toBe(true);
+         |                                                                                              ^
+      30 |   return readyFrame!;
+      31 | }
+      32 |
+        at paperFrame (/Users/aadith/Projects/Portfolio/Website/tests/workspace.spec.ts:29:94)
+        at expectPaperFits (/Users/aadith/Projects/Portfolio/Website/tests/workspace.spec.ts:82:21)
+        at /Users/aadith/Projects/Portfolio/Website/tests/workspace.spec.ts:438:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/workspace-design-touch-gui-33555-without-horizontal-overflow/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/workspace-design-touch-gui-33555-without-horizontal-overflow/error-context.md
+
+  1 failed
+    tests/workspace.spec.ts:418:1 › design: touch guided views and navigation fit without horizontal overflow 
+  2 passed (31.8s)

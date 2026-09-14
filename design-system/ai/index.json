@@ -8,17 +8,6 @@
       "path": "src/components/atoms/BrandLockup.astro",
       "tier": "atom"
     },
-    "src/components/atoms/DecryptedText.js": {
-      "imports": [
-        "motion/react-m",
-        "react"
-      ],
-      "localComponentDependencies": [],
-      "localDataDependencies": [],
-      "name": "DecryptedText",
-      "path": "src/components/atoms/DecryptedText.js",
-      "tier": "atom"
-    },
     "src/components/atoms/GridBackdrop.astro": {
       "imports": [],
       "localComponentDependencies": [],
@@ -140,23 +129,6 @@
       "name": "WorkingLoopMap",
       "path": "src/components/molecules/WorkingLoopMap.astro",
       "tier": "molecule"
-    },
-    "src/components/organisms/AadithCompanion.astro": {
-      "imports": [
-        "@/components/atoms/DecryptedText.js",
-        "@/data/companion",
-        "react",
-        "react-dom/client"
-      ],
-      "localComponentDependencies": [
-        "src/components/atoms/DecryptedText.js"
-      ],
-      "localDataDependencies": [
-        "src/data/companion.ts"
-      ],
-      "name": "AadithCompanion",
-      "path": "src/components/organisms/AadithCompanion.astro",
-      "tier": "organism"
     },
     "src/components/organisms/FeaturedWork.astro": {
       "imports": [
@@ -296,17 +268,27 @@
       "path": "src/components/organisms/WorkItemIndex.astro",
       "tier": "organism"
     },
+    "src/components/workspace/WorkspaceContent.astro": {
+      "imports": [
+        "@/data/workspace"
+      ],
+      "localComponentDependencies": [],
+      "localDataDependencies": [
+        "src/data/workspace.ts"
+      ],
+      "name": "WorkspaceContent",
+      "path": "src/components/workspace/WorkspaceContent.astro",
+      "tier": "component"
+    },
     "src/layouts/BaseLayout.astro": {
       "imports": [
         "@/components/atoms/GridBackdrop.astro",
-        "@/components/organisms/AadithCompanion.astro",
         "@/components/organisms/Footer.astro",
         "@/components/organisms/Header.astro",
         "@/data/siteConfig"
       ],
       "localComponentDependencies": [
         "src/components/atoms/GridBackdrop.astro",
-        "src/components/organisms/AadithCompanion.astro",
         "src/components/organisms/Footer.astro",
         "src/components/organisms/Header.astro"
       ],
@@ -338,33 +320,6 @@
       ],
       "imports": [],
       "path": "src/data/adventures.ts"
-    },
-    "src/data/agentGrounding.ts": {
-      "exports": [
-        "agentGroundingChunks"
-      ],
-      "imports": [
-        "@/types"
-      ],
-      "path": "src/data/agentGrounding.ts"
-    },
-    "src/data/companion.ts": {
-      "exports": [
-        "buildCompanionContext",
-        "companionSuggestions"
-      ],
-      "imports": [
-        "@/data/about",
-        "@/data/adventures",
-        "@/data/agentGrounding",
-        "@/data/lab",
-        "@/data/projects",
-        "@/data/siteConfig",
-        "@/data/work",
-        "@/data/writing",
-        "@/types"
-      ],
-      "path": "src/data/companion.ts"
     },
     "src/data/lab.json": {
       "exports": [],
@@ -497,6 +452,33 @@
       ],
       "path": "src/data/work/microsoft-copilot/turn-n/index.ts"
     },
+    "src/data/workspace.ts": {
+      "exports": [
+        "WorkspaceAchievement",
+        "WorkspaceProject",
+        "WorkspaceSection",
+        "WorkspaceSectionContent",
+        "workspaceAbout",
+        "workspaceAchievements",
+        "workspaceAchievementsMissing",
+        "workspaceContact",
+        "workspaceDesignExperiments",
+        "workspaceExperiments",
+        "workspaceMilestones",
+        "workspaceProjects",
+        "workspaceReadingMissing",
+        "workspaceSections",
+        "workspaceWriting"
+      ],
+      "imports": [
+        "./about",
+        "./lab",
+        "./projects",
+        "./siteConfig",
+        "./writing"
+      ],
+      "path": "src/data/workspace.ts"
+    },
     "src/data/writing.ts": {
       "exports": [
         "WritingNote",
@@ -517,10 +499,58 @@
         "node:path"
       ],
       "path": "src/lib/shots.ts"
+    },
+    "src/lib/workspace/audio.ts": {
+      "exports": [],
+      "imports": [],
+      "path": "src/lib/workspace/audio.ts"
+    },
+    "src/lib/workspace/config.ts": {
+      "exports": [
+        "CameraView",
+        "ObjectBinding",
+        "SectionId",
+        "ViewId",
+        "assetUrl",
+        "idleDelay",
+        "motionDuration",
+        "objectBindings",
+        "viewObjects",
+        "views"
+      ],
+      "imports": [
+        "../../../public/models/workspace-saved.manifest.json"
+      ],
+      "path": "src/lib/workspace/config.ts"
+    },
+    "src/lib/workspace/controller.ts": {
+      "exports": [
+        "initWorkspace"
+      ],
+      "imports": [
+        "./audio",
+        "./config",
+        "./scene"
+      ],
+      "path": "src/lib/workspace/controller.ts"
+    },
+    "src/lib/workspace/scene.ts": {
+      "exports": [
+        "MonitorProject"
+      ],
+      "imports": [
+        "../../../public/models/workspace-saved.manifest.json",
+        "./config",
+        "three",
+        "three/addons/environments/RoomEnvironment.js",
+        "three/addons/lights/RectAreaLightUniformsLib.js",
+        "three/addons/loaders/GLTFLoader.js"
+      ],
+      "path": "src/lib/workspace/scene.ts"
     }
   },
   "framework": "astro",
-  "generatedAt": "2026-09-02T06:50:38.952292+00:00",
+  "generatedAt": "2026-09-12T18:16:31.749454+00:00",
   "generator": "design-system/ai/codebase-index.py",
   "pages": {
     "src/pages/404.astro": {
@@ -563,6 +593,22 @@
       "name": "about",
       "path": "src/pages/about.astro",
       "route": "/about"
+    },
+    "src/pages/achievements.astro": {
+      "importedComponents": [
+        "src/layouts/BaseLayout.astro"
+      ],
+      "importedData": [
+        "src/data/workspace.ts"
+      ],
+      "imports": [
+        "@/data/workspace",
+        "@/layouts/BaseLayout.astro"
+      ],
+      "kind": "page",
+      "name": "achievements",
+      "path": "src/pages/achievements.astro",
+      "route": "/achievements"
     },
     "src/pages/adventures.astro": {
       "importedComponents": [
@@ -610,17 +656,18 @@
     },
     "src/pages/index.astro": {
       "importedComponents": [
-        "src/components/organisms/FeaturedWork.astro",
-        "src/components/organisms/Hero.astro",
-        "src/components/organisms/ProfileSignals.astro",
-        "src/layouts/BaseLayout.astro"
+        "src/components/workspace/WorkspaceContent.astro"
       ],
-      "importedData": [],
+      "importedData": [
+        "src/data/siteConfig.ts",
+        "src/data/workspace.ts",
+        "src/lib/workspace/controller.ts"
+      ],
       "imports": [
-        "@/components/organisms/FeaturedWork.astro",
-        "@/components/organisms/Hero.astro",
-        "@/components/organisms/ProfileSignals.astro",
-        "@/layouts/BaseLayout.astro"
+        "@/components/workspace/WorkspaceContent.astro",
+        "@/data/siteConfig",
+        "@/data/workspace",
+        "@/lib/workspace/controller"
       ],
       "kind": "page",
       "name": "index",
@@ -771,22 +818,23 @@
     }
   },
   "stats": {
-    "approxJsonTokens": 5764,
-    "componentCount": 25,
-    "dataFileCount": 19,
+    "approxJsonTokens": 6041,
+    "componentCount": 24,
+    "dataFileCount": 22,
     "duplicatePageFilenamesPreserved": [
       "[slug].astro"
     ],
-    "pageCount": 11,
-    "pageRouteCount": 11,
+    "pageCount": 12,
+    "pageRouteCount": 12,
     "tierCounts": {
-      "atom": 9,
+      "atom": 8,
+      "component": 1,
       "layout": 1,
       "molecule": 5,
-      "organism": 10
+      "organism": 9
     }
   },
-  "tokenEfficiencyNote": "This index summarizes 25 components and 11 routes using full relative path keys, so an AI can retrieve structure and dependencies in a few thousand tokens instead of reading every source file.",
+  "tokenEfficiencyNote": "This index summarizes 24 components and 12 routes using full relative path keys, so an AI can retrieve structure and dependencies in a few thousand tokens instead of reading every source file.",
   "uniqueKeyPolicy": "All maps are keyed by full repository-relative path; filename stems are never used as unique keys.",
   "version": "0.2.0"
 }

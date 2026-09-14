@@ -5,6 +5,10 @@ import { defineConfig } from "astro/config";
 export default defineConfig({
   site: "https://aadithva-portfolio.vercel.app",
   output: "static",
+  vite: {
+    esbuild: { jsx: "automatic" },
+    optimizeDeps: { exclude: ["@designcodeio/threeui"] },
+  },
   build: {
     format: "directory",
   },

@@ -17,14 +17,12 @@
     "TrueFocus"
   ],
   "dataDependencies": [],
-  "usedBy": [
-    "route /"
-  ],
+  "usedBy": [],
   "a11yNotes": [
     "Headline is a real h1 with stable screen-reader and no-JavaScript text.",
     "The focus effect removes blur and its moving frame when reduced motion is requested."
   ],
   "version": "0.3.0",
-  "lastUpdated": "2026-09-02",
+  "lastUpdated": "2026-09-12",
   "source": "Generated from Astro source + design-system/ai/index.json by component-metadata.py."
 }

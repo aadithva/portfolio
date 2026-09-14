@@ -16,7 +16,6 @@ Generated from `design-system/ai/index.json` — do not edit by hand.
 | Component | Path | Purpose | Dependencies | Used by |
 |---|---|---|---|---|
 | `BrandLockup` | `src/components/atoms/BrandLockup.astro` | Aadith's reusable Digibop wordmark. | — | Footer, Header |
-| `DecryptedText` | `src/components/atoms/DecryptedText.js` | React Bits decryption-text atom for newly resolved companion answers. | — | AadithCompanion |
 | `GridBackdrop` | `src/components/atoms/GridBackdrop.astro` | Fixed large-cell grid behind the entire portfolio. | — | BaseLayout |
 | `LetterGlitch` | `src/components/atoms/LetterGlitch.astro` | Tokenised canvas field of smoothly scrambling monospace characters. | — | Footer |
 | `Line` | `src/components/atoms/Line.astro` | Tokenised 1px editorial divider. | — | CaseStudySection, FeaturedWork, ProfileSignals, ProjectNav, route /404, route /about, route /adventures, route /contact, route /lab/[slug], route /work/[parent]/[item], route /writing |
@@ -39,12 +38,11 @@ Generated from `design-system/ai/index.json` — do not edit by hand.
 
 | Component | Path | Purpose | Dependencies | Used by |
 |---|---|---|---|---|
-| `AadithCompanion` | `src/components/organisms/AadithCompanion.astro` | Minimized public-context portfolio sidekick that opens as a drawer. | `DecryptedText`, `companion` | BaseLayout |
-| `FeaturedWork` | `src/components/organisms/FeaturedWork.astro` | Homepage 'Selected Work' organism: section label plus the featured project list. | `HoverRevealList`, `Line`, `Reveal`, `SectionLabel`, `projects` | route / |
+| `FeaturedWork` | `src/components/organisms/FeaturedWork.astro` | Homepage 'Selected Work' organism: section label plus the featured project list. | `HoverRevealList`, `Line`, `Reveal`, `SectionLabel`, `projects` | _not imported_ |
 | `Footer` | `src/components/organisms/Footer.astro` | Global footer with a full-canvas orange glitch signature, identity, social links, and secondary nav. | `BrandLockup`, `LetterGlitch`, `siteConfig` | BaseLayout |
 | `Header` | `src/components/organisms/Header.astro` | Static mono editorial header with Aadith's wordmark and wrapping primary navigation. | `BrandLockup`, `navigation`, `siteConfig` | BaseLayout |
-| `Hero` | `src/components/organisms/Hero.astro` | Homepage hero: compact mono positioning and role line. | `Reveal`, `TrueFocus` | route / |
-| `ProfileSignals` | `src/components/organisms/ProfileSignals.astro` | Homepage proof section connecting enterprise AI, founder work, and design-to-code practice. | `Line`, `Reveal`, `SectionLabel` | route / |
+| `Hero` | `src/components/organisms/Hero.astro` | Homepage hero: compact mono positioning and role line. | `Reveal`, `TrueFocus` | _not imported_ |
+| `ProfileSignals` | `src/components/organisms/ProfileSignals.astro` | Homepage proof section connecting enterprise AI, founder work, and design-to-code practice. | `Line`, `Reveal`, `SectionLabel` | _not imported_ |
 | `ProjectHero` | `src/components/organisms/ProjectHero.astro` | Case-study hero: title, Role/Year/Client/Category meta, and hero image. | `Reveal` | route /work/[slug] |
 | `ProjectNav` | `src/components/organisms/ProjectNav.astro` | Previous/next navigation between work case studies. | `Line` | route /work/[slug] |
 | `WorkGate` | `src/components/organisms/WorkGate.astro` | Reusable password gate for protected Microsoft work pages. | — | route /work/[parent]/[item], route /work/[slug] |
@@ -54,7 +52,13 @@ Generated from `design-system/ai/index.json` — do not edit by hand.
 
 | Component | Path | Purpose | Dependencies | Used by |
 |---|---|---|---|---|
-| `BaseLayout` | `src/layouts/BaseLayout.astro` | App shell: document head, paired Plex typography, minimized companion, header/footer, and global client behaviour. | `AadithCompanion`, `Footer`, `GridBackdrop`, `Header`, `siteConfig` | route /, route /404, route /about, route /adventures, route /contact, route /lab, route /lab/[slug], route /work, route /work/[parent]/[item], route /work/[slug], route /writing |
+| `BaseLayout` | `src/layouts/BaseLayout.astro` | App shell: document head, paired Plex typography, header/footer, and global client behaviour. | `Footer`, `GridBackdrop`, `Header`, `siteConfig` | route /404, route /about, route /achievements, route /adventures, route /contact, route /lab, route /lab/[slug], route /work, route /work/[parent]/[item], route /work/[slug], route /writing |
+
+## Other components
+
+| Component | Path | Purpose | Dependencies | Used by |
+|---|---|---|---|---|
+| `WorkspaceContent` | `src/components/workspace/WorkspaceContent.astro` | — | `workspace` | route / |
 
 ## Routes
 
@@ -62,9 +66,10 @@ Generated from `design-system/ai/index.json` — do not edit by hand.
 |---|---|---|
 | `/404` | `src/pages/404.astro` | `Line`, `Reveal`, `SectionLabel`, `BaseLayout` |
 | `/about` | `src/pages/about.astro` | `Line`, `Reveal`, `SectionLabel`, `BaseLayout` |
+| `/achievements` | `src/pages/achievements.astro` | `BaseLayout` |
 | `/adventures` | `src/pages/adventures.astro` | `Line`, `Reveal`, `DottedIndiaMap`, `BaseLayout` |
 | `/contact` | `src/pages/contact.astro` | `Line`, `Reveal`, `SectionLabel`, `BaseLayout` |
-| `/` | `src/pages/index.astro` | `FeaturedWork`, `Hero`, `ProfileSignals`, `BaseLayout` |
+| `/` | `src/pages/index.astro` | `WorkspaceContent` |
 | `/lab` | `src/pages/lab.astro` | `Reveal`, `LabCard`, `WorkingLoopMap`, `BaseLayout` |
 | `/lab/[slug]` | `src/pages/lab/[slug].astro` | `Line`, `Reveal`, `SectionLabel`, `BaseLayout` |
 | `/work` | `src/pages/work.astro` | `Reveal`, `HoverRevealList`, `BaseLayout` |

@@ -1,0 +1,9 @@
+00:00.517  blend            | Read blend: "/Users/aadith/Projects/Portfolio/Website/artifacts/workspace/laptop-closeup/source-before-laptop-closeup.blend"
+/Users/aadith/Projects/Portfolio/Website/scripts/blender/apply_laptop_closeup.py:96: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  hit_material.use_nodes = True
+Info: No new files have been packed
+Info: Saved as "workspace-laptop-closeup.blend"
+LAPTOP_CLOSEUP_CANDIDATE {"backupSha256": "0fde1f402b6e8f3302dca46d23fe0f279f5b3d4daebdcca3da9ec97fdea36108", "candidateSha256": "a30acb18554f7707220c5f02d2606d2ae4be96d0ad774ae3a623062f6340517e", "textureSha256": "925ef6ec25dac335cc5ee59ba45175c3e06e941bdc1921d2e373e0a444e84090", "textureSize": [2048, 1429], "oldLidAspect": 1.5773049357669608, "newLidAspect": 1.4331700489853043, "depthScale": 1.1005706802788024, "unrelatedObjectsUnchanged": true, "discoveryRootsPreserved": ["sticker_1", "sticker_2"]}
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+
+Blender quit

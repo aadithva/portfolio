@@ -25,12 +25,12 @@ INDEX_PATH = AI_ROOT / "index.json"
 # Curated reasoning per component. Keyed by component name (file stem).
 CONTENT: Dict[str, dict] = {
     "BaseLayout": {
-        "summary": "App shell: document head, paired Plex typography, minimized companion, header/footer, and global client behaviour.",
-        "what": "Wraps every page with metadata, IBM Plex Sans and Mono, the base and editorial theme stylesheets, GridBackdrop, Header/Footer, and the minimized AadithCompanion drawer.",
-        "why": "Centralises page chrome, companion visibility, and restrained vanilla-JS behaviour while preserving the same reading width across routes.",
-        "whenToUse": ["Wrap any new page.", "Set per-page <title> and meta description.", "Use bare=true for gated/standalone screens that should hide nav and the companion.", "Override companion only when a future route needs behavior different from the route-aware default."],
-        "whenNotToUse": ["Do not import inside another component - it is a top-level layout.", "Do not re-implement route/reveal observers or companion route checks in a page; they already live here."],
-        "a11yNotes": ["Includes a skip link.", "Respects prefers-reduced-motion and keeps content visible without JavaScript.", "The minimized companion never reserves or reduces the reading canvas."],
+        "summary": "App shell: document head, paired Plex typography, header/footer, and global client behaviour.",
+        "what": "Wraps every page with metadata, IBM Plex Sans and Mono, the base and editorial theme stylesheets, GridBackdrop, and Header/Footer.",
+        "why": "Centralises page chrome and restrained vanilla-JS behaviour while preserving the same reading width across routes.",
+        "whenToUse": ["Wrap any new page.", "Set per-page <title> and meta description.", "Use bare=true for gated/standalone screens that should hide nav."],
+        "whenNotToUse": ["Do not import inside another component - it is a top-level layout.", "Do not re-implement route/reveal observers in a page; they already live here."],
+        "a11yNotes": ["Includes a skip link.", "Respects prefers-reduced-motion and keeps content visible without JavaScript."],
     },
     "BrandLockup": {
         "summary": "Aadith's reusable Digibop wordmark.",
@@ -39,28 +39,6 @@ CONTENT: Dict[str, dict] = {
         "whenToUse": ["Use the wordmark in Header and Footer identity areas.", "Use it for the oversized clipped footer signature."],
         "whenNotToUse": ["Do not add a separate logo symbol beside it.", "Do not pair it with unrelated display fonts or multiple accent colours."],
         "a11yNotes": ["The visible wordmark provides the identity label inside the home link.", "The footer display wordmark is hidden from assistive technology as repeated decoration."],
-    },
-    "DecryptedText": {
-        "summary": "React Bits decryption-text atom for newly resolved companion answers.",
-        "what": "Scrambles visible characters for a short reveal, keeps the stable original text available to assistive technology, and resolves immediately when reduced motion is requested.",
-        "why": "Gives completed AI answers a clear state-change moment without making the transcript continuously animated.",
-        "whenToUse": ["Animate only a newly returned companion answer.", "Use animateOn=view so the reveal begins when the appended answer is visible."],
-        "whenNotToUse": ["Do not animate restored conversation history, user messages, errors, labels, or long-lived page copy.", "Do not bypass the reduced-motion fallback."],
-        "a11yNotes": ["The scrambled visual layer is aria-hidden while the stable original answer remains available to screen readers.", "prefers-reduced-motion shows the final text immediately."],
-        "propsOrInputs": [
-            {"name": "text", "type": "string", "required": False},
-            {"name": "speed", "type": "number", "required": False},
-            {"name": "maxIterations", "type": "number", "required": False},
-            {"name": "sequential", "type": "boolean", "required": False},
-            {"name": "revealDirection", "type": "\"start\" | \"end\" | \"center\"", "required": False},
-            {"name": "useOriginalCharsOnly", "type": "boolean", "required": False},
-            {"name": "characters", "type": "string", "required": False},
-            {"name": "className", "type": "string", "required": False},
-            {"name": "parentClassName", "type": "string", "required": False},
-            {"name": "encryptedClassName", "type": "string", "required": False},
-            {"name": "animateOn", "type": "\"view\" | \"hover\" | \"inViewHover\" | \"click\"", "required": False},
-            {"name": "clickMode", "type": "\"once\" | \"toggle\"", "required": False},
-        ],
     },
     "TrueFocus": {
         "summary": "React Bits focus-frame atom for selected words in the homepage statement.",
@@ -176,14 +154,6 @@ CONTENT: Dict[str, dict] = {
         "whenToUse": ["Rendered automatically by BaseLayout."],
         "whenNotToUse": ["Do not import directly into pages.", "Hidden on bare/gated layouts by design."],
         "a11yNotes": ["Uses contentinfo landmark via <footer>.", "Links have discernible text.", "The animated signature is decorative, hidden from assistive technology, and static under reduced motion."],
-    },
-    "AadithCompanion": {
-        "summary": "Minimized public-context portfolio sidekick that opens as a drawer.",
-        "what": "Renders a fixed bottom-right Ask trigger, transcript, grounded source links, prompt suggestions, composer, loading state, and sessionStorage-backed client behavior.",
-        "why": "Lets recruiters, collaborators, and investors ask focused questions without reserving page width or interrupting case-study reading.",
-        "whenToUse": ["Render through BaseLayout on portfolio routes.", "Keep answers grounded through the configured secure Azure endpoint."],
-        "whenNotToUse": ["Do not render directly inside pages.", "Do not place Azure credentials or private context in PUBLIC environment variables."],
-        "a11yNotes": ["Uses an aside landmark and aria-live transcript.", "The drawer supports Escape, focus containment, explicit labels, and reduced motion at every viewport size.", "Model output is rendered as text and links come only from validated server sources."],
     },
     "Header": {
         "summary": "Static mono editorial header with Aadith's wordmark and wrapping primary navigation.",

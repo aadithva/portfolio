@@ -19,14 +19,12 @@
     "SectionLabel"
   ],
   "dataDependencies": [],
-  "usedBy": [
-    "route /"
-  ],
+  "usedBy": [],
   "a11yNotes": [
     "Uses a labelled section with real h2/h3 hierarchy.",
     "Every signal includes a descriptive text link."
   ],
   "version": "0.3.0",
-  "lastUpdated": "2026-09-02",
+  "lastUpdated": "2026-09-12",
   "source": "Generated from Astro source + design-system/ai/index.json by component-metadata.py."
 }

@@ -1,0 +1,16 @@
+
+> aadithva-portfolio@1.0.0 test:workspace
+> playwright test -c playwright.workspace.config.ts --grep computer
+
+
+Running 5 tests using 1 worker
+
+(node:99783) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 tests/workspace.spec.ts:9:1 › monitor enters the computer, Work opens a desktop window, Escape returns through both levels (4.4s)
+  ✓  2 tests/workspace.spec.ts:36:1 › computer folders preserve browser history and the CRT toggle (917ms)
+  ✓  3 tests/workspace.spec.ts:57:1 › computer entry can be cancelled before the camera arrives and boot can be skipped (4.7s)
+  ✓  4 tests/workspace.spec.ts:73:1 › computer deep links and folders work after WebGL asset failure (798ms)
+  ✓  5 tests/workspace.spec.ts:87:1 › mobile computer folders, scroll and return remain usable by touch (1.2s)
+
+  5 passed (14.2s)

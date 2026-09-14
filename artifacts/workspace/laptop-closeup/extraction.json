@@ -1,0 +1,170 @@
+{
+  "source": "source.jpg",
+  "source_sha256": "039d9b47a3607d2dfb52fca86df04666d6214ca3fbd667bd4071016247aa708f",
+  "source_size": [
+    3213,
+    5712
+  ],
+  "rebuild_input_path": "/Users/aadith/Projects/Portfolio/Website/artifacts/workspace/laptop-closeup/source.jpg",
+  "exif_orientation_normalized": true,
+  "portrait_corner_order": [
+    "top-left",
+    "top-right",
+    "bottom-right",
+    "bottom-left"
+  ],
+  "portrait_corners_px": [
+    [
+      243,
+      916
+    ],
+    [
+      2837,
+      899
+    ],
+    [
+      2931,
+      4543
+    ],
+    [
+      350,
+      4660
+    ]
+  ],
+  "portrait_right_rim_contour_px": [
+    [
+      2830,
+      899
+    ],
+    [
+      2832,
+      1050
+    ],
+    [
+      2838,
+      1250
+    ],
+    [
+      2847,
+      1500
+    ],
+    [
+      2854,
+      1750
+    ],
+    [
+      2862,
+      2000
+    ],
+    [
+      2866,
+      2300
+    ],
+    [
+      2875,
+      2700
+    ],
+    [
+      2886,
+      3100
+    ],
+    [
+      2900,
+      3500
+    ],
+    [
+      2914,
+      4000
+    ],
+    [
+      2920,
+      4350
+    ],
+    [
+      2921,
+      4450
+    ],
+    [
+      2924,
+      4543
+    ]
+  ],
+  "portrait_right_rim_background_exclusion_px": 3,
+  "landscape_corner_order": [
+    "top-left",
+    "top-right",
+    "bottom-right",
+    "bottom-left"
+  ],
+  "landscape_corners_in_source_px": [
+    [
+      350,
+      4660
+    ],
+    [
+      243,
+      916
+    ],
+    [
+      2837,
+      899
+    ],
+    [
+      2931,
+      4543
+    ]
+  ],
+  "orientation": "90 degrees clockwise: source portrait left edge maps to landscape top; not mirrored",
+  "perspective_destination_to_source": [
+    -0.03000166598990485,
+    1.059931704163191,
+    350.0,
+    -1.0413112149834298,
+    0.003088736014703535,
+    4660.0,
+    -1.1159888922821729e-06,
+    1.0936323595323888e-05
+  ],
+  "master_size": [
+    3600,
+    2512
+  ],
+  "web_size": [
+    2048,
+    1429
+  ],
+  "image_aspect": 1.4331210191082802,
+  "mean_projected_edge_aspect": 1.4274160316526936,
+  "aspect_caveat": "Approximate near-frontal photo estimate, not a calibrated physical measurement.",
+  "existing_printed_mesh_aspect": 1.5773,
+  "corner_mask_radius_master_px": 106,
+  "edge_fill_rgb_by_corner_tl_tr_br_bl": [
+    [
+      9,
+      14,
+      20
+    ],
+    [
+      52,
+      55,
+      60
+    ],
+    [
+      80,
+      78,
+      81
+    ],
+    [
+      17,
+      21,
+      28
+    ]
+  ],
+  "pixel_operations": [
+    "bicubic perspective resampling",
+    "sampled dark fill outside rounded corners and measured portrait-right lid boundary only",
+    "Lanczos web downsampling",
+    "quality95 4:4:4 JPEG encoding"
+  ],
+  "unchanged_artwork": "No sticker redraw, replacement, rearrangement, white-balance, sharpening, or generative editing."
+}

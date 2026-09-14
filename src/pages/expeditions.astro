@@ -1,0 +1,85 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import DottedIndiaMap from "@/components/molecules/DottedIndiaMap.astro";
+import {
+  expeditions,
+  expeditionsIntro,
+  expeditionsReflection,
+  expeditionRouteCaption,
+  expeditionsMissingMedia,
+} from "@/data/expeditions";
+---
+
+<BaseLayout title="Expeditions" description="Two journeys across India by bicycle, including the supported 2025 Ride for Unity from Kashmir to Kanyakumari.">
+  <div class="page container expeditions-page">
+    <h1 class="page-header__title">Expeditions</h1>
+    <p class="page-header__intro">{expeditionsIntro}</p>
+
+    <nav class="expedition-index" aria-label="Expedition stories">
+      {expeditions.map((expedition) => <a class="inline-link" href={`#${expedition.id}`}>{expedition.title}</a>)}
+    </nav>
+
+    {expeditions.map((expedition) => (
+      <article class="expedition-story" id={expedition.id} aria-labelledby={`${expedition.id}-title`}>
+        <div class:list={["expedition-overview", { "expedition-overview--mapped": expedition.showRouteMap }]}>
+          <div>
+            <p class="section-label">{expedition.dateLabel}</p>
+            <h2 id={`${expedition.id}-title`}>{expedition.title}</h2>
+            <p class="expedition-route">{expedition.route}</p>
+            {expedition.facts.length > 0 && (
+              <dl class="expedition-facts">
+                {expedition.facts.map((fact) => <div><dt>{fact.label}</dt><dd>{fact.value}</dd></div>)}
+              </dl>
+            )}
+          </div>
+          {expedition.showRouteMap && (
+            <figure class="expedition-map">
+              <div class="routemap is-visible"><DottedIndiaMap /></div>
+              <figcaption>{expeditionRouteCaption}</figcaption>
+            </figure>
+          )}
+        </div>
+        <div class="prose">
+          {expedition.paragraphs.map((paragraph) => <p>{paragraph}</p>)}
+        </div>
+        {expedition.images.map((image) => (
+          <figure class="expedition-photo">
+            <img src={image.src} alt={image.alt} width={image.width} height={image.height} loading="lazy" decoding="async" />
+            <figcaption>{image.caption}</figcaption>
+          </figure>
+        ))}
+        {expedition.missingDetails && <p class="expedition-note">{expedition.missingDetails}</p>}
+      </article>
+    ))}
+
+    <div class="expedition-reflection prose"><p>{expeditionsReflection}</p></div>
+    <p class="expedition-note">{expeditionsMissingMedia}</p>
+    <div class="expedition-links">
+      <a class="inline-link" href="/">Back to the desk</a>
+      <a class="inline-link" href="/adventures">Original cycling stories</a>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .expedition-index, .expedition-links { display: flex; flex-wrap: wrap; gap: 16px 28px; margin: 32px 0; }
+  .expedition-index a, .expedition-links a { display: inline-flex; align-items: center; min-height: 44px; }
+  .expedition-story { max-width: 62rem; border-top: 1px solid var(--ds-color-border); padding: 40px 0; scroll-margin-top: 24px; }
+  .expedition-overview--mapped { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, .8fr); align-items: center; gap: 48px; }
+  .expedition-story h2 { font-size: clamp(1.6rem, 4vw, 2.4rem); font-weight: 400; line-height: 1.2; margin: 12px 0; }
+  .expedition-route { color: var(--ds-color-muted-fg); font-size: 14px; line-height: 1.7; }
+  .expedition-facts { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px 16px; margin-top: 28px; }
+  .expedition-facts dt { color: var(--ds-color-muted-fg); font-size: 11px; margin-bottom: 7px; }
+  .expedition-facts dd { margin: 0; font-size: 14px; line-height: 1.6; }
+  .expedition-map { margin: 0; }
+  .expedition-map figcaption, .expedition-photo figcaption { color: var(--ds-color-muted-fg); font-size: 11px; line-height: 1.7; margin-top: 12px; }
+  .expedition-story .prose { margin-top: 28px; }
+  .expedition-photo { max-width: 42rem; margin: 28px 0 0; }
+  .expedition-photo img { display: block; width: 100%; height: auto; }
+  .expedition-note { max-width: 42rem; color: var(--ds-color-muted-fg); font-size: 12px; line-height: 1.7; margin-top: 20px; }
+  .expedition-reflection { border-top: 1px solid var(--ds-color-border); padding-top: 32px; }
+  @media (max-width: 640px) {
+    .expedition-overview--mapped { grid-template-columns: 1fr; gap: 24px; }
+    .expedition-map { width: 100%; max-width: 340px; margin: 0 auto; }
+  }
+</style>

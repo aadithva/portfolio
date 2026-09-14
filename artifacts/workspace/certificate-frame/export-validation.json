@@ -1,0 +1,50 @@
+{
+  "masterSha256": "53f595eedf4874b8294c45e5122ac9560e51411c9b5f64eb4ab6971ab5e3ae3d",
+  "glbSha256": "d25d9a56b9be504b92f89226f7fba3f6f6ff353e9fa0eefb6c0a24c7ee92a362",
+  "revision": "1d1cff6b24dc",
+  "triangles": 182626,
+  "addedTriangles": 0,
+  "bytes": 15156468,
+  "certificateTextureIsExactJpeg": true,
+  "certificateNodes": [
+    "certificate_iitg \u00b7 Certificate \u00b7 Charcoal stained timber",
+    "certificate_iitg \u00b7 Cream mat",
+    "certificate_iitg \u00b7 Degree print",
+    "certificate_iitg \u00b7 Glazing",
+    "certificate_iitg \u00b7 Timber backing",
+    "certificate_iitg"
+  ],
+  "chairRootPreserved": true,
+  "lightingUnchanged": true,
+  "bounds": [
+    [
+      -0.381373,
+      2.652513,
+      -2.420373
+    ],
+    [
+      -0.012263,
+      3.312488,
+      -2.051263
+    ]
+  ],
+  "uniformScale": 0.75,
+  "frameCenter": [
+    -0.20000000298023224,
+    2.9825000762939453,
+    -2.239000082015991
+  ],
+  "pegboardBounds": [
+    [
+      -1.148876,
+      2.615744,
+      -1.928142
+    ],
+    [
+      -0.451322,
+      3.349495,
+      -1.230589
+    ]
+  ],
+  "placementAudit": "right-placement/application.json"
+}

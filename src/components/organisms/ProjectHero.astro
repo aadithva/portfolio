@@ -17,9 +17,16 @@ const meta = [
 ];
 
 const PUBLIC_DIR = path.resolve(process.cwd(), "public");
-const thumb = project.thumbnail;
+const publicCover = !project.passwordProtected && project.sections.find(
+  (section) => section.type === "image-full" && section.images?.some(
+    (image) => image.startsWith("/") && !image.includes("placeholder") && fs.existsSync(path.join(PUBLIC_DIR, image))
+  )
+);
+const thumb = publicCover ? publicCover.images?.find(
+  (image) => image.startsWith("/") && !image.includes("placeholder") && fs.existsSync(path.join(PUBLIC_DIR, image))
+) : project.thumbnail;
 const hasThumb =
-  !!thumb && thumb.startsWith("/")
+  !!thumb && thumb.startsWith("/") && !thumb.includes("placeholder")
     ? (() => { try { return fs.statSync(path.join(PUBLIC_DIR, thumb)).isFile(); } catch { return false; } })()
     : false;
 ---
@@ -47,7 +54,7 @@ const hasThumb =
     <div class="container">
       <Reveal>
         <figure class="case-figure aspect-16x9">
-          <img src={thumb} alt={`${project.title} cover`} loading="eager" decoding="async" />
+          <img src={thumb} alt={(publicCover && publicCover.caption) || `${project.title} cover`} loading="eager" decoding="async" />
         </figure>
       </Reveal>
     </div>

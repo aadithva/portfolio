@@ -1,0 +1,72 @@
+/* Ordinary sections share the desk's HTML dialog. Only achievements use paper. */
+.ws-paper-sheet { --paper-color: var(--ws-panel); display: flex; flex-direction: column; width: 100%; height: 100%; min-height: 0; }
+.ws-paper-preview, .ws-paper-paging, #desk-paper-reader, #desk-paper-status { display: none; }
+.ws-content-return { margin-left: auto; }
+#desk-content:not([data-paper]) .ws-content-scroll { min-height: 0; }
+#desk-content:not([data-paper]) .ws-dialog-bar,
+#desk-content:not([data-paper]) .ws-dialog-footer { flex-shrink: 0; }
+#desk-content[data-paper] .ws-content-return { display: none; }
+#desk-content[data-paper] .ws-paper-preview { display: block; }
+#desk-content[data-paper] #desk-paper-status { display: block; }
+#desk-content[data-paper] #desk-paper-reader:not([hidden]) { display: block; }
+#desk-content[data-paper] {
+  position: fixed; inset: 0; margin: 0; padding: 0;
+  width: 100vw; height: 100dvh; max-width: none; max-height: none;
+  border: 0; border-radius: 0; background: transparent; box-shadow: none;
+}
+#desk-content[data-paper]::backdrop { background: #11101030; backdrop-filter: blur(2px); }
+.workspace-page:has(#desk-content[open][data-paper][data-computer="false"]) :is(.ws-header,.ws-intro,.ws-view-rail,.ws-bottom,.ws-camera-controls,.ws-scene-caption) { visibility: hidden; }
+#desk-content[data-paper][open] { display: block; animation: none; }
+#desk-content[data-paper] .ws-paper-sheet { width: 100%; height: 100%; }
+#desk-content[data-paper] .ws-dialog-bar {
+  position: absolute; z-index: 4; left: 28px; right: 28px; top: 12px;
+  padding: 0; min-height: 52px; border: 0; background: transparent;
+}
+#desk-content[data-paper] .ws-dialog-bar > span { color: #aaaab0; }
+#desk-content[data-paper] .ws-close { background: transparent; }
+.ws-paper-preview { position: absolute; inset: 58px 0 66px; }
+.ws-paper-preview iframe { display: block; width: 100%; height: 100%; border: 0; background: transparent; }
+#desk-content[data-paper] .ws-dialog-footer {
+  position: absolute; z-index: 4; inset: auto 28px 12px; min-height: 44px;
+  display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 20px;
+  padding: 0; border: 0; background: transparent;
+}
+#desk-content[data-paper] .ws-paper-paging { display: flex; gap: 14px; align-items: center; justify-content: center; font: 11px var(--ws-mono); color: #b9b9bd; }
+.ws-paper-paging button { height: 44px; width: 44px; background: transparent; color: #f2f2f0; font-size: 20px; }
+.ws-paper-paging button:disabled { opacity: .25; cursor: default; }
+#desk-paper-reader { justify-self: end; min-height: 44px; padding: 8px 0 8px 16px; font-size: 11px; background: transparent; color: #d7d7d9; }
+#desk-paper-status { font: 10px var(--ws-mono); color: #9a9aa0; }
+#desk-content[data-paper="source"][data-paper-view="sheet"] .ws-content-scroll {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip-path: inset(50%); white-space: normal;
+}
+#desk-content[data-paper="loading"][data-paper-view="sheet"] .ws-content-scroll { visibility: hidden; }
+#desk-content[data-paper-view="reader"] .ws-paper-preview { visibility: hidden; }
+#desk-content[data-paper-view="reader"] .ws-content-scroll,
+#desk-content[data-paper="fallback"] .ws-content-scroll {
+  position: absolute; inset: 76px 20px 78px; margin: 0 auto;
+  max-width: 820px; width: auto; height: auto; padding: 48px 56px 60px;
+  overflow-y: auto; background: #19191b; border: 1px solid #ffffff26;
+  border-radius: 2px; clip-path: none; scrollbar-gutter: stable;
+}
+#desk-content[data-paper-view="reader"] .ws-paper-paging,
+#desk-content[data-paper="fallback"] .ws-paper-paging { visibility: hidden; }
+#desk-content[data-paper] .wc-project-grid { grid-template-columns: 1fr; }
+#desk-content[data-paper] .wc-project-grid > * { margin-top: 0; }
+#desk-content[data-paper] .wc-title { font-size: clamp(30px, 3vw, 43px); }
+@media (max-width: 760px) {
+  #desk-content[data-paper] .ws-dialog-bar { left: 18px; right: 18px; top: 8px; gap: 12px; }
+  #desk-content[data-paper] .ws-back { gap: 8px; font-size: 11px; }
+  #desk-content[data-paper] .ws-dialog-bar > span { font-size: 10px; }
+  #desk-content[data-paper] .ws-dialog-footer { inset: auto 18px 8px; gap: 6px; grid-template-columns: 1fr auto; }
+  #desk-paper-status { grid-column: 1/-1; text-align: center; }
+  #desk-content[data-paper] #desk-paper-status:empty { display: none; }
+  .ws-paper-paging { justify-content: flex-start; gap: 8px; }
+  .ws-paper-preview { inset: 58px 0 62px; }
+  #desk-content[data-paper-view="reader"] .ws-content-scroll,
+  #desk-content[data-paper="fallback"] .ws-content-scroll { inset: 66px 14px 66px; padding: 28px 24px 40px; }
+}
+@media (forced-colors: active) {
+  #desk-content[data-paper] { background: Canvas; color: CanvasText; }
+  #desk-content[data-paper] .ws-content-scroll { background: Canvas; color: CanvasText; border-color: CanvasText; }
+}

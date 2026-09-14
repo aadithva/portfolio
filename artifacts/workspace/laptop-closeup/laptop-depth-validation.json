@@ -1,0 +1,205 @@
+{
+  "source": "/Users/aadith/Projects/Portfolio/Website/artifacts/workspace/laptop-closeup/workspace-laptop-closeup.blend",
+  "sourceSha256": "a8d9d7fb91f20fec27c9606ce4e1079734f69a36c901dd7459c217531d3788cf",
+  "laptopBounds": {
+    "min": [
+      -0.33306747674942017,
+      1.3146692514419556,
+      -1.1647394895553589
+    ],
+    "max": [
+      0.26187750697135925,
+      1.3616961240768433,
+      -0.7315779328346252
+    ]
+  },
+  "staticNames": [
+    "_static \u00b7 Porcelain edges"
+  ],
+  "crossingFaces": 0,
+  "intersectingMeshes": [],
+  "nearestLidOrShellVertexToStatic": 0.004669308662414551,
+  "bottomSamples": [
+    {
+      "object": "Laptop lower shell",
+      "point": [
+        -0.3190837502479553,
+        1.3146692514419556,
+        -0.7489268183708191
+      ],
+      "gap": 0.004669308662414551
+    },
+    {
+      "object": "Laptop lower shell",
+      "point": [
+        -0.3190837502479553,
+        1.3146692514419556,
+        -1.1434731483459473
+      ],
+      "gap": 0.004669308662414551
+    },
+    {
+      "object": "Laptop lower shell",
+      "point": [
+        0.24789375066757202,
+        1.3146692514419556,
+        -0.7489268183708191
+      ],
+      "gap": 0.015229105949401855
+    },
+    {
+      "object": "Laptop lower shell",
+      "point": [
+        0.24789375066757202,
+        1.3146692514419556,
+        -1.1434731483459473
+      ],
+      "gap": 0.004669308662414551
+    },
+    {
+      "object": "Laptop sticker printed lid",
+      "point": [
+        -0.31832098960876465,
+        1.3616961240768433,
+        -0.7489268183708191
+      ],
+      "gap": 0.051696181297302246
+    },
+    {
+      "object": "Laptop sticker printed lid",
+      "point": [
+        0.24713099002838135,
+        1.3616961240768433,
+        -0.7489268183708191
+      ],
+      "gap": 0.062486886978149414
+    },
+    {
+      "object": "Laptop sticker printed lid",
+      "point": [
+        0.24713099002838135,
+        1.3616961240768433,
+        -1.1434731483459473
+      ],
+      "gap": 0.051696181297302246
+    },
+    {
+      "object": "Laptop sticker printed lid",
+      "point": [
+        -0.31832098960876465,
+        1.3616961240768433,
+        -1.1434731483459473
+      ],
+      "gap": 0.051696181297302246
+    },
+    {
+      "object": "laptop \u00b7 Soft charcoal plastic",
+      "point": [
+        -0.29874372482299805,
+        1.3286772966384888,
+        -0.7321376204490662
+      ],
+      "gap": null
+    },
+    {
+      "object": "laptop \u00b7 Soft charcoal plastic",
+      "point": [
+        -0.29874372482299805,
+        1.3286772966384888,
+        -0.7326972484588623
+      ],
+      "gap": null
+    },
+    {
+      "object": "laptop \u00b7 Soft charcoal plastic",
+      "point": [
+        -0.28704825043678284,
+        1.3286772966384888,
+        -0.7321376204490662
+      ],
+      "gap": null
+    },
+    {
+      "object": "laptop \u00b7 Soft charcoal plastic",
+      "point": [
+        -0.28704825043678284,
+        1.3286772966384888,
+        -0.7326972484588623
+      ],
+      "gap": null
+    },
+    {
+      "object": "laptop \u00b7 Soft charcoal plastic",
+      "point": [
+        -0.28348875045776367,
+        1.3286772966384888,
+        -0.7321376204490662
+      ],
+      "gap": null
+    },
+    {
+      "object": "laptop \u00b7 Soft charcoal plastic",
+      "point": [
+        -0.28348875045776367,
+        1.3286772966384888,
+        -0.7326972484588623
+      ],
+      "gap": null
+    },
+    {
+      "object": "laptop \u00b7 Soft charcoal plastic",
+      "point": [
+        -0.2717932462692261,
+        1.3286772966384888,
+        -0.7321376204490662
+      ],
+      "gap": null
+    },
+    {
+      "object": "laptop \u00b7 Soft charcoal plastic",
+      "point": [
+        -0.2717932462692261,
+        1.3286772966384888,
+        -0.7326972484588623
+      ],
+      "gap": null
+    },
+    {
+      "object": "laptop \u00b7 Soft charcoal plastic",
+      "point": [
+        -0.2682337462902069,
+        1.3286772966384888,
+        -0.7321376204490662
+      ],
+      "gap": null
+    },
+    {
+      "object": "laptop \u00b7 Soft charcoal plastic",
+      "point": [
+        -0.2682337462902069,
+        1.3286772966384888,
+        -0.7326972484588623
+      ],
+      "gap": null
+    },
+    {
+      "object": "laptop \u00b7 Soft charcoal plastic",
+      "point": [
+        -0.2565382421016693,
+        1.3286772966384888,
+        -0.7321376204490662
+      ],
+      "gap": null
+    },
+    {
+      "object": "laptop \u00b7 Soft charcoal plastic",
+      "point": [
+        -0.2565382421016693,
+        1.3286772966384888,
+        -0.7326972484588623
+      ],
+      "gap": null
+    }
+  ],
+  "passed": true
+}

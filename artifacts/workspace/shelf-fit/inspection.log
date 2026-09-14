@@ -1,0 +1,177 @@
+00:01.514  blend            | Read blend: "/Users/aadith/Projects/Portfolio/Website/artifacts/workspace/workspace.blend"
+
+ROOT workspace_left_wing matrix [Vector((0.7071067094802856, -0.7071067094802856, 0.0, -0.650879979133606)), Vector((0.7071067094802856, 0.7071067094802856, 0.0, 1.3941899538040161)), Vector((0.0, 0.0, 1.0, 0.0)), Vector((0.0, 0.0, 0.0, 1.0))]
+About card illustration parent about bounds [[-0.9619, 2.78251, -1.52543], [-0.77853, 3.20942, -1.34205]] verts 4
+About card pin parent about bounds [[-0.87536, 3.1794, -1.43889], [-0.85068, 3.21275, -1.41421]] verts 128
+About card stock parent about bounds [[-0.96831, 2.77917, -1.53184], [-0.77931, 3.21275, -1.34283]] verts 96
+Book spine DESIGN parent books bounds [[-0.50855, 2.24404, -1.48344], [-0.49348, 2.24962, -1.46838]] verts 904
+books · Lamp enamel vermilion parent books bounds [[-0.63118, 2.14748, -1.49931], [-0.55667, 2.32037, -1.39956]] verts 192
+books · Sage green hardcover parent books bounds [[-0.62729, 2.14748, -1.53232], [-0.52366, 2.34559, -1.42869]] verts 288
+books · Satin brass parent books bounds [[-0.5761, 2.16423, -1.55633], [-0.4202, 2.33712, -1.40043]] verts 960
+books · Terracotta clay parent books bounds [[-0.52244, 2.14748, -1.63717], [-0.41881, 2.35279, -1.53354]] verts 288
+books · Uncoated paper parent books bounds [[-0.64796, 2.14748, -1.62872], [-0.42587, 2.34883, -1.40662]] verts 768
+books · Warm cream accents parent books bounds [[-0.58177, 2.16152, -1.56252], [-0.42135, 2.30344, -1.40408]] verts 2968
+books · Washed blue hardcover parent books bounds [[-0.55448, 2.14748, -1.60319], [-0.45279, 2.30597, -1.5015]] verts 288
+Cloth book cover parent books_cover bounds [[-0.65642, 2.14748, -1.47407], [-0.5844, 2.32037, -1.40205]] verts 96
+Colored pencil.003 parent workspace_left_wing bounds [[-0.44597, 2.64218, -1.7736], [-0.42829, 2.86479, -1.76301]] verts 160
+Contact card brass pin parent contact bounds [[-0.59077, 2.94793, -1.71162], [-0.56717, 2.97728, -1.68802]] verts 128
+Contact card paper parent contact bounds [[-0.70381, 2.69912, -1.82466], [-0.4793, 2.97261, -1.60015]] verts 96
+Contact card print parent contact bounds [[-0.69726, 2.70246, -1.81812], [-0.47793, 2.96928, -1.59878]] verts 4
+Cream clipped note parent workspace_left_wing bounds [[-1.12513, 2.70913, -1.30752], [-1.03599, 2.96261, -1.21838]] verts 96
+Creator Micro foam border end -1 parent figma bounds [[-0.7321, 2.15468, -1.31136], [-0.55138, 2.25368, -1.13065]] verts 96
+Creator Micro foam border end 1 parent figma bounds [[-0.91442, 2.15468, -1.49369], [-0.73371, 2.25368, -1.31297]] verts 96
+Creator Micro foam border side -1 parent figma bounds [[-0.92747, 2.15468, -1.3244], [-0.72066, 2.25368, -1.1176]] verts 96
+Creator Micro foam border side 1 parent figma bounds [[-0.74514, 2.15468, -1.50673], [-0.53834, 2.25368, -1.29993]] verts 96
+Creator Micro foam support parent figma bounds [[-0.90138, 2.15423, -1.48064], [-0.56443, 2.21273, -1.14369]] verts 96
+Creator Micro tray collaboration print parent figma bounds [[-0.68074, 2.19853, -1.25982], [-0.58008, 2.21289, -1.15916]] verts 1140
+Creator Micro tray end -1 parent figma bounds [[-0.7321, 2.15108, -1.31136], [-0.53261, 2.26808, -1.11187]] verts 96
+Creator Micro tray end 1 parent figma bounds [[-0.9332, 2.15108, -1.51246], [-0.73371, 2.26808, -1.31297]] verts 96
+Creator Micro tray side -1 parent figma bounds [[-0.93702, 2.15108, -1.31518], [-0.72989, 2.26808, -1.10805]] verts 96
+Creator Micro tray side 1 parent figma bounds [[-0.73591, 2.15108, -1.51628], [-0.52879, 2.26808, -1.30915]] verts 96
+Creator Micro white tray floor parent figma bounds [[-0.93702, 2.14748, -1.51628], [-0.52879, 2.15468, -1.10805]] verts 96
+Creator Micro black fastening screw parent figma_creator_micro bounds [[-0.7383, 2.22938, -1.18774], [-0.7275, 2.23478, -1.17694]] verts 192
+Creator Micro black fastening screw.001 parent figma_creator_micro bounds [[-0.86813, 2.22938, -1.31757], [-0.85733, 2.23478, -1.30677]] verts 192
+Creator Micro black fastening screw.002 parent figma_creator_micro bounds [[-0.60848, 2.22938, -1.31757], [-0.59768, 2.23478, -1.30677]] verts 192
+Creator Micro black fastening screw.003 parent figma_creator_micro bounds [[-0.7383, 2.22938, -1.44739], [-0.7275, 2.23478, -1.43659]] verts 192
+Creator Micro black rotary encoder parent figma_creator_micro bounds [[-0.84827, 2.23118, -1.33207], [-0.81227, 2.27078, -1.29607]] verts 384
+Creator Micro cyan key r0c1 parent figma_creator_micro bounds [[-0.82403, 2.23748, -1.37147], [-0.77287, 2.25548, -1.32031]] verts 96
+Creator Micro cyan key r1c2 parent figma_creator_micro bounds [[-0.76039, 2.23748, -1.37147], [-0.70923, 2.25548, -1.32031]] verts 96
+Creator Micro cyan key r2c3 parent figma_creator_micro bounds [[-0.69675, 2.23748, -1.37147], [-0.64559, 2.25548, -1.32031]] verts 96
+Creator Micro frosted acrylic base parent figma_creator_micro bounds [[-0.89132, 2.21048, -1.47058], [-0.57449, 2.22488, -1.15375]] verts 96
+Creator Micro green key r0c2 parent figma_creator_micro bounds [[-0.79221, 2.23748, -1.40329], [-0.74105, 2.25548, -1.35213]] verts 96
+Creator Micro green key r1c3 parent figma_creator_micro bounds [[-0.72857, 2.23748, -1.40329], [-0.67741, 2.25548, -1.35213]] verts 96
+Creator Micro horizontal metal scroll encoder parent figma_creator_micro bounds [[-0.75541, 2.23388, -1.23921], [-0.71422, 2.26448, -1.19802]] verts 384
+Creator Micro knob index parent figma_creator_micro bounds [[-0.84069, 2.27267, -1.32449], [-0.82876, 2.27339, -1.31256]] verts 96
+Creator Micro knob top parent figma_creator_micro bounds [[-0.84647, 2.27078, -1.33027], [-0.81407, 2.27258, -1.29787]] verts 384
+Creator Micro pale circuit plate parent figma_creator_micro bounds [[-0.87893, 2.22308, -1.45819], [-0.58687, 2.23028, -1.16614]] verts 96
+Creator Micro pink key r1c0 parent figma_creator_micro bounds [[-0.82403, 2.23748, -1.30783], [-0.77287, 2.25548, -1.25668]] verts 96
+Creator Micro pink key r2c1 parent figma_creator_micro bounds [[-0.76039, 2.23748, -1.30783], [-0.70923, 2.25548, -1.25668]] verts 96
+Creator Micro pink key r3c2 parent figma_creator_micro bounds [[-0.69675, 2.23748, -1.30783], [-0.64559, 2.25548, -1.25668]] verts 96
+Creator Micro plate attribution parent figma_creator_micro bounds [[-0.69272, 2.23109, -1.27118], [-0.63554, 2.23127, -1.21518]] verts 1600
+Creator Micro purple key r1c1 parent figma_creator_micro bounds [[-0.79221, 2.23748, -1.33965], [-0.74105, 2.25548, -1.28849]] verts 96
+Creator Micro purple key r2c2 parent figma_creator_micro bounds [[-0.72857, 2.23748, -1.33965], [-0.67741, 2.25548, -1.28849]] verts 96
+Creator Micro red key r2c0 parent figma_creator_micro bounds [[-0.79221, 2.23748, -1.27601], [-0.74105, 2.25548, -1.22486]] verts 96
+Creator Micro red key r3c1 parent figma_creator_micro bounds [[-0.72857, 2.23748, -1.27601], [-0.67741, 2.25548, -1.22486]] verts 96
+Creator Micro screw slot parent figma_creator_micro bounds [[-0.73537, 2.23473, -1.18481], [-0.73044, 2.23518, -1.17988]] verts 96
+Creator Micro screw slot.001 parent figma_creator_micro bounds [[-0.86519, 2.23473, -1.31463], [-0.86026, 2.23518, -1.3097]] verts 96
+Creator Micro screw slot.002 parent figma_creator_micro bounds [[-0.60554, 2.23473, -1.31463], [-0.60061, 2.23518, -1.3097]] verts 96
+Creator Micro screw slot.003 parent figma_creator_micro bounds [[-0.73537, 2.23473, -1.44446], [-0.73044, 2.23518, -1.43953]] verts 96
+Creator Micro scroll housing parent figma_creator_micro bounds [[-0.76152, 2.23073, -1.24532], [-0.70811, 2.24423, -1.19191]] verts 96
+Creator Micro scroll knurl 0 parent figma_creator_micro bounds [[-0.75601, 2.24864, -1.23981], [-0.73576, 2.24972, -1.21956]] verts 96
+Creator Micro scroll knurl 1 parent figma_creator_micro bounds [[-0.7556, 2.25299, -1.23941], [-0.73527, 2.25419, -1.21907]] verts 96
+Creator Micro scroll knurl 10 parent figma_creator_micro bounds [[-0.73436, 2.25299, -1.21816], [-0.71402, 2.25419, -1.19782]] verts 96
+Creator Micro scroll knurl 11 parent figma_creator_micro bounds [[-0.73386, 2.24864, -1.21767], [-0.71361, 2.24972, -1.19742]] verts 96
+Creator Micro scroll knurl 12 parent figma_creator_micro bounds [[-0.73436, 2.24417, -1.21816], [-0.71402, 2.24536, -1.19782]] verts 96
+Creator Micro scroll knurl 13 parent figma_creator_micro bounds [[-0.7357, 2.24007, -1.2195], [-0.71529, 2.24135, -1.1991]] verts 96
+Creator Micro scroll knurl 14 parent figma_creator_micro bounds [[-0.73777, 2.2367, -1.22158], [-0.71735, 2.23799, -1.20115]] verts 96
+Creator Micro scroll knurl 15 parent figma_creator_micro bounds [[-0.7404, 2.2343, -1.2242], [-0.72003, 2.23556, -1.20383]] verts 96
+Creator Micro scroll knurl 16 parent figma_creator_micro bounds [[-0.74339, 2.2331, -1.22719], [-0.72309, 2.23425, -1.20689]] verts 96
+Creator Micro scroll knurl 17 parent figma_creator_micro bounds [[-0.74654, 2.2331, -1.23034], [-0.72624, 2.23425, -1.21004]] verts 96
+Creator Micro scroll knurl 18 parent figma_creator_micro bounds [[-0.7496, 2.2343, -1.2334], [-0.72923, 2.23556, -1.21303]] verts 96
+Creator Micro scroll knurl 19 parent figma_creator_micro bounds [[-0.75228, 2.2367, -1.23608], [-0.73185, 2.23799, -1.21565]] verts 96
+Creator Micro scroll knurl 2 parent figma_creator_micro bounds [[-0.75433, 2.257, -1.23813], [-0.73392, 2.25829, -1.21773]] verts 96
+Creator Micro scroll knurl 20 parent figma_creator_micro bounds [[-0.75433, 2.24007, -1.23813], [-0.73392, 2.24135, -1.21773]] verts 96
+Creator Micro scroll knurl 21 parent figma_creator_micro bounds [[-0.7556, 2.24417, -1.23941], [-0.73527, 2.24536, -1.21907]] verts 96
+Creator Micro scroll knurl 3 parent figma_creator_micro bounds [[-0.75228, 2.26037, -1.23608], [-0.73185, 2.26166, -1.21565]] verts 96
+Creator Micro scroll knurl 4 parent figma_creator_micro bounds [[-0.7496, 2.26279, -1.2334], [-0.72923, 2.26405, -1.21303]] verts 96
+Creator Micro scroll knurl 5 parent figma_creator_micro bounds [[-0.74654, 2.2641, -1.23034], [-0.72624, 2.26525, -1.21004]] verts 96
+Creator Micro scroll knurl 6 parent figma_creator_micro bounds [[-0.74339, 2.2641, -1.22719], [-0.72309, 2.26525, -1.20689]] verts 96
+Creator Micro scroll knurl 7 parent figma_creator_micro bounds [[-0.7404, 2.26279, -1.2242], [-0.72003, 2.26405, -1.20383]] verts 96
+Creator Micro scroll knurl 8 parent figma_creator_micro bounds [[-0.73777, 2.26037, -1.22158], [-0.71735, 2.26166, -1.20115]] verts 96
+Creator Micro scroll knurl 9 parent figma_creator_micro bounds [[-0.7357, 2.257, -1.2195], [-0.71529, 2.25829, -1.1991]] verts 96
+Creator Micro switch r0c1 parent figma_creator_micro bounds [[-0.81761, 2.22938, -1.36505], [-0.7793, 2.24018, -1.32674]] verts 96
+Creator Micro switch r0c2 parent figma_creator_micro bounds [[-0.78579, 2.22938, -1.39687], [-0.74748, 2.24018, -1.35856]] verts 96
+Creator Micro switch r1c0 parent figma_creator_micro bounds [[-0.81761, 2.22938, -1.30141], [-0.7793, 2.24018, -1.2631]] verts 96
+Creator Micro switch r1c1 parent figma_creator_micro bounds [[-0.78579, 2.22938, -1.33323], [-0.74748, 2.24018, -1.29492]] verts 96
+Creator Micro switch r1c2 parent figma_creator_micro bounds [[-0.75397, 2.22938, -1.36505], [-0.71566, 2.24018, -1.32674]] verts 96
+Creator Micro switch r1c3 parent figma_creator_micro bounds [[-0.72215, 2.22938, -1.39687], [-0.68384, 2.24018, -1.35856]] verts 96
+Creator Micro switch r2c0 parent figma_creator_micro bounds [[-0.78579, 2.22938, -1.26959], [-0.74748, 2.24018, -1.23128]] verts 96
+Creator Micro switch r2c1 parent figma_creator_micro bounds [[-0.75397, 2.22938, -1.30141], [-0.71566, 2.24018, -1.2631]] verts 96
+Creator Micro switch r2c2 parent figma_creator_micro bounds [[-0.72215, 2.22938, -1.33323], [-0.68384, 2.24018, -1.29492]] verts 96
+Creator Micro switch r2c3 parent figma_creator_micro bounds [[-0.69033, 2.22938, -1.36505], [-0.65202, 2.24018, -1.32674]] verts 96
+Creator Micro switch r3c1 parent figma_creator_micro bounds [[-0.72215, 2.22938, -1.26959], [-0.68384, 2.24018, -1.23128]] verts 96
+Creator Micro switch r3c2 parent figma_creator_micro bounds [[-0.69033, 2.22938, -1.30141], [-0.65202, 2.24018, -1.2631]] verts 96
+Creator Micro actual front Figma print parent figma_lid bounds [[-0.73087, 2.15468, -1.31013], [-0.52213, 2.27798, -1.10139]] verts 4
+Creator Micro actual right side print parent figma_lid bounds [[-0.73087, 2.15468, -1.52294], [-0.52213, 2.27798, -1.3142]] verts 4
+Creator Micro actual top printed drawing parent figma_lid bounds [[-0.94291, 2.28266, -1.52218], [-0.52289, 2.28266, -1.10215]] verts 4
+Creator Micro rear Work Louder print parent figma_lid bounds [[-0.87657, 2.20588, -1.45581], [-0.80207, 2.22018, -1.38131]] verts 568
+Creator Micro yellow cover end -1 parent figma_lid bounds [[-0.7325, 2.15378, -1.31176], [-0.5233, 2.27978, -1.10256]] verts 96
+Creator Micro yellow cover end 1 parent figma_lid bounds [[-0.94251, 2.15378, -1.52177], [-0.73331, 2.27978, -1.31257]] verts 96
+Creator Micro yellow cover side -1 parent figma_lid bounds [[-0.94506, 2.15378, -1.31431], [-0.73076, 2.27978, -1.10001]] verts 96
+Creator Micro yellow cover side 1 parent figma_lid bounds [[-0.73505, 2.15378, -1.52432], [-0.52075, 2.27978, -1.31002]] verts 96
+Creator Micro yellow cover top parent figma_lid bounds [[-0.94485, 2.27708, -1.52412], [-0.52095, 2.28248, -1.10021]] verts 96
+Pegboard slots parent workspace_left_wing bounds [[-1.14888, 2.61574, -1.92814], [-0.45132, 3.3495, -1.23059]] verts 4
+plant_1 ceramic pot parent plant_1 bounds [[-0.8036, 1.76859, -1.30241], [-0.69232, 1.88393, -1.19113]] verts 168
+plant_1 soil parent plant_1 bounds [[-0.79655, 1.86475, -1.29536], [-0.69938, 1.87275, -1.19818]] verts 48
+plant_1 · Leaf jade parent plant_1 bounds [[-0.79276, 1.873, -1.28125], [-0.70189, 1.93565, -1.20363]] verts 210
+plant_1 · Leaf sage parent plant_1 bounds [[-0.81649, 1.873, -1.31396], [-0.73075, 1.98198, -1.17511]] verts 168
+plant_1 · Leaf shaded parent plant_1 bounds [[-0.81055, 1.873, -1.34173], [-0.66017, 2.03044, -1.20115]] verts 168
+Small aloe ceramic pot parent Small aloe bounds [[-0.68487, 1.76859, -1.45695], [-0.58093, 1.87632, -1.35301]] verts 168
+Small aloe soil parent Small aloe bounds [[-0.67829, 1.85815, -1.45036], [-0.58752, 1.86615, -1.35959]] verts 48
+Small aloe · Leaf jade parent Small aloe bounds [[-0.67479, 1.86612, -1.43723], [-0.58982, 1.92509, -1.36464]] verts 210
+Small aloe · Leaf sage parent Small aloe bounds [[-0.69691, 1.86612, -1.46774], [-0.61679, 1.96799, -1.33804]] verts 168
+Small aloe · Leaf shaded parent Small aloe bounds [[-0.69136, 1.86612, -1.49367], [-0.55089, 2.01324, -1.36235]] verts 168
+Tiny jade plant ceramic pot parent Tiny jade plant bounds [[-0.52591, 1.76859, -1.55687], [-0.43786, 1.85985, -1.46882]] verts 168
+Tiny jade plant soil parent Tiny jade plant bounds [[-0.52033, 1.84384, -1.55129], [-0.44344, 1.85184, -1.4744]] verts 48
+Tiny jade plant · Leaf jade parent Tiny jade plant bounds [[-0.51748, 1.8512, -1.54028], [-0.4453, 1.90226, -1.47856]] verts 210
+Tiny jade plant · Leaf sage parent Tiny jade plant bounds [[-0.53611, 1.8512, -1.56601], [-0.46816, 1.93765, -1.45615]] verts 168
+Tiny jade plant · Leaf shaded parent Tiny jade plant bounds [[-0.53144, 1.8512, -1.58798], [-0.41242, 1.97598, -1.47667]] verts 168
+workspace_left_wing · Brushed aluminium parent workspace_left_wing bounds [[-1.12717, 2.65043, -1.90643], [-0.46584, 3.3506, -1.23589]] verts 672
+workspace_left_wing · Figma ochre parent workspace_left_wing bounds [[-0.44993, 2.64203, -1.81473], [-0.38715, 2.91454, -1.78216]] verts 192
+workspace_left_wing · Forest green parent workspace_left_wing bounds [[-0.43085, 2.64206, -1.82287], [-0.4077, 2.90528, -1.74793]] verts 192
+workspace_left_wing · Lamp enamel vermilion parent workspace_left_wing bounds [[-0.73708, 2.64192, -1.78981], [-0.41333, 3.28946, -1.59564]] verts 480
+workspace_left_wing · Matte black rubber parent workspace_left_wing bounds [[-1.0773, 3.08935, -1.37296], [-0.87707, 3.24944, -1.17272]] verts 444
+workspace_left_wing · Porcelain edges parent workspace_left_wing bounds [[-1.18797, 1.29798, -1.96723], [-0.31203, 3.38285, -1.05534]] verts 768
+workspace_left_wing · Sage green hardcover parent workspace_left_wing bounds [[-1.10591, 2.78751, -1.2883], [-1.0473, 2.91758, -1.22969]] verts 32
+workspace_left_wing · Soft charcoal plastic parent workspace_left_wing bounds [[-1.08669, 2.95761, -1.36119], [-0.87445, 3.41626, -1.1701]] verts 788
+workspace_left_wing · Warm cream accents parent workspace_left_wing bounds [[-0.68252, 3.13533, -1.70553], [-0.61856, 3.22029, -1.64157]] verts 928
+workspace_left_wing · Warm powder-coated white parent workspace_left_wing bounds [[-1.04475, 1.35169, -1.84205], [-0.36123, 2.76249, -1.20168]] verts 384
+
+ROOT workspace_right_wing matrix [Vector((0.7071067094802856, 0.7071067094802856, 0.0, 0.650879979133606)), Vector((-0.7071067094802856, 0.7071067094802856, 0.0, 1.3941899538040161)), Vector((0.0, 0.0, 1.0, 0.0)), Vector((0.0, 0.0, 0.0, 1.0))]
+Notebook ribbon parent workspace_right_wing bounds [[0.5805, 1.71857, -1.23948], [0.58966, 1.76526, -1.23033]] verts 96
+plant_2 ceramic pot parent plant_2 bounds [[0.67643, 2.48, -1.19929], [0.80116, 2.60927, -1.07456]] verts 168
+plant_2 soil parent plant_2 bounds [[0.68434, 2.58826, -1.19139], [0.79326, 2.59627, -1.08247]] verts 48
+plant_2 · Leaf jade parent plant_2 bounds [[0.64021, 2.68071, -1.13413], [0.82219, 2.76676, -1.02376]] verts 126
+plant_2 · Leaf sage parent plant_2 bounds [[0.59344, 2.71814, -1.27593], [0.80011, 2.84155, -1.10713]] verts 126
+plant_2 · Leaf shaded parent plant_2 bounds [[0.64935, 2.59646, -1.2521], [0.91163, 2.91633, -0.97713]] verts 1854
+Print circle parent workspace_right_wing bounds [[0.72243, 2.19484, -1.29387], [0.77349, 2.28956, -1.24281]] verts 114
+Shelf lower back.001 parent workspace_right_wing bounds [[0.56066, 1.35169, -1.71813], [0.97482, 1.73191, -1.30397]] verts 96
+Small abstract print parent workspace_right_wing bounds [[0.71021, 2.15548, -1.30969], [0.78931, 2.3089, -1.23059]] verts 4
+Small photo frame parent workspace_right_wing bounds [[0.70667, 2.13881, -1.33121], [0.81083, 2.32558, -1.22705]] verts 96
+Robot aerial parent toy bounds [[0.54578, 2.34392, -1.47052], [0.55462, 2.40062, -1.46168]] verts 96
+Robot aerial tip parent toy bounds [[0.53989, 2.38828, -1.47642], [0.56052, 2.4163, -1.45579]] verts 86
+Tiny robot head parent toy bounds [[0.50848, 2.2522, -1.50783], [0.59193, 2.33892, -1.42438]] verts 96
+Tiny robot torso parent toy bounds [[0.51319, 2.13881, -1.50312], [0.58722, 2.2522, -1.42909]] verts 96
+toy · Soft charcoal plastic parent toy bounds [[0.50709, 2.13547, -1.49286], [0.57696, 2.31958, -1.42299]] verts 576
+toy · Terracotta clay parent toy bounds [[0.4989, 2.18766, -1.51741], [0.6015, 2.23003, -1.4148]] verts 192
+Window deep recess parent window bounds [[0.81735, 2.85, -1.75583], [2.35784, 4.45, -0.21534]] verts 96
+Window latch parent window bounds [[1.33434, 3.585, -0.83579], [1.38123, 3.715, -0.78889]] verts 96
+window · Distant warm windows parent window bounds [[0.96577, 2.98213, -1.5268], [2.15845, 3.7651, -0.33412]] verts 2112
+window · Porcelain edges parent window bounds [[0.53585, 2.7875, -1.76155], [2.36356, 4.445, 0.06616]] verts 480
+window · Warm powder-coated white parent window bounds [[0.65387, 2.8, -1.72839], [2.3304, 4.52, -0.05186]] verts 384
+window_glass parent window bounds [[0.87129, 2.935, -1.634], [2.23601, 4.365, -0.26928]] verts 4
+workspace_right_wing · Porcelain edges parent workspace_right_wing bounds [[0.31203, 1.29798, -1.73304], [0.98973, 2.48, -1.05534]] verts 576
+workspace_right_wing · Sage green hardcover parent workspace_right_wing bounds [[0.46122, 1.8453, -1.52632], [0.84054, 1.88399, -1.147]] verts 192
+workspace_right_wing · Terracotta clay parent workspace_right_wing bounds [[0.46122, 1.76393, -1.52632], [0.84054, 1.80261, -1.147]] verts 192
+workspace_right_wing · Uncoated paper parent workspace_right_wing bounds [[0.46122, 1.7696, -1.52632], [0.84054, 1.87832, -1.147]] verts 480
+
+ROOT monitor matrix [Vector((1.0, 0.0, 0.0, 0.0)), Vector((0.0, 1.0, 0.0, 1.1699999570846558)), Vector((0.0, 0.0, 1.0, 1.7168675661087036)), Vector((0.0, 0.0, 0.0, 1.0))]
+Monitor fitted rear mounting bracket parent monitor bounds [[-0.065, 1.44, -1.2645], [0.065, 1.57, -1.1895]] verts 8
+Monitor outer housing parent monitor bounds [[-0.51092, 1.40924, -1.20397], [0.51092, 2.02449, -1.14245]] verts 96
+Monitor power LED parent monitor bounds [[0.43067, 1.42743, -1.128], [0.43602, 1.43278, -1.12533]] verts 96
+Monitor stand base behind Xbox parent monitor bounds [[-0.175, 1.31, -1.65], [0.175, 1.333, -1.47]] verts 8
+Monitor stand rear post parent monitor bounds [[-0.0325, 1.32, -1.622], [0.0325, 1.59, -1.578]] verts 8
+monitor · Brushed aluminium parent monitor bounds [[-0.47615, 1.41673, -1.14084], [0.47615, 1.44241, -1.12961]] verts 96
+monitor · Soft charcoal plastic parent monitor bounds [[-0.4815, 1.42717, -1.14592], [0.4815, 1.99908, -1.1249]] verts 408
+monitor_screen parent monitor bounds [[-0.4601, 1.45472, -1.12987], [0.4601, 1.97902, -1.12987]] verts 4
+STATIC Room floor bounds [[-3.32, -0.185, -2.6643], [3.32, -0.015, 2.36]] verts 120
+STATIC _static · Limewashed plaster bounds [[-3.21629, -0.02, -2.59629], [3.21629, 4.58, 0.66629]] verts 200
+STATIC _static · Warm powder-coated white bounds [[-3.11748, 0.01442, -2.49748], [3.11748, 2.33225, 0.65348]] verts 768
+STATIC _static · Tile grout bounds [[-3.3, -0.0135, -2.16], [3.3, -0.0105, 2.33]] verts 80
+STATIC _static · Porcelain edges bounds [[-1.25139, 0.00481, -2.33361], [1.25139, 2.37894, -0.65178]] verts 544
+STATIC _static · Matte black rubber bounds [[-0.44202, 0.00811, -1.66563], [1.78217, 2.41954, 0.31585]] verts 1368
+STATIC _static · Soft charcoal plastic bounds [[-0.88225, 1.31043, -1.37487], [0.16882, 1.42573, -0.72297]] verts 2040
+STATIC _static · Brushed aluminium bounds [[-0.77292, 1.3637, -1.17503], [0.22984, 1.38104, -0.9429]] verts 224
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+
+Blender quit

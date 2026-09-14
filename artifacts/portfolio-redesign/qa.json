@@ -1,0 +1,1420 @@
+[
+  {
+    "path": "/work",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "status": 200,
+    "errors": [],
+    "broken": [],
+    "width": 1440,
+    "scrollWidth": 1440,
+    "title": "Work",
+    "headingFont": "\"IBM Plex Sans\", \"Helvetica Neue\", Arial, sans-serif",
+    "bodyColor": "rgb(238, 234, 226)",
+    "background": "rgb(25, 25, 24)",
+    "headerBottom": 89,
+    "headingTop": 185,
+    "gridPresent": false,
+    "glitchPresent": false,
+    "nav": [
+      {
+        "text": "Work",
+        "height": 45.796875,
+        "href": "/work"
+      },
+      {
+        "text": "Lab",
+        "height": 45.796875,
+        "href": "/lab"
+      },
+      {
+        "text": "About",
+        "height": 45.796875,
+        "href": "/about"
+      },
+      {
+        "text": "Adventures",
+        "height": 45.796875,
+        "href": "/adventures"
+      },
+      {
+        "text": "Writing",
+        "height": 45.796875,
+        "href": "/writing"
+      },
+      {
+        "text": "Contact",
+        "height": 45.796875,
+        "href": "/contact"
+      }
+    ],
+    "workLinks": [
+      "/work/owly-studio",
+      "/work/microsoft-copilot",
+      "/work/angel-one",
+      "/work/reachify",
+      "/work/daolens",
+      "/work/crunch"
+    ],
+    "failedImages": []
+  },
+  {
+    "path": "/about",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "status": 200,
+    "errors": [],
+    "broken": [],
+    "width": 1440,
+    "scrollWidth": 1440,
+    "title": "About",
+    "headingFont": "\"IBM Plex Sans\", \"Helvetica Neue\", Arial, sans-serif",
+    "bodyColor": "rgb(238, 234, 226)",
+    "background": "rgb(25, 25, 24)",
+    "headerBottom": 89,
+    "headingTop": 185,
+    "gridPresent": false,
+    "glitchPresent": false,
+    "nav": [
+      {
+        "text": "Work",
+        "height": 45.796875,
+        "href": "/work"
+      },
+      {
+        "text": "Lab",
+        "height": 45.796875,
+        "href": "/lab"
+      },
+      {
+        "text": "About",
+        "height": 45.796875,
+        "href": "/about"
+      },
+      {
+        "text": "Adventures",
+        "height": 45.796875,
+        "href": "/adventures"
+      },
+      {
+        "text": "Writing",
+        "height": 45.796875,
+        "href": "/writing"
+      },
+      {
+        "text": "Contact",
+        "height": 45.796875,
+        "href": "/contact"
+      }
+    ],
+    "workLinks": [],
+    "failedImages": []
+  },
+  {
+    "path": "/writing",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "status": 200,
+    "errors": [],
+    "broken": [],
+    "width": 1440,
+    "scrollWidth": 1440,
+    "title": "Writing",
+    "headingFont": "\"IBM Plex Sans\", \"Helvetica Neue\", Arial, sans-serif",
+    "bodyColor": "rgb(238, 234, 226)",
+    "background": "rgb(25, 25, 24)",
+    "headerBottom": 89,
+    "headingTop": 185,
+    "gridPresent": false,
+    "glitchPresent": false,
+    "nav": [
+      {
+        "text": "Work",
+        "height": 45.796875,
+        "href": "/work"
+      },
+      {
+        "text": "Lab",
+        "height": 45.796875,
+        "href": "/lab"
+      },
+      {
+        "text": "About",
+        "height": 45.796875,
+        "href": "/about"
+      },
+      {
+        "text": "Adventures",
+        "height": 45.796875,
+        "href": "/adventures"
+      },
+      {
+        "text": "Writing",
+        "height": 45.796875,
+        "href": "/writing"
+      },
+      {
+        "text": "Contact",
+        "height": 45.796875,
+        "href": "/contact"
+      }
+    ],
+    "workLinks": [],
+    "failedImages": []
+  },
+  {
+    "path": "/lab",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "status": 200,
+    "errors": [],
+    "broken": [],
+    "width": 1440,
+    "scrollWidth": 1440,
+    "title": "Lab",
+    "headingFont": "\"IBM Plex Sans\", \"Helvetica Neue\", Arial, sans-serif",
+    "bodyColor": "rgb(238, 234, 226)",
+    "background": "rgb(25, 25, 24)",
+    "headerBottom": 89,
+    "headingTop": 185,
+    "gridPresent": false,
+    "glitchPresent": false,
+    "nav": [
+      {
+        "text": "Work",
+        "height": 45.796875,
+        "href": "/work"
+      },
+      {
+        "text": "Lab",
+        "height": 45.796875,
+        "href": "/lab"
+      },
+      {
+        "text": "About",
+        "height": 45.796875,
+        "href": "/about"
+      },
+      {
+        "text": "Adventures",
+        "height": 45.796875,
+        "href": "/adventures"
+      },
+      {
+        "text": "Writing",
+        "height": 45.796875,
+        "href": "/writing"
+      },
+      {
+        "text": "Contact",
+        "height": 45.796875,
+        "href": "/contact"
+      }
+    ],
+    "workLinks": [],
+    "failedImages": []
+  },
+  {
+    "path": "/contact",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "status": 200,
+    "errors": [],
+    "broken": [],
+    "width": 1440,
+    "scrollWidth": 1440,
+    "title": "Say hello",
+    "headingFont": "\"IBM Plex Sans\", \"Helvetica Neue\", Arial, sans-serif",
+    "bodyColor": "rgb(238, 234, 226)",
+    "background": "rgb(25, 25, 24)",
+    "headerBottom": 89,
+    "headingTop": 185,
+    "gridPresent": false,
+    "glitchPresent": false,
+    "nav": [
+      {
+        "text": "Work",
+        "height": 45.796875,
+        "href": "/work"
+      },
+      {
+        "text": "Lab",
+        "height": 45.796875,
+        "href": "/lab"
+      },
+      {
+        "text": "About",
+        "height": 45.796875,
+        "href": "/about"
+      },
+      {
+        "text": "Adventures",
+        "height": 45.796875,
+        "href": "/adventures"
+      },
+      {
+        "text": "Writing",
+        "height": 45.796875,
+        "href": "/writing"
+      },
+      {
+        "text": "Contact",
+        "height": 45.796875,
+        "href": "/contact"
+      }
+    ],
+    "workLinks": [],
+    "failedImages": []
+  },
+  {
+    "path": "/work/owly-studio",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "status": 200,
+    "errors": [],
+    "broken": [],
+    "width": 1440,
+    "scrollWidth": 1440,
+    "title": " Owly ",
+    "headingFont": "\"IBM Plex Sans\", \"Helvetica Neue\", Arial, sans-serif",
+    "bodyColor": "rgb(238, 234, 226)",
+    "background": "rgb(25, 25, 24)",
+    "headerBottom": 89,
+    "headingTop": 185,
+    "gridPresent": false,
+    "glitchPresent": false,
+    "nav": [
+      {
+        "text": "Work",
+        "height": 45.796875,
+        "href": "/work"
+      },
+      {
+        "text": "Lab",
+        "height": 45.796875,
+        "href": "/lab"
+      },
+      {
+        "text": "About",
+        "height": 45.796875,
+        "href": "/about"
+      },
+      {
+        "text": "Adventures",
+        "height": 45.796875,
+        "href": "/adventures"
+      },
+      {
+        "text": "Writing",
+        "height": 45.796875,
+        "href": "/writing"
+      },
+      {
+        "text": "Contact",
+        "height": 45.796875,
+        "href": "/contact"
+      }
+    ],
+    "workLinks": [],
+    "failedImages": []
+  },
+  {
+    "path": "/expeditions",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "status": 200,
+    "errors": [],
+    "broken": [],
+    "width": 1440,
+    "scrollWidth": 1440,
+    "title": "Expeditions",
+    "headingFont": "\"IBM Plex Sans\", \"Helvetica Neue\", Arial, sans-serif",
+    "bodyColor": "rgb(238, 234, 226)",
+    "background": "rgb(25, 25, 24)",
+    "headerBottom": 89,
+    "headingTop": 185,
+    "gridPresent": false,
+    "glitchPresent": false,
+    "nav": [
+      {
+        "text": "Work",
+        "height": 45.796875,
+        "href": "/work"
+      },
+      {
+        "text": "Lab",
+        "height": 45.796875,
+        "href": "/lab"
+      },
+      {
+        "text": "About",
+        "height": 45.796875,
+        "href": "/about"
+      },
+      {
+        "text": "Adventures",
+        "height": 45.796875,
+        "href": "/adventures"
+      },
+      {
+        "text": "Writing",
+        "height": 45.796875,
+        "href": "/writing"
+      },
+      {
+        "text": "Contact",
+        "height": 45.796875,
+        "href": "/contact"
+      }
+    ],
+    "workLinks": [],
+    "failedImages": []
+  },
+  {
+    "path": "/adventures",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "status": 200,
+    "errors": [],
+    "broken": [],
+    "width": 1440,
+    "scrollWidth": 1440,
+    "title": "Adventures",
+    "headingFont": "\"IBM Plex Sans\", \"Helvetica Neue\", Arial, sans-serif",
+    "bodyColor": "rgb(238, 234, 226)",
+    "background": "rgb(25, 25, 24)",
+    "headerBottom": 89,
+    "headingTop": 185,
+    "gridPresent": false,
+    "glitchPresent": false,
+    "nav": [
+      {
+        "text": "Work",
+        "height": 45.796875,
+        "href": "/work"
+      },
+      {
+        "text": "Lab",
+        "height": 45.796875,
+        "href": "/lab"
+      },
+      {
+        "text": "About",
+        "height": 45.796875,
+        "href": "/about"
+      },
+      {
+        "text": "Adventures",
+        "height": 45.796875,
+        "href": "/adventures"
+      },
+      {
+        "text": "Writing",
+        "height": 45.796875,
+        "href": "/writing"
+      },
+      {
+        "text": "Contact",
+        "height": 45.796875,
+        "href": "/contact"
+      }
+    ],
+    "workLinks": [],
+    "failedImages": []
+  },
+  {
+    "path": "/lab/agent-canvas",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "status": 200,
+    "errors": [],
+    "broken": [],
+    "width": 1440,
+    "scrollWidth": 1440,
+    "title": "Agent Canvas",
+    "headingFont": "\"IBM Plex Sans\", \"Helvetica Neue\", Arial, sans-serif",
+    "bodyColor": "rgb(238, 234, 226)",
+    "background": "rgb(25, 25, 24)",
+    "headerBottom": 89,
+    "headingTop": 232.0625,
+    "gridPresent": false,
+    "glitchPresent": false,
+    "nav": [
+      {
+        "text": "Work",
+        "height": 45.796875,
+        "href": "/work"
+      },
+      {
+        "text": "Lab",
+        "height": 45.796875,
+        "href": "/lab"
+      },
+      {
+        "text": "About",
+        "height": 45.796875,
+        "href": "/about"
+      },
+      {
+        "text": "Adventures",
+        "height": 45.796875,
+        "href": "/adventures"
+      },
+      {
+        "text": "Writing",
+        "height": 45.796875,
+        "href": "/writing"
+      },
+      {
+        "text": "Contact",
+        "height": 45.796875,
+        "href": "/contact"
+      }
+    ],
+    "workLinks": [],
+    "failedImages": []
+  },
+  {
+    "path": "/work/angel-one",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "status": 200,
+    "errors": [],
+    "broken": [],
+    "width": 1440,
+    "scrollWidth": 1440,
+    "title": " Angel One ",
+    "headingFont": "\"IBM Plex Sans\", \"Helvetica Neue\", Arial, sans-serif",
+    "bodyColor": "rgb(238, 234, 226)",
+    "background": "rgb(25, 25, 24)",
+    "headerBottom": 89,
+    "headingTop": 185,
+    "gridPresent": false,
+    "glitchPresent": false,
+    "nav": [
+      {
+        "text": "Work",
+        "height": 45.796875,
+        "href": "/work"
+      },
+      {
+        "text": "Lab",
+        "height": 45.796875,
+        "href": "/lab"
+      },
+      {
+        "text": "About",
+        "height": 45.796875,
+        "href": "/about"
+      },
+      {
+        "text": "Adventures",
+        "height": 45.796875,
+        "href": "/adventures"
+      },
+      {
+        "text": "Writing",
+        "height": 45.796875,
+        "href": "/writing"
+      },
+      {
+        "text": "Contact",
+        "height": 45.796875,
+        "href": "/contact"
+      }
+    ],
+    "workLinks": [],
+    "failedImages": []
+  },
+  {
+    "path": "/work/daolens/dao-denver",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "status": 200,
+    "errors": [],
+    "broken": [],
+    "width": 1440,
+    "scrollWidth": 1440,
+    "title": " DAO Denver ",
+    "headingFont": "\"IBM Plex Sans\", \"Helvetica Neue\", Arial, sans-serif",
+    "bodyColor": "rgb(238, 234, 226)",
+    "background": "rgb(25, 25, 24)",
+    "headerBottom": 89,
+    "headingTop": 306.59375,
+    "gridPresent": false,
+    "glitchPresent": false,
+    "nav": [
+      {
+        "text": "Work",
+        "height": 45.796875,
+        "href": "/work"
+      },
+      {
+        "text": "Lab",
+        "height": 45.796875,
+        "href": "/lab"
+      },
+      {
+        "text": "About",
+        "height": 45.796875,
+        "href": "/about"
+      },
+      {
+        "text": "Adventures",
+        "height": 45.796875,
+        "href": "/adventures"
+      },
+      {
+        "text": "Writing",
+        "height": 45.796875,
+        "href": "/writing"
+      },
+      {
+        "text": "Contact",
+        "height": 45.796875,
+        "href": "/contact"
+      }
+    ],
+    "workLinks": [],
+    "failedImages": []
+  },
+  {
+    "path": "/achievements",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "status": 200,
+    "errors": [],
+    "broken": [],
+    "width": 1440,
+    "scrollWidth": 1440,
+    "title": "Achievements",
+    "headingFont": "\"IBM Plex Sans\", \"Helvetica Neue\", Arial, sans-serif",
+    "bodyColor": "rgb(238, 234, 226)",
+    "background": "rgb(25, 25, 24)",
+    "headerBottom": 89,
+    "headingTop": 185,
+    "gridPresent": false,
+    "glitchPresent": false,
+    "nav": [
+      {
+        "text": "Work",
+        "height": 45.796875,
+        "href": "/work"
+      },
+      {
+        "text": "Lab",
+        "height": 45.796875,
+        "href": "/lab"
+      },
+      {
+        "text": "About",
+        "height": 45.796875,
+        "href": "/about"
+      },
+      {
+        "text": "Adventures",
+        "height": 45.796875,
+        "href": "/adventures"
+      },
+      {
+        "text": "Writing",
+        "height": 45.796875,
+        "href": "/writing"
+      },
+      {
+        "text": "Contact",
+        "height": 45.796875,
+        "href": "/contact"
+      }
+    ],
+    "workLinks": [],
+    "failedImages": []
+  },
+  {
+    "path": "/404",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "status": 200,
+    "errors": [],
+    "broken": [],
+    "width": 1440,
+    "scrollWidth": 1440,
+    "title": " \nThat page is not here.\n ",
+    "headingFont": "\"IBM Plex Sans\", \"Helvetica Neue\", Arial, sans-serif",
+    "bodyColor": "rgb(238, 234, 226)",
+    "background": "rgb(25, 25, 24)",
+    "headerBottom": 89,
+    "headingTop": 254.59375,
+    "gridPresent": false,
+    "glitchPresent": false,
+    "nav": [
+      {
+        "text": "Work",
+        "height": 45.796875,
+        "href": "/work"
+      },
+      {
+        "text": "Lab",
+        "height": 45.796875,
+        "href": "/lab"
+      },
+      {
+        "text": "About",
+        "height": 45.796875,
+        "href": "/about"
+      },
+      {
+        "text": "Adventures",
+        "height": 45.796875,
+        "href": "/adventures"
+      },
+      {
+        "text": "Writing",
+        "height": 45.796875,
+        "href": "/writing"
+      },
+      {
+        "text": "Contact",
+        "height": 45.796875,
+        "href": "/contact"
+      }
+    ],
+    "workLinks": [],
+    "failedImages": []
+  },
+  {
+    "path": "/work",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "status": 200,
+    "errors": [],
+    "broken": [],
+    "width": 390,
+    "scrollWidth": 390,
+    "title": "Work",
+    "headingFont": "\"IBM Plex Sans\", \"Helvetica Neue\", Arial, sans-serif",
+    "bodyColor": "rgb(238, 234, 226)",
+    "background": "rgb(25, 25, 24)",
+    "headerBottom": 194.59375,
+    "headingTop": 242.59375,
+    "gridPresent": false,
+    "glitchPresent": false,
+    "nav": [
+      {
+        "text": "Work",
+        "height": 45.796875,
+        "href": "/work"
+      },
+      {
+        "text": "Lab",
+        "height": 45.796875,
+        "href": "/lab"
+      },
+      {
+        "text": "About",
+        "height": 45.796875,
+        "href": "/about"
+      },
+      {
+        "text": "Adventures",
+        "height": 45.796875,
+        "href": "/adventures"
+      },
+      {
+        "text": "Writing",
+        "height": 45.796875,
+        "href": "/writing"
+      },
+      {
+        "text": "Contact",
+        "height": 45.796875,
+        "href": "/contact"
+      }
+    ],
+    "workLinks": [
+      "/work/owly-studio",
+      "/work/microsoft-copilot",
+      "/work/angel-one",
+      "/work/reachify",
+      "/work/daolens",
+      "/work/crunch"
+    ],
+    "failedImages": []
+  },
+  {
+    "path": "/about",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "status": 200,
+    "errors": [],
+    "broken": [],
+    "width": 390,
+    "scrollWidth": 390,
+    "title": "About",
+    "headingFont": "\"IBM Plex Sans\", \"Helvetica Neue\", Arial, sans-serif",
+    "bodyColor": "rgb(238, 234, 226)",
+    "background": "rgb(25, 25, 24)",
+    "headerBottom": 194.59375,
+    "headingTop": 242.59375,
+    "gridPresent": false,
+    "glitchPresent": false,
+    "nav": [
+      {
+        "text": "Work",
+        "height": 45.796875,
+        "href": "/work"
+      },
+      {
+        "text": "Lab",
+        "height": 45.796875,
+        "href": "/lab"
+      },
+      {
+        "text": "About",
+        "height": 45.796875,
+        "href": "/about"
+      },
+      {
+        "text": "Adventures",
+        "height": 45.796875,
+        "href": "/adventures"
+      },
+      {
+        "text": "Writing",
+        "height": 45.796875,
+        "href": "/writing"
+      },
+      {
+        "text": "Contact",
+        "height": 45.796875,
+        "href": "/contact"
+      }
+    ],
+    "workLinks": [],
+    "failedImages": []
+  },
+  {
+    "path": "/writing",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "status": 200,
+    "errors": [],
+    "broken": [],
+    "width": 390,
+    "scrollWidth": 390,
+    "title": "Writing",
+    "headingFont": "\"IBM Plex Sans\", \"Helvetica Neue\", Arial, sans-serif",
+    "bodyColor": "rgb(238, 234, 226)",
+    "background": "rgb(25, 25, 24)",
+    "headerBottom": 194.59375,
+    "headingTop": 242.59375,
+    "gridPresent": false,
+    "glitchPresent": false,
+    "nav": [
+      {
+        "text": "Work",
+        "height": 45.796875,
+        "href": "/work"
+      },
+      {
+        "text": "Lab",
+        "height": 45.796875,
+        "href": "/lab"
+      },
+      {
+        "text": "About",
+        "height": 45.796875,
+        "href": "/about"
+      },
+      {
+        "text": "Adventures",
+        "height": 45.796875,
+        "href": "/adventures"
+      },
+      {
+        "text": "Writing",
+        "height": 45.796875,
+        "href": "/writing"
+      },
+      {
+        "text": "Contact",
+        "height": 45.796875,
+        "href": "/contact"
+      }
+    ],
+    "workLinks": [],
+    "failedImages": []
+  },
+  {
+    "path": "/lab",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "status": 200,
+    "errors": [],
+    "broken": [],
+    "width": 390,
+    "scrollWidth": 390,
+    "title": "Lab",
+    "headingFont": "\"IBM Plex Sans\", \"Helvetica Neue\", Arial, sans-serif",
+    "bodyColor": "rgb(238, 234, 226)",
+    "background": "rgb(25, 25, 24)",
+    "headerBottom": 194.59375,
+    "headingTop": 242.59375,
+    "gridPresent": false,
+    "glitchPresent": false,
+    "nav": [
+      {
+        "text": "Work",
+        "height": 45.796875,
+        "href": "/work"
+      },
+      {
+        "text": "Lab",
+        "height": 45.796875,
+        "href": "/lab"
+      },
+      {
+        "text": "About",
+        "height": 45.796875,
+        "href": "/about"
+      },
+      {
+        "text": "Adventures",
+        "height": 45.796875,
+        "href": "/adventures"
+      },
+      {
+        "text": "Writing",
+        "height": 45.796875,
+        "href": "/writing"
+      },
+      {
+        "text": "Contact",
+        "height": 45.796875,
+        "href": "/contact"
+      }
+    ],
+    "workLinks": [],
+    "failedImages": []
+  },
+  {
+    "path": "/contact",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "status": 200,
+    "errors": [],
+    "broken": [],
+    "width": 390,
+    "scrollWidth": 390,
+    "title": "Say hello",
+    "headingFont": "\"IBM Plex Sans\", \"Helvetica Neue\", Arial, sans-serif",
+    "bodyColor": "rgb(238, 234, 226)",
+    "background": "rgb(25, 25, 24)",
+    "headerBottom": 194.59375,
+    "headingTop": 242.59375,
+    "gridPresent": false,
+    "glitchPresent": false,
+    "nav": [
+      {
+        "text": "Work",
+        "height": 45.796875,
+        "href": "/work"
+      },
+      {
+        "text": "Lab",
+        "height": 45.796875,
+        "href": "/lab"
+      },
+      {
+        "text": "About",
+        "height": 45.796875,
+        "href": "/about"
+      },
+      {
+        "text": "Adventures",
+        "height": 45.796875,
+        "href": "/adventures"
+      },
+      {
+        "text": "Writing",
+        "height": 45.796875,
+        "href": "/writing"
+      },
+      {
+        "text": "Contact",
+        "height": 45.796875,
+        "href": "/contact"
+      }
+    ],
+    "workLinks": [],
+    "failedImages": []
+  },
+  {
+    "path": "/work/owly-studio",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "status": 200,
+    "errors": [],
+    "broken": [],
+    "width": 390,
+    "scrollWidth": 390,
+    "title": " Owly ",
+    "headingFont": "\"IBM Plex Sans\", \"Helvetica Neue\", Arial, sans-serif",
+    "bodyColor": "rgb(238, 234, 226)",
+    "background": "rgb(25, 25, 24)",
+    "headerBottom": 194.59375,
+    "headingTop": 250.59375,
+    "gridPresent": false,
+    "glitchPresent": false,
+    "nav": [
+      {
+        "text": "Work",
+        "height": 45.796875,
+        "href": "/work"
+      },
+      {
+        "text": "Lab",
+        "height": 45.796875,
+        "href": "/lab"
+      },
+      {
+        "text": "About",
+        "height": 45.796875,
+        "href": "/about"
+      },
+      {
+        "text": "Adventures",
+        "height": 45.796875,
+        "href": "/adventures"
+      },
+      {
+        "text": "Writing",
+        "height": 45.796875,
+        "href": "/writing"
+      },
+      {
+        "text": "Contact",
+        "height": 45.796875,
+        "href": "/contact"
+      }
+    ],
+    "workLinks": [],
+    "failedImages": []
+  },
+  {
+    "path": "/expeditions",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "status": 200,
+    "errors": [],
+    "broken": [],
+    "width": 390,
+    "scrollWidth": 390,
+    "title": "Expeditions",
+    "headingFont": "\"IBM Plex Sans\", \"Helvetica Neue\", Arial, sans-serif",
+    "bodyColor": "rgb(238, 234, 226)",
+    "background": "rgb(25, 25, 24)",
+    "headerBottom": 194.59375,
+    "headingTop": 242.59375,
+    "gridPresent": false,
+    "glitchPresent": false,
+    "nav": [
+      {
+        "text": "Work",
+        "height": 45.796875,
+        "href": "/work"
+      },
+      {
+        "text": "Lab",
+        "height": 45.796875,
+        "href": "/lab"
+      },
+      {
+        "text": "About",
+        "height": 45.796875,
+        "href": "/about"
+      },
+      {
+        "text": "Adventures",
+        "height": 45.796875,
+        "href": "/adventures"
+      },
+      {
+        "text": "Writing",
+        "height": 45.796875,
+        "href": "/writing"
+      },
+      {
+        "text": "Contact",
+        "height": 45.796875,
+        "href": "/contact"
+      }
+    ],
+    "workLinks": [],
+    "failedImages": []
+  },
+  {
+    "path": "/adventures",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "status": 200,
+    "errors": [],
+    "broken": [],
+    "width": 390,
+    "scrollWidth": 390,
+    "title": "Adventures",
+    "headingFont": "\"IBM Plex Sans\", \"Helvetica Neue\", Arial, sans-serif",
+    "bodyColor": "rgb(238, 234, 226)",
+    "background": "rgb(25, 25, 24)",
+    "headerBottom": 194.59375,
+    "headingTop": 242.59375,
+    "gridPresent": false,
+    "glitchPresent": false,
+    "nav": [
+      {
+        "text": "Work",
+        "height": 45.796875,
+        "href": "/work"
+      },
+      {
+        "text": "Lab",
+        "height": 45.796875,
+        "href": "/lab"
+      },
+      {
+        "text": "About",
+        "height": 45.796875,
+        "href": "/about"
+      },
+      {
+        "text": "Adventures",
+        "height": 45.796875,
+        "href": "/adventures"
+      },
+      {
+        "text": "Writing",
+        "height": 45.796875,
+        "href": "/writing"
+      },
+      {
+        "text": "Contact",
+        "height": 45.796875,
+        "href": "/contact"
+      }
+    ],
+    "workLinks": [],
+    "failedImages": []
+  },
+  {
+    "path": "/lab/agent-canvas",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "status": 200,
+    "errors": [],
+    "broken": [],
+    "width": 390,
+    "scrollWidth": 390,
+    "title": "Agent Canvas",
+    "headingFont": "\"IBM Plex Sans\", \"Helvetica Neue\", Arial, sans-serif",
+    "bodyColor": "rgb(238, 234, 226)",
+    "background": "rgb(25, 25, 24)",
+    "headerBottom": 194.59375,
+    "headingTop": 289.65625,
+    "gridPresent": false,
+    "glitchPresent": false,
+    "nav": [
+      {
+        "text": "Work",
+        "height": 45.796875,
+        "href": "/work"
+      },
+      {
+        "text": "Lab",
+        "height": 45.796875,
+        "href": "/lab"
+      },
+      {
+        "text": "About",
+        "height": 45.796875,
+        "href": "/about"
+      },
+      {
+        "text": "Adventures",
+        "height": 45.796875,
+        "href": "/adventures"
+      },
+      {
+        "text": "Writing",
+        "height": 45.796875,
+        "href": "/writing"
+      },
+      {
+        "text": "Contact",
+        "height": 45.796875,
+        "href": "/contact"
+      }
+    ],
+    "workLinks": [],
+    "failedImages": []
+  },
+  {
+    "path": "/work/angel-one",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "status": 200,
+    "errors": [],
+    "broken": [],
+    "width": 390,
+    "scrollWidth": 390,
+    "title": " Angel One ",
+    "headingFont": "\"IBM Plex Sans\", \"Helvetica Neue\", Arial, sans-serif",
+    "bodyColor": "rgb(238, 234, 226)",
+    "background": "rgb(25, 25, 24)",
+    "headerBottom": 194.59375,
+    "headingTop": 250.59375,
+    "gridPresent": false,
+    "glitchPresent": false,
+    "nav": [
+      {
+        "text": "Work",
+        "height": 45.796875,
+        "href": "/work"
+      },
+      {
+        "text": "Lab",
+        "height": 45.796875,
+        "href": "/lab"
+      },
+      {
+        "text": "About",
+        "height": 45.796875,
+        "href": "/about"
+      },
+      {
+        "text": "Adventures",
+        "height": 45.796875,
+        "href": "/adventures"
+      },
+      {
+        "text": "Writing",
+        "height": 45.796875,
+        "href": "/writing"
+      },
+      {
+        "text": "Contact",
+        "height": 45.796875,
+        "href": "/contact"
+      }
+    ],
+    "workLinks": [],
+    "failedImages": []
+  },
+  {
+    "path": "/work/daolens/dao-denver",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "status": 200,
+    "errors": [],
+    "broken": [],
+    "width": 390,
+    "scrollWidth": 390,
+    "title": " DAO Denver ",
+    "headingFont": "\"IBM Plex Sans\", \"Helvetica Neue\", Arial, sans-serif",
+    "bodyColor": "rgb(238, 234, 226)",
+    "background": "rgb(25, 25, 24)",
+    "headerBottom": 194.59375,
+    "headingTop": 372.1875,
+    "gridPresent": false,
+    "glitchPresent": false,
+    "nav": [
+      {
+        "text": "Work",
+        "height": 45.796875,
+        "href": "/work"
+      },
+      {
+        "text": "Lab",
+        "height": 45.796875,
+        "href": "/lab"
+      },
+      {
+        "text": "About",
+        "height": 45.796875,
+        "href": "/about"
+      },
+      {
+        "text": "Adventures",
+        "height": 45.796875,
+        "href": "/adventures"
+      },
+      {
+        "text": "Writing",
+        "height": 45.796875,
+        "href": "/writing"
+      },
+      {
+        "text": "Contact",
+        "height": 45.796875,
+        "href": "/contact"
+      }
+    ],
+    "workLinks": [],
+    "failedImages": []
+  },
+  {
+    "path": "/achievements",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "status": 200,
+    "errors": [],
+    "broken": [],
+    "width": 390,
+    "scrollWidth": 390,
+    "title": "Achievements",
+    "headingFont": "\"IBM Plex Sans\", \"Helvetica Neue\", Arial, sans-serif",
+    "bodyColor": "rgb(238, 234, 226)",
+    "background": "rgb(25, 25, 24)",
+    "headerBottom": 194.59375,
+    "headingTop": 242.59375,
+    "gridPresent": false,
+    "glitchPresent": false,
+    "nav": [
+      {
+        "text": "Work",
+        "height": 45.796875,
+        "href": "/work"
+      },
+      {
+        "text": "Lab",
+        "height": 45.796875,
+        "href": "/lab"
+      },
+      {
+        "text": "About",
+        "height": 45.796875,
+        "href": "/about"
+      },
+      {
+        "text": "Adventures",
+        "height": 45.796875,
+        "href": "/adventures"
+      },
+      {
+        "text": "Writing",
+        "height": 45.796875,
+        "href": "/writing"
+      },
+      {
+        "text": "Contact",
+        "height": 45.796875,
+        "href": "/contact"
+      }
+    ],
+    "workLinks": [],
+    "failedImages": []
+  },
+  {
+    "path": "/404",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "status": 200,
+    "errors": [],
+    "broken": [],
+    "width": 390,
+    "scrollWidth": 390,
+    "title": " \nThat page is not here.\n ",
+    "headingFont": "\"IBM Plex Sans\", \"Helvetica Neue\", Arial, sans-serif",
+    "bodyColor": "rgb(238, 234, 226)",
+    "background": "rgb(25, 25, 24)",
+    "headerBottom": 194.59375,
+    "headingTop": 312.1875,
+    "gridPresent": false,
+    "glitchPresent": false,
+    "nav": [
+      {
+        "text": "Work",
+        "height": 45.796875,
+        "href": "/work"
+      },
+      {
+        "text": "Lab",
+        "height": 45.796875,
+        "href": "/lab"
+      },
+      {
+        "text": "About",
+        "height": 45.796875,
+        "href": "/about"
+      },
+      {
+        "text": "Adventures",
+        "height": 45.796875,
+        "href": "/adventures"
+      },
+      {
+        "text": "Writing",
+        "height": 45.796875,
+        "href": "/writing"
+      },
+      {
+        "text": "Contact",
+        "height": 45.796875,
+        "href": "/contact"
+      }
+    ],
+    "workLinks": [],
+    "failedImages": []
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    name: 'desktop',
+    errors: [],
+    metrics: {
+      attributes: [Object],
+      dialogWidth: 1000,
+      sheetWidth: 1000,
+      scrollWidth: 976,
+      clientWidth: 976,
+      canvasSize: [Array]
+    }
+  },
+  {
+    name: 'mobile',
+    errors: [],
+    metrics: {
+      attributes: [Object],
+      dialogWidth: 358,
+      sheetWidth: 358,
+      scrollWidth: 342,
+      clientWidth: 342,
+      canvasSize: [Array]
+    }
+  }
+]

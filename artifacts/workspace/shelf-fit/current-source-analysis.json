@@ -1,0 +1,4295 @@
+{
+  "source": "/Users/aadith/Projects/Portfolio/Website/artifacts/workspace/workspace.blend",
+  "sha256": "f26fbb05c2173e756204de1c2194db4a0b64816340bb8dcb992fbbc5eabf3284",
+  "objects": {
+    "monitor": {
+      "parent": null,
+      "pivot": [
+        0.0,
+        1.7168675661087036,
+        -1.1699999570846558
+      ],
+      "bounds": {
+        "min": [
+          -0.510925,
+          1.31,
+          -1.65
+        ],
+        "max": [
+          0.510925,
+          2.024493,
+          -1.1249
+        ]
+      },
+      "children": [
+        "Monitor arm above Xbox",
+        "Monitor fitted rear mounting bracket",
+        "Monitor outer housing",
+        "Monitor power LED",
+        "Monitor stand base behind Xbox",
+        "Monitor stand rear post",
+        "monitor \u00b7 Brushed aluminium",
+        "monitor \u00b7 Soft charcoal plastic",
+        "monitor_screen"
+      ],
+      "matrixWorld": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          1.1699999570846558
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          1.7168675661087036
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    "monitor_screen": {
+      "parent": "monitor",
+      "pivot": [
+        0.0,
+        -0.4031323194503784,
+        -0.7699999809265137
+      ],
+      "bounds": {
+        "min": [
+          -0.4601,
+          1.454718,
+          -1.129875
+        ],
+        "max": [
+          0.4601,
+          1.979017,
+          -1.129875
+        ]
+      },
+      "children": [],
+      "matrixWorld": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.7699999809265137
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          -0.4031323194503784
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    "workspace_left_wing": {
+      "parent": null,
+      "pivot": [
+        -0.650879979133606,
+        0.0,
+        -1.3941899538040161
+      ],
+      "bounds": {
+        "min": [
+          -1.187966,
+          1.297982,
+          -1.967232
+        ],
+        "max": [
+          -0.312031,
+          3.416259,
+          -1.055341
+        ]
+      },
+      "children": [
+        "about",
+        "About card illustration",
+        "About card pin",
+        "About card stock",
+        "books",
+        "Book spine DESIGN",
+        "books \u00b7 Lamp enamel vermilion",
+        "books \u00b7 Sage green hardcover",
+        "books \u00b7 Satin brass",
+        "books \u00b7 Terracotta clay",
+        "books \u00b7 Uncoated paper",
+        "books \u00b7 Warm cream accents",
+        "books \u00b7 Washed blue hardcover",
+        "books_cover",
+        "Cloth book cover",
+        "Colored pencil.003",
+        "contact",
+        "Contact card brass pin",
+        "Contact card paper",
+        "Contact card print",
+        "Cream clipped note",
+        "figma",
+        "Creator Micro foam border end -1",
+        "Creator Micro foam border end 1",
+        "Creator Micro foam border side -1",
+        "Creator Micro foam border side 1",
+        "Creator Micro foam support",
+        "Creator Micro tray collaboration print",
+        "Creator Micro tray end -1",
+        "Creator Micro tray end 1",
+        "Creator Micro tray side -1",
+        "Creator Micro tray side 1",
+        "Creator Micro white tray floor",
+        "figma_creator_micro",
+        "Creator Micro black fastening screw",
+        "Creator Micro black fastening screw.001",
+        "Creator Micro black fastening screw.002",
+        "Creator Micro black fastening screw.003",
+        "Creator Micro black rotary encoder",
+        "Creator Micro cyan key r0c1",
+        "Creator Micro cyan key r1c2",
+        "Creator Micro cyan key r2c3",
+        "Creator Micro frosted acrylic base",
+        "Creator Micro green key r0c2",
+        "Creator Micro green key r1c3",
+        "Creator Micro horizontal metal scroll encoder",
+        "Creator Micro knob index",
+        "Creator Micro knob top",
+        "Creator Micro pale circuit plate",
+        "Creator Micro pink key r1c0",
+        "Creator Micro pink key r2c1",
+        "Creator Micro pink key r3c2",
+        "Creator Micro plate attribution",
+        "Creator Micro purple key r1c1",
+        "Creator Micro purple key r2c2",
+        "Creator Micro red key r2c0",
+        "Creator Micro red key r3c1",
+        "Creator Micro screw slot",
+        "Creator Micro screw slot.001",
+        "Creator Micro screw slot.002",
+        "Creator Micro screw slot.003",
+        "Creator Micro scroll housing",
+        "Creator Micro scroll knurl 0",
+        "Creator Micro scroll knurl 1",
+        "Creator Micro scroll knurl 10",
+        "Creator Micro scroll knurl 11",
+        "Creator Micro scroll knurl 12",
+        "Creator Micro scroll knurl 13",
+        "Creator Micro scroll knurl 14",
+        "Creator Micro scroll knurl 15",
+        "Creator Micro scroll knurl 16",
+        "Creator Micro scroll knurl 17",
+        "Creator Micro scroll knurl 18",
+        "Creator Micro scroll knurl 19",
+        "Creator Micro scroll knurl 2",
+        "Creator Micro scroll knurl 20",
+        "Creator Micro scroll knurl 21",
+        "Creator Micro scroll knurl 3",
+        "Creator Micro scroll knurl 4",
+        "Creator Micro scroll knurl 5",
+        "Creator Micro scroll knurl 6",
+        "Creator Micro scroll knurl 7",
+        "Creator Micro scroll knurl 8",
+        "Creator Micro scroll knurl 9",
+        "Creator Micro switch r0c1",
+        "Creator Micro switch r0c2",
+        "Creator Micro switch r1c0",
+        "Creator Micro switch r1c1",
+        "Creator Micro switch r1c2",
+        "Creator Micro switch r1c3",
+        "Creator Micro switch r2c0",
+        "Creator Micro switch r2c1",
+        "Creator Micro switch r2c2",
+        "Creator Micro switch r2c3",
+        "Creator Micro switch r3c1",
+        "Creator Micro switch r3c2",
+        "figma_lid",
+        "Creator Micro actual front Figma print",
+        "Creator Micro actual right side print",
+        "Creator Micro actual top printed drawing",
+        "Creator Micro rear Work Louder print",
+        "Creator Micro yellow cover end -1",
+        "Creator Micro yellow cover end 1",
+        "Creator Micro yellow cover side -1",
+        "Creator Micro yellow cover side 1",
+        "Creator Micro yellow cover top",
+        "Pegboard slots",
+        "plant_1",
+        "plant_1 ceramic pot",
+        "plant_1 soil",
+        "plant_1 \u00b7 Leaf jade",
+        "plant_1 \u00b7 Leaf sage",
+        "plant_1 \u00b7 Leaf shaded",
+        "Small aloe",
+        "Small aloe ceramic pot",
+        "Small aloe soil",
+        "Small aloe \u00b7 Leaf jade",
+        "Small aloe \u00b7 Leaf sage",
+        "Small aloe \u00b7 Leaf shaded",
+        "Tiny jade plant",
+        "Tiny jade plant ceramic pot",
+        "Tiny jade plant soil",
+        "Tiny jade plant \u00b7 Leaf jade",
+        "Tiny jade plant \u00b7 Leaf sage",
+        "Tiny jade plant \u00b7 Leaf shaded",
+        "workspace_left_wing \u00b7 Brushed aluminium",
+        "workspace_left_wing \u00b7 Figma ochre",
+        "workspace_left_wing \u00b7 Forest green",
+        "workspace_left_wing \u00b7 Lamp enamel vermilion",
+        "workspace_left_wing \u00b7 Matte black rubber",
+        "workspace_left_wing \u00b7 Porcelain edges",
+        "workspace_left_wing \u00b7 Sage green hardcover",
+        "workspace_left_wing \u00b7 Soft charcoal plastic",
+        "workspace_left_wing \u00b7 Warm cream accents",
+        "workspace_left_wing \u00b7 Warm powder-coated white"
+      ],
+      "matrixWorld": [
+        [
+          0.7071067094802856,
+          -0.7071067094802856,
+          0.0,
+          -0.650879979133606
+        ],
+        [
+          0.7071067094802856,
+          0.7071067094802856,
+          0.0,
+          1.3941899538040161
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    "workspace_right_wing": {
+      "parent": null,
+      "pivot": [
+        0.650879979133606,
+        0.0,
+        -1.3941899538040161
+      ],
+      "bounds": {
+        "min": [
+          0.312031,
+          1.297982,
+          -1.761553
+        ],
+        "max": [
+          2.363563,
+          4.52,
+          0.066161
+        ]
+      },
+      "children": [
+        "Notebook ribbon",
+        "plant_2",
+        "plant_2 ceramic pot",
+        "plant_2 soil",
+        "plant_2 \u00b7 Leaf jade",
+        "plant_2 \u00b7 Leaf sage",
+        "plant_2 \u00b7 Leaf shaded",
+        "Print circle",
+        "Shelf lower back.001",
+        "Small abstract print",
+        "Small photo frame",
+        "toy",
+        "Robot aerial",
+        "Robot aerial tip",
+        "Tiny robot head",
+        "Tiny robot torso",
+        "toy \u00b7 Soft charcoal plastic",
+        "toy \u00b7 Terracotta clay",
+        "window",
+        "Window deep recess",
+        "Window latch",
+        "window \u00b7 Distant warm windows",
+        "window \u00b7 Porcelain edges",
+        "window \u00b7 Warm powder-coated white",
+        "window_glass",
+        "workspace_right_wing \u00b7 Porcelain edges",
+        "workspace_right_wing \u00b7 Sage green hardcover",
+        "workspace_right_wing \u00b7 Terracotta clay",
+        "workspace_right_wing \u00b7 Uncoated paper"
+      ],
+      "matrixWorld": [
+        [
+          0.7071067094802856,
+          0.7071067094802856,
+          0.0,
+          0.650879979133606
+        ],
+        [
+          -0.7071067094802856,
+          0.7071067094802856,
+          0.0,
+          1.3941899538040161
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    "speaker": {
+      "parent": null,
+      "pivot": [
+        -0.07000000029802322,
+        2.4566524028778076,
+        -1.6349999904632568
+      ],
+      "bounds": {
+        "min": [
+          -0.311538,
+          2.379942,
+          -1.729072
+        ],
+        "max": [
+          0.171538,
+          2.520022,
+          -1.590099
+        ]
+      },
+      "children": [
+        "Speaker brandless mark",
+        "Speaker fabric body",
+        "Speaker grille",
+        "Speaker indicator",
+        "speaker \u00b7 Chair woven frame"
+      ],
+      "matrixWorld": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -0.07000000029802322
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          1.6349999904632568
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          2.4566524028778076
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    "books": {
+      "parent": "workspace_left_wing",
+      "pivot": [
+        -0.5165296792984009,
+        2.1654863357543945,
+        -1.5186407566070557
+      ],
+      "bounds": {
+        "min": [
+          -0.656418,
+          2.147476,
+          -1.637171
+        ],
+        "max": [
+          -0.418809,
+          2.352793,
+          -1.399562
+        ]
+      },
+      "children": [
+        "Book spine DESIGN",
+        "books \u00b7 Lamp enamel vermilion",
+        "books \u00b7 Sage green hardcover",
+        "books \u00b7 Satin brass",
+        "books \u00b7 Terracotta clay",
+        "books \u00b7 Uncoated paper",
+        "books \u00b7 Warm cream accents",
+        "books \u00b7 Washed blue hardcover",
+        "books_cover",
+        "Cloth book cover"
+      ],
+      "matrixWorld": [
+        [
+          0.7071064710617065,
+          -0.7071064710617065,
+          0.0,
+          -0.5165296792984009
+        ],
+        [
+          0.7071064710617065,
+          0.7071064710617065,
+          0.0,
+          1.5186407566070557
+        ],
+        [
+          0.0,
+          0.0,
+          0.9999998211860657,
+          2.1654863357543945
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    "figma": {
+      "parent": "workspace_left_wing",
+      "pivot": [
+        -0.7329037189483643,
+        2.1474761962890625,
+        -1.312165379524231
+      ],
+      "bounds": {
+        "min": [
+          -0.945056,
+          2.147476,
+          -1.524318
+        ],
+        "max": [
+          -0.520751,
+          2.282656,
+          -1.100013
+        ]
+      },
+      "children": [
+        "Creator Micro foam border end -1",
+        "Creator Micro foam border end 1",
+        "Creator Micro foam border side -1",
+        "Creator Micro foam border side 1",
+        "Creator Micro foam support",
+        "Creator Micro tray collaboration print",
+        "Creator Micro tray end -1",
+        "Creator Micro tray end 1",
+        "Creator Micro tray side -1",
+        "Creator Micro tray side 1",
+        "Creator Micro white tray floor",
+        "figma_creator_micro",
+        "Creator Micro black fastening screw",
+        "Creator Micro black fastening screw.001",
+        "Creator Micro black fastening screw.002",
+        "Creator Micro black fastening screw.003",
+        "Creator Micro black rotary encoder",
+        "Creator Micro cyan key r0c1",
+        "Creator Micro cyan key r1c2",
+        "Creator Micro cyan key r2c3",
+        "Creator Micro frosted acrylic base",
+        "Creator Micro green key r0c2",
+        "Creator Micro green key r1c3",
+        "Creator Micro horizontal metal scroll encoder",
+        "Creator Micro knob index",
+        "Creator Micro knob top",
+        "Creator Micro pale circuit plate",
+        "Creator Micro pink key r1c0",
+        "Creator Micro pink key r2c1",
+        "Creator Micro pink key r3c2",
+        "Creator Micro plate attribution",
+        "Creator Micro purple key r1c1",
+        "Creator Micro purple key r2c2",
+        "Creator Micro red key r2c0",
+        "Creator Micro red key r3c1",
+        "Creator Micro screw slot",
+        "Creator Micro screw slot.001",
+        "Creator Micro screw slot.002",
+        "Creator Micro screw slot.003",
+        "Creator Micro scroll housing",
+        "Creator Micro scroll knurl 0",
+        "Creator Micro scroll knurl 1",
+        "Creator Micro scroll knurl 10",
+        "Creator Micro scroll knurl 11",
+        "Creator Micro scroll knurl 12",
+        "Creator Micro scroll knurl 13",
+        "Creator Micro scroll knurl 14",
+        "Creator Micro scroll knurl 15",
+        "Creator Micro scroll knurl 16",
+        "Creator Micro scroll knurl 17",
+        "Creator Micro scroll knurl 18",
+        "Creator Micro scroll knurl 19",
+        "Creator Micro scroll knurl 2",
+        "Creator Micro scroll knurl 20",
+        "Creator Micro scroll knurl 21",
+        "Creator Micro scroll knurl 3",
+        "Creator Micro scroll knurl 4",
+        "Creator Micro scroll knurl 5",
+        "Creator Micro scroll knurl 6",
+        "Creator Micro scroll knurl 7",
+        "Creator Micro scroll knurl 8",
+        "Creator Micro scroll knurl 9",
+        "Creator Micro switch r0c1",
+        "Creator Micro switch r0c2",
+        "Creator Micro switch r1c0",
+        "Creator Micro switch r1c1",
+        "Creator Micro switch r1c2",
+        "Creator Micro switch r1c3",
+        "Creator Micro switch r2c0",
+        "Creator Micro switch r2c1",
+        "Creator Micro switch r2c2",
+        "Creator Micro switch r2c3",
+        "Creator Micro switch r3c1",
+        "Creator Micro switch r3c2",
+        "figma_lid",
+        "Creator Micro actual front Figma print",
+        "Creator Micro actual right side print",
+        "Creator Micro actual top printed drawing",
+        "Creator Micro rear Work Louder print",
+        "Creator Micro yellow cover end -1",
+        "Creator Micro yellow cover end 1",
+        "Creator Micro yellow cover side -1",
+        "Creator Micro yellow cover side 1",
+        "Creator Micro yellow cover top"
+      ],
+      "matrixWorld": [
+        [
+          0.6363959908485413,
+          -0.6363959908485413,
+          0.0,
+          -0.7329037189483643
+        ],
+        [
+          0.6363959908485413,
+          0.6363959908485413,
+          0.0,
+          1.312165379524231
+        ],
+        [
+          0.0,
+          0.0,
+          0.8999999165534973,
+          2.1474761962890625
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    "plant_1": {
+      "parent": "workspace_left_wing",
+      "pivot": [
+        -0.7479621171951294,
+        1.76859450340271,
+        -1.2467687129974365
+      ],
+      "bounds": {
+        "min": [
+          -0.81649,
+          1.768595,
+          -1.341726
+        ],
+        "max": [
+          -0.660166,
+          2.030445,
+          -1.175111
+        ]
+      },
+      "children": [
+        "plant_1 ceramic pot",
+        "plant_1 soil",
+        "plant_1 \u00b7 Leaf jade",
+        "plant_1 \u00b7 Leaf sage",
+        "plant_1 \u00b7 Leaf shaded"
+      ],
+      "matrixWorld": [
+        [
+          0.7071066498756409,
+          -0.7071066498756409,
+          0.0,
+          -0.7479621171951294
+        ],
+        [
+          0.7071066498756409,
+          0.7071066498756409,
+          0.0,
+          1.2467687129974365
+        ],
+        [
+          0.0,
+          0.0,
+          0.9999999403953552,
+          1.76859450340271
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    "plant_2": {
+      "parent": "workspace_right_wing",
+      "pivot": [
+        0.7387975454330444,
+        2.479999542236328,
+        -1.1369266510009766
+      ],
+      "bounds": {
+        "min": [
+          0.593444,
+          2.48,
+          -1.275931
+        ],
+        "max": [
+          0.911629,
+          2.916327,
+          -0.97713
+        ]
+      },
+      "children": [
+        "plant_2 ceramic pot",
+        "plant_2 soil",
+        "plant_2 \u00b7 Leaf jade",
+        "plant_2 \u00b7 Leaf sage",
+        "plant_2 \u00b7 Leaf shaded"
+      ],
+      "matrixWorld": [
+        [
+          0.7071064710617065,
+          0.7071064710617065,
+          0.0,
+          0.7387975454330444
+        ],
+        [
+          -0.7071064710617065,
+          0.7071064710617065,
+          0.0,
+          1.1369266510009766
+        ],
+        [
+          0.0,
+          0.0,
+          0.9999998211860657,
+          2.479999542236328
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    "trophy_1": {
+      "parent": null,
+      "pivot": [
+        0.5066301822662354,
+        2.4809999465942383,
+        -1.5214691162109375
+      ],
+      "bounds": {
+        "min": [
+          0.44513,
+          2.481,
+          -1.582969
+        ],
+        "max": [
+          0.56813,
+          2.70814,
+          -1.459969
+        ]
+      },
+      "children": [
+        "trophy_1 attached handle",
+        "trophy_1 attached handle.001",
+        "trophy_1 blank plaque",
+        "trophy_1 continuous stem",
+        "trophy_1 cup collar",
+        "trophy_1 foot socket",
+        "trophy_1 hollow cup",
+        "trophy_1 solid plinth"
+      ],
+      "matrixWorld": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.5066301822662354
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          1.5214691162109375
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          2.4809999465942383
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    "trophy_2": {
+      "parent": null,
+      "pivot": [
+        0.6586581468582153,
+        2.4809999465942383,
+        -1.369441270828247
+      ],
+      "bounds": {
+        "min": [
+          0.597158,
+          2.481,
+          -1.430941
+        ],
+        "max": [
+          0.720158,
+          2.74914,
+          -1.307941
+        ]
+      },
+      "children": [
+        "trophy_2 attached handle",
+        "trophy_2 attached handle.001",
+        "trophy_2 blank plaque",
+        "trophy_2 continuous stem",
+        "trophy_2 cup collar",
+        "trophy_2 foot socket",
+        "trophy_2 hollow cup",
+        "trophy_2 solid plinth"
+      ],
+      "matrixWorld": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.6586581468582153
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          1.369441270828247
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          2.4809999465942383
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    "medal_1": {
+      "parent": null,
+      "pivot": [
+        -0.23000000417232513,
+        2.3789422512054443,
+        -1.503000020980835
+      ],
+      "bounds": {
+        "min": [
+          -0.271,
+          2.166942,
+          -1.479
+        ],
+        "max": [
+          -0.189,
+          2.360506,
+          -1.46225
+        ]
+      },
+      "children": [
+        "medal_1 blank medallion",
+        "medal_1 eyelet",
+        "medal_1 fabric ribbon",
+        "medal_1 fabric ribbon.001",
+        "medal_1 inset medallion face",
+        "medal_1 shelf hook"
+      ],
+      "matrixWorld": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -0.23000000417232513
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          1.503000020980835
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          2.3789422512054443
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    "medal_2": {
+      "parent": null,
+      "pivot": [
+        0.0,
+        2.3789422512054443,
+        -1.503000020980835
+      ],
+      "bounds": {
+        "min": [
+          -0.041,
+          2.166942,
+          -1.479
+        ],
+        "max": [
+          0.041,
+          2.360506,
+          -1.46225
+        ]
+      },
+      "children": [
+        "medal_2 blank medallion",
+        "medal_2 eyelet",
+        "medal_2 fabric ribbon",
+        "medal_2 fabric ribbon.001",
+        "medal_2 inset medallion face",
+        "medal_2 shelf hook"
+      ],
+      "matrixWorld": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          1.503000020980835
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          2.3789422512054443
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    "medal_3": {
+      "parent": null,
+      "pivot": [
+        0.23000000417232513,
+        2.3789422512054443,
+        -1.503000020980835
+      ],
+      "bounds": {
+        "min": [
+          0.189,
+          2.166942,
+          -1.479
+        ],
+        "max": [
+          0.271,
+          2.360506,
+          -1.46225
+        ]
+      },
+      "children": [
+        "medal_3 blank medallion",
+        "medal_3 eyelet",
+        "medal_3 fabric ribbon",
+        "medal_3 fabric ribbon.001",
+        "medal_3 inset medallion face",
+        "medal_3 shelf hook"
+      ],
+      "matrixWorld": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.23000000417232513
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          1.503000020980835
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          2.3789422512054443
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    "desktop_surface": {
+      "parent": null,
+      "pivot": [
+        0.0,
+        1.309999942779541,
+        -1.2200000286102295
+      ],
+      "bounds": null,
+      "children": [],
+      "matrixWorld": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          1.2200000286102295
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          1.309999942779541
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    }
+  },
+  "components": {
+    "workspace_left_wing \u00b7 Porcelain edges": {
+      "materials": [
+        "Porcelain edges"
+      ],
+      "parent": "workspace_left_wing",
+      "parts": [
+        {
+          "world": {
+            "min": [
+              -0.984875,
+              1.297982,
+              -1.318282
+            ],
+            "max": [
+              -0.726788,
+              2.462323,
+              -1.060195
+            ]
+          },
+          "parentLocal": {
+            "min": [
+              -0.310948,
+              1.297982,
+              -0.165263
+            ],
+            "max": [
+              -0.268742,
+              2.462323,
+              0.165263
+            ]
+          },
+          "vertices": 96
+        },
+        {
+          "world": {
+            "min": [
+              -0.574972,
+              1.297982,
+              -1.728185
+            ],
+            "max": [
+              -0.316885,
+              2.462323,
+              -1.470098
+            ]
+          },
+          "parentLocal": {
+            "min": [
+              0.268742,
+              1.297982,
+              -0.165263
+            ],
+            "max": [
+              0.310948,
+              2.462323,
+              0.165263
+            ]
+          },
+          "vertices": 96
+        },
+        {
+          "world": {
+            "min": [
+              -0.989729,
+              1.317338,
+              -1.733039
+            ],
+            "max": [
+              -0.312031,
+              1.366032,
+              -1.055341
+            ]
+          },
+          "parentLocal": {
+            "min": [
+              -0.310185,
+              1.317338,
+              -0.17289
+            ],
+            "max": [
+              0.310185,
+              1.366032,
+              0.17289
+            ]
+          },
+          "vertices": 96
+        },
+        {
+          "world": {
+            "min": [
+              -0.989729,
+              1.717566,
+              -1.733039
+            ],
+            "max": [
+              -0.312031,
+              1.76626,
+              -1.055341
+            ]
+          },
+          "parentLocal": {
+            "min": [
+              -0.310185,
+              1.717566,
+              -0.17289
+            ],
+            "max": [
+              0.310185,
+              1.76626,
+              0.17289
+            ]
+          },
+          "vertices": 96
+        },
+        {
+          "world": {
+            "min": [
+              -0.989729,
+              2.097782,
+              -1.733039
+            ],
+            "max": [
+              -0.312031,
+              2.146477,
+              -1.055341
+            ]
+          },
+          "parentLocal": {
+            "min": [
+              -0.310185,
+              2.097782,
+              -0.17289
+            ],
+            "max": [
+              0.310185,
+              2.146477,
+              0.17289
+            ]
+          },
+          "vertices": 96
+        },
+        {
+          "world": {
+            "min": [
+              -0.989729,
+              2.431306,
+              -1.733039
+            ],
+            "max": [
+              -0.312031,
+              2.48,
+              -1.055341
+            ]
+          },
+          "parentLocal": {
+            "min": [
+              -0.310185,
+              2.431306,
+              -0.17289
+            ],
+            "max": [
+              0.310185,
+              2.48,
+              0.17289
+            ]
+          },
+          "vertices": 96
+        },
+        {
+          "world": {
+            "min": [
+              -1.187966,
+              2.582392,
+              -1.967232
+            ],
+            "max": [
+              -0.444593,
+              3.382848,
+              -1.223859
+            ]
+          },
+          "parentLocal": {
+            "min": [
+              -0.493245,
+              2.582392,
+              -0.278404
+            ],
+            "max": [
+              0.544095,
+              3.382848,
+              -0.240266
+            ]
+          },
+          "vertices": 96
+        },
+        {
+          "world": {
+            "min": [
+              -0.939846,
+              2.600736,
+              -1.711921
+            ],
+            "max": [
+              -0.421601,
+              2.677446,
+              -1.193677
+            ]
+          },
+          "parentLocal": {
+            "min": [
+              -0.340695,
+              2.600736,
+              -0.07119
+            ],
+            "max": [
+              0.381375,
+              2.677446,
+              -0.053901
+            ]
+          },
+          "vertices": 96
+        }
+      ]
+    },
+    "workspace_left_wing \u00b7 Warm powder-coated white": {
+      "materials": [
+        "Warm powder-coated white"
+      ],
+      "parent": "workspace_left_wing",
+      "parts": [
+        {
+          "world": {
+            "min": [
+              -0.97482,
+              1.35169,
+              -1.71813
+            ],
+            "max": [
+              -0.560656,
+              1.731907,
+              -1.303966
+            ]
+          },
+          "parentLocal": {
+            "min": [
+              -0.287303,
+              1.35169,
+              -0.173398
+            ],
+            "max": [
+              0.287302,
+              1.731907,
+              -0.157126
+            ]
+          },
+          "vertices": 96
+        },
+        {
+          "world": {
+            "min": [
+              -1.04475,
+              2.595733,
+              -1.816826
+            ],
+            "max": [
+              -0.4296,
+              2.642426,
+              -1.201675
+            ]
+          },
+          "parentLocal": {
+            "min": [
+              -0.340695,
+              2.595733,
+              -0.22374
+            ],
+            "max": [
+              0.381375,
+              2.642426,
+              -0.06102
+            ]
+          },
+          "vertices": 96
+        },
+        {
+          "world": {
+            "min": [
+              -0.473099,
+              2.595733,
+              -1.842049
+            ],
+            "max": [
+              -0.361229,
+              2.762494,
+              -1.730179
+            ]
+          },
+          "parentLocal": {
+            "min": [
+              0.38646,
+              2.595733,
+              -0.167805
+            ],
+            "max": [
+              0.49833,
+              2.762494,
+              -0.055935
+            ]
+          },
+          "vertices": 192
+        }
+      ]
+    },
+    "workspace_right_wing \u00b7 Porcelain edges": {
+      "materials": [
+        "Porcelain edges"
+      ],
+      "parent": "workspace_right_wing",
+      "parts": [
+        {
+          "world": {
+            "min": [
+              0.316885,
+              1.297982,
+              -1.728185
+            ],
+            "max": [
+              0.574972,
+              2.462323,
+              -1.470098
+            ]
+          },
+          "parentLocal": {
+            "min": [
+              -0.310948,
+              1.297982,
+              -0.165263
+            ],
+            "max": [
+              -0.268742,
+              2.462323,
+              0.165262
+            ]
+          },
+          "vertices": 96
+        },
+        {
+          "world": {
+            "min": [
+              0.726788,
+              1.297982,
+              -1.318282
+            ],
+            "max": [
+              0.984875,
+              2.462323,
+              -1.060195
+            ]
+          },
+          "parentLocal": {
+            "min": [
+              0.268742,
+              1.297982,
+              -0.165263
+            ],
+            "max": [
+              0.310948,
+              2.462323,
+              0.165262
+            ]
+          },
+          "vertices": 96
+        },
+        {
+          "world": {
+            "min": [
+              0.312031,
+              1.317338,
+              -1.733039
+            ],
+            "max": [
+              0.989729,
+              1.366032,
+              -1.055341
+            ]
+          },
+          "parentLocal": {
+            "min": [
+              -0.310185,
+              1.317338,
+              -0.17289
+            ],
+            "max": [
+              0.310185,
+              1.366032,
+              0.17289
+            ]
+          },
+          "vertices": 96
+        },
+        {
+          "world": {
+            "min": [
+              0.312031,
+              1.717566,
+              -1.733039
+            ],
+            "max": [
+              0.989729,
+              1.76626,
+              -1.055341
+            ]
+          },
+          "parentLocal": {
+            "min": [
+              -0.310185,
+              1.717566,
+              -0.17289
+            ],
+            "max": [
+              0.310185,
+              1.76626,
+              0.17289
+            ]
+          },
+          "vertices": 96
+        },
+        {
+          "world": {
+            "min": [
+              0.312031,
+              2.097782,
+              -1.733039
+            ],
+            "max": [
+              0.989729,
+              2.146477,
+              -1.055341
+            ]
+          },
+          "parentLocal": {
+            "min": [
+              -0.310185,
+              2.097782,
+              -0.17289
+            ],
+            "max": [
+              0.310185,
+              2.146477,
+              0.17289
+            ]
+          },
+          "vertices": 96
+        },
+        {
+          "world": {
+            "min": [
+              0.312031,
+              2.431306,
+              -1.733039
+            ],
+            "max": [
+              0.989729,
+              2.48,
+              -1.055341
+            ]
+          },
+          "parentLocal": {
+            "min": [
+              -0.310185,
+              2.431306,
+              -0.17289
+            ],
+            "max": [
+              0.310185,
+              2.48,
+              0.17289
+            ]
+          },
+          "vertices": 96
+        }
+      ]
+    },
+    "Shelf lower back.001": {
+      "materials": [
+        "Warm powder-coated white"
+      ],
+      "parent": "workspace_right_wing",
+      "parts": [
+        {
+          "world": {
+            "min": [
+              0.560656,
+              1.35169,
+              -1.71813
+            ],
+            "max": [
+              0.97482,
+              1.731907,
+              -1.303966
+            ]
+          },
+          "parentLocal": {
+            "min": [
+              -0.287302,
+              1.35169,
+              -0.173398
+            ],
+            "max": [
+              0.287303,
+              1.731907,
+              -0.157126
+            ]
+          },
+          "vertices": 96
+        }
+      ]
+    },
+    "Pegboard slots": {
+      "materials": [
+        "Pegboard printed recesses"
+      ],
+      "parent": "workspace_left_wing",
+      "parts": [
+        {
+          "world": {
+            "min": [
+              -1.148876,
+              2.615744,
+              -1.928142
+            ],
+            "max": [
+              -0.451322,
+              3.349495,
+              -1.230589
+            ]
+          },
+          "parentLocal": {
+            "min": [
+              -0.46782,
+              2.615744,
+              -0.236452
+            ],
+            "max": [
+              0.51867,
+              3.349495,
+              -0.236452
+            ]
+          },
+          "vertices": 4
+        }
+      ]
+    },
+    "workspace_left_wing \u00b7 Brushed aluminium": {
+      "materials": [
+        "Brushed aluminium"
+      ],
+      "parent": "workspace_left_wing",
+      "parts": [
+        {
+          "world": {
+            "min": [
+              -1.127167,
+              2.650431,
+              -1.259219
+            ],
+            "max": [
+              -1.113054,
+              2.674444,
+              -1.245105
+            ]
+          },
+          "parentLocal": {
+            "min": [
+              -0.441378,
+              2.650431,
+              -0.233656
+            ],
+            "max": [
+              -0.423072,
+              2.674444,
+              -0.229079
+            ]
+          },
+          "vertices": 96
+        },
+        {
+          "world": {
+            "min": [
+              -0.479953,
+              2.65043,
+              -1.906434
+            ],
+            "max": [
+              -0.465839,
+              2.674444,
+              -1.89232
+            ]
+          },
+          "parentLocal": {
+            "min": [
+              0.473922,
+              2.65043,
+              -0.233656
+            ],
+            "max": [
+              0.492228,
+              2.674444,
+              -0.229079
+            ]
+          },
+          "vertices": 96
+        },
+        {
+          "world": {
+            "min": [
+              -1.127167,
+              3.277454,
+              -1.259219
+            ],
+            "max": [
+              -1.113054,
+              3.301468,
+              -1.245106
+            ]
+          },
+          "parentLocal": {
+            "min": [
+              -0.441378,
+              3.277454,
+              -0.233656
+            ],
+            "max": [
+              -0.423072,
+              3.301468,
+              -0.229079
+            ]
+          },
+          "vertices": 96
+        },
+        {
+          "world": {
+            "min": [
+              -0.479953,
+              3.277454,
+              -1.906434
+            ],
+            "max": [
+              -0.465839,
+              3.301468,
+              -1.89232
+            ]
+          },
+          "parentLocal": {
+            "min": [
+              0.473922,
+              3.277454,
+              -0.233656
+            ],
+            "max": [
+              0.492228,
+              3.301468,
+              -0.229079
+            ]
+          },
+          "vertices": 96
+        },
+        {
+          "world": {
+            "min": [
+              -1.073095,
+              2.978617,
+              -1.255486
+            ],
+            "max": [
+              -1.053504,
+              3.013304,
+              -1.235895
+            ]
+          },
+          "parentLocal": {
+            "min": [
+              -0.409851,
+              2.978617,
+              -0.188145
+            ],
+            "max": [
+              -0.383409,
+              3.013304,
+              -0.185094
+            ]
+          },
+          "vertices": 128
+        },
+        {
+          "world": {
+            "min": [
+              -1.032266,
+              3.335047,
+              -1.3441
+            ],
+            "max": [
+              -0.949069,
+              3.350602,
+              -1.260902
+            ]
+          },
+          "parentLocal": {
+            "min": [
+              -0.311029,
+              3.335047,
+              -0.228825
+            ],
+            "max": [
+              -0.299171,
+              3.350602,
+              -0.12204
+            ]
+          },
+          "vertices": 160
+        }
+      ]
+    },
+    "workspace_left_wing \u00b7 Lamp enamel vermilion": {
+      "materials": [
+        "Lamp enamel vermilion"
+      ],
+      "parent": "workspace_left_wing",
+      "parts": [
+        {
+          "world": {
+            "min": [
+              -0.737079,
+              3.089347,
+              -1.760849
+            ],
+            "max": [
+              -0.571872,
+              3.289461,
+              -1.595642
+            ]
+          },
+          "parentLocal": {
+            "min": [
+              0.083902,
+              3.089347,
+              -0.206451
+            ],
+            "max": [
+              0.312728,
+              3.289461,
+              -0.200349
+            ]
+          },
+          "vertices": 96
+        },
+        {
+          "world": {
+            "min": [
+              -0.470512,
+              2.641918,
+              -1.786818
+            ],
+            "max": [
+              -0.452358,
+              2.862637,
+              -1.761589
+            ]
+          },
+          "parentLocal": {
+            "min": [
+              0.389013,
+              2.641918,
+              -0.141839
+            ],
+            "max": [
+              0.416323,
+              2.862637,
+              -0.127666
+            ]
+          },
+          "vertices": 224
+        },
+        {
+          "world": {
+            "min": [
+              -0.428024,
+              2.642286,
+              -1.789809
+            ],
+            "max": [
+              -0.413326,
+              2.903579,
+              -1.779711
+            ]
+          },
+          "parentLocal": {
+            "min": [
+              0.432924,
+              2.642286,
+              -0.120314
+            ],
+            "max": [
+              0.444984,
+              2.903579,
+              -0.106477
+            ]
+          },
+          "vertices": 160
+        }
+      ]
+    },
+    "workspace_left_wing \u00b7 Warm cream accents": {
+      "materials": [
+        "Warm cream accents"
+      ],
+      "parent": "workspace_left_wing",
+      "parts": [
+        {
+          "world": {
+            "min": [
+              -0.631842,
+              3.192739,
+              -1.703327
+            ],
+            "max": [
+              -0.620549,
+              3.220285,
+              -1.692034
+            ]
+          },
+          "parentLocal": {
+            "min": [
+              0.224069,
+              3.192739,
+              -0.197146
+            ],
+            "max": [
+              0.240041,
+              3.220285,
+              -0.197145
+            ]
+          },
+          "vertices": 12
+        },
+        {
+          "world": {
+            "min": [
+              -0.646782,
+              3.192739,
+              -1.690484
+            ],
+            "max": [
+              -0.633392,
+              3.220285,
+              -1.677094
+            ]
+          },
+          "parentLocal": {
+            "min": [
+              0.202942,
+              3.192739,
+              -0.197146
+            ],
+            "max": [
+              0.221878,
+              3.220285,
+              -0.197145
+            ]
+          },
+          "vertices": 12
+        },
+        {
+          "world": {
+            "min": [
+              -0.663311,
+              3.192739,
+              -1.675464
+            ],
+            "max": [
+              -0.648412,
+              3.220285,
+              -1.660564
+            ]
+          },
+          "parentLocal": {
+            "min": [
+              0.179565,
+              3.192739,
+              -0.197146
+            ],
+            "max": [
+              0.200636,
+              3.220285,
+              -0.197145
+            ]
+          },
+          "vertices": 11
+        },
+        {
+          "world": {
+            "min": [
+              -0.679122,
+              3.192739,
+              -1.659096
+            ],
+            "max": [
+              -0.66478,
+              3.220285,
+              -1.644754
+            ]
+          },
+          "parentLocal": {
+            "min": [
+              0.157205,
+              3.192739,
+              -0.197146
+            ],
+            "max": [
+              0.177488,
+              3.220285,
+              -0.197145
+            ]
+          },
+          "vertices": 13
+        },
+        {
+          "world": {
+            "min": [
+              -0.632058,
+              3.192739,
+              -1.703543
+            ],
+            "max": [
+              -0.620764,
+              3.220285,
+              -1.69225
+            ]
+          },
+          "parentLocal": {
+            "min": [
+              0.22407,
+              3.192739,
+              -0.197451
+            ],
+            "max": [
+              0.240041,
+              3.220285,
+              -0.197451
+            ]
+          },
+          "vertices": 12
+        },
+        {
+          "world": {
+            "min": [
+              -0.646997,
+              3.192739,
+              -1.6907
+            ],
+            "max": [
+              -0.633607,
+              3.220285,
+              -1.67731
+            ]
+          },
+          "parentLocal": {
+            "min": [
+              0.202942,
+              3.192739,
+              -0.197451
+            ],
+            "max": [
+              0.221878,
+              3.220285,
+              -0.197451
+            ]
+          },
+          "vertices": 12
+        },
+        {
+          "world": {
+            "min": [
+              -0.663527,
+              3.192739,
+              -1.675679
+            ],
+            "max": [
+              -0.648628,
+              3.220285,
+              -1.66078
+            ]
+          },
+          "parentLocal": {
+            "min": [
+              0.179565,
+              3.192739,
+              -0.197451
+            ],
+            "max": [
+              0.200636,
+              3.220285,
+              -0.197451
+            ]
+          },
+          "vertices": 11
+        },
+        {
+          "world": {
+            "min": [
+              -0.679338,
+              3.192739,
+              -1.659312
+            ],
+            "max": [
+              -0.664996,
+              3.220285,
+              -1.64497
+            ]
+          },
+          "parentLocal": {
+            "min": [
+              0.157205,
+              3.192739,
+              -0.197451
+            ],
+            "max": [
+              0.177488,
+              3.220285,
+              -0.19745
+            ]
+          },
+          "vertices": 13
+        },
+        {
+          "world": {
+            "min": [
+              -0.679338,
+              3.192739,
+              -1.659312
+            ],
+            "max": [
+              -0.66478,
+              3.220285,
+              -1.644754
+            ]
+          },
+          "parentLocal": {
+            "min": [
+              0.157205,
+              3.192739,
+              -0.197451
+            ],
+            "max": [
+              0.177488,
+              3.220285,
+              -0.197145
+            ]
+          },
+          "vertices": 26
+        },
+        {
+          "world": {
+            "min": [
+              -0.663527,
+              3.192739,
+              -1.675679
+            ],
+            "max": [
+              -0.648412,
+              3.220285,
+              -1.660564
+            ]
+          },
+          "parentLocal": {
+            "min": [
+              0.179565,
+              3.192739,
+              -0.197451
+            ],
+            "max": [
+              0.200636,
+              3.220285,
+              -0.197145
+            ]
+          },
+          "vertices": 16
+        },
+        {
+          "world": {
+            "min": [
+              -0.658199,
+              3.203637,
+              -1.670159
+            ],
+            "max": [
+              -0.653932,
+              3.21386,
+              -1.665892
+            ]
+          },
+          "parentLocal": {
+            "min": [
+              0.187099,
+              3.203637,
+              -0.197451
+            ],
+            "max": [
+              0.192829,
+              3.21386,
+              -0.197145
+            ]
+          },
+          "vertices": 6
+        },
+        {
+          "world": {
+            "min": [
+              -0.646997,
+              3.192739,
+              -1.6907
+            ],
+            "max": [
+              -0.633392,
+              3.220285,
+              -1.677094
+            ]
+          },
+          "parentLocal": {
+            "min": [
+              0.202942,
+              3.192739,
+              -0.197451
+            ],
+            "max": [
+              0.221878,
+              3.220285,
+              -0.197145
+            ]
+          },
+          "vertices": 24
+        },
+        {
+          "world": {
+            "min": [
+              -0.632058,
+              3.192739,
+              -1.703543
+            ],
+            "max": [
+              -0.620549,
+              3.220285,
+              -1.692034
+            ]
+          },
+          "parentLocal": {
+            "min": [
+              0.224069,
+              3.192739,
+              -0.197451
+            ],
+            "max": [
+              0.240041,
+              3.220285,
+              -0.197145
+            ]
+          },
+          "vertices": 24
+        },
+        {
+          "world": {
+            "min": [
+              -0.620766,
+              3.135706,
+              -1.705316
+            ],
+            "max": [
+              -0.61856,
+              3.139798,
+              -1.70311
+            ]
+          },
+          "parentLocal": {
+            "min": [
+              0.239733,
+              3.135706,
+              -0.197146
+            ],
+            "max": [
+              0.242853,
+              3.139798,
+              -0.197145
+            ]
+          },
+          "vertices": 4
+        },
+        {
+          "world": {
+            "min": [
+              -0.632062,
+              3.135328,
+              -1.701171
+            ],
+            "max": [
+              -0.622705,
+              3.157418,
+              -1.691814
+            ]
+          },
+          "parentLocal": {
+            "min": [
+              0.223759,
+              3.135328,
+              -0.197146
+            ],
+            "max": [
+              0.236991,
+              3.157418,
+              -0.197145
+            ]
+          },
+          "vertices": 86
+        },
+        {
+          "world": {
+            "min": [
+              -0.644378,
+              3.135342,
+              -1.69026
+            ],
+            "max": [
+              -0.633616,
+              3.157418,
+              -1.679498
+            ]
+          },
+          "parentLocal": {
+            "min": [
+              0.206341,
+              3.135342,
+              -0.197146
+            ],
+            "max": [
+              0.221561,
+              3.157418,
+              -0.197145
+            ]
+          },
+          "vertices": 60
+        },
+        {
+          "world": {
+            "min": [
+              -0.655563,
+              3.135706,
+              -1.677441
+            ],
+            "max": [
+              -0.646434,
+              3.157055,
+              -1.668312
+            ]
+          },
+          "parentLocal": {
+            "min": [
+              0.190522,
+              3.135706,
+              -0.197146
+            ],
+            "max": [
+              0.203433,
+              3.157055,
+              -0.197145
+            ]
+          },
+          "vertices": 10
+        },
+        {
+          "world": {
+            "min": [
+              -0.660124,
+              3.135706,
+              -1.666075
+            ],
+            "max": [
+              -0.657801,
+              3.157055,
+              -1.663752
+            ]
+          },
+          "parentLocal": {
+            "min": [
+              0.184072,
+              3.135706,
+              -0.197146
+            ],
+            "max": [
+              0.187358,
+              3.157055,
+              -0.197146
+            ]
+          },
+          "vertices": 4
+        },
+        {
+          "world": {
+            "min": [
+              -0.671655,
+              3.135706,
+              -1.66142
+            ],
+            "max": [
+              -0.662455,
+              3.157055,
+              -1.652221
+            ]
+          },
+          "parentLocal": {
+            "min": [
+              0.167765,
+              3.135706,
+              -0.197145
+            ],
+            "max": [
+              0.180775,
+              3.157055,
+              -0.197145
+            ]
+          },
+          "vertices": 12
+        },
+        {
+          "world": {
+            "min": [
+              -0.682307,
+              3.135706,
+              -1.650714
+            ],
+            "max": [
+              -0.673162,
+              3.157055,
+              -1.641569
+            ]
+          },
+          "parentLocal": {
+            "min": [
+              0.152701,
+              3.135706,
+              -0.197146
+            ],
+            "max": [
+              0.165634,
+              3.157055,
+              -0.197145
+            ]
+          },
+          "vertices": 8
+        },
+        {
+          "world": {
+            "min": [
+              -0.620982,
+              3.135706,
+              -1.705531
+            ],
+            "max": [
+              -0.618776,
+              3.139798,
+              -1.703326
+            ]
+          },
+          "parentLocal": {
+            "min": [
+              0.239733,
+              3.135706,
+              -0.197451
+            ],
+            "max": [
+              0.242852,
+              3.139798,
+              -0.197451
+            ]
+          },
+          "vertices": 4
+        },
+        {
+          "world": {
+            "min": [
+              -0.632277,
+              3.135328,
+              -1.701387
+            ],
+            "max": [
+              -0.622921,
+              3.157418,
+              -1.69203
+            ]
+          },
+          "parentLocal": {
+            "min": [
+              0.223759,
+              3.135328,
+              -0.197451
+            ],
+            "max": [
+              0.236991,
+              3.157418,
+              -0.19745
+            ]
+          },
+          "vertices": 86
+        },
+        {
+          "world": {
+            "min": [
+              -0.644593,
+              3.135342,
+              -1.690476
+            ],
+            "max": [
+              -0.633832,
+              3.157418,
+              -1.679714
+            ]
+          },
+          "parentLocal": {
+            "min": [
+              0.206341,
+              3.135342,
+              -0.197451
+            ],
+            "max": [
+              0.221561,
+              3.157418,
+              -0.19745
+            ]
+          },
+          "vertices": 60
+        },
+        {
+          "world": {
+            "min": [
+              -0.655779,
+              3.135706,
+              -1.677657
+            ],
+            "max": [
+              -0.64665,
+              3.157055,
+              -1.668528
+            ]
+          },
+          "parentLocal": {
+            "min": [
+              0.190522,
+              3.135706,
+              -0.197451
+            ],
+            "max": [
+              0.203433,
+              3.157055,
+              -0.197451
+            ]
+          },
+          "vertices": 10
+        },
+        {
+          "world": {
+            "min": [
+              -0.66034,
+              3.135706,
+              -1.666291
+            ],
+            "max": [
+              -0.658016,
+              3.157055,
+              -1.663967
+            ]
+          },
+          "parentLocal": {
+            "min": [
+              0.184072,
+              3.135706,
+              -0.197451
+            ],
+            "max": [
+              0.187358,
+              3.157055,
+              -0.197451
+            ]
+          },
+          "vertices": 4
+        },
+        {
+          "world": {
+            "min": [
+              -0.671871,
+              3.135706,
+              -1.661636
+            ],
+            "max": [
+              -0.662671,
+              3.157055,
+              -1.652436
+            ]
+          },
+          "parentLocal": {
+            "min": [
+              0.167765,
+              3.135706,
+              -0.197451
+            ],
+            "max": [
+              0.180775,
+              3.157055,
+              -0.197451
+            ]
+          },
+          "vertices": 12
+        },
+        {
+          "world": {
+            "min": [
+              -0.682523,
+              3.135706,
+              -1.650929
+            ],
+            "max": [
+              -0.673378,
+              3.157055,
+              -1.641784
+            ]
+          },
+          "parentLocal": {
+            "min": [
+              0.152701,
+              3.135706,
+              -0.197451
+            ],
+            "max": [
+              0.165633,
+              3.157055,
+              -0.197451
+            ]
+          },
+          "vertices": 8
+        },
+        {
+          "world": {
+            "min": [
+              -0.682523,
+              3.135706,
+              -1.650929
+            ],
+            "max": [
+              -0.673162,
+              3.157055,
+              -1.641569
+            ]
+          },
+          "parentLocal": {
+            "min": [
+              0.152701,
+              3.135706,
+              -0.197451
+            ],
+            "max": [
+              0.165634,
+              3.157055,
+              -0.197145
+            ]
+          },
+          "vertices": 16
+        },
+        {
+          "world": {
+            "min": [
+              -0.671871,
+              3.135706,
+              -1.661636
+            ],
+            "max": [
+              -0.662455,
+              3.157055,
+              -1.652221
+            ]
+          },
+          "parentLocal": {
+            "min": [
+              0.167765,
+              3.135706,
+              -0.197451
+            ],
+            "max": [
+              0.180775,
+              3.157055,
+              -0.197145
+            ]
+          },
+          "vertices": 24
+        },
+        {
+          "world": {
+            "min": [
+              -0.66034,
+              3.135706,
+              -1.666291
+            ],
+            "max": [
+              -0.657801,
+              3.157055,
+              -1.663752
+            ]
+          },
+          "parentLocal": {
+            "min": [
+              0.184072,
+              3.135706,
+              -0.197451
+            ],
+            "max": [
+              0.187358,
+              3.157055,
+              -0.197146
+            ]
+          },
+          "vertices": 8
+        },
+        {
+          "world": {
+            "min": [
+              -0.655779,
+              3.135706,
+              -1.677657
+            ],
+            "max": [
+              -0.646434,
+              3.157055,
+              -1.668312
+            ]
+          },
+          "parentLocal": {
+            "min": [
+              0.190522,
+              3.135706,
+              -0.197451
+            ],
+            "max": [
+              0.203433,
+              3.157055,
+              -0.197145
+            ]
+          },
+          "vertices": 20
+        },
+        {
+          "world": {
+            "min": [
+              -0.644593,
+              3.135342,
+              -1.690476
+            ],
+            "max": [
+              -0.633616,
+              3.157418,
+              -1.679498
+            ]
+          },
+          "parentLocal": {
+            "min": [
+              0.206341,
+              3.135342,
+              -0.197451
+            ],
+            "max": [
+              0.221561,
+              3.157418,
+              -0.197145
+            ]
+          },
+          "vertices": 120
+        },
+        {
+          "world": {
+            "min": [
+              -0.632277,
+              3.135328,
+              -1.701387
+            ],
+            "max": [
+              -0.622705,
+              3.157418,
+              -1.691814
+            ]
+          },
+          "parentLocal": {
+            "min": [
+              0.223759,
+              3.135328,
+              -0.197451
+            ],
+            "max": [
+              0.236991,
+              3.157418,
+              -0.197145
+            ]
+          },
+          "vertices": 172
+        },
+        {
+          "world": {
+            "min": [
+              -0.620982,
+              3.135706,
+              -1.705531
+            ],
+            "max": [
+              -0.61856,
+              3.139798,
+              -1.70311
+            ]
+          },
+          "parentLocal": {
+            "min": [
+              0.239733,
+              3.135706,
+              -0.197451
+            ],
+            "max": [
+              0.242853,
+              3.139798,
+              -0.197145
+            ]
+          },
+          "vertices": 8
+        }
+      ]
+    },
+    "Cream clipped note": {
+      "materials": [
+        "Uncoated paper"
+      ],
+      "parent": "workspace_left_wing",
+      "parts": [
+        {
+          "world": {
+            "min": [
+              -1.125131,
+              2.709131,
+              -1.307522
+            ],
+            "max": [
+              -1.035986,
+              2.962608,
+              -1.218377
+            ]
+          },
+          "parentLocal": {
+            "min": [
+              -0.45765,
+              2.709131,
+              -0.214333
+            ],
+            "max": [
+              -0.33561,
+              2.962608,
+              -0.207722
+            ]
+          },
+          "vertices": 96
+        }
+      ]
+    },
+    "workspace_left_wing \u00b7 Sage green hardcover": {
+      "materials": [
+        "Sage green hardcover"
+      ],
+      "parent": "workspace_left_wing",
+      "parts": [
+        {
+          "world": {
+            "min": [
+              -1.105908,
+              2.914248,
+              -1.288298
+            ],
+            "max": [
+              -1.047299,
+              2.917583,
+              -1.229689
+            ]
+          },
+          "parentLocal": {
+            "min": [
+              -0.43731,
+              2.914248,
+              -0.206197
+            ],
+            "max": [
+              -0.35595,
+              2.917583,
+              -0.204671
+            ]
+          },
+          "vertices": 8
+        },
+        {
+          "world": {
+            "min": [
+              -1.105908,
+              2.867554,
+              -1.288298
+            ],
+            "max": [
+              -1.047299,
+              2.87089,
+              -1.229689
+            ]
+          },
+          "parentLocal": {
+            "min": [
+              -0.43731,
+              2.867554,
+              -0.206197
+            ],
+            "max": [
+              -0.35595,
+              2.87089,
+              -0.204671
+            ]
+          },
+          "vertices": 8
+        },
+        {
+          "world": {
+            "min": [
+              -1.105908,
+              2.827532,
+              -1.288298
+            ],
+            "max": [
+              -1.047299,
+              2.830867,
+              -1.229689
+            ]
+          },
+          "parentLocal": {
+            "min": [
+              -0.43731,
+              2.827532,
+              -0.206197
+            ],
+            "max": [
+              -0.35595,
+              2.830867,
+              -0.204671
+            ]
+          },
+          "vertices": 8
+        },
+        {
+          "world": {
+            "min": [
+              -1.105908,
+              2.787509,
+              -1.288298
+            ],
+            "max": [
+              -1.047299,
+              2.790844,
+              -1.229689
+            ]
+          },
+          "parentLocal": {
+            "min": [
+              -0.43731,
+              2.787509,
+              -0.206197
+            ],
+            "max": [
+              -0.35595,
+              2.790844,
+              -0.204671
+            ]
+          },
+          "vertices": 8
+        }
+      ]
+    },
+    "workspace_left_wing \u00b7 Soft charcoal plastic": {
+      "materials": [
+        "Soft charcoal plastic"
+      ],
+      "parent": "workspace_left_wing",
+      "parts": [
+        {
+          "world": {
+            "min": [
+              -1.086693,
+              2.957605,
+              -1.269083
+            ],
+            "max": [
+              -1.047098,
+              2.980952,
+              -1.229488
+            ]
+          },
+          "parentLocal": {
+            "min": [
+              -0.415699,
+              2.957605,
+              -0.202891
+            ],
+            "max": [
+              -0.377561,
+              2.980952,
+              -0.180517
+            ]
+          },
+          "vertices": 96
+        },
+        {
+          "world": {
+            "min": [
+              -1.076704,
+              3.179325,
+              -1.352495
+            ],
+            "max": [
+              -0.893702,
+              3.416259,
+              -1.17532
+            ]
+          },
+          "parentLocal": {
+            "min": [
+              -0.449776,
+              3.179325,
+              -0.173221
+            ],
+            "max": [
+              -0.206989,
+              3.416259,
+              -0.126766
+            ]
+          },
+          "vertices": 248
+        },
+        {
+          "world": {
+            "min": [
+              -1.065536,
+              3.106023,
+              -1.229948
+            ],
+            "max": [
+              -1.00569,
+              3.246103,
+              -1.170102
+            ]
+          },
+          "parentLocal": {
+            "min": [
+              -0.439852,
+              3.106023,
+              -0.164754
+            ],
+            "max": [
+              -0.378832,
+              3.246103,
+              -0.104751
+            ]
+          },
+          "vertices": 222
+        },
+        {
+          "world": {
+            "min": [
+              -0.934295,
+              3.106023,
+              -1.361189
+            ],
+            "max": [
+              -0.874449,
+              3.246103,
+              -1.301343
+            ]
+          },
+          "parentLocal": {
+            "min": [
+              -0.25425,
+              3.106023,
+              -0.164754
+            ],
+            "max": [
+              -0.19323,
+              3.246103,
+              -0.104751
+            ]
+          },
+          "vertices": 222
+        }
+      ]
+    },
+    "workspace_left_wing \u00b7 Matte black rubber": {
+      "materials": [
+        "Matte black rubber"
+      ],
+      "parent": "workspace_left_wing",
+      "parts": [
+        {
+          "world": {
+            "min": [
+              -1.077302,
+              3.089347,
+              -1.241714
+            ],
+            "max": [
+              -1.008307,
+              3.249439,
+              -1.172719
+            ]
+          },
+          "parentLocal": {
+            "min": [
+              -0.44748,
+              3.089347,
+              -0.175432
+            ],
+            "max": [
+              -0.371205,
+              3.249439,
+              -0.114413
+            ]
+          },
+          "vertices": 222
+        },
+        {
+          "world": {
+            "min": [
+              -0.946061,
+              3.089347,
+              -1.372955
+            ],
+            "max": [
+              -0.877066,
+              3.249439,
+              -1.30396
+            ]
+          },
+          "parentLocal": {
+            "min": [
+              -0.261877,
+              3.089347,
+              -0.175432
+            ],
+            "max": [
+              -0.185603,
+              3.249439,
+              -0.114413
+            ]
+          },
+          "vertices": 222
+        }
+      ]
+    },
+    "workspace_left_wing \u00b7 Figma ochre": {
+      "materials": [
+        "Figma ochre"
+      ],
+      "parent": "workspace_left_wing",
+      "parts": [
+        {
+          "world": {
+            "min": [
+              -0.44993,
+              2.642031,
+              -1.804826
+            ],
+            "max": [
+              -0.434357,
+              2.876759,
+              -1.782164
+            ]
+          },
+          "parentLocal": {
+            "min": [
+              0.418113,
+              2.642031,
+              -0.141841
+            ],
+            "max": [
+              0.441788,
+              2.876759,
+              -0.127664
+            ]
+          },
+          "vertices": 96
+        },
+        {
+          "world": {
+            "min": [
+              -0.41,
+              2.642081,
+              -1.814729
+            ],
+            "max": [
+              -0.387154,
+              2.914541,
+              -1.798988
+            ]
+          },
+          "parentLocal": {
+            "min": [
+              0.458244,
+              2.642081,
+              -0.120488
+            ],
+            "max": [
+              0.482168,
+              2.914541,
+              -0.106303
+            ]
+          },
+          "vertices": 96
+        }
+      ]
+    },
+    "workspace_left_wing \u00b7 Forest green": {
+      "materials": [
+        "Forest green"
+      ],
+      "parent": "workspace_left_wing",
+      "parts": [
+        {
+          "world": {
+            "min": [
+              -0.425163,
+              2.642288,
+              -1.822868
+            ],
+            "max": [
+              -0.413575,
+              2.866908,
+              -1.809671
+            ]
+          },
+          "parentLocal": {
+            "min": [
+              0.457012,
+              2.642288,
+              -0.141839
+            ],
+            "max": [
+              0.467305,
+              2.866908,
+              -0.127666
+            ]
+          },
+          "vertices": 96
+        },
+        {
+          "world": {
+            "min": [
+              -0.430849,
+              2.642061,
+              -1.763978
+            ],
+            "max": [
+              -0.407704,
+              2.905282,
+              -1.747933
+            ]
+          },
+          "parentLocal": {
+            "min": [
+              0.4074,
+              2.642061,
+              -0.09913
+            ],
+            "max": [
+              0.43175,
+              2.905282,
+              -0.084947
+            ]
+          },
+          "vertices": 96
+        }
+      ]
+    },
+    "Colored pencil.003": {
+      "materials": [
+        "Washed blue hardcover"
+      ],
+      "parent": "workspace_left_wing",
+      "parts": [
+        {
+          "world": {
+            "min": [
+              -0.445975,
+              2.642177,
+              -1.773599
+            ],
+            "max": [
+              -0.42829,
+              2.864791,
+              -1.763007
+            ]
+          },
+          "parentLocal": {
+            "min": [
+              0.407531,
+              2.642177,
+              -0.120309
+            ],
+            "max": [
+              0.423829,
+              2.864791,
+              -0.106482
+            ]
+          },
+          "vertices": 160
+        }
+      ]
+    },
+    "Monitor outer housing": {
+      "materials": [
+        "Warm powder-coated white"
+      ],
+      "parent": "monitor",
+      "parts": [
+        {
+          "world": {
+            "min": [
+              -0.510925,
+              1.409242,
+              -1.203972
+            ],
+            "max": [
+              0.510925,
+              2.024493,
+              -1.142447
+            ]
+          },
+          "parentLocal": {
+            "min": [
+              -0.510925,
+              -0.307625,
+              -0.033973
+            ],
+            "max": [
+              0.510925,
+              0.307625,
+              0.027552
+            ]
+          },
+          "vertices": 96
+        }
+      ]
+    },
+    "monitor \u00b7 Soft charcoal plastic": {
+      "materials": [
+        "Soft charcoal plastic"
+      ],
+      "parent": "monitor",
+      "parts": [
+        {
+          "world": {
+            "min": [
+              -0.4815,
+              1.434655,
+              -1.145925
+            ],
+            "max": [
+              0.4815,
+              1.99908,
+              -1.132015
+            ]
+          },
+          "parentLocal": {
+            "min": [
+              -0.4815,
+              -0.282212,
+              0.024075
+            ],
+            "max": [
+              0.4815,
+              0.282212,
+              0.037985
+            ]
+          },
+          "vertices": 96
+        },
+        {
+          "world": {
+            "min": [
+              0.006546,
+              1.427165,
+              -1.1249
+            ],
+            "max": [
+              0.010823,
+              1.433191,
+              -1.1249
+            ]
+          },
+          "parentLocal": {
+            "min": [
+              0.006546,
+              -0.289703,
+              0.0451
+            ],
+            "max": [
+              0.010823,
+              -0.283677,
+              0.0451
+            ]
+          },
+          "vertices": 6
+        },
+        {
+          "world": {
+            "min": [
+              0.001361,
+              1.427165,
+              -1.1249
+            ],
+            "max": [
+              0.005638,
+              1.433191,
+              -1.1249
+            ]
+          },
+          "parentLocal": {
+            "min": [
+              0.001361,
+              -0.289703,
+              0.0451
+            ],
+            "max": [
+              0.005638,
+              -0.283677,
+              0.0451
+            ]
+          },
+          "vertices": 6
+        },
+        {
+          "world": {
+            "min": [
+              -0.004333,
+              1.427165,
+              -1.1249
+            ],
+            "max": [
+              0.000288,
+              1.433241,
+              -1.1249
+            ]
+          },
+          "parentLocal": {
+            "min": [
+              -0.004333,
+              -0.289703,
+              0.0451
+            ],
+            "max": [
+              0.000288,
+              -0.283627,
+              0.0451
+            ]
+          },
+          "vertices": 12
+        },
+        {
+          "world": {
+            "min": [
+              -0.010467,
+              1.427165,
+              -1.1249
+            ],
+            "max": [
+              -0.005373,
+              1.433241,
+              -1.1249
+            ]
+          },
+          "parentLocal": {
+            "min": [
+              -0.010467,
+              -0.289703,
+              0.0451
+            ],
+            "max": [
+              -0.005373,
+              -0.283627,
+              0.0451
+            ]
+          },
+          "vertices": 54
+        },
+        {
+          "world": {
+            "min": [
+              0.006546,
+              1.427165,
+              -1.12522
+            ],
+            "max": [
+              0.010823,
+              1.433191,
+              -1.12522
+            ]
+          },
+          "parentLocal": {
+            "min": [
+              0.006546,
+              -0.289703,
+              0.04478
+            ],
+            "max": [
+              0.010823,
+              -0.283677,
+              0.04478
+            ]
+          },
+          "vertices": 6
+        },
+        {
+          "world": {
+            "min": [
+              0.001361,
+              1.427165,
+              -1.12522
+            ],
+            "max": [
+              0.005638,
+              1.433191,
+              -1.12522
+            ]
+          },
+          "parentLocal": {
+            "min": [
+              0.001361,
+              -0.289703,
+              0.04478
+            ],
+            "max": [
+              0.005638,
+              -0.283677,
+              0.04478
+            ]
+          },
+          "vertices": 6
+        },
+        {
+          "world": {
+            "min": [
+              -0.004333,
+              1.427165,
+              -1.12522
+            ],
+            "max": [
+              0.000288,
+              1.433241,
+              -1.12522
+            ]
+          },
+          "parentLocal": {
+            "min": [
+              -0.004333,
+              -0.289703,
+              0.04478
+            ],
+            "max": [
+              0.000288,
+              -0.283627,
+              0.04478
+            ]
+          },
+          "vertices": 12
+        },
+        {
+          "world": {
+            "min": [
+              -0.010467,
+              1.427165,
+              -1.12522
+            ],
+            "max": [
+              -0.005373,
+              1.433241,
+              -1.12522
+            ]
+          },
+          "parentLocal": {
+            "min": [
+              -0.010467,
+              -0.289703,
+              0.04478
+            ],
+            "max": [
+              -0.005373,
+              -0.283627,
+              0.04478
+            ]
+          },
+          "vertices": 54
+        },
+        {
+          "world": {
+            "min": [
+              -0.010467,
+              1.427165,
+              -1.12522
+            ],
+            "max": [
+              -0.005373,
+              1.433241,
+              -1.1249
+            ]
+          },
+          "parentLocal": {
+            "min": [
+              -0.010467,
+              -0.289703,
+              0.04478
+            ],
+            "max": [
+              -0.005373,
+              -0.283627,
+              0.0451
+            ]
+          },
+          "vertices": 54
+        },
+        {
+          "world": {
+            "min": [
+              -0.00924,
+              1.428189,
+              -1.12522
+            ],
+            "max": [
+              -0.006641,
+              1.432213,
+              -1.1249
+            ]
+          },
+          "parentLocal": {
+            "min": [
+              -0.00924,
+              -0.288679,
+              0.04478
+            ],
+            "max": [
+              -0.006641,
+              -0.284655,
+              0.0451
+            ]
+          },
+          "vertices": 54
+        },
+        {
+          "world": {
+            "min": [
+              -0.004333,
+              1.427165,
+              -1.12522
+            ],
+            "max": [
+              0.000288,
+              1.433241,
+              -1.1249
+            ]
+          },
+          "parentLocal": {
+            "min": [
+              -0.004333,
+              -0.289703,
+              0.04478
+            ],
+            "max": [
+              0.000288,
+              -0.283627,
+              0.0451
+            ]
+          },
+          "vertices": 24
+        },
+        {
+          "world": {
+            "min": [
+              0.001361,
+              1.427165,
+              -1.12522
+            ],
+            "max": [
+              0.005638,
+              1.433191,
+              -1.1249
+            ]
+          },
+          "parentLocal": {
+            "min": [
+              0.001361,
+              -0.289703,
+              0.04478
+            ],
+            "max": [
+              0.005638,
+              -0.283677,
+              0.0451
+            ]
+          },
+          "vertices": 12
+        },
+        {
+          "world": {
+            "min": [
+              0.006546,
+              1.427165,
+              -1.12522
+            ],
+            "max": [
+              0.010823,
+              1.433191,
+              -1.1249
+            ]
+          },
+          "parentLocal": {
+            "min": [
+              0.006546,
+              -0.289703,
+              0.04478
+            ],
+            "max": [
+              0.010823,
+              -0.283677,
+              0.0451
+            ]
+          },
+          "vertices": 12
+        }
+      ]
+    },
+    "monitor_screen": {
+      "materials": [
+        "Monitor idle display"
+      ],
+      "parent": "monitor",
+      "parts": [
+        {
+          "world": {
+            "min": [
+              -0.4601,
+              1.454718,
+              -1.129875
+            ],
+            "max": [
+              0.4601,
+              1.979017,
+              -1.129875
+            ]
+          },
+          "parentLocal": {
+            "min": [
+              -0.4601,
+              -0.26215,
+              0.040125
+            ],
+            "max": [
+              0.4601,
+              0.26215,
+              0.040125
+            ]
+          },
+          "vertices": 4
+        }
+      ]
+    },
+    "monitor \u00b7 Brushed aluminium": {
+      "materials": [
+        "Brushed aluminium"
+      ],
+      "parent": "monitor",
+      "parts": [
+        {
+          "world": {
+            "min": [
+              -0.47615,
+              1.416732,
+              -1.140842
+            ],
+            "max": [
+              0.47615,
+              1.442412,
+              -1.129607
+            ]
+          },
+          "parentLocal": {
+            "min": [
+              -0.47615,
+              -0.300135,
+              0.029158
+            ],
+            "max": [
+              0.47615,
+              -0.274455,
+              0.040393
+            ]
+          },
+          "vertices": 96
+        }
+      ]
+    },
+    "Monitor power LED": {
+      "materials": [
+        "Leaf sage"
+      ],
+      "parent": "monitor",
+      "parts": [
+        {
+          "world": {
+            "min": [
+              0.430675,
+              1.427433,
+              -1.128002
+            ],
+            "max": [
+              0.436025,
+              1.432783,
+              -1.125327
+            ]
+          },
+          "parentLocal": {
+            "min": [
+              0.430675,
+              -0.289435,
+              0.041998
+            ],
+            "max": [
+              0.436025,
+              -0.284085,
+              0.044673
+            ]
+          },
+          "vertices": 96
+        }
+      ]
+    },
+    "workspace_right_wing \u00b7 Uncoated paper": {
+      "materials": [
+        "Uncoated paper"
+      ],
+      "parent": "workspace_right_wing",
+      "parts": [
+        {
+          "world": {
+            "min": [
+              0.47044,
+              1.769595,
+              -1.517099
+            ],
+            "max": [
+              0.831319,
+              1.796944,
+              -1.15622
+            ]
+          },
+          "parentLocal": {
+            "min": [
+              -0.116955,
+              1.769595,
+              -0.058477
+            ],
+            "max": [
+              0.198315,
+              1.796944,
+              0.139838
+            ]
+          },
+          "vertices": 96
+        },
+        {
+          "world": {
+            "min": [
+              0.47044,
+              1.810285,
+              -1.517099
+            ],
+            "max": [
+              0.831319,
+              1.837634,
+              -1.15622
+            ]
+          },
+          "parentLocal": {
+            "min": [
+              -0.116955,
+              1.810285,
+              -0.058477
+            ],
+            "max": [
+              0.198315,
+              1.837634,
+              0.139838
+            ]
+          },
+          "vertices": 96
+        },
+        {
+          "world": {
+            "min": [
+              0.461223,
+              1.804615,
+              -1.526316
+            ],
+            "max": [
+              0.840536,
+              1.809952,
+              -1.147003
+            ]
+          },
+          "parentLocal": {
+            "min": [
+              -0.124583,
+              1.804615,
+              -0.063563
+            ],
+            "max": [
+              0.205942,
+              1.809952,
+              0.144923
+            ]
+          },
+          "vertices": 96
+        },
+        {
+          "world": {
+            "min": [
+              0.461223,
+              1.837968,
+              -1.526316
+            ],
+            "max": [
+              0.840536,
+              1.843304,
+              -1.147003
+            ]
+          },
+          "parentLocal": {
+            "min": [
+              -0.124583,
+              1.837968,
+              -0.063563
+            ],
+            "max": [
+              0.205942,
+              1.843304,
+              0.144923
+            ]
+          },
+          "vertices": 96
+        },
+        {
+          "world": {
+            "min": [
+              0.47044,
+              1.850975,
+              -1.517099
+            ],
+            "max": [
+              0.831319,
+              1.878324,
+              -1.15622
+            ]
+          },
+          "parentLocal": {
+            "min": [
+              -0.116955,
+              1.850975,
+              -0.058477
+            ],
+            "max": [
+              0.198315,
+              1.878324,
+              0.139838
+            ]
+          },
+          "vertices": 96
+        }
+      ]
+    },
+    "workspace_right_wing \u00b7 Terracotta clay": {
+      "materials": [
+        "Terracotta clay"
+      ],
+      "parent": "workspace_right_wing",
+      "parts": [
+        {
+          "world": {
+            "min": [
+              0.461223,
+              1.763925,
+              -1.526317
+            ],
+            "max": [
+              0.840536,
+              1.769262,
+              -1.147003
+            ]
+          },
+          "parentLocal": {
+            "min": [
+              -0.124583,
+              1.763925,
+              -0.063563
+            ],
+            "max": [
+              0.205942,
+              1.769262,
+              0.144923
+            ]
+          },
+          "vertices": 96
+        },
+        {
+          "world": {
+            "min": [
+              0.461223,
+              1.797278,
+              -1.526316
+            ],
+            "max": [
+              0.840536,
+              1.802614,
+              -1.147003
+            ]
+          },
+          "parentLocal": {
+            "min": [
+              -0.124583,
+              1.797278,
+              -0.063563
+            ],
+            "max": [
+              0.205942,
+              1.802614,
+              0.144923
+            ]
+          },
+          "vertices": 96
+        }
+      ]
+    },
+    "workspace_right_wing \u00b7 Sage green hardcover": {
+      "materials": [
+        "Sage green hardcover"
+      ],
+      "parent": "workspace_right_wing",
+      "parts": [
+        {
+          "world": {
+            "min": [
+              0.461223,
+              1.845305,
+              -1.526317
+            ],
+            "max": [
+              0.840536,
+              1.850641,
+              -1.147003
+            ]
+          },
+          "parentLocal": {
+            "min": [
+              -0.124583,
+              1.845305,
+              -0.063563
+            ],
+            "max": [
+              0.205942,
+              1.850641,
+              0.144923
+            ]
+          },
+          "vertices": 96
+        },
+        {
+          "world": {
+            "min": [
+              0.461223,
+              1.878657,
+              -1.526316
+            ],
+            "max": [
+              0.840536,
+              1.883994,
+              -1.147003
+            ]
+          },
+          "parentLocal": {
+            "min": [
+              -0.124583,
+              1.878657,
+              -0.063563
+            ],
+            "max": [
+              0.205942,
+              1.883994,
+              0.144923
+            ]
+          },
+          "vertices": 96
+        }
+      ]
+    },
+    "Notebook ribbon": {
+      "materials": [
+        "Lamp enamel vermilion"
+      ],
+      "parent": "workspace_right_wing",
+      "parts": [
+        {
+          "world": {
+            "min": [
+              0.580502,
+              1.718566,
+              -1.239481
+            ],
+            "max": [
+              0.589658,
+              1.76526,
+              -1.230325
+            ]
+          },
+          "parentLocal": {
+            "min": [
+              0.060003,
+              1.718566,
+              0.158144
+            ],
+            "max": [
+              0.072207,
+              1.76526,
+              0.160178
+            ]
+          },
+          "vertices": 96
+        }
+      ]
+    },
+    "Small photo frame": {
+      "materials": [
+        "Figma ochre"
+      ],
+      "parent": "workspace_right_wing",
+      "parts": [
+        {
+          "world": {
+            "min": [
+              0.706666,
+              2.138805,
+              -1.331213
+            ],
+            "max": [
+              0.810833,
+              2.325579,
+              -1.227046
+            ]
+          },
+          "parentLocal": {
+            "min": [
+              0.088987,
+              2.138805,
+              -0.005085
+            ],
+            "max": [
+              0.226282,
+              2.325579,
+              0.015255
+            ]
+          },
+          "vertices": 96
+        }
+      ]
+    },
+    "Small abstract print": {
+      "materials": [
+        "Washed blue hardcover"
+      ],
+      "parent": "workspace_right_wing",
+      "parts": [
+        {
+          "world": {
+            "min": [
+              0.710208,
+              2.155482,
+              -1.309693
+            ],
+            "max": [
+              0.789312,
+              2.308903,
+              -1.230588
+            ]
+          },
+          "parentLocal": {
+            "min": [
+              0.1017,
+              2.155482,
+              0.017797
+            ],
+            "max": [
+              0.21357,
+              2.308903,
+              0.017798
+            ]
+          },
+          "vertices": 4
+        }
+      ]
+    },
+    "Print circle": {
+      "materials": [
+        "Warm cream accents"
+      ],
+      "parent": "workspace_right_wing",
+      "parts": [
+        {
+          "world": {
+            "min": [
+              0.722433,
+              2.194837,
+              -1.293872
+            ],
+            "max": [
+              0.773491,
+              2.289558,
+              -1.242814
+            ]
+          },
+          "parentLocal": {
+            "min": [
+              0.121531,
+              2.194837,
+              0.019323
+            ],
+            "max": [
+              0.193738,
+              2.289558,
+              0.021357
+            ]
+          },
+          "vertices": 114
+        }
+      ]
+    },
+    "Monitor fitted rear mounting bracket": {
+      "materials": [
+        "Soft charcoal plastic"
+      ],
+      "parent": "monitor",
+      "parts": [
+        {
+          "world": {
+            "min": [
+              -0.065,
+              1.44,
+              -1.2645
+            ],
+            "max": [
+              0.065,
+              1.57,
+              -1.1895
+            ]
+          },
+          "parentLocal": {
+            "min": [
+              -0.065,
+              -0.276868,
+              -0.0945
+            ],
+            "max": [
+              0.065,
+              -0.146868,
+              -0.0195
+            ]
+          },
+          "vertices": 8
+        }
+      ]
+    },
+    "Monitor stand base behind Xbox": {
+      "materials": [
+        "Brushed aluminium"
+      ],
+      "parent": "monitor",
+      "parts": [
+        {
+          "world": {
+            "min": [
+              -0.175,
+              1.31,
+              -1.65
+            ],
+            "max": [
+              0.175,
+              1.333,
+              -1.47
+            ]
+          },
+          "parentLocal": {
+            "min": [
+              -0.175,
+              -0.406868,
+              -0.48
+            ],
+            "max": [
+              0.175,
+              -0.383868,
+              -0.3
+            ]
+          },
+          "vertices": 8
+        }
+      ]
+    },
+    "Monitor stand rear post": {
+      "materials": [
+        "Brushed aluminium"
+      ],
+      "parent": "monitor",
+      "parts": [
+        {
+          "world": {
+            "min": [
+              -0.0325,
+              1.32,
+              -1.622
+            ],
+            "max": [
+              0.0325,
+              1.59,
+              -1.578
+            ]
+          },
+          "parentLocal": {
+            "min": [
+              -0.0325,
+              -0.396868,
+              -0.452
+            ],
+            "max": [
+              0.0325,
+              -0.126868,
+              -0.408
+            ]
+          },
+          "vertices": 8
+        }
+      ]
+    }
+  }
+}

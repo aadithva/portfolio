@@ -1,0 +1,46 @@
+[
+  {
+    "name": "desktop",
+    "errors": [],
+    "models": [
+      {
+        "url": "http://localhost:4323/models/workspace-saved.glb?v=bd7d82546b63",
+        "status": 200
+      }
+    ],
+    "found": "Both stickers found. Nicely spotted.",
+    "stats": {
+      "realtimeShadows": "true",
+      "view": "experiments",
+      "computerMode": "false",
+      "cameraTargetY": "1.338",
+      "drawCalls": "160",
+      "triangles": "258212",
+      "pixelRatio": "1",
+      "geometryTriangles": "170370"
+    },
+    "overflow": false
+  },
+  {
+    "name": "mobile",
+    "errors": [],
+    "models": [
+      {
+        "url": "http://localhost:4323/models/workspace-saved.glb?v=bd7d82546b63",
+        "status": 200
+      }
+    ],
+    "found": "Both stickers found. Nicely spotted.",
+    "stats": {
+      "realtimeShadows": "false",
+      "view": "experiments",
+      "computerMode": "false",
+      "cameraTargetY": "1.338",
+      "drawCalls": "51",
+      "triangles": "89144",
+      "pixelRatio": "1.35",
+      "geometryTriangles": "170370"
+    },
+    "overflow": false
+  }
+]

@@ -1,0 +1,9 @@
+00:00.538  blend            | Read blend: "/Users/aadith/Projects/Portfolio/Website/artifacts/workspace/ride-for-unity-medal/source-before-medal-53f595eedf48.blend"
+/Users/aadith/Projects/Portfolio/Website/scripts/blender/replace_ride_for_unity_medal.py:74: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  mat.use_nodes = True
+Info: No new files have been packed
+Info: Saved as "workspace-ride-for-unity-medal.blend"
+UNITY_MEDAL_CANDIDATE {"sourceSha256": "53f595eedf4874b8294c45e5122ac9560e51411c9b5f64eb4ab6971ab5e3ae3d", "candidateSha256": "5abd3a97927384af4f3df07c9e17e39c67f4971187dd5d9fc977a01c9d48b69d", "textureSha256": "25e1e002c86362fbae856ea669d7e405d6fa7f96887fb961bd07cc36ce2db65f", "textureSize": [3120, 4160], "photoPixelsEdited": false, "mappedFromUnchangedFullImage": true, "interactiveRoot": "medal_1", "removedRoots": ["medal_2", "medal_3"], "unrelatedObjectCount": 463, "unrelatedObjectsUnchanged": true, "webRoot": [0.0, 2.3789422512054443, -1.2829999923706055], "webBounds": [[-0.0699, 2.086442, -1.309], [0.0699, 2.392942, -1.23783]], "bodyThickness": 0.006, "bodyWidth": 0.13979999999999998, "bodyHeight": 0.14639999999999997, "monitorScreenClearance": 0.107425, "medalFamilyCount": 1, "newObjects": ["medal_1 \u00b7 Attached shelf hook", "medal_1 \u00b7 Cloth loop over shelf", "medal_1 \u00b7 Embossed bicycle wheel 1", "medal_1 \u00b7 Embossed bicycle wheel 2", "medal_1 \u00b7 Open rectangular ribbon eyelet", "medal_1 \u00b7 Photographed Fit India cloth ribbon", "medal_1 \u00b7 Raised Kashmir to Kanyakumari banner", "medal_1 \u00b7 Shallow mountain relief", "medal_1 \u00b7 Traced cast brass body"]}
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+
+Blender quit

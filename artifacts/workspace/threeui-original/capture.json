@@ -1,0 +1,102 @@
+[
+  {
+    "name": "desktop",
+    "hash": "8ec1b71c0dbcafbadf908100ae2a08045d0a1087c00a09d28245ef19366c7353",
+    "sheet": {
+      "state": {
+        "intro": 0.9847846444034768,
+        "dragYaw": 0,
+        "dragPitch": 0,
+        "hover": 0,
+        "quad": [
+          [
+            453.3838200453014,
+            57.063380989043594
+          ],
+          [
+            910.0208813907915,
+            80.73251983595628
+          ],
+          [
+            933.8332354384006,
+            676.8334045107326
+          ],
+          [
+            446.77887318559226,
+            668.9889164515746
+          ]
+        ]
+      },
+      "drawCalls": 3,
+      "revision": "149"
+    },
+    "errors": [],
+    "overflow": false,
+    "camera": {
+      "realtimeShadows": "true",
+      "view": "desk-detail",
+      "computerMode": "false",
+      "cameraNavigation": "enabled",
+      "cameraDragging": "false",
+      "cameraModified": "true",
+      "cameraTargetY": "1.680",
+      "cameraYaw": "-0.08594",
+      "cameraPitch": "0.03581",
+      "cameraZoom": "1.09107",
+      "drawCalls": "142",
+      "triangles": "158832",
+      "pixelRatio": "1",
+      "geometryTriangles": "170370"
+    }
+  },
+  {
+    "name": "mobile",
+    "hash": "8ec1b71c0dbcafbadf908100ae2a08045d0a1087c00a09d28245ef19366c7353",
+    "sheet": {
+      "state": {
+        "intro": 0.9860304472261404,
+        "dragYaw": 0,
+        "dragPitch": 0,
+        "hover": 0,
+        "quad": [
+          [
+            27.707353306564556,
+            111.702986234024
+          ],
+          [
+            337.25874368324475,
+            124.97323400592691
+          ],
+          [
+            353.2122207518732,
+            531.6382537446702
+          ],
+          [
+            22.60864449633442,
+            524.385103924039
+          ]
+        ]
+      },
+      "drawCalls": 3,
+      "revision": "149"
+    },
+    "errors": [],
+    "overflow": false,
+    "camera": {
+      "realtimeShadows": "false",
+      "view": "desk-detail",
+      "computerMode": "false",
+      "cameraNavigation": "enabled",
+      "cameraDragging": "false",
+      "cameraModified": "true",
+      "cameraTargetY": "1.660",
+      "cameraYaw": "-0.18668",
+      "cameraPitch": "0.07779",
+      "cameraZoom": "1.09107",
+      "drawCalls": "138",
+      "triangles": "156150",
+      "pixelRatio": "1.35",
+      "geometryTriangles": "170370"
+    }
+  }
+]

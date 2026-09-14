@@ -1,0 +1,7 @@
+00:00.711  blend            | Read blend: "/Users/aadith/Projects/Portfolio/Website/artifacts/workspace/laptop-closeup/source-before-laptop-closeup.blend"
+00:05.115  render           | Saved: '/Users/aadith/Projects/Portfolio/Website/artifacts/workspace/laptop-closeup/before-laptop.png'
+00:05.117  blend            | Read blend: "/Users/aadith/Projects/Portfolio/Website/artifacts/workspace/laptop-closeup/workspace-laptop-closeup.blend"
+00:09.023  render           | Saved: '/Users/aadith/Projects/Portfolio/Website/artifacts/workspace/laptop-closeup/after-laptop.png'
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+
+Blender quit

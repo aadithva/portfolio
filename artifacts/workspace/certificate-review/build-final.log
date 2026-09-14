@@ -1,0 +1,84 @@
+
+> aadithva-portfolio@1.0.0 build
+> astro build
+
+16:22:04 [content] Syncing content
+16:22:04 [content] Synced content
+16:22:04 [types] Generated 19ms
+16:22:04 [build] output: "static"
+16:22:04 [build] mode: "static"
+16:22:04 [build] directory: /Users/aadith/Projects/Portfolio/Website/dist/
+16:22:04 [build] Collecting build info...
+16:22:04 [build] ✓ Completed in 28ms.
+16:22:04 [build] Building static entrypoints...
+16:22:05 [vite] ✓ built in 683ms
+16:22:05 [build] ✓ Completed in 699ms.
+
+ building client (vite) 
+16:22:05 [vite] transforming...
+16:22:05 [vite] ✓ 23 modules transformed.
+16:22:05 [vite] rendering chunks...
+16:22:05 [vite] computing gzip size...
+16:22:05 [vite] dist/_astro/BaseLayout.astro_astro_type_script_index_0_lang.CG639956.js    0.76 kB │ gzip:   0.46 kB
+16:22:05 [vite] dist/_astro/tactile-dock.CFKzt64b.js                                       4.66 kB │ gzip:   2.12 kB
+16:22:05 [vite] dist/_astro/index.astro_astro_type_script_index_0_lang.BWU1UeJz.js        30.72 kB │ gzip:  11.09 kB
+16:22:05 [vite] dist/_astro/portfolio-paper-source.DbkqI4G7.js                           652.75 kB │ gzip: 166.09 kB
+16:22:05 [vite] dist/_astro/scene.CfnG_vlI.js                                            892.08 kB │ gzip: 269.75 kB
+16:22:05 [WARN] [vite] 
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+16:22:05 [vite] ✓ built in 719ms
+
+ generating static routes 
+16:22:05 ▶ src/pages/404.astro
+16:22:05   └─ /404.html (+5ms) 
+16:22:05 ▶ src/pages/about.astro
+16:22:05   └─ /about/index.html (+2ms) 
+16:22:05 ▶ src/pages/achievements.astro
+16:22:05   └─ /achievements/index.html (+1ms) 
+16:22:05 ▶ src/pages/adventures.astro
+16:22:05   └─ /adventures/index.html (+1ms) 
+16:22:06 ▶ src/pages/contact.astro
+16:22:06   └─ /contact/index.html (+1ms) 
+16:22:06 ▶ src/pages/expeditions.astro
+16:22:06   └─ /expeditions/index.html (+1ms) 
+16:22:06 ▶ src/pages/index.astro
+16:22:06   └─ /index.html (+2ms) 
+16:22:06 ▶ src/pages/lab/[slug].astro
+16:22:06   ├─ /lab/calculator/index.html (+2ms) 
+16:22:06   ├─ /lab/a11y-screenshot-justifier/index.html (+1ms) 
+16:22:06   ├─ /lab/design-review-bot/index.html (+1ms) 
+16:22:06   ├─ /lab/gif-generator/index.html (+1ms) 
+16:22:06   ├─ /lab/fhl-agent-design/index.html (+1ms) 
+16:22:06   ├─ /lab/system-messages-site/index.html (+1ms) 
+16:22:06   ├─ /lab/agent-canvas/index.html (+1ms) 
+16:22:06   ├─ /lab/behavior-diff/index.html (+1ms) 
+16:22:06   ├─ /lab/conversation-pattern-library/index.html (+1ms) 
+16:22:06   ├─ /lab/figma-redline-plugin/index.html (+1ms) 
+16:22:06   ├─ /lab/figma-mcp/index.html (+1ms) 
+16:22:06   ├─ /lab/flowsense/index.html (+1ms) 
+16:22:06   ├─ /lab/owly-studio/index.html (+1ms) 
+16:22:06   └─ /lab/owly-website/index.html (+2ms) 
+16:22:06 ▶ src/pages/lab.astro
+16:22:06   └─ /lab/index.html (+1ms) 
+16:22:06 ▶ src/pages/work/[parent]/[item].astro
+16:22:06   ├─ /work/microsoft-copilot/citations/index.html (+2ms) 
+16:22:06   ├─ /work/microsoft-copilot/deep-citations/index.html (+1ms) 
+16:22:06   └─ /work/daolens/dao-denver/index.html (+1ms) 
+16:22:06 ▶ src/pages/work/[slug].astro
+16:22:06   ├─ /work/owly-studio/index.html (+1ms) 
+16:22:06   ├─ /work/microsoft-copilot/index.html (+1ms) 
+16:22:06   ├─ /work/angel-one/index.html (+1ms) 
+16:22:06   ├─ /work/reachify/index.html (+1ms) 
+16:22:06   ├─ /work/daolens/index.html (+0ms) 
+16:22:06   └─ /work/crunch/index.html (+1ms) 
+16:22:06 ▶ src/pages/work.astro
+16:22:06   └─ /work/index.html (+1ms) 
+16:22:06 ▶ src/pages/writing.astro
+16:22:06   └─ /writing/index.html (+1ms) 
+16:22:06 ✓ Completed in 51ms.
+
+16:22:06 [build] 33 page(s) built in 1.53s
+16:22:06 [build] Complete!

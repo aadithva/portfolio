@@ -1,0 +1,9 @@
+00:02.173  blend            | Read blend: "/Users/aadith/Projects/Portfolio/Website/artifacts/workspace/certificate-frame/source-before-certificate-45bdde209587.blend"
+/Users/aadith/Projects/Portfolio/Website/scripts/blender/add_iitg_certificate.py:58: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  mat.use_nodes = True
+Info: No new files have been packed
+Info: Saved as "workspace-iitg-certificate.blend"
+CERTIFICATE_FRAME_CANDIDATE {"sourceSha256": "45bdde209587b90c072ab09d43eaf74b79501850c1d0bd0ceb702cf355f98384", "candidateSha256": "85b26f3dfe644528b2365e986dcb3f3919d157cf4827c96872be904eff02fc31", "textureSha256": "fd537db36f61df52abd9e4b3e01c3f53ba4ca1c32275ddc41923a0084b0837dc", "textureSize": [1738, 2479], "imageAspectPreserved": true, "unrelatedObjectsUnchanged": true, "originalObjectCount": 475, "newObjectCount": 9, "interactiveRoot": "certificate_iitg", "webBounds": [[-1.791831, 2.780017, -1.130831], [-1.299684, 3.659983, -0.638684]], "webCenter": [-1.5499999523162842, 3.2200000286102295, -0.8889999985694885], "outerDimensions": [0.654, 0.8799666283084006, 0.042], "pegboardHorizontalGap": 0.150684, "wallTopGap": 0.920017}
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+
+Blender quit

@@ -1,0 +1,13 @@
+
+> aadithva-portfolio@1.0.0 test:workspace
+> playwright test -c playwright.workspace.config.ts --grep touch guided views|wall certificate and all three medals
+
+
+Running 2 tests using 1 worker
+
+(node:94650) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 tests/workspace.spec.ts:418:1 › design: touch guided views and navigation fit without horizontal overflow (25.4s)
+  ✓  2 tests/workspace.spec.ts:598:1 › wall certificate and all three medals open achievements by keyboard, with the third trophy removed (4.4s)
+
+  2 passed (31.9s)

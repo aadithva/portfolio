@@ -1,0 +1,768 @@
+{
+  "checks": [
+    {
+      "check": "mesh intersection",
+      "objects": [
+        "monitor",
+        "workspace_left_wing"
+      ],
+      "crossingFaces": 0,
+      "pass": true
+    },
+    {
+      "check": "mesh intersection",
+      "objects": [
+        "monitor",
+        "workspace_right_wing"
+      ],
+      "crossingFaces": 0,
+      "pass": true
+    },
+    {
+      "check": "mesh intersection",
+      "objects": [
+        "trophy_1",
+        "plant_2"
+      ],
+      "crossingFaces": 0,
+      "pass": true
+    },
+    {
+      "check": "mesh intersection",
+      "objects": [
+        "trophy_2",
+        "plant_2"
+      ],
+      "crossingFaces": 0,
+      "pass": true
+    },
+    {
+      "check": "mesh intersection",
+      "objects": [
+        "trophy_1",
+        "trophy_2"
+      ],
+      "crossingFaces": 0,
+      "pass": true
+    },
+    {
+      "check": "mesh intersection",
+      "objects": [
+        "trophy_1",
+        "window"
+      ],
+      "crossingFaces": 0,
+      "pass": true
+    },
+    {
+      "check": "mesh intersection",
+      "objects": [
+        "trophy_2",
+        "window"
+      ],
+      "crossingFaces": 0,
+      "pass": true
+    },
+    {
+      "check": "mesh intersection",
+      "objects": [
+        "plant_2",
+        "window"
+      ],
+      "crossingFaces": 0,
+      "pass": true
+    },
+    {
+      "check": "mesh intersection",
+      "objects": [
+        "controller",
+        "laptop"
+      ],
+      "crossingFaces": 0,
+      "pass": true
+    },
+    {
+      "check": "mesh intersection",
+      "objects": [
+        "controller_black",
+        "laptop"
+      ],
+      "crossingFaces": 0,
+      "pass": true
+    },
+    {
+      "check": "mesh intersection",
+      "objects": [
+        "monitor",
+        "laptop"
+      ],
+      "crossingFaces": 0,
+      "pass": true
+    },
+    {
+      "check": "support contact",
+      "object": "monitor",
+      "gap": 0.0,
+      "pass": true
+    },
+    {
+      "check": "support contact",
+      "object": "controller",
+      "gap": 0.001,
+      "pass": true
+    },
+    {
+      "check": "support contact",
+      "object": "controller_black",
+      "gap": 0.001,
+      "pass": true
+    },
+    {
+      "check": "support contact",
+      "object": "trophy_1",
+      "gap": 0.001,
+      "pass": true
+    },
+    {
+      "check": "support contact",
+      "object": "trophy_2",
+      "gap": 0.001,
+      "pass": true
+    },
+    {
+      "check": "support contact",
+      "object": "speaker",
+      "gap": 0.001,
+      "pass": true
+    },
+    {
+      "check": "support contact",
+      "object": "books",
+      "gap": 0.001,
+      "pass": true
+    },
+    {
+      "check": "support contact",
+      "object": "pen_pot",
+      "gap": 0.0,
+      "pass": true
+    },
+    {
+      "check": "support contact",
+      "object": "chair",
+      "gap": 0.0,
+      "pass": true
+    },
+    {
+      "check": "award object count",
+      "pass": true
+    },
+    {
+      "check": "cover opening clearance",
+      "phase": 0.0,
+      "crossingFaces": 0,
+      "pass": true
+    },
+    {
+      "check": "cover opening clearance",
+      "phase": 0.01,
+      "crossingFaces": 0,
+      "pass": true
+    },
+    {
+      "check": "cover opening clearance",
+      "phase": 0.02,
+      "crossingFaces": 0,
+      "pass": true
+    },
+    {
+      "check": "cover opening clearance",
+      "phase": 0.03,
+      "crossingFaces": 0,
+      "pass": true
+    },
+    {
+      "check": "cover opening clearance",
+      "phase": 0.04,
+      "crossingFaces": 0,
+      "pass": true
+    },
+    {
+      "check": "cover opening clearance",
+      "phase": 0.05,
+      "crossingFaces": 0,
+      "pass": true
+    },
+    {
+      "check": "cover opening clearance",
+      "phase": 0.06,
+      "crossingFaces": 0,
+      "pass": true
+    },
+    {
+      "check": "cover opening clearance",
+      "phase": 0.07,
+      "crossingFaces": 0,
+      "pass": true
+    },
+    {
+      "check": "cover opening clearance",
+      "phase": 0.08,
+      "crossingFaces": 0,
+      "pass": true
+    },
+    {
+      "check": "cover opening clearance",
+      "phase": 0.09,
+      "crossingFaces": 0,
+      "pass": true
+    },
+    {
+      "check": "cover opening clearance",
+      "phase": 0.1,
+      "crossingFaces": 0,
+      "pass": true
+    },
+    {
+      "check": "cover opening clearance",
+      "phase": 0.11,
+      "crossingFaces": 0,
+      "pass": true
+    },
+    {
+      "check": "cover opening clearance",
+      "phase": 0.12,
+      "crossingFaces": 0,
+      "pass": true
+    },
+    {
+      "check": "cover opening clearance",
+      "phase": 0.13,
+      "crossingFaces": 0,
+      "pass": true
+    },
+    {
+      "check": "cover opening clearance",
+      "phase": 0.14,
+      "crossingFaces": 0,
+      "pass": true
+    },
+    {
+      "check": "cover opening clearance",
+      "phase": 0.15,
+      "crossingFaces": 0,
+      "pass": true
+    },
+    {
+      "check": "cover opening clearance",
+      "phase": 0.16,
+      "crossingFaces": 0,
+      "pass": true
+    },
+    {
+      "check": "cover opening clearance",
+      "phase": 0.17,
+      "crossingFaces": 0,
+      "pass": true
+    },
+    {
+      "check": "cover opening clearance",
+      "phase": 0.18,
+      "crossingFaces": 0,
+      "pass": true
+    },
+    {
+      "check": "cover opening clearance",
+      "phase": 0.19,
+      "crossingFaces": 0,
+      "pass": true
+    },
+    {
+      "check": "cover opening clearance",
+      "phase": 0.2,
+      "crossingFaces": 0,
+      "pass": true
+    },
+    {
+      "check": "cover opening clearance",
+      "phase": 0.21,
+      "crossingFaces": 0,
+      "pass": true
+    },
+    {
+      "check": "cover opening clearance",
+      "phase": 0.22,
+      "crossingFaces": 0,
+      "pass": true
+    },
+    {
+      "check": "cover opening clearance",
+      "phase": 0.23,
+      "crossingFaces": 0,
+      "pass": true
+    },
+    {
+      "check": "cover opening clearance",
+      "phase": 0.24,
+      "crossingFaces": 0,
+      "pass": true
+    },
+    {
+      "check": "cover opening clearance",
+      "phase": 0.25,
+      "crossingFaces": 0,
+      "pass": true
+    },
+    {
+      "check": "cover opening clearance",
+      "phase": 0.26,
+      "crossingFaces": 0,
+      "pass": true
+    },
+    {
+      "check": "cover opening clearance",
+      "phase": 0.27,
+      "crossingFaces": 0,
+      "pass": true
+    },
+    {
+      "check": "cover opening clearance",
+      "phase": 0.28,
+      "crossingFaces": 0,
+      "pass": true
+    },
+    {
+      "check": "cover opening clearance",
+      "phase": 0.29,
+      "crossingFaces": 0,
+      "pass": true
+    },
+    {
+      "check": "cover opening clearance",
+      "phase": 0.3,
+      "crossingFaces": 0,
+      "pass": true
+    },
+    {
+      "check": "cover opening clearance",
+      "phase": 0.31,
+      "crossingFaces": 0,
+      "pass": true
+    },
+    {
+      "check": "cover opening clearance",
+      "phase": 0.32,
+      "crossingFaces": 0,
+      "pass": true
+    },
+    {
+      "check": "cover opening clearance",
+      "phase": 0.33,
+      "crossingFaces": 0,
+      "pass": true
+    },
+    {
+      "check": "cover opening clearance",
+      "phase": 0.34,
+      "crossingFaces": 0,
+      "pass": true
+    },
+    {
+      "check": "cover opening clearance",
+      "phase": 0.35,
+      "crossingFaces": 0,
+      "pass": true
+    },
+    {
+      "check": "cover opening clearance",
+      "phase": 0.36,
+      "crossingFaces": 0,
+      "pass": true
+    },
+    {
+      "check": "cover opening clearance",
+      "phase": 0.37,
+      "crossingFaces": 0,
+      "pass": true
+    },
+    {
+      "check": "cover opening clearance",
+      "phase": 0.38,
+      "crossingFaces": 0,
+      "pass": true
+    },
+    {
+      "check": "cover opening clearance",
+      "phase": 0.39,
+      "crossingFaces": 0,
+      "pass": true
+    },
+    {
+      "check": "cover opening clearance",
+      "phase": 0.4,
+      "crossingFaces": 0,
+      "pass": true
+    },
+    {
+      "check": "cover opening clearance",
+      "phase": 0.41,
+      "crossingFaces": 0,
+      "pass": true
+    },
+    {
+      "check": "cover opening clearance",
+      "phase": 0.42,
+      "crossingFaces": 0,
+      "pass": true
+    },
+    {
+      "check": "cover opening clearance",
+      "phase": 0.43,
+      "crossingFaces": 0,
+      "pass": true
+    },
+    {
+      "check": "cover opening clearance",
+      "phase": 0.44,
+      "crossingFaces": 0,
+      "pass": true
+    },
+    {
+      "check": "cover opening clearance",
+      "phase": 0.45,
+      "crossingFaces": 0,
+      "pass": true
+    },
+    {
+      "check": "cover opening clearance",
+      "phase": 0.46,
+      "crossingFaces": 0,
+      "pass": true
+    },
+    {
+      "check": "cover opening clearance",
+      "phase": 0.47,
+      "crossingFaces": 0,
+      "pass": true
+    },
+    {
+      "check": "cover opening clearance",
+      "phase": 0.48,
+      "crossingFaces": 0,
+      "pass": true
+    },
+    {
+      "check": "cover opening clearance",
+      "phase": 0.49,
+      "crossingFaces": 0,
+      "pass": true
+    },
+    {
+      "check": "cover opening clearance",
+      "phase": 0.5,
+      "crossingFaces": 0,
+      "pass": true
+    },
+    {
+      "check": "cover opening clearance",
+      "phase": 0.51,
+      "crossingFaces": 0,
+      "pass": true
+    },
+    {
+      "check": "cover opening clearance",
+      "phase": 0.52,
+      "crossingFaces": 0,
+      "pass": true
+    },
+    {
+      "check": "cover opening clearance",
+      "phase": 0.53,
+      "crossingFaces": 0,
+      "pass": true
+    },
+    {
+      "check": "cover opening clearance",
+      "phase": 0.54,
+      "crossingFaces": 0,
+      "pass": true
+    },
+    {
+      "check": "cover opening clearance",
+      "phase": 0.55,
+      "crossingFaces": 0,
+      "pass": true
+    },
+    {
+      "check": "cover opening clearance",
+      "phase": 0.56,
+      "crossingFaces": 0,
+      "pass": true
+    },
+    {
+      "check": "cover opening clearance",
+      "phase": 0.57,
+      "crossingFaces": 0,
+      "pass": true
+    },
+    {
+      "check": "cover opening clearance",
+      "phase": 0.58,
+      "crossingFaces": 0,
+      "pass": true
+    },
+    {
+      "check": "cover opening clearance",
+      "phase": 0.59,
+      "crossingFaces": 0,
+      "pass": true
+    },
+    {
+      "check": "cover opening clearance",
+      "phase": 0.6,
+      "crossingFaces": 0,
+      "pass": true
+    },
+    {
+      "check": "cover opening clearance",
+      "phase": 0.61,
+      "crossingFaces": 0,
+      "pass": true
+    },
+    {
+      "check": "cover opening clearance",
+      "phase": 0.62,
+      "crossingFaces": 0,
+      "pass": true
+    },
+    {
+      "check": "cover opening clearance",
+      "phase": 0.63,
+      "crossingFaces": 0,
+      "pass": true
+    },
+    {
+      "check": "cover opening clearance",
+      "phase": 0.64,
+      "crossingFaces": 0,
+      "pass": true
+    },
+    {
+      "check": "cover opening clearance",
+      "phase": 0.65,
+      "crossingFaces": 0,
+      "pass": true
+    },
+    {
+      "check": "cover opening clearance",
+      "phase": 0.66,
+      "crossingFaces": 0,
+      "pass": true
+    },
+    {
+      "check": "cover opening clearance",
+      "phase": 0.67,
+      "crossingFaces": 0,
+      "pass": true
+    },
+    {
+      "check": "cover opening clearance",
+      "phase": 0.68,
+      "crossingFaces": 0,
+      "pass": true
+    },
+    {
+      "check": "cover opening clearance",
+      "phase": 0.69,
+      "crossingFaces": 0,
+      "pass": true
+    },
+    {
+      "check": "cover opening clearance",
+      "phase": 0.7,
+      "crossingFaces": 0,
+      "pass": true
+    },
+    {
+      "check": "cover opening clearance",
+      "phase": 0.71,
+      "crossingFaces": 0,
+      "pass": true
+    },
+    {
+      "check": "cover opening clearance",
+      "phase": 0.72,
+      "crossingFaces": 0,
+      "pass": true
+    },
+    {
+      "check": "cover opening clearance",
+      "phase": 0.73,
+      "crossingFaces": 0,
+      "pass": true
+    },
+    {
+      "check": "cover opening clearance",
+      "phase": 0.74,
+      "crossingFaces": 0,
+      "pass": true
+    },
+    {
+      "check": "cover opening clearance",
+      "phase": 0.75,
+      "crossingFaces": 0,
+      "pass": true
+    },
+    {
+      "check": "cover opening clearance",
+      "phase": 0.76,
+      "crossingFaces": 0,
+      "pass": true
+    },
+    {
+      "check": "cover opening clearance",
+      "phase": 0.77,
+      "crossingFaces": 0,
+      "pass": true
+    },
+    {
+      "check": "cover opening clearance",
+      "phase": 0.78,
+      "crossingFaces": 0,
+      "pass": true
+    },
+    {
+      "check": "cover opening clearance",
+      "phase": 0.79,
+      "crossingFaces": 0,
+      "pass": true
+    },
+    {
+      "check": "cover opening clearance",
+      "phase": 0.8,
+      "crossingFaces": 0,
+      "pass": true
+    },
+    {
+      "check": "cover opening clearance",
+      "phase": 0.81,
+      "crossingFaces": 0,
+      "pass": true
+    },
+    {
+      "check": "cover opening clearance",
+      "phase": 0.82,
+      "crossingFaces": 0,
+      "pass": true
+    },
+    {
+      "check": "cover opening clearance",
+      "phase": 0.83,
+      "crossingFaces": 0,
+      "pass": true
+    },
+    {
+      "check": "cover opening clearance",
+      "phase": 0.84,
+      "crossingFaces": 0,
+      "pass": true
+    },
+    {
+      "check": "cover opening clearance",
+      "phase": 0.85,
+      "crossingFaces": 0,
+      "pass": true
+    },
+    {
+      "check": "cover opening clearance",
+      "phase": 0.86,
+      "crossingFaces": 0,
+      "pass": true
+    },
+    {
+      "check": "cover opening clearance",
+      "phase": 0.87,
+      "crossingFaces": 0,
+      "pass": true
+    },
+    {
+      "check": "cover opening clearance",
+      "phase": 0.88,
+      "crossingFaces": 0,
+      "pass": true
+    },
+    {
+      "check": "cover opening clearance",
+      "phase": 0.89,
+      "crossingFaces": 0,
+      "pass": true
+    },
+    {
+      "check": "cover opening clearance",
+      "phase": 0.9,
+      "crossingFaces": 0,
+      "pass": true
+    },
+    {
+      "check": "cover opening clearance",
+      "phase": 0.91,
+      "crossingFaces": 0,
+      "pass": true
+    },
+    {
+      "check": "cover opening clearance",
+      "phase": 0.92,
+      "crossingFaces": 0,
+      "pass": true
+    },
+    {
+      "check": "cover opening clearance",
+      "phase": 0.93,
+      "crossingFaces": 0,
+      "pass": true
+    },
+    {
+      "check": "cover opening clearance",
+      "phase": 0.94,
+      "crossingFaces": 0,
+      "pass": true
+    },
+    {
+      "check": "cover opening clearance",
+      "phase": 0.95,
+      "crossingFaces": 0,
+      "pass": true
+    },
+    {
+      "check": "cover opening clearance",
+      "phase": 0.96,
+      "crossingFaces": 0,
+      "pass": true
+    },
+    {
+      "check": "cover opening clearance",
+      "phase": 0.97,
+      "crossingFaces": 0,
+      "pass": true
+    },
+    {
+      "check": "cover opening clearance",
+      "phase": 0.98,
+      "crossingFaces": 0,
+      "pass": true
+    },
+    {
+      "check": "cover opening clearance",
+      "phase": 0.99,
+      "crossingFaces": 0,
+      "pass": true
+    },
+    {
+      "check": "cover opening clearance",
+      "phase": 1.0,
+      "crossingFaces": 0,
+      "pass": true
+    }
+  ],
+  "passed": true
+}

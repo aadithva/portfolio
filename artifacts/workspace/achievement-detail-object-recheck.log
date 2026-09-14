@@ -1,0 +1,12 @@
+
+> aadithva-portfolio@1.0.0 test:workspace
+> playwright test -c playwright.workspace.config.ts --grep wall certificate
+
+
+Running 1 test using 1 worker
+
+(node:3745) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 tests/workspace.spec.ts:628:1 › wall certificate and medal open their own achievement content, preserve history, and retain two trophies (29.2s)
+
+  1 passed (35.7s)
