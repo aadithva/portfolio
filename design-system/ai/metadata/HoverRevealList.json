@@ -25,11 +25,11 @@
       "required": false
     }
   ],
-  "componentDependencies": [
-    "PixelTransition",
-    "Reveal"
+  "componentDependencies": [],
+  "dataDependencies": [
+    "index",
+    "projectPreviews"
   ],
-  "dataDependencies": [],
   "usedBy": [
     "FeaturedWork",
     "route /work"
@@ -40,6 +40,6 @@
     "Missing thumbnails use an explicit visual placeholder until the configured asset arrives."
   ],
   "version": "0.3.0",
-  "lastUpdated": "2026-09-12",
+  "lastUpdated": "2026-09-15",
   "source": "Generated from Astro source + design-system/ai/index.json by component-metadata.py."
 }

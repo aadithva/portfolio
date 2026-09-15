@@ -1,5 +1,36 @@
 # Portfolio Agent Handoff
 
+## Pre-push verification, 15 September 2026
+
+The latest room includes the balcony plant and the monitor arrow overlay is
+removed. `npm run check:workspace` and `npm run build` pass, with 33 static pages.
+The full workspace browser suite has 34 passing tests and one failure at the
+existing geometry limit: 201,811 room triangles against a limit below 180,000.
+The limit was not raised. All four floor-only cat checks pass.
+
+## Roaming calico cat, 15 September 2026
+
+Latest user revision: floor-only wandering, no added fur and no furniture jumps.
+The cat enters right and exits left, then reverses on its next visit. Clicking,
+tapping or keyboard-activating the cat plays a synthesized meow. It keeps the
+matte coat and original markings. The mobile overview now includes more floor.
+The following chair-jump notes describe the preceding revision.
+
+The homepage now loads JonasDichelle's selected cat as a separate animated GLB,
+`public/models/workspace-cat.glb`. `src/lib/workspace/cat.ts` controls its floor,
+chair, and offscreen-return routine. Desk visits were removed at the user's request.
+The chair is angled 18 degrees in the runtime, and the cat keeps its heading
+while sitting. The coat now has full-body fur cards and a matte skinned undercoat.
+Jump timing is shared through `cat-motion.json`. The original supplied archive is
+extracted under `artifacts/workspace/cat/source/`; `cat-web.blend` is the separate
+editable adaptation. The room master is not modified by cat export.
+
+Use `scripts/blender/export_workspace_cat.py` to rebuild. The website uses the
+original calico map, short skinned fur geometry, baked Walk/Run and adapted sit
+and hop clips. Furniture traversal is scripted, with surveyed anchors and chair
+transform following. See `docs/workspace-cat.md` for source, CC BY 3.0 credit,
+rebuild commands and evidence. Public credit is in the Desk guide.
+
 ## Matte surface finish and black bicycle, 15 September 2026
 
 The current master has material-specific matte roughness and fine surface grain

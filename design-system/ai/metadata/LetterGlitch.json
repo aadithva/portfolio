@@ -53,15 +53,13 @@
   ],
   "componentDependencies": [],
   "dataDependencies": [],
-  "usedBy": [
-    "Footer"
-  ],
+  "usedBy": [],
   "a11yNotes": [
     "Always hidden from assistive technology.",
     "Renders a static field when prefers-reduced-motion is enabled.",
     "Animation pauses when off-screen or when the document is hidden."
   ],
   "version": "0.3.0",
-  "lastUpdated": "2026-09-12",
+  "lastUpdated": "2026-09-15",
   "source": "Generated from Astro source + design-system/ai/index.json by component-metadata.py."
 }

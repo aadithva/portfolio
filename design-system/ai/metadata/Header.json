@@ -13,9 +13,7 @@
     "Do not hard-code nav links \u2014 edit data/navigation."
   ],
   "propsOrInputs": [],
-  "componentDependencies": [
-    "BrandLockup"
-  ],
+  "componentDependencies": [],
   "dataDependencies": [
     "navigation",
     "siteConfig"
@@ -28,6 +26,6 @@
     "Active links expose aria-current=page."
   ],
   "version": "0.3.0",
-  "lastUpdated": "2026-09-12",
+  "lastUpdated": "2026-09-15",
   "source": "Generated from Astro source + design-system/ai/index.json by component-metadata.py."
 }

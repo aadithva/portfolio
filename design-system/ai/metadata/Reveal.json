@@ -37,7 +37,6 @@
     "CaseStudySection",
     "FeaturedWork",
     "Hero",
-    "HoverRevealList",
     "ProfileSignals",
     "ProjectHero",
     "WorkItemIndex",
@@ -56,6 +55,6 @@
     "Reduced motion resolves it visible immediately."
   ],
   "version": "0.3.0",
-  "lastUpdated": "2026-09-12",
+  "lastUpdated": "2026-09-15",
   "source": "Generated from Astro source + design-system/ai/index.json by component-metadata.py."
 }

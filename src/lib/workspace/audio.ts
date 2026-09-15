@@ -5,6 +5,7 @@ export class DeskAudio {
   private ambient?: GainNode;
   private oscillators: OscillatorNode[] = [];
   private lastTap = -Infinity;
+  private lastMeow = -Infinity;
   enabled = false;
   playing = false;
 
@@ -36,6 +37,33 @@ export class DeskAudio {
       osc.connect(gain); gain.connect(this.master); osc.start(now); osc.stop(now + .25);
       osc.onended = () => { osc.disconnect(); gain.disconnect(); };
     }
+  }
+
+  /** A short voiced meow, triggered only by deliberately petting the cat.
+   * Separate from ambient sound: petting works without starting room music.
+   */
+  async meow() {
+    if(performance.now()-this.lastMeow<1100)return false;
+    this.lastMeow=performance.now();
+    this.context??=new AudioContext();
+    await this.context.resume();
+    const ctx=this.context,now=ctx.currentTime;
+    const voice=ctx.createOscillator(),volume=ctx.createGain();
+    const nasal=ctx.createBiquadFilter(),mouth=ctx.createBiquadFilter();
+    voice.type='sawtooth';
+    voice.frequency.setValueAtTime(510,now);
+    voice.frequency.exponentialRampToValueAtTime(820,now+.12);
+    voice.frequency.exponentialRampToValueAtTime(640,now+.34);
+    voice.frequency.exponentialRampToValueAtTime(290,now+.78);
+    nasal.type='bandpass';nasal.Q.value=2.4;
+    nasal.frequency.setValueAtTime(1550,now);nasal.frequency.exponentialRampToValueAtTime(850,now+.36);nasal.frequency.exponentialRampToValueAtTime(550,now+.8);
+    mouth.type='lowpass';mouth.frequency.value=3300;
+    volume.gain.setValueAtTime(0,now);volume.gain.linearRampToValueAtTime(.13,now+.06);
+    volume.gain.linearRampToValueAtTime(.1,now+.4);volume.gain.exponentialRampToValueAtTime(.0001,now+.88);
+    voice.connect(nasal);nasal.connect(mouth);mouth.connect(volume);volume.connect(ctx.destination);
+    voice.start(now);voice.stop(now+.9);
+    voice.onended=()=>{voice.disconnect();nasal.disconnect();mouth.disconnect();volume.disconnect();};
+    return true;
   }
 
   async toggleAmbient() {

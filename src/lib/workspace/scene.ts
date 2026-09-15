@@ -3,6 +3,7 @@ import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
 import { RectAreaLightUniformsLib } from 'three/addons/lights/RectAreaLightUniformsLib.js';
 import { DeskCameraOrbit } from './camera-orbit';
+import { WorkspaceCat } from './cat';
 import savedLighting from '../../../public/models/workspace-saved.manifest.json';
 import { assetUrl, views, mobileViews, scenePalette, presentationLighting, viewObjects, objectBindings, motionDuration, idleDelay, cursorFraming, type ViewId } from './config';
 
@@ -16,6 +17,7 @@ type SceneOptions = {
   onProgress: (progress: number, detail: string) => void;
   onReady: () => void; onError: (message: string) => void;
   onObject: (name: string, source?: HTMLElement) => void;
+  onMeow: () => void;
   onHover: (label: string | null, x: number, y: number) => void;
 };
 type Selection = { object: THREE.Object3D; initial: THREE.Vector3; rotation: THREE.Euler; anchor: THREE.Vector3; button: HTMLButtonElement; impulse: number; hover: number; };
@@ -79,6 +81,7 @@ export class DeskScene {
   private focusTargets = new Map<ViewId, THREE.Vector3>();
   private bakedMaps = new Map<string, THREE.Texture>();
   private authoredLights: THREE.Light[] = [];
+  private cat?: WorkspaceCat;
 
   constructor(private options: SceneOptions) {
     this.reduced = options.reducedMotion;
@@ -197,6 +200,13 @@ export class DeskScene {
       this.options.mount.dataset.geometryTriangles = String(geometryTriangles);
       this.scene.add(this.model);
       this.model.updateMatrixWorld(true);
+      const chair=this.model.getObjectByName('chair');
+      if(chair){
+        // Keep the measured cushion point local while opening the seat toward the room.
+        chair.userData.catSeatLocal=chair.worldToLocal(new THREE.Vector3(-.36,.767,-.31)).toArray();
+        chair.rotation.y-=THREE.MathUtils.degToRad(18);
+        chair.updateMatrixWorld(true);
+      }
       for (const [name, binding] of Object.entries(objectBindings)) {
         const object = this.model.getObjectByName(name);
         if (!object) continue;
@@ -256,6 +266,13 @@ export class DeskScene {
       if (this.disposed) return;
       this.options.onProgress(100, 'Your desk is ready.');
       this.options.onReady();
+      // The room is usable before the separately skinned companion loads.
+      void WorkspaceCat.load(this.scene, this.model, this.options.mount, this.options.onMeow).then(cat => {
+        if(this.disposed){cat.dispose();return;}
+        this.cat=cat;cat.setReducedMotion(this.reduced);this.renderer.shadowMap.needsUpdate=true;this.wake();
+      }).catch(error=>{
+        if(!this.disposed){this.options.mount.dataset.catReady='false';console.warn('Workspace cat could not load',error);}
+      });
       this.resize();
       if (!this.reduced && this.view === 'overview') {
         this.baseCamera.add(new THREE.Vector3(.15,.18,.65));
@@ -753,13 +770,16 @@ export class DeskScene {
       s.button.style.left=`${(screen.x*.5+.5)*width}px`;s.button.style.top=`${(-screen.y*.5+.5)*height}px`;
       s.button.hidden=(this.hunting && name==='laptop')||screen.z>1||screen.z< -1||Math.abs(screen.x)>1.08||Math.abs(screen.y)>1.08;
     }
-    if(moving)this.renderer.shadowMap.needsUpdate=true;
+    this.cat?.setReducedMotion(this.reduced);
+    const catMoving=this.cat?.update(dt,this.enabled&&!this.computerMode&&this.view!=='computer')??false;
+    this.cat?.project(this.camera,width,height);
+    if(moving||catMoving)this.renderer.shadowMap.needsUpdate=true;
     if(!this.computerMode&&this.view!=='computer'&&!this.reduced&&this.enabled&&now-this.lastActivity>idleDelay){if(!this.idle||now-this.lastSlide>6500){this.idle=true;this.lastSlide=now;this.slide++;this.drawScreen();}}
     this.renderer.render(this.scene,this.camera);
     // Exposed read-only metrics make QA possible without adding a visitor-facing debug UI.
     this.options.mount.dataset.drawCalls=String(this.renderer.info.render.calls);this.options.mount.dataset.triangles=String(this.renderer.info.render.triangles);this.options.mount.dataset.pixelRatio=String(this.renderer.getPixelRatio());
     if(this.ready&&frameDelta>0&&frameDelta<150){this.frameSamples.push(frameDelta);if(this.frameSamples.length===100){const average=this.frameSamples.reduce((a,b)=>a+b,0)/100;if(average>38&&!this.lowPower){this.lowPower=true;this.renderer.setPixelRatio(1.2);this.renderer.shadowMap.enabled=false;this.options.mount.dataset.realtimeShadows='false';}this.frameSamples=[];}}
-    if(this.transition||moving||orbitMoving||this.parallax.distanceTo(parallaxAllowed?this.cursor:this.zero)>.001)this.wake();
+    if(this.transition||moving||catMoving||orbitMoving||this.parallax.distanceTo(parallaxAllowed?this.cursor:this.zero)>.001)this.wake();
     else this.scheduleIdle();
   }
   private scheduleIdle() {
@@ -769,5 +789,5 @@ export class DeskScene {
     this.idleTimer=setTimeout(()=>this.wake(),delay);
   }
   private disposeModel(root: THREE.Object3D) { const materials=new Set<THREE.Material>();root.traverse(object=>{const mesh=object as THREE.Mesh;if(!mesh.isMesh)return;mesh.geometry.dispose();(Array.isArray(mesh.material)?mesh.material:[mesh.material]).forEach(m=>materials.add(m));});materials.forEach(m=>{for(const value of Object.values(m)){if(value instanceof THREE.Texture)value.dispose();}m.dispose();}); }
-  dispose(){this.disposed=true;this.clearCameraGesture();cancelAnimationFrame(this.raf);clearTimeout(this.timeout);clearTimeout(this.idleTimer);this.abort.abort();this.resized.disconnect();this.transition?.resolve(false);if(this.model)this.disposeModel(this.model);this.screenTexture.dispose();this.screenMaterial.dispose();this.environment.dispose();this.renderer.dispose();this.renderer.domElement.remove();this.options.hotspots.replaceChildren();}
+  dispose(){this.disposed=true;this.clearCameraGesture();cancelAnimationFrame(this.raf);clearTimeout(this.timeout);clearTimeout(this.idleTimer);this.abort.abort();this.resized.disconnect();this.transition?.resolve(false);this.cat?.dispose();if(this.model)this.disposeModel(this.model);this.screenTexture.dispose();this.screenMaterial.dispose();this.environment.dispose();this.renderer.dispose();this.renderer.domElement.remove();this.options.hotspots.replaceChildren();}
 }

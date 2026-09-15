@@ -94,17 +94,17 @@
     },
     "src/components/molecules/HoverRevealList.astro": {
       "imports": [
-        "@/components/atoms/PixelTransition.astro",
-        "@/components/atoms/Reveal.astro",
+        "@/data/projectPreviews",
+        "@/data/work",
         "@/types",
         "node:fs",
         "node:path"
       ],
-      "localComponentDependencies": [
-        "src/components/atoms/PixelTransition.astro",
-        "src/components/atoms/Reveal.astro"
+      "localComponentDependencies": [],
+      "localDataDependencies": [
+        "src/data/projectPreviews.ts",
+        "src/data/work/index.ts"
       ],
-      "localDataDependencies": [],
       "name": "HoverRevealList",
       "path": "src/components/molecules/HoverRevealList.astro",
       "tier": "molecule"
@@ -153,14 +153,9 @@
     },
     "src/components/organisms/Footer.astro": {
       "imports": [
-        "@/components/atoms/BrandLockup.astro",
-        "@/components/atoms/LetterGlitch.astro",
         "@/data/siteConfig"
       ],
-      "localComponentDependencies": [
-        "src/components/atoms/BrandLockup.astro",
-        "src/components/atoms/LetterGlitch.astro"
-      ],
+      "localComponentDependencies": [],
       "localDataDependencies": [
         "src/data/siteConfig.ts"
       ],
@@ -170,13 +165,10 @@
     },
     "src/components/organisms/Header.astro": {
       "imports": [
-        "@/components/atoms/BrandLockup.astro",
         "@/data/navigation",
         "@/data/siteConfig"
       ],
-      "localComponentDependencies": [
-        "src/components/atoms/BrandLockup.astro"
-      ],
+      "localComponentDependencies": [],
       "localDataDependencies": [
         "src/data/navigation.ts",
         "src/data/siteConfig.ts"
@@ -268,12 +260,41 @@
       "path": "src/components/organisms/WorkItemIndex.astro",
       "tier": "organism"
     },
-    "src/components/workspace/WorkspaceContent.astro": {
+    "src/components/workspace/ComputerDesktop.astro": {
       "imports": [
+        "@/data/siteConfig",
         "@/data/workspace"
       ],
       "localComponentDependencies": [],
       "localDataDependencies": [
+        "src/data/siteConfig.ts",
+        "src/data/workspace.ts"
+      ],
+      "name": "ComputerDesktop",
+      "path": "src/components/workspace/ComputerDesktop.astro",
+      "tier": "component"
+    },
+    "src/components/workspace/ThreeUIPaperScene.tsx": {
+      "imports": [
+        "@designcodeio/threeui"
+      ],
+      "localComponentDependencies": [],
+      "localDataDependencies": [],
+      "name": "ThreeUIPaperScene",
+      "path": "src/components/workspace/ThreeUIPaperScene.tsx",
+      "tier": "component"
+    },
+    "src/components/workspace/WorkspaceContent.astro": {
+      "imports": [
+        "@/components/molecules/DottedIndiaMap.astro",
+        "@/data/expeditions",
+        "@/data/workspace"
+      ],
+      "localComponentDependencies": [
+        "src/components/molecules/DottedIndiaMap.astro"
+      ],
+      "localDataDependencies": [
+        "src/data/expeditions.ts",
         "src/data/workspace.ts"
       ],
       "name": "WorkspaceContent",
@@ -282,18 +303,18 @@
     },
     "src/layouts/BaseLayout.astro": {
       "imports": [
-        "@/components/atoms/GridBackdrop.astro",
         "@/components/organisms/Footer.astro",
         "@/components/organisms/Header.astro",
-        "@/data/siteConfig"
+        "@/data/siteConfig",
+        "@/lib/ui/tactile-dock"
       ],
       "localComponentDependencies": [
-        "src/components/atoms/GridBackdrop.astro",
         "src/components/organisms/Footer.astro",
         "src/components/organisms/Header.astro"
       ],
       "localDataDependencies": [
-        "src/data/siteConfig.ts"
+        "src/data/siteConfig.ts",
+        "src/lib/ui/tactile-dock.ts"
       ],
       "name": "BaseLayout",
       "path": "src/layouts/BaseLayout.astro",
@@ -320,6 +341,21 @@
       ],
       "imports": [],
       "path": "src/data/adventures.ts"
+    },
+    "src/data/expeditions.ts": {
+      "exports": [
+        "Expedition",
+        "ExpeditionImage",
+        "expeditionRouteCaption",
+        "expeditions",
+        "expeditionsIntro",
+        "expeditionsMissingMedia",
+        "expeditionsReflection"
+      ],
+      "imports": [
+        "./adventures"
+      ],
+      "path": "src/data/expeditions.ts"
     },
     "src/data/lab.json": {
       "exports": [],
@@ -351,6 +387,13 @@
         "@/types"
       ],
       "path": "src/data/navigation.ts"
+    },
+    "src/data/projectPreviews.ts": {
+      "exports": [
+        "optimizedProjectPreview"
+      ],
+      "imports": [],
+      "path": "src/data/projectPreviews.ts"
     },
     "src/data/projects.ts": {
       "exports": [
@@ -472,7 +515,9 @@
       ],
       "imports": [
         "./about",
+        "./expeditions",
         "./lab",
+        "./projectPreviews",
         "./projects",
         "./siteConfig",
         "./writing"
@@ -500,21 +545,100 @@
       ],
       "path": "src/lib/shots.ts"
     },
+    "src/lib/ui/paper-content.ts": {
+      "exports": [
+        "PaperAction",
+        "PaperBlock",
+        "PaperContentDocument",
+        "PaperImageBlock",
+        "PaperTextBlock",
+        "PaperTextKind",
+        "PaperTextRun",
+        "activatePaperAction",
+        "extractPaperContent"
+      ],
+      "imports": [],
+      "path": "src/lib/ui/paper-content.ts"
+    },
+    "src/lib/ui/paper-panel.ts": {
+      "exports": [
+        "initPaperPanel"
+      ],
+      "imports": [
+        "./paper-content",
+        "./portfolio-paper-source"
+      ],
+      "path": "src/lib/ui/paper-panel.ts"
+    },
+    "src/lib/ui/portfolio-paper-runtime.js": {
+      "exports": [],
+      "imports": [],
+      "path": "src/lib/ui/portfolio-paper-runtime.js"
+    },
+    "src/lib/ui/portfolio-paper-source.ts": {
+      "exports": [
+        "portfolioPaperSource"
+      ],
+      "imports": [
+        "../../../vendor/threeui/src/shaders/3d-paper/sources/3d-paper.html?raw",
+        "./portfolio-paper-runtime.js?raw"
+      ],
+      "path": "src/lib/ui/portfolio-paper-source.ts"
+    },
+    "src/lib/ui/tactile-dock.ts": {
+      "exports": [
+        "initTactileDocks"
+      ],
+      "imports": [],
+      "path": "src/lib/ui/tactile-dock.ts"
+    },
+    "src/lib/ui/threeui-paper-mount.tsx": {
+      "exports": [
+        "mountThreeUIPaper"
+      ],
+      "imports": [
+        "../../components/workspace/ThreeUIPaperScene",
+        "react-dom/client"
+      ],
+      "path": "src/lib/ui/threeui-paper-mount.tsx"
+    },
     "src/lib/workspace/audio.ts": {
       "exports": [],
       "imports": [],
       "path": "src/lib/workspace/audio.ts"
     },
+    "src/lib/workspace/camera-orbit.ts": {
+      "exports": [],
+      "imports": [
+        "three"
+      ],
+      "path": "src/lib/workspace/camera-orbit.ts"
+    },
+    "src/lib/workspace/cat.ts": {
+      "exports": [],
+      "imports": [
+        "three",
+        "three/addons/loaders/GLTFLoader.js"
+      ],
+      "path": "src/lib/workspace/cat.ts"
+    },
     "src/lib/workspace/config.ts": {
       "exports": [
+        "AchievementId",
         "CameraView",
+        "GuidedViewId",
         "ObjectBinding",
         "SectionId",
         "ViewId",
+        "achievementViews",
         "assetUrl",
+        "cursorFraming",
         "idleDelay",
+        "mobileViews",
         "motionDuration",
         "objectBindings",
+        "presentationLighting",
+        "scenePalette",
         "viewObjects",
         "views"
       ],
@@ -528,6 +652,7 @@
         "initWorkspace"
       ],
       "imports": [
+        "../ui/paper-panel",
         "./audio",
         "./config",
         "./scene"
@@ -536,10 +661,14 @@
     },
     "src/lib/workspace/scene.ts": {
       "exports": [
-        "MonitorProject"
+        "CameraNavigationState",
+        "MonitorProject",
+        "ScreenRect"
       ],
       "imports": [
         "../../../public/models/workspace-saved.manifest.json",
+        "./camera-orbit",
+        "./cat",
         "./config",
         "three",
         "three/addons/environments/RoomEnvironment.js",
@@ -550,7 +679,7 @@
     }
   },
   "framework": "astro",
-  "generatedAt": "2026-09-12T18:16:31.749454+00:00",
+  "generatedAt": "2026-09-15T08:53:39.659824+00:00",
   "generator": "design-system/ai/codebase-index.py",
   "pages": {
     "src/pages/404.astro": {
@@ -654,19 +783,43 @@
       "path": "src/pages/contact.astro",
       "route": "/contact"
     },
+    "src/pages/expeditions.astro": {
+      "importedComponents": [
+        "src/components/molecules/DottedIndiaMap.astro",
+        "src/layouts/BaseLayout.astro"
+      ],
+      "importedData": [
+        "src/data/expeditions.ts"
+      ],
+      "imports": [
+        "@/components/molecules/DottedIndiaMap.astro",
+        "@/data/expeditions",
+        "@/layouts/BaseLayout.astro"
+      ],
+      "kind": "page",
+      "name": "expeditions",
+      "path": "src/pages/expeditions.astro",
+      "route": "/expeditions"
+    },
     "src/pages/index.astro": {
       "importedComponents": [
+        "src/components/workspace/ComputerDesktop.astro",
         "src/components/workspace/WorkspaceContent.astro"
       ],
       "importedData": [
+        "src/data/navigation.ts",
         "src/data/siteConfig.ts",
         "src/data/workspace.ts",
+        "src/lib/ui/tactile-dock.ts",
         "src/lib/workspace/controller.ts"
       ],
       "imports": [
+        "@/components/workspace/ComputerDesktop.astro",
         "@/components/workspace/WorkspaceContent.astro",
+        "@/data/navigation",
         "@/data/siteConfig",
         "@/data/workspace",
+        "@/lib/ui/tactile-dock",
         "@/lib/workspace/controller"
       ],
       "kind": "page",
@@ -818,23 +971,23 @@
     }
   },
   "stats": {
-    "approxJsonTokens": 6041,
-    "componentCount": 24,
-    "dataFileCount": 22,
+    "approxJsonTokens": 7052,
+    "componentCount": 26,
+    "dataFileCount": 32,
     "duplicatePageFilenamesPreserved": [
       "[slug].astro"
     ],
-    "pageCount": 12,
-    "pageRouteCount": 12,
+    "pageCount": 13,
+    "pageRouteCount": 13,
     "tierCounts": {
       "atom": 8,
-      "component": 1,
+      "component": 3,
       "layout": 1,
       "molecule": 5,
       "organism": 9
     }
   },
-  "tokenEfficiencyNote": "This index summarizes 24 components and 12 routes using full relative path keys, so an AI can retrieve structure and dependencies in a few thousand tokens instead of reading every source file.",
+  "tokenEfficiencyNote": "This index summarizes 26 components and 13 routes using full relative path keys, so an AI can retrieve structure and dependencies in a few thousand tokens instead of reading every source file.",
   "uniqueKeyPolicy": "All maps are keyed by full repository-relative path; filename stems are never used as unique keys.",
   "version": "0.2.0"
 }

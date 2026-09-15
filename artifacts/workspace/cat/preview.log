@@ -1,0 +1,13 @@
+00:00.464  blend            | Read blend: "/Users/aadith/Projects/Portfolio/Website/artifacts/workspace/cat/cat-web.blend"
+/Users/aadith/Projects/Portfolio/Website/scripts/blender/preview_workspace_cat.py:12: DeprecationWarning: 'World.use_nodes' is expected to be removed in Blender 6.0
+  scene.world=bpy.data.worlds.new('Preview world');scene.world.use_nodes=True
+00:01.739  render           | Saved: '/Users/aadith/Projects/Portfolio/Website/artifacts/workspace/cat/cat-idle.png'
+00:02.596  render           | Saved: '/Users/aadith/Projects/Portfolio/Website/artifacts/workspace/cat/cat-sit.png'
+00:03.482  render           | Saved: '/Users/aadith/Projects/Portfolio/Website/artifacts/workspace/cat/cat-crouch.png'
+00:04.372  render           | Saved: '/Users/aadith/Projects/Portfolio/Website/artifacts/workspace/cat/cat-launch.png'
+00:05.199  render           | Saved: '/Users/aadith/Projects/Portfolio/Website/artifacts/workspace/cat/cat-flight.png'
+00:06.135  render           | Saved: '/Users/aadith/Projects/Portfolio/Website/artifacts/workspace/cat/cat-landing.png'
+00:06.139  blend            | Read blend: "/Users/aadith/Projects/Portfolio/Website/artifacts/workspace/workspace.blend"
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+
+Blender quit

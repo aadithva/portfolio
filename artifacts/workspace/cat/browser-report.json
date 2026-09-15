@@ -1,0 +1,95 @@
+{
+  "states": [
+    {
+      "state": "entering",
+      "position": "5.763,-0.011,2.190",
+      "cycle": "0"
+    },
+    {
+      "state": "wandering",
+      "position": "0.840,-0.011,0.900",
+      "cycle": "0",
+      "captured": true
+    },
+    {
+      "state": "looking-around",
+      "position": "0.350,-0.011,0.780",
+      "cycle": "0",
+      "captured": true
+    },
+    {
+      "state": "wandering",
+      "position": "0.107,-0.011,0.814",
+      "cycle": "0",
+      "captured": true
+    },
+    {
+      "state": "looking-around",
+      "position": "-0.650,-0.011,0.920",
+      "cycle": "0",
+      "captured": true
+    },
+    {
+      "state": "wandering",
+      "position": "-0.844,-0.011,0.965",
+      "cycle": "0",
+      "captured": true
+    },
+    {
+      "state": "leaving",
+      "position": "-1.821,-0.011,1.193",
+      "cycle": "0"
+    },
+    {
+      "state": "outside",
+      "position": "-5.800,-0.011,2.200",
+      "cycle": "0"
+    },
+    {
+      "state": "entering",
+      "position": "-5.406,-0.011,2.100",
+      "cycle": "1"
+    },
+    {
+      "state": "wandering",
+      "position": "-1.374,-0.011,1.086",
+      "cycle": "1",
+      "captured": true
+    },
+    {
+      "state": "looking-around",
+      "position": "-0.650,-0.011,0.920",
+      "cycle": "1",
+      "captured": true
+    },
+    {
+      "state": "wandering",
+      "position": "-0.339,-0.011,0.876",
+      "cycle": "1",
+      "captured": true
+    },
+    {
+      "state": "looking-around",
+      "position": "0.350,-0.011,0.780",
+      "cycle": "1",
+      "captured": true
+    },
+    {
+      "state": "wandering",
+      "position": "0.544,-0.011,0.827",
+      "cycle": "1",
+      "captured": true
+    },
+    {
+      "state": "leaving",
+      "position": "1.517,-0.011,1.070",
+      "cycle": "1"
+    },
+    {
+      "state": "outside",
+      "position": "5.800,-0.011,2.200",
+      "cycle": "1"
+    }
+  ],
+  "errors": []
+}

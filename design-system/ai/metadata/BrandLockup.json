@@ -22,15 +22,12 @@
   ],
   "componentDependencies": [],
   "dataDependencies": [],
-  "usedBy": [
-    "Footer",
-    "Header"
-  ],
+  "usedBy": [],
   "a11yNotes": [
     "The visible wordmark provides the identity label inside the home link.",
     "The footer display wordmark is hidden from assistive technology as repeated decoration."
   ],
   "version": "0.3.0",
-  "lastUpdated": "2026-09-12",
+  "lastUpdated": "2026-09-15",
   "source": "Generated from Astro source + design-system/ai/index.json by component-metadata.py."
 }

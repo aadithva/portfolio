@@ -15,12 +15,12 @@ Generated from `design-system/ai/index.json` — do not edit by hand.
 
 | Component | Path | Purpose | Dependencies | Used by |
 |---|---|---|---|---|
-| `BrandLockup` | `src/components/atoms/BrandLockup.astro` | Aadith's reusable Digibop wordmark. | — | Footer, Header |
-| `GridBackdrop` | `src/components/atoms/GridBackdrop.astro` | Fixed large-cell grid behind the entire portfolio. | — | BaseLayout |
-| `LetterGlitch` | `src/components/atoms/LetterGlitch.astro` | Tokenised canvas field of smoothly scrambling monospace characters. | — | Footer |
+| `BrandLockup` | `src/components/atoms/BrandLockup.astro` | Aadith's reusable Digibop wordmark. | — | _not imported_ |
+| `GridBackdrop` | `src/components/atoms/GridBackdrop.astro` | Fixed large-cell grid behind the entire portfolio. | — | _not imported_ |
+| `LetterGlitch` | `src/components/atoms/LetterGlitch.astro` | Tokenised canvas field of smoothly scrambling monospace characters. | — | _not imported_ |
 | `Line` | `src/components/atoms/Line.astro` | Tokenised 1px editorial divider. | — | CaseStudySection, FeaturedWork, ProfileSignals, ProjectNav, route /404, route /about, route /adventures, route /contact, route /lab/[slug], route /work/[parent]/[item], route /writing |
-| `PixelTransition` | `src/components/atoms/PixelTransition.astro` | Dependency-free pixel-cover transition for swapping two visual layers. | — | HoverRevealList |
-| `Reveal` | `src/components/atoms/Reveal.astro` | Semantic wrapper retained for optional restrained entrance behaviour. | — | CaseStudySection, FeaturedWork, Hero, HoverRevealList, ProfileSignals, ProjectHero, WorkItemIndex, route /404, route /about, route /adventures, route /contact, route /lab, route /lab/[slug], route /work, route /work/[parent]/[item], route /writing |
+| `PixelTransition` | `src/components/atoms/PixelTransition.astro` | Dependency-free pixel-cover transition for swapping two visual layers. | — | _not imported_ |
+| `Reveal` | `src/components/atoms/Reveal.astro` | Semantic wrapper retained for optional restrained entrance behaviour. | — | CaseStudySection, FeaturedWork, Hero, ProfileSignals, ProjectHero, WorkItemIndex, route /404, route /about, route /adventures, route /contact, route /lab, route /lab/[slug], route /work, route /work/[parent]/[item], route /writing |
 | `SectionLabel` | `src/components/atoms/SectionLabel.astro` | Small uppercase eyebrow label for section headings. | — | FeaturedWork, ProfileSignals, WorkItemIndex, route /404, route /about, route /contact, route /lab/[slug], route /writing |
 | `TrueFocus` | `src/components/atoms/TrueFocus.jsx` | React Bits focus-frame atom for selected words in the homepage statement. | — | Hero |
 
@@ -29,8 +29,8 @@ Generated from `design-system/ai/index.json` — do not edit by hand.
 | Component | Path | Purpose | Dependencies | Used by |
 |---|---|---|---|---|
 | `CaseStudySection` | `src/components/molecules/CaseStudySection.astro` | Data-driven renderer for case-study blocks: text, image-full, image-grid, stats, quote, and editorial frameworks. | `Line`, `Reveal` | route /work/[parent]/[item], route /work/[slug] |
-| `DottedIndiaMap` | `src/components/molecules/DottedIndiaMap.astro` | Accurate dotted India map with the Kashmir-to-Kanyakumari cycling route. | — | route /adventures |
-| `HoverRevealList` | `src/components/molecules/HoverRevealList.astro` | Numbered work index with a persistent left thumbnail and orange pixel swaps. | `PixelTransition`, `Reveal` | FeaturedWork, route /work |
+| `DottedIndiaMap` | `src/components/molecules/DottedIndiaMap.astro` | Accurate dotted India map with the Kashmir-to-Kanyakumari cycling route. | — | WorkspaceContent, route /adventures, route /expeditions |
+| `HoverRevealList` | `src/components/molecules/HoverRevealList.astro` | Numbered work index with a persistent left thumbnail and orange pixel swaps. | `index`, `projectPreviews` | FeaturedWork, route /work |
 | `LabCard` | `src/components/molecules/LabCard.astro` | Ranked editorial row for a shortlisted Lab project. | `shots` | route /lab |
 | `WorkingLoopMap` | `src/components/molecules/WorkingLoopMap.astro` | Linked working-loop diagram for the Lab overview. | — | route /lab |
 
@@ -39,8 +39,8 @@ Generated from `design-system/ai/index.json` — do not edit by hand.
 | Component | Path | Purpose | Dependencies | Used by |
 |---|---|---|---|---|
 | `FeaturedWork` | `src/components/organisms/FeaturedWork.astro` | Homepage 'Selected Work' organism: section label plus the featured project list. | `HoverRevealList`, `Line`, `Reveal`, `SectionLabel`, `projects` | _not imported_ |
-| `Footer` | `src/components/organisms/Footer.astro` | Global footer with a full-canvas orange glitch signature, identity, social links, and secondary nav. | `BrandLockup`, `LetterGlitch`, `siteConfig` | BaseLayout |
-| `Header` | `src/components/organisms/Header.astro` | Static mono editorial header with Aadith's wordmark and wrapping primary navigation. | `BrandLockup`, `navigation`, `siteConfig` | BaseLayout |
+| `Footer` | `src/components/organisms/Footer.astro` | Global footer with a full-canvas orange glitch signature, identity, social links, and secondary nav. | `siteConfig` | BaseLayout |
+| `Header` | `src/components/organisms/Header.astro` | Static mono editorial header with Aadith's wordmark and wrapping primary navigation. | `navigation`, `siteConfig` | BaseLayout |
 | `Hero` | `src/components/organisms/Hero.astro` | Homepage hero: compact mono positioning and role line. | `Reveal`, `TrueFocus` | _not imported_ |
 | `ProfileSignals` | `src/components/organisms/ProfileSignals.astro` | Homepage proof section connecting enterprise AI, founder work, and design-to-code practice. | `Line`, `Reveal`, `SectionLabel` | _not imported_ |
 | `ProjectHero` | `src/components/organisms/ProjectHero.astro` | Case-study hero: title, Role/Year/Client/Category meta, and hero image. | `Reveal` | route /work/[slug] |
@@ -52,13 +52,15 @@ Generated from `design-system/ai/index.json` — do not edit by hand.
 
 | Component | Path | Purpose | Dependencies | Used by |
 |---|---|---|---|---|
-| `BaseLayout` | `src/layouts/BaseLayout.astro` | App shell: document head, paired Plex typography, header/footer, and global client behaviour. | `Footer`, `GridBackdrop`, `Header`, `siteConfig` | route /404, route /about, route /achievements, route /adventures, route /contact, route /lab, route /lab/[slug], route /work, route /work/[parent]/[item], route /work/[slug], route /writing |
+| `BaseLayout` | `src/layouts/BaseLayout.astro` | App shell: document head, paired Plex typography, header/footer, and global client behaviour. | `Footer`, `Header`, `siteConfig`, `tactile-dock` | route /404, route /about, route /achievements, route /adventures, route /contact, route /expeditions, route /lab, route /lab/[slug], route /work, route /work/[parent]/[item], route /work/[slug], route /writing |
 
 ## Other components
 
 | Component | Path | Purpose | Dependencies | Used by |
 |---|---|---|---|---|
-| `WorkspaceContent` | `src/components/workspace/WorkspaceContent.astro` | — | `workspace` | route / |
+| `ComputerDesktop` | `src/components/workspace/ComputerDesktop.astro` | — | `siteConfig`, `workspace` | route / |
+| `ThreeUIPaperScene` | `src/components/workspace/ThreeUIPaperScene.tsx` | — | — | _not imported_ |
+| `WorkspaceContent` | `src/components/workspace/WorkspaceContent.astro` | — | `DottedIndiaMap`, `expeditions`, `workspace` | route / |
 
 ## Routes
 
@@ -69,7 +71,8 @@ Generated from `design-system/ai/index.json` — do not edit by hand.
 | `/achievements` | `src/pages/achievements.astro` | `BaseLayout` |
 | `/adventures` | `src/pages/adventures.astro` | `Line`, `Reveal`, `DottedIndiaMap`, `BaseLayout` |
 | `/contact` | `src/pages/contact.astro` | `Line`, `Reveal`, `SectionLabel`, `BaseLayout` |
-| `/` | `src/pages/index.astro` | `WorkspaceContent` |
+| `/expeditions` | `src/pages/expeditions.astro` | `DottedIndiaMap`, `BaseLayout` |
+| `/` | `src/pages/index.astro` | `ComputerDesktop`, `WorkspaceContent` |
 | `/lab` | `src/pages/lab.astro` | `Reveal`, `LabCard`, `WorkingLoopMap`, `BaseLayout` |
 | `/lab/[slug]` | `src/pages/lab/[slug].astro` | `Line`, `Reveal`, `SectionLabel`, `BaseLayout` |
 | `/work` | `src/pages/work.astro` | `Reveal`, `HoverRevealList`, `BaseLayout` |

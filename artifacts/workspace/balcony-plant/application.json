@@ -1,0 +1,18 @@
+{
+  "sourceSha256": "801c9d1c759bdd7416f8fb0390d300421e4491fe4aea5841e214209a7b75102d",
+  "candidateSha256": "2c9cef3c4c697493054af442ab82af65ae2f70b47cd48c6488c89a26382c5b2d",
+  "backup": "artifacts/workspace/balcony-plant/source-before-plant-801c9d1c759b.blend",
+  "positionWeb": [
+    -2.3475944995880127,
+    -0.02500000037252903,
+    -1.1216442584991455
+  ],
+  "height": 1.56,
+  "potDiameter": 0.48,
+  "leaves": 18,
+  "unrelatedObjectsUnchanged": true,
+  "collisions": {
+    "balcony_door": 0,
+    "balcony_exterior": 0
+  }
+}

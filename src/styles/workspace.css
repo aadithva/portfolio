@@ -82,10 +82,6 @@ button:disabled { cursor: wait; }
 .ws-hotspot span { display: none; background: var(--ws-panel); color: var(--ws-ink); border: 1px solid var(--ws-line); border-radius: 5px; font-size: 11px; white-space: nowrap; padding: 8px 11px; position: absolute; bottom: 49px; box-shadow: 0 4px 15px #0003; }
 .ws-hotspot:focus-visible { opacity: 1; background: #eeeae220; outline: 2px solid var(--ws-accent); }
 .ws-hotspot:focus-visible span { display: block; }
-.ws-hotspot[data-primary] { opacity: 1; background: var(--ds-color-accent); color: #191918; border: 1px solid #f4786780; box-shadow: 0 3px 16px #0005; font-size: 23px; top: 0; }
-.ws-hotspot[data-primary]::after { content: '↗'; }
-.ws-hotspot[data-primary]:hover { background: var(--ws-accent); }
-.ws-hotspot[data-primary]:hover span { display: block; }
 .ws-loader { position: absolute; left: 50%; top: 45%; transform: translate(-50%,-50%); width: 260px; display: flex; flex-direction: column; gap: 16px; text-align: center; font-size: 12px; color: var(--ws-muted); }
 .ws-loader-title { font-size: 23px; letter-spacing: -.5px; color: var(--ws-ink); }
 .ws-loader progress { width: 100%; height: 2px; border: 0; background: var(--ws-raised); appearance: none; }
@@ -263,3 +259,6 @@ kbd { font: 10px var(--ws-mono); padding: 2px 5px; border: 1px solid var(--ws-li
 @media(forced-colors:active) {
   .ws-primary,.ws-hotspot[data-primary],.ws-controls button,.ws-view-rail button { border: 1px solid ButtonText; }
 }
+.ws-cat-hit { position:absolute; transform:translate(-50%,-50%); z-index:3; border:0; background:transparent; color:transparent; cursor:pointer; border-radius:50%; padding:0; touch-action:manipulation; }
+.ws-cat-hit:focus-visible { outline:2px solid #eeeae2; outline-offset:3px; }
+.ws-cat-hit[hidden] { display:none; }

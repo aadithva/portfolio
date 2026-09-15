@@ -1,0 +1,2341 @@
+{
+  "objects": [
+    {
+      "name": "Armature",
+      "type": "ARMATURE",
+      "dimensions": [
+        2.2790751457214355,
+        9.736797332763672,
+        9.512985229492188
+      ],
+      "vertices": null,
+      "vertexGroups": [],
+      "modifiers": [],
+      "bones": [
+        "Foot_front_IK_L",
+        "Knee_back_IK_L",
+        "Foot_Back_IK_L",
+        "Knee_front_IK_L",
+        "Tail_controller",
+        "Foot_front_IK_R",
+        "Knee_back_IK_R",
+        "Foot_Back_IK_R",
+        "Knee_front_IK_R",
+        "Spine",
+        "Spine.001",
+        "Spine.002",
+        "Spine.003",
+        "Spine.004",
+        "Neck",
+        "Neck.001",
+        "Neck.002",
+        "Head",
+        "Mouth",
+        "Nose",
+        "Ear_connector",
+        "Ear",
+        "Ear.001",
+        "Ear.002",
+        "Ear_connector.001",
+        "Ear.006",
+        "Ear.003",
+        "Ear.004",
+        "Head_controller",
+        "Shoulder_front_L",
+        "Thigh_front_L",
+        "Calf_Front_L",
+        "Foot_front_L2",
+        "Foot_front_L",
+        "toe_connector_L.001",
+        "toe_connector_L",
+        "Toe_pinky_L_front",
+        "Toe_ring_L_front",
+        "toe_connector_L.002",
+        "Toe_thumb_L_front",
+        "Toe_Pointer_L_front",
+        "Thigh_front_R",
+        "Calf_Front_R",
+        "Foot_front_L2.002",
+        "Foot_front_R",
+        "toe_connector_R",
+        "toe_connector_R.001",
+        "Toe_pinky_L_front.002",
+        "Toe_ring_L_front.002",
+        "toe_connector_R.002",
+        "Toe_thumb_L_front.002",
+        "Toe_Pointer_L_front.002",
+        "Hip",
+        "Thigh_Back_L",
+        "Calf_back_L",
+        "Foot_Back_L",
+        "Foot_Back_L2",
+        "toe_connector_L_back.002",
+        "Toe_back_L_Thumb",
+        "toe_connector_L_back.001",
+        "toe_connector_L_back",
+        "Toe_back_L_pinky",
+        "Toe_back_L_Ring",
+        "Toe_back_L_Pointer",
+        "Thigh_Back_R",
+        "Calf_back_R",
+        "Foot_Back_R",
+        "Foot_Back_L2.002",
+        "toe_connector_L_back.006",
+        "Toe_back_L_Thumb.002",
+        "toe_connector_L_back.003",
+        "toe_connector_L_back.004",
+        "Toe_back_L_pinky.002",
+        "Toe_back_L_Ring.002",
+        "Toe_back_L_Pointer.002",
+        "Tail",
+        "Tail.001",
+        "Tail.002",
+        "Tail.003",
+        "Tail.004",
+        "Tail.005",
+        "Tail.006",
+        "Tail.007",
+        "Spine_controller_1",
+        "Spine_controller_2"
+      ]
+    },
+    {
+      "name": "Camera",
+      "type": "CAMERA",
+      "dimensions": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "vertices": null,
+      "vertexGroups": [],
+      "modifiers": [],
+      "bones": []
+    },
+    {
+      "name": "Cat",
+      "type": "MESH",
+      "dimensions": [
+        2.847249746322632,
+        9.997916221618652,
+        9.299442291259766
+      ],
+      "vertices": 1417,
+      "vertexGroups": [
+        "Knee_front_IK_L",
+        "Bone.001",
+        "Bone.002",
+        "Bone.003",
+        "Bone.004",
+        "Bone.005",
+        "Bone.006",
+        "Bone.007",
+        "Bone.008",
+        "Bone.009",
+        "Bone.010",
+        "Bone.011",
+        "Bone.012",
+        "Bone.053",
+        "Bone.054",
+        "Bone.055",
+        "Bone.056",
+        "Bone.057",
+        "Bone.058",
+        "Bone.059",
+        "Bone.060",
+        "Bone.013",
+        "Bone.014",
+        "Bone.015",
+        "Bone.016",
+        "Bone.017",
+        "Bone.019",
+        "Bone.018",
+        "Bone.020",
+        "Bone.021",
+        "Bone.022",
+        "Bone.023",
+        "Bone.024",
+        "Bone.025",
+        "Bone.027",
+        "Bone.026",
+        "Bone.028",
+        "Bone.029",
+        "Bone.030",
+        "Bone.031",
+        "Bone.032",
+        "Bone.033",
+        "Bone.035",
+        "Bone.034",
+        "Bone.036",
+        "Bone.037",
+        "Bone.038",
+        "Bone.039",
+        "Bone.040",
+        "Bone.041",
+        "Bone.043",
+        "Bone.042",
+        "Bone.044",
+        "Bone.045",
+        "Bone.046",
+        "Bone.047",
+        "Bone.048",
+        "Bone.049",
+        "Bone.050",
+        "Bone.051",
+        "Bone.052",
+        "Spine",
+        "Spine.001",
+        "Spine.002",
+        "Spine.003",
+        "Spine.004",
+        "Neck",
+        "Neck.001",
+        "Neck.002",
+        "Head",
+        "Mouth",
+        "Nose",
+        "Ear_connector",
+        "Ear",
+        "Ear.001",
+        "Ear.002",
+        "Ear_connector.002",
+        "Ear.006",
+        "Ear.006",
+        "Ear.003",
+        "Shoulder_front_L",
+        "Thigh_front_L",
+        "Calf_Front_L",
+        "Foot_front_L2",
+        "Foot_front_L",
+        "toe_connector_L.001",
+        "toe_connector_L",
+        "Toe_pinky_L_front",
+        "Toe_ring_L_front",
+        "toe_connector_L.002",
+        "Toe_thumb_L_front",
+        "Toe_Pointer_L_front",
+        "Thigh_front_R",
+        "Calf_Front_R",
+        "Foot_front_L2.002",
+        "Foot_front_R",
+        "toe_connector_R",
+        "toe_connector_R.001",
+        "Toe_pinky_L_front.002",
+        "Toe_ring_L_front.002",
+        "toe_connector_R.002",
+        "Toe_thumb_L_front.002",
+        "Toe_Pointer_L_front.002",
+        "Hip",
+        "Thigh_Back_L",
+        "Calf_back_L",
+        "Foot_Back_L",
+        "Foot_Back_L2",
+        "toe_connector_L_back.002",
+        "Toe_back_L_Thumb",
+        "toe_connector_L_back.001",
+        "toe_connector_L_back",
+        "Toe_back_L_pinky",
+        "Toe_back_L_Ring",
+        "Toe_back_L_Pointer",
+        "Thigh_Back_R",
+        "Calf_back_R",
+        "Foot_Back_R",
+        "Foot_Back_L2.002",
+        "toe_connector_L_back.006",
+        "Toe_back_L_Thumb.002",
+        "toe_connector_L_back.006",
+        "toe_connector_L_back.003",
+        "Toe_back_L_pinky.002",
+        "Toe_back_L_Ring.002",
+        "Toe_back_L_Pointer.002",
+        "Tail",
+        "Tail.001",
+        "Tail.002",
+        "Tail.003",
+        "Tail.004",
+        "Tail.005",
+        "Tail.006",
+        "Tail.007",
+        "hair",
+        "Spine.005_IK",
+        "Ear_connector.001",
+        "Ear.004",
+        "Head_controller",
+        "toe_connector_L_back.004",
+        "Knee_back_IK_L",
+        "Foot_Back_IK_L",
+        "Spine_controller_1",
+        "Spine_controller_2",
+        "Tail_controller",
+        "Knee_back_IK_R",
+        "Foot_Back_IK_R"
+      ],
+      "modifiers": [
+        "ARMATURE",
+        "SUBSURF",
+        "PARTICLE_SYSTEM",
+        "PARTICLE_SYSTEM"
+      ],
+      "bones": []
+    },
+    {
+      "name": "Empty",
+      "type": "EMPTY",
+      "dimensions": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "vertices": null,
+      "vertexGroups": [],
+      "modifiers": [],
+      "bones": []
+    },
+    {
+      "name": "eye",
+      "type": "MESH",
+      "dimensions": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "vertices": 0,
+      "vertexGroups": [],
+      "modifiers": [],
+      "bones": []
+    },
+    {
+      "name": "Plane",
+      "type": "MESH",
+      "dimensions": [
+        153.6918182373047,
+        166.04061889648438,
+        44.72501754760742
+      ],
+      "vertices": 34,
+      "vertexGroups": [],
+      "modifiers": [
+        "SUBSURF"
+      ],
+      "bones": []
+    },
+    {
+      "name": "Sphere",
+      "type": "MESH",
+      "dimensions": [
+        0.3359285891056061,
+        0.33577680587768555,
+        0.3348831534385681
+      ],
+      "vertices": 482,
+      "vertexGroups": [
+        "Spine",
+        "Spine.001",
+        "Spine.002",
+        "Spine.003",
+        "Spine.004",
+        "Neck",
+        "Neck.001",
+        "Neck.002",
+        "Head",
+        "Mouth",
+        "Nose",
+        "Ear_connector",
+        "Ear",
+        "Ear.001",
+        "Ear.002",
+        "Ear_connector.001",
+        "Ear.006",
+        "Ear.003",
+        "Ear.004",
+        "Shoulder_front_L",
+        "Thigh_front_L",
+        "Calf_Front_L",
+        "Foot_front_L2",
+        "Foot_front_L",
+        "toe_connector_L.001",
+        "toe_connector_L",
+        "Toe_pinky_L_front",
+        "Toe_ring_L_front",
+        "toe_connector_L.002",
+        "Toe_thumb_L_front",
+        "Toe_Pointer_L_front",
+        "Thigh_front_R",
+        "Calf_Front_R",
+        "Foot_front_L2.002",
+        "Foot_front_R",
+        "toe_connector_R",
+        "toe_connector_R.001",
+        "Toe_pinky_L_front.002",
+        "Toe_ring_L_front.002",
+        "toe_connector_R.002",
+        "Toe_thumb_L_front.002",
+        "Toe_Pointer_L_front.002",
+        "Hip",
+        "Thigh_Back_L",
+        "Calf_back_L",
+        "Foot_Back_L",
+        "Foot_Back_L2",
+        "toe_connector_L_back.002",
+        "Toe_back_L_Thumb",
+        "toe_connector_L_back.001",
+        "toe_connector_L_back",
+        "Toe_back_L_pinky",
+        "Toe_back_L_Ring",
+        "Toe_back_L_Pointer",
+        "Thigh_Back_R",
+        "Calf_back_R",
+        "Foot_Back_R",
+        "Foot_Back_L2.002",
+        "toe_connector_L_back.006",
+        "Toe_back_L_Thumb.002",
+        "toe_connector_L_back.003",
+        "toe_connector_L_back.004",
+        "Toe_back_L_pinky.002",
+        "Toe_back_L_Ring.002",
+        "Toe_back_L_Pointer.002",
+        "Tail",
+        "Tail.001",
+        "Tail.002",
+        "Tail.003",
+        "Tail.004",
+        "Tail.005",
+        "Tail.006",
+        "Tail.007",
+        "Knee_back_IK_R",
+        "Foot_Back_IK_R"
+      ],
+      "modifiers": [
+        "SUBSURF",
+        "ARMATURE"
+      ],
+      "bones": []
+    },
+    {
+      "name": "Sphere.001",
+      "type": "MESH",
+      "dimensions": [
+        0.33487096428871155,
+        0.3342420160770416,
+        0.33522453904151917
+      ],
+      "vertices": 482,
+      "vertexGroups": [
+        "Spine",
+        "Spine.001",
+        "Spine.002",
+        "Spine.003",
+        "Spine.004",
+        "Neck",
+        "Neck.001",
+        "Neck.002",
+        "Head",
+        "Mouth",
+        "Nose",
+        "Ear_connector",
+        "Ear",
+        "Ear.001",
+        "Ear.002",
+        "Ear_connector.001",
+        "Ear.006",
+        "Ear.003",
+        "Ear.004",
+        "Shoulder_front_L",
+        "Thigh_front_L",
+        "Calf_Front_L",
+        "Foot_front_L2",
+        "Foot_front_L",
+        "toe_connector_L.001",
+        "toe_connector_L",
+        "Toe_pinky_L_front",
+        "Toe_ring_L_front",
+        "toe_connector_L.002",
+        "Toe_thumb_L_front",
+        "Toe_Pointer_L_front",
+        "Thigh_front_R",
+        "Calf_Front_R",
+        "Foot_front_L2.002",
+        "Foot_front_R",
+        "toe_connector_R",
+        "toe_connector_R.001",
+        "Toe_pinky_L_front.002",
+        "Toe_ring_L_front.002",
+        "toe_connector_R.002",
+        "Toe_thumb_L_front.002",
+        "Toe_Pointer_L_front.002",
+        "Hip",
+        "Thigh_Back_L",
+        "Calf_back_L",
+        "Foot_Back_L",
+        "Foot_Back_L2",
+        "toe_connector_L_back.002",
+        "Toe_back_L_Thumb",
+        "toe_connector_L_back.001",
+        "toe_connector_L_back",
+        "Toe_back_L_pinky",
+        "Toe_back_L_Ring",
+        "Toe_back_L_Pointer",
+        "Thigh_Back_R",
+        "Calf_back_R",
+        "Foot_Back_R",
+        "Foot_Back_L2.002",
+        "toe_connector_L_back.006",
+        "Toe_back_L_Thumb.002",
+        "toe_connector_L_back.003",
+        "toe_connector_L_back.004",
+        "Toe_back_L_pinky.002",
+        "Toe_back_L_Ring.002",
+        "Toe_back_L_Pointer.002",
+        "Tail",
+        "Tail.001",
+        "Tail.002",
+        "Tail.003",
+        "Tail.004",
+        "Tail.005",
+        "Tail.006",
+        "Tail.007",
+        "Knee_back_IK_R",
+        "Foot_Back_IK_R"
+      ],
+      "modifiers": [
+        "SUBSURF",
+        "ARMATURE"
+      ],
+      "bones": []
+    }
+  ],
+  "actions": [
+    {
+      "name": "CameraAction",
+      "range": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "run",
+      "range": [
+        1.0,
+        15.0
+      ]
+    },
+    {
+      "name": "Walk",
+      "range": [
+        1.0,
+        28.0
+      ]
+    }
+  ],
+  "images": [
+    {
+      "name": "11967-diffuse.jpg.001",
+      "path": "//Jonas Dichelle/web/Projects/Projects/Animations/Cats/11967-diffuse.jpg",
+      "packed": true
+    },
+    {
+      "name": "black-cat-fur-texture.jpg",
+      "path": "//Jonas Dichelle/web/Projects/Projects/Animations/Cats/black-cat-fur-texture.jpg",
+      "packed": true
+    },
+    {
+      "name": "EXR",
+      "path": "//../AppData/Roaming/Blender Foundation/Blender/2.77/scripts/addons/pro_lighting_skies_demo/hdris/cloudy08_EXR.exr",
+      "packed": true
+    },
+    {
+      "name": "green_eye_diff.jpg.001",
+      "path": "//Jonas Dichelle/web/Projects/Projects/Animations/Cats/green_eye_diff.jpg",
+      "packed": true
+    },
+    {
+      "name": "JPG",
+      "path": "//../AppData/Roaming/Blender Foundation/Blender/2.77/scripts/addons/pro_lighting_skies_demo/hdris/cloudy08_medium.jpg",
+      "packed": true
+    },
+    {
+      "name": "Render Result",
+      "path": "",
+      "packed": false
+    },
+    {
+      "name": "Untitled",
+      "path": "//Jonas Dichelle/web/Projects/Projects/Animations/Cats/cat_texture_new.png",
+      "packed": true
+    },
+    {
+      "name": "Viewer Node",
+      "path": "",
+      "packed": false
+    }
+  ],
+  "materials": [
+    {
+      "name": "Cornea",
+      "nodes": [
+        [
+          "Mix Shader",
+          "MIX_SHADER"
+        ],
+        [
+          "Output",
+          "OUTPUT_MATERIAL"
+        ],
+        [
+          "Value.01",
+          "VALUE"
+        ],
+        [
+          "GlossyBSDF",
+          "BSDF_GLOSSY"
+        ],
+        [
+          "TransparentBSDF",
+          "BSDF_TRANSPARENT"
+        ],
+        [
+          "RGB",
+          "RGB"
+        ],
+        [
+          "Geo",
+          "NEW_GEOMETRY"
+        ],
+        [
+          "Value",
+          "VALUE"
+        ],
+        [
+          "Math",
+          "MATH"
+        ]
+      ]
+    },
+    {
+      "name": "hair",
+      "nodes": [
+        [
+          "Material Output",
+          "OUTPUT_MATERIAL"
+        ],
+        [
+          "Hair BSDF.001",
+          "BSDF_HAIR"
+        ],
+        [
+          "Hair BSDF",
+          "BSDF_HAIR"
+        ],
+        [
+          "Diffuse BSDF",
+          "BSDF_DIFFUSE"
+        ],
+        [
+          "Reroute",
+          "REROUTE"
+        ],
+        [
+          "Hair Info",
+          "HAIR_INFO"
+        ],
+        [
+          "Hue Saturation Value",
+          "HUE_SAT"
+        ],
+        [
+          "Add Shader",
+          "ADD_SHADER"
+        ],
+        [
+          "Mix",
+          "MIX"
+        ],
+        [
+          "Transparent BSDF",
+          "BSDF_TRANSPARENT"
+        ],
+        [
+          "ColorRamp",
+          "VALTORGB"
+        ],
+        [
+          "ColorRamp.001",
+          "VALTORGB"
+        ],
+        [
+          "Mix Shader",
+          "MIX_SHADER"
+        ],
+        [
+          "Mix Shader.001",
+          "MIX_SHADER"
+        ],
+        [
+          "Image Texture",
+          "TEX_IMAGE"
+        ]
+      ]
+    },
+    {
+      "name": "Material",
+      "nodes": [
+        [
+          "Material Output",
+          "OUTPUT_MATERIAL"
+        ],
+        [
+          "Diffuse BSDF",
+          "BSDF_DIFFUSE"
+        ]
+      ]
+    },
+    {
+      "name": "Material.002",
+      "nodes": [
+        [
+          "Material Output",
+          "OUTPUT_MATERIAL"
+        ],
+        [
+          "Diffuse BSDF",
+          "BSDF_DIFFUSE"
+        ]
+      ]
+    },
+    {
+      "name": "PBR Dielectric",
+      "nodes": [
+        [
+          "Mapping",
+          "MAPPING"
+        ],
+        [
+          "Texture Coordinate",
+          "TEX_COORD"
+        ],
+        [
+          "Material Output",
+          "OUTPUT_MATERIAL"
+        ],
+        [
+          "RGB Curves",
+          "CURVE_RGB"
+        ],
+        [
+          "Group",
+          "GROUP"
+        ],
+        [
+          "Image Texture",
+          "TEX_IMAGE"
+        ]
+      ]
+    },
+    {
+      "name": "Pupil",
+      "nodes": [
+        [
+          "Output",
+          "OUTPUT_MATERIAL"
+        ],
+        [
+          "DiffuseBSDF",
+          "BSDF_DIFFUSE"
+        ],
+        [
+          "Geo",
+          "NEW_GEOMETRY"
+        ],
+        [
+          "TextureCoor",
+          "TEX_COORD"
+        ],
+        [
+          "ImageTex",
+          "TEX_IMAGE"
+        ]
+      ]
+    },
+    {
+      "name": "Sclera_and_Iris",
+      "nodes": [
+        [
+          "Value.03",
+          "VALUE"
+        ],
+        [
+          "Value.04",
+          "VALUE"
+        ],
+        [
+          "RGB to BW",
+          "RGBTOBW"
+        ],
+        [
+          "Bright/Contrast",
+          "BRIGHTCONTRAST"
+        ],
+        [
+          "Output",
+          "OUTPUT_MATERIAL"
+        ],
+        [
+          "Bump",
+          "BUMP"
+        ],
+        [
+          "Value",
+          "VALUE"
+        ],
+        [
+          "TextureCoor",
+          "TEX_COORD"
+        ],
+        [
+          "GlossyBSDF",
+          "BSDF_GLOSSY"
+        ],
+        [
+          "DiffuseBSDF",
+          "BSDF_DIFFUSE"
+        ],
+        [
+          "Reroute",
+          "REROUTE"
+        ],
+        [
+          "Value.02",
+          "VALUE"
+        ],
+        [
+          "ImageTex.01",
+          "TEX_IMAGE"
+        ],
+        [
+          "ImageTex",
+          "TEX_IMAGE"
+        ],
+        [
+          "Mix Shader",
+          "MIX_SHADER"
+        ],
+        [
+          "Math",
+          "MATH"
+        ]
+      ]
+    },
+    {
+      "name": "skin",
+      "nodes": [
+        [
+          "Image Texture",
+          "TEX_IMAGE"
+        ],
+        [
+          "Diffuse BSDF",
+          "BSDF_DIFFUSE"
+        ],
+        [
+          "Material Output",
+          "OUTPUT_MATERIAL"
+        ]
+      ]
+    }
+  ],
+  "rig": [
+    {
+      "name": "Foot_front_IK_L",
+      "head": [
+        0.5920867919921875,
+        -1.5426862239837646,
+        -2.6219308376312256
+      ],
+      "tail": [
+        0.5920867919921875,
+        -1.920623540878296,
+        -2.731954336166382
+      ],
+      "parent": null,
+      "constraints": []
+    },
+    {
+      "name": "Knee_back_IK_L",
+      "head": [
+        0.7072941064834595,
+        3.7648911476135254,
+        -1.0944416522979736
+      ],
+      "tail": [
+        0.7072941064834595,
+        4.126372337341309,
+        -1.0944416522979736
+      ],
+      "parent": null,
+      "constraints": []
+    },
+    {
+      "name": "Foot_Back_IK_L",
+      "head": [
+        0.707294225692749,
+        2.664655923843384,
+        -2.6033356189727783
+      ],
+      "tail": [
+        0.7758082747459412,
+        2.0473737716674805,
+        -2.7133591175079346
+      ],
+      "parent": null,
+      "constraints": []
+    },
+    {
+      "name": "Knee_front_IK_L",
+      "head": [
+        0.7072940468788147,
+        -0.7841826677322388,
+        -1.8533380031585693
+      ],
+      "tail": [
+        0.7072940468788147,
+        -0.534314751625061,
+        -1.8533380031585693
+      ],
+      "parent": null,
+      "constraints": []
+    },
+    {
+      "name": "Tail_controller",
+      "head": [
+        -6.225583604191343e-08,
+        4.14948034286499,
+        6.207635879516602
+      ],
+      "tail": [
+        -6.225589999075964e-08,
+        4.14948034286499,
+        6.742042541503906
+      ],
+      "parent": null,
+      "constraints": []
+    },
+    {
+      "name": "Foot_front_IK_R",
+      "head": [
+        -0.5920867919921875,
+        -1.5426862239837646,
+        -2.6219308376312256
+      ],
+      "tail": [
+        -0.5920867919921875,
+        -1.920623540878296,
+        -2.731954336166382
+      ],
+      "parent": null,
+      "constraints": []
+    },
+    {
+      "name": "Knee_back_IK_R",
+      "head": [
+        -0.7072939872741699,
+        3.7648911476135254,
+        -1.0944416522979736
+      ],
+      "tail": [
+        -0.7072939872741699,
+        4.126372337341309,
+        -1.0944416522979736
+      ],
+      "parent": null,
+      "constraints": []
+    },
+    {
+      "name": "Foot_Back_IK_R",
+      "head": [
+        -0.7072944641113281,
+        2.664655923843384,
+        -2.6033356189727783
+      ],
+      "tail": [
+        -0.7758083343505859,
+        2.0473737716674805,
+        -2.7133591175079346
+      ],
+      "parent": null,
+      "constraints": []
+    },
+    {
+      "name": "Knee_front_IK_R",
+      "head": [
+        -0.7072939872741699,
+        -0.7841826677322388,
+        -1.8533380031585693
+      ],
+      "tail": [
+        -0.7072939872741699,
+        -0.534314751625061,
+        -1.8533380031585693
+      ],
+      "parent": null,
+      "constraints": []
+    },
+    {
+      "name": "Spine",
+      "head": [
+        2.3421881323315574e-08,
+        1.581647515296936,
+        2.2213635444641113
+      ],
+      "tail": [
+        1.8407682489396393e-07,
+        2.768799066543579,
+        2.4717442989349365
+      ],
+      "parent": null,
+      "constraints": [
+        {
+          "type": "PIVOT",
+          "name": "Pivot",
+          "subtarget": "Spine.001",
+          "chain": null
+        },
+        {
+          "type": "IK",
+          "name": "IK",
+          "subtarget": "Hip",
+          "chain": 0
+        }
+      ]
+    },
+    {
+      "name": "Spine.001",
+      "head": [
+        2.3421819150826195e-08,
+        1.581647515296936,
+        2.2213635444641113
+      ],
+      "tail": [
+        -2.5908539669217134e-07,
+        0.7708039879798889,
+        2.0814592838287354
+      ],
+      "parent": "Spine",
+      "constraints": []
+    },
+    {
+      "name": "Spine.002",
+      "head": [
+        -2.5908539669217134e-07,
+        0.7708039879798889,
+        2.0814592838287354
+      ],
+      "tail": [
+        -4.282618704110064e-07,
+        0.08661133050918579,
+        1.997064471244812
+      ],
+      "parent": "Spine.001",
+      "constraints": [
+        {
+          "type": "IK",
+          "name": "IK",
+          "subtarget": "Spine_controller_1",
+          "chain": 0
+        }
+      ]
+    },
+    {
+      "name": "Spine.003",
+      "head": [
+        -4.282618704110064e-07,
+        0.08661133050918579,
+        1.997064471244812
+      ],
+      "tail": [
+        -2.875764266718761e-07,
+        -0.6543187499046326,
+        2.0071146488189697
+      ],
+      "parent": "Spine.002",
+      "constraints": [
+        {
+          "type": "COPY_ROTATION",
+          "name": "Copy Rotation",
+          "subtarget": "Spine.002",
+          "chain": null
+        }
+      ]
+    },
+    {
+      "name": "Spine.004",
+      "head": [
+        -2.875764266718761e-07,
+        -0.6543187499046326,
+        2.0071146488189697
+      ],
+      "tail": [
+        3.353491706548084e-08,
+        -1.1940765380859375,
+        1.850819706916809
+      ],
+      "parent": "Spine.003",
+      "constraints": [
+        {
+          "type": "IK",
+          "name": "IK",
+          "subtarget": "Spine_controller_2",
+          "chain": 0
+        }
+      ]
+    },
+    {
+      "name": "Neck",
+      "head": [
+        8.166469278592103e-09,
+        -1.1811797618865967,
+        1.8261630535125732
+      ],
+      "tail": [
+        1.7305200827877343e-08,
+        -1.8095051050186157,
+        2.395122766494751
+      ],
+      "parent": null,
+      "constraints": []
+    },
+    {
+      "name": "Neck.001",
+      "head": [
+        1.7305200827877343e-08,
+        -1.8095051050186157,
+        2.395122766494751
+      ],
+      "tail": [
+        3.344725385545644e-08,
+        -2.390402317047119,
+        2.843811511993408
+      ],
+      "parent": "Neck",
+      "constraints": []
+    },
+    {
+      "name": "Neck.002",
+      "head": [
+        3.344725385545644e-08,
+        -2.390402317047119,
+        2.843811511993408
+      ],
+      "tail": [
+        6.550721565190543e-08,
+        -3.1168034076690674,
+        3.3522934913635254
+      ],
+      "parent": "Neck.001",
+      "constraints": [
+        {
+          "type": "IK",
+          "name": "IK",
+          "subtarget": "Head_controller",
+          "chain": 3
+        },
+        {
+          "type": "COPY_ROTATION",
+          "name": "Copy Rotation",
+          "subtarget": "",
+          "chain": null
+        },
+        {
+          "type": "COPY_ROTATION",
+          "name": "Copy Rotation.001",
+          "subtarget": "Head_controller",
+          "chain": null
+        }
+      ]
+    },
+    {
+      "name": "Head",
+      "head": [
+        6.550721565190543e-08,
+        -3.1168034076690674,
+        3.3522934913635254
+      ],
+      "tail": [
+        7.056663520188522e-08,
+        -3.5808064937591553,
+        2.6284427642822266
+      ],
+      "parent": "Neck.002",
+      "constraints": []
+    },
+    {
+      "name": "Mouth",
+      "head": [
+        7.056663520188522e-08,
+        -3.5808064937591553,
+        2.6284427642822266
+      ],
+      "tail": [
+        6.76272335908834e-08,
+        -4.318943500518799,
+        2.05521297454834
+      ],
+      "parent": "Head",
+      "constraints": []
+    },
+    {
+      "name": "Nose",
+      "head": [
+        7.056663520188522e-08,
+        -3.5808064937591553,
+        2.6284427642822266
+      ],
+      "tail": [
+        8.723481670358524e-08,
+        -4.770167350769043,
+        2.553980827331543
+      ],
+      "parent": "Head",
+      "constraints": []
+    },
+    {
+      "name": "Ear_connector",
+      "head": [
+        6.550721565190543e-08,
+        -3.1168034076690674,
+        3.3522934913635254
+      ],
+      "tail": [
+        0.6045500636100769,
+        -3.4926695823669434,
+        3.670452833175659
+      ],
+      "parent": "Neck.002",
+      "constraints": []
+    },
+    {
+      "name": "Ear",
+      "head": [
+        0.6045500636100769,
+        -3.4926695823669434,
+        3.670452833175659
+      ],
+      "tail": [
+        0.8160567283630371,
+        -3.6666195392608643,
+        4.000133514404297
+      ],
+      "parent": "Ear_connector",
+      "constraints": []
+    },
+    {
+      "name": "Ear.001",
+      "head": [
+        0.8160567283630371,
+        -3.6666195392608643,
+        4.000133514404297
+      ],
+      "tail": [
+        1.0126335620880127,
+        -3.8373360633850098,
+        4.2977399826049805
+      ],
+      "parent": "Ear",
+      "constraints": []
+    },
+    {
+      "name": "Ear.002",
+      "head": [
+        1.0126335620880127,
+        -3.8373360633850098,
+        4.2977399826049805
+      ],
+      "tail": [
+        1.1395375728607178,
+        -3.9004316329956055,
+        4.48639440536499
+      ],
+      "parent": "Ear.001",
+      "constraints": []
+    },
+    {
+      "name": "Ear_connector.001",
+      "head": [
+        6.550721565190543e-08,
+        -3.1168034076690674,
+        3.3522934913635254
+      ],
+      "tail": [
+        -0.6045498251914978,
+        -3.4926695823669434,
+        3.67045259475708
+      ],
+      "parent": "Neck.002",
+      "constraints": []
+    },
+    {
+      "name": "Ear.006",
+      "head": [
+        -0.6045498251914978,
+        -3.4926695823669434,
+        3.67045259475708
+      ],
+      "tail": [
+        -0.8160566687583923,
+        -3.6666195392608643,
+        4.000133514404297
+      ],
+      "parent": "Ear_connector.001",
+      "constraints": []
+    },
+    {
+      "name": "Ear.003",
+      "head": [
+        -0.8160566687583923,
+        -3.6666195392608643,
+        4.000133514404297
+      ],
+      "tail": [
+        -1.012633204460144,
+        -3.8373360633850098,
+        4.2977399826049805
+      ],
+      "parent": "Ear.006",
+      "constraints": []
+    },
+    {
+      "name": "Ear.004",
+      "head": [
+        -1.012633204460144,
+        -3.8373360633850098,
+        4.2977399826049805
+      ],
+      "tail": [
+        -1.1395376920700073,
+        -3.9004316329956055,
+        4.48639440536499
+      ],
+      "parent": "Ear.003",
+      "constraints": []
+    },
+    {
+      "name": "Head_controller",
+      "head": [
+        6.550721565190543e-08,
+        -3.11680269241333,
+        3.3522932529449463
+      ],
+      "tail": [
+        6.5507187230196e-08,
+        -3.8667755126953125,
+        4.068312644958496
+      ],
+      "parent": null,
+      "constraints": []
+    },
+    {
+      "name": "Shoulder_front_L",
+      "head": [
+        8.166469278592103e-09,
+        -1.1811797618865967,
+        1.8261630535125732
+      ],
+      "tail": [
+        8.166461284986326e-09,
+        -2.1871089935302734,
+        1.2760461568832397
+      ],
+      "parent": null,
+      "constraints": []
+    },
+    {
+      "name": "Thigh_front_L",
+      "head": [
+        8.166461284986326e-09,
+        -2.1871089935302734,
+        1.2760461568832397
+      ],
+      "tail": [
+        0.6941315531730652,
+        -1.1947572231292725,
+        0.09411084651947021
+      ],
+      "parent": null,
+      "constraints": []
+    },
+    {
+      "name": "Calf_Front_L",
+      "head": [
+        0.6941315531730652,
+        -1.1947572231292725,
+        0.09411084651947021
+      ],
+      "tail": [
+        0.7641945481300354,
+        -1.3701817989349365,
+        -1.914858102798462
+      ],
+      "parent": "Thigh_front_L",
+      "constraints": [
+        {
+          "type": "IK",
+          "name": "IK",
+          "subtarget": "Knee_front_IK_L",
+          "chain": 2
+        }
+      ]
+    },
+    {
+      "name": "Foot_front_L2",
+      "head": [
+        0.7641945481300354,
+        -1.3701817989349365,
+        -1.914858102798462
+      ],
+      "tail": [
+        0.5920877456665039,
+        -1.542686104774475,
+        -2.6219332218170166
+      ],
+      "parent": "Calf_Front_L",
+      "constraints": [
+        {
+          "type": "IK",
+          "name": "IK",
+          "subtarget": "Foot_front_IK_L",
+          "chain": 3
+        }
+      ]
+    },
+    {
+      "name": "Foot_front_L",
+      "head": [
+        0.5920877456665039,
+        -1.542686104774475,
+        -2.6219332218170166
+      ],
+      "tail": [
+        0.5920876860618591,
+        -1.9206262826919556,
+        -2.73195743560791
+      ],
+      "parent": "Foot_front_L2",
+      "constraints": [
+        {
+          "type": "COPY_ROTATION",
+          "name": "Copy Rotation",
+          "subtarget": "Foot_front_IK_L",
+          "chain": null
+        }
+      ]
+    },
+    {
+      "name": "toe_connector_L.001",
+      "head": [
+        0.5920876860618591,
+        -1.9206262826919556,
+        -2.73195743560791
+      ],
+      "tail": [
+        0.7330610156059265,
+        -1.9206262826919556,
+        -2.73195743560791
+      ],
+      "parent": "Foot_front_L",
+      "constraints": []
+    },
+    {
+      "name": "toe_connector_L",
+      "head": [
+        0.7330610156059265,
+        -1.9206262826919556,
+        -2.73195743560791
+      ],
+      "tail": [
+        0.8848618865013123,
+        -1.8961423635482788,
+        -2.73195743560791
+      ],
+      "parent": "toe_connector_L.001",
+      "constraints": []
+    },
+    {
+      "name": "Toe_pinky_L_front",
+      "head": [
+        0.8848618865013123,
+        -1.8961423635482788,
+        -2.73195743560791
+      ],
+      "tail": [
+        0.8971038460731506,
+        -2.0614097118377686,
+        -2.73195743560791
+      ],
+      "parent": "toe_connector_L",
+      "constraints": []
+    },
+    {
+      "name": "Toe_ring_L_front",
+      "head": [
+        0.7330610156059265,
+        -1.9206262826919556,
+        -2.73195743560791
+      ],
+      "tail": [
+        0.7391819953918457,
+        -2.167915105819702,
+        -2.731957197189331
+      ],
+      "parent": "toe_connector_L.001",
+      "constraints": []
+    },
+    {
+      "name": "toe_connector_L.002",
+      "head": [
+        0.5920876860618591,
+        -1.9206262826919556,
+        -2.73195743560791
+      ],
+      "tail": [
+        0.41335445642471313,
+        -1.910832405090332,
+        -2.73195743560791
+      ],
+      "parent": "Foot_front_L",
+      "constraints": []
+    },
+    {
+      "name": "Toe_thumb_L_front",
+      "head": [
+        0.41335445642471313,
+        -1.910832405090332,
+        -2.73195743560791
+      ],
+      "tail": [
+        0.4268206059932709,
+        -2.1213953495025635,
+        -2.731957197189331
+      ],
+      "parent": "toe_connector_L.002",
+      "constraints": []
+    },
+    {
+      "name": "Toe_Pointer_L_front",
+      "head": [
+        0.5920876860618591,
+        -1.9206262826919556,
+        -2.73195743560791
+      ],
+      "tail": [
+        0.5896392464637756,
+        -2.1985201835632324,
+        -2.731957197189331
+      ],
+      "parent": "Foot_front_L",
+      "constraints": []
+    },
+    {
+      "name": "Thigh_front_R",
+      "head": [
+        8.166461284986326e-09,
+        -2.1871089935302734,
+        1.2760461568832397
+      ],
+      "tail": [
+        -0.6941313743591309,
+        -1.1947572231292725,
+        0.09411084651947021
+      ],
+      "parent": null,
+      "constraints": []
+    },
+    {
+      "name": "Calf_Front_R",
+      "head": [
+        -0.6941313743591309,
+        -1.1947572231292725,
+        0.09411084651947021
+      ],
+      "tail": [
+        -0.7641944885253906,
+        -1.3701817989349365,
+        -1.914858102798462
+      ],
+      "parent": "Thigh_front_R",
+      "constraints": [
+        {
+          "type": "IK",
+          "name": "IK",
+          "subtarget": "Knee_front_IK_R",
+          "chain": 2
+        }
+      ]
+    },
+    {
+      "name": "Foot_front_L2.002",
+      "head": [
+        -0.7641944885253906,
+        -1.3701817989349365,
+        -1.914858102798462
+      ],
+      "tail": [
+        -0.5920877456665039,
+        -1.542686104774475,
+        -2.6219332218170166
+      ],
+      "parent": "Calf_Front_R",
+      "constraints": [
+        {
+          "type": "IK",
+          "name": "IK",
+          "subtarget": "Foot_front_IK_R",
+          "chain": 3
+        }
+      ]
+    },
+    {
+      "name": "Foot_front_R",
+      "head": [
+        -0.5920877456665039,
+        -1.542686104774475,
+        -2.6219332218170166
+      ],
+      "tail": [
+        -0.5920877456665039,
+        -1.9206262826919556,
+        -2.73195743560791
+      ],
+      "parent": "Foot_front_L2.002",
+      "constraints": [
+        {
+          "type": "COPY_ROTATION",
+          "name": "Copy Rotation",
+          "subtarget": "Foot_front_IK_R",
+          "chain": null
+        }
+      ]
+    },
+    {
+      "name": "toe_connector_R",
+      "head": [
+        -0.5920877456665039,
+        -1.9206262826919556,
+        -2.73195743560791
+      ],
+      "tail": [
+        -0.7330608367919922,
+        -1.9206262826919556,
+        -2.73195743560791
+      ],
+      "parent": "Foot_front_R",
+      "constraints": []
+    },
+    {
+      "name": "toe_connector_R.001",
+      "head": [
+        -0.7330608367919922,
+        -1.9206262826919556,
+        -2.73195743560791
+      ],
+      "tail": [
+        -0.884861946105957,
+        -1.8961423635482788,
+        -2.73195743560791
+      ],
+      "parent": "toe_connector_R",
+      "constraints": []
+    },
+    {
+      "name": "Toe_pinky_L_front.002",
+      "head": [
+        -0.884861946105957,
+        -1.8961423635482788,
+        -2.73195743560791
+      ],
+      "tail": [
+        -0.8971037864685059,
+        -2.0614097118377686,
+        -2.73195743560791
+      ],
+      "parent": "toe_connector_R.001",
+      "constraints": []
+    },
+    {
+      "name": "Toe_ring_L_front.002",
+      "head": [
+        -0.7330608367919922,
+        -1.9206262826919556,
+        -2.73195743560791
+      ],
+      "tail": [
+        -0.7391819953918457,
+        -2.167915105819702,
+        -2.731957197189331
+      ],
+      "parent": "toe_connector_R",
+      "constraints": []
+    },
+    {
+      "name": "toe_connector_R.002",
+      "head": [
+        -0.5920877456665039,
+        -1.9206262826919556,
+        -2.73195743560791
+      ],
+      "tail": [
+        -0.41335439682006836,
+        -1.910832405090332,
+        -2.73195743560791
+      ],
+      "parent": "Foot_front_R",
+      "constraints": []
+    },
+    {
+      "name": "Toe_thumb_L_front.002",
+      "head": [
+        -0.41335439682006836,
+        -1.910832405090332,
+        -2.73195743560791
+      ],
+      "tail": [
+        -0.4268207550048828,
+        -2.1213953495025635,
+        -2.731957197189331
+      ],
+      "parent": "toe_connector_R.002",
+      "constraints": []
+    },
+    {
+      "name": "Toe_Pointer_L_front.002",
+      "head": [
+        -0.5920877456665039,
+        -1.9206262826919556,
+        -2.73195743560791
+      ],
+      "tail": [
+        -0.5896391868591309,
+        -2.1985201835632324,
+        -2.731957197189331
+      ],
+      "parent": "Foot_front_R",
+      "constraints": []
+    },
+    {
+      "name": "Hip",
+      "head": [
+        1.892157008853701e-08,
+        2.774679660797119,
+        2.442028760910034
+      ],
+      "tail": [
+        -2.2732416837811797e-08,
+        3.6705849170684814,
+        1.9233465194702148
+      ],
+      "parent": null,
+      "constraints": []
+    },
+    {
+      "name": "Thigh_Back_L",
+      "head": [
+        -2.2732416837811797e-08,
+        3.6705849170684814,
+        1.9233465194702148
+      ],
+      "tail": [
+        0.7072930335998535,
+        2.318864345550537,
+        0.3830207586288452
+      ],
+      "parent": "Hip",
+      "constraints": []
+    },
+    {
+      "name": "Calf_back_L",
+      "head": [
+        0.7072930335998535,
+        2.318864345550537,
+        0.3830207586288452
+      ],
+      "tail": [
+        0.7072945833206177,
+        3.764890193939209,
+        -1.0944418907165527
+      ],
+      "parent": "Thigh_Back_L",
+      "constraints": [
+        {
+          "type": "IK",
+          "name": "IK",
+          "subtarget": "Knee_back_IK_L",
+          "chain": 2
+        }
+      ]
+    },
+    {
+      "name": "Foot_Back_L",
+      "head": [
+        0.7072945833206177,
+        3.764890193939209,
+        -1.0944418907165527
+      ],
+      "tail": [
+        0.7072932720184326,
+        2.664656639099121,
+        -2.6033363342285156
+      ],
+      "parent": "Calf_back_L",
+      "constraints": [
+        {
+          "type": "IK",
+          "name": "IK",
+          "subtarget": "Foot_Back_IK_L",
+          "chain": 3
+        }
+      ]
+    },
+    {
+      "name": "Foot_Back_L2",
+      "head": [
+        0.7072932720184326,
+        2.664656639099121,
+        -2.6033363342285156
+      ],
+      "tail": [
+        0.7758069038391113,
+        2.047372817993164,
+        -2.7133591175079346
+      ],
+      "parent": "Foot_Back_L",
+      "constraints": [
+        {
+          "type": "COPY_ROTATION",
+          "name": "Copy Rotation",
+          "subtarget": "Foot_Back_IK_L",
+          "chain": null
+        }
+      ]
+    },
+    {
+      "name": "toe_connector_L_back.002",
+      "head": [
+        0.7758069038391113,
+        2.047372817993164,
+        -2.7133591175079346
+      ],
+      "tail": [
+        0.6593378782272339,
+        2.053323745727539,
+        -2.7133591175079346
+      ],
+      "parent": "Foot_Back_L2",
+      "constraints": []
+    },
+    {
+      "name": "Toe_back_L_Thumb",
+      "head": [
+        0.6593378782272339,
+        2.053323745727539,
+        -2.7133591175079346
+      ],
+      "tail": [
+        0.700144350528717,
+        1.8552418947219849,
+        -2.7133586406707764
+      ],
+      "parent": "toe_connector_L_back.002",
+      "constraints": []
+    },
+    {
+      "name": "toe_connector_L_back.001",
+      "head": [
+        0.7758069038391113,
+        2.047372817993164,
+        -2.7133591175079346
+      ],
+      "tail": [
+        0.8761232495307922,
+        2.028669834136963,
+        -2.7133591175079346
+      ],
+      "parent": "Foot_Back_L2",
+      "constraints": []
+    },
+    {
+      "name": "toe_connector_L_back",
+      "head": [
+        0.8761232495307922,
+        2.028669834136963,
+        -2.7133591175079346
+      ],
+      "tail": [
+        0.9611372351646423,
+        2.076277494430542,
+        -2.7133591175079346
+      ],
+      "parent": "toe_connector_L_back.001",
+      "constraints": []
+    },
+    {
+      "name": "Toe_back_L_pinky",
+      "head": [
+        0.9611372351646423,
+        2.076277494430542,
+        -2.7133591175079346
+      ],
+      "tail": [
+        0.9687883257865906,
+        1.931754231452942,
+        -2.7133586406707764
+      ],
+      "parent": "toe_connector_L_back",
+      "constraints": []
+    },
+    {
+      "name": "Toe_back_L_Ring",
+      "head": [
+        0.8761232495307922,
+        2.028669834136963,
+        -2.7133591175079346
+      ],
+      "tail": [
+        0.8880249261856079,
+        1.859492540359497,
+        -2.7133586406707764
+      ],
+      "parent": "toe_connector_L_back.001",
+      "constraints": []
+    },
+    {
+      "name": "Toe_back_L_Pointer",
+      "head": [
+        0.7758069038391113,
+        2.047372817993164,
+        -2.7133591175079346
+      ],
+      "tail": [
+        0.800460696220398,
+        1.826337218284607,
+        -2.7133586406707764
+      ],
+      "parent": "Foot_Back_L2",
+      "constraints": []
+    },
+    {
+      "name": "Thigh_Back_R",
+      "head": [
+        -2.2732416837811797e-08,
+        3.6705849170684814,
+        1.9233465194702148
+      ],
+      "tail": [
+        -0.7072930335998535,
+        2.318864345550537,
+        0.38302063941955566
+      ],
+      "parent": "Hip",
+      "constraints": []
+    },
+    {
+      "name": "Calf_back_R",
+      "head": [
+        -0.7072930335998535,
+        2.318864345550537,
+        0.38302063941955566
+      ],
+      "tail": [
+        -0.7072944641113281,
+        3.764890193939209,
+        -1.0944420099258423
+      ],
+      "parent": "Thigh_Back_R",
+      "constraints": [
+        {
+          "type": "IK",
+          "name": "IK",
+          "subtarget": "Knee_back_IK_R",
+          "chain": 2
+        }
+      ]
+    },
+    {
+      "name": "Foot_Back_R",
+      "head": [
+        -0.7072944641113281,
+        3.764890193939209,
+        -1.0944420099258423
+      ],
+      "tail": [
+        -0.7072935104370117,
+        2.664656639099121,
+        -2.6033363342285156
+      ],
+      "parent": "Calf_back_R",
+      "constraints": [
+        {
+          "type": "IK",
+          "name": "IK",
+          "subtarget": "Foot_Back_IK_R",
+          "chain": 3
+        }
+      ]
+    },
+    {
+      "name": "Foot_Back_L2.002",
+      "head": [
+        -0.7072935104370117,
+        2.664656639099121,
+        -2.6033363342285156
+      ],
+      "tail": [
+        -0.7758069038391113,
+        2.047372817993164,
+        -2.7133593559265137
+      ],
+      "parent": "Foot_Back_R",
+      "constraints": [
+        {
+          "type": "COPY_ROTATION",
+          "name": "Copy Rotation",
+          "subtarget": "Foot_Back_IK_R",
+          "chain": null
+        }
+      ]
+    },
+    {
+      "name": "toe_connector_L_back.006",
+      "head": [
+        -0.7758069038391113,
+        2.047372817993164,
+        -2.7133593559265137
+      ],
+      "tail": [
+        -0.6593379974365234,
+        2.053323745727539,
+        -2.7133593559265137
+      ],
+      "parent": "Foot_Back_L2.002",
+      "constraints": []
+    },
+    {
+      "name": "Toe_back_L_Thumb.002",
+      "head": [
+        -0.6593379974365234,
+        2.053323745727539,
+        -2.7133593559265137
+      ],
+      "tail": [
+        -0.7001442909240723,
+        1.8552420139312744,
+        -2.7133588790893555
+      ],
+      "parent": "toe_connector_L_back.006",
+      "constraints": []
+    },
+    {
+      "name": "toe_connector_L_back.003",
+      "head": [
+        -0.7758069038391113,
+        2.047372817993164,
+        -2.7133593559265137
+      ],
+      "tail": [
+        -0.8761234283447266,
+        2.028669834136963,
+        -2.7133593559265137
+      ],
+      "parent": "Foot_Back_L2.002",
+      "constraints": []
+    },
+    {
+      "name": "toe_connector_L_back.004",
+      "head": [
+        -0.8761234283447266,
+        2.028669834136963,
+        -2.7133593559265137
+      ],
+      "tail": [
+        -0.9611372947692871,
+        2.076277494430542,
+        -2.7133593559265137
+      ],
+      "parent": "toe_connector_L_back.003",
+      "constraints": []
+    },
+    {
+      "name": "Toe_back_L_pinky.002",
+      "head": [
+        -0.9611372947692871,
+        2.076277494430542,
+        -2.7133593559265137
+      ],
+      "tail": [
+        -0.9687881469726562,
+        1.9317543506622314,
+        -2.7133588790893555
+      ],
+      "parent": "toe_connector_L_back.004",
+      "constraints": []
+    },
+    {
+      "name": "Toe_back_L_Ring.002",
+      "head": [
+        -0.8761234283447266,
+        2.028669834136963,
+        -2.7133593559265137
+      ],
+      "tail": [
+        -0.8880248069763184,
+        1.859492540359497,
+        -2.7133588790893555
+      ],
+      "parent": "toe_connector_L_back.003",
+      "constraints": []
+    },
+    {
+      "name": "Toe_back_L_Pointer.002",
+      "head": [
+        -0.7758069038391113,
+        2.047372817993164,
+        -2.7133593559265137
+      ],
+      "tail": [
+        -0.8004608154296875,
+        1.826337218284607,
+        -2.7133588790893555
+      ],
+      "parent": "Foot_Back_L2.002",
+      "constraints": []
+    },
+    {
+      "name": "Tail",
+      "head": [
+        1.892157008853701e-08,
+        2.774679660797119,
+        2.442028760910034
+      ],
+      "tail": [
+        -2.1078504275351406e-08,
+        3.607714891433716,
+        2.677793264389038
+      ],
+      "parent": null,
+      "constraints": [
+        {
+          "type": "COPY_ROTATION",
+          "name": "Copy Rotation",
+          "subtarget": "Tail.001",
+          "chain": null
+        }
+      ]
+    },
+    {
+      "name": "Tail.001",
+      "head": [
+        -2.1078504275351406e-08,
+        3.607714891433716,
+        2.677793264389038
+      ],
+      "tail": [
+        -3.088986133548133e-08,
+        3.812044620513916,
+        3.007864475250244
+      ],
+      "parent": "Tail",
+      "constraints": []
+    },
+    {
+      "name": "Tail.002",
+      "head": [
+        -3.088986133548133e-08,
+        3.812044620513916,
+        3.007864475250244
+      ],
+      "tail": [
+        -3.9474201685152366e-08,
+        3.972801446914673,
+        3.4680981636047363
+      ],
+      "parent": "Tail.001",
+      "constraints": []
+    },
+    {
+      "name": "Tail.003",
+      "head": [
+        -3.9474201685152366e-08,
+        3.972801446914673,
+        3.4680981636047363
+      ],
+      "tail": [
+        -4.64063916183477e-08,
+        4.087182998657227,
+        3.8956775665283203
+      ],
+      "parent": "Tail.002",
+      "constraints": []
+    },
+    {
+      "name": "Tail.004",
+      "head": [
+        -4.64063916183477e-08,
+        4.087182998657227,
+        3.8956775665283203
+      ],
+      "tail": [
+        -5.2521457405418914e-08,
+        4.160837173461914,
+        4.462179183959961
+      ],
+      "parent": "Tail.003",
+      "constraints": []
+    },
+    {
+      "name": "Tail.005",
+      "head": [
+        -5.2521457405418914e-08,
+        4.160837173461914,
+        4.462179183959961
+      ],
+      "tail": [
+        -5.45542135910182e-08,
+        4.139410495758057,
+        5.028487205505371
+      ],
+      "parent": "Tail.004",
+      "constraints": []
+    },
+    {
+      "name": "Tail.006",
+      "head": [
+        -5.45542135910182e-08,
+        4.139410495758057,
+        5.028487205505371
+      ],
+      "tail": [
+        -5.7942408204780804e-08,
+        4.129389762878418,
+        5.673605442047119
+      ],
+      "parent": "Tail.005",
+      "constraints": []
+    },
+    {
+      "name": "Tail.007",
+      "head": [
+        -5.7942408204780804e-08,
+        4.129389762878418,
+        5.673605442047119
+      ],
+      "tail": [
+        -6.225571524964835e-08,
+        4.149479866027832,
+        6.207634449005127
+      ],
+      "parent": "Tail.006",
+      "constraints": [
+        {
+          "type": "IK",
+          "name": "IK",
+          "subtarget": "Tail_controller",
+          "chain": 7
+        }
+      ]
+    },
+    {
+      "name": "Spine_controller_1",
+      "head": [
+        3.678297844089684e-08,
+        -0.005470693111419678,
+        1.8703569173812866
+      ],
+      "tail": [
+        3.678297844089684e-08,
+        -0.005470693111419678,
+        3.3412554264068604
+      ],
+      "parent": null,
+      "constraints": []
+    },
+    {
+      "name": "Spine_controller_2",
+      "head": [
+        3.327114228568462e-08,
+        -1.1940853595733643,
+        1.8508235216140747
+      ],
+      "tail": [
+        3.327114228568462e-08,
+        -1.1940853595733643,
+        2.2737374305725098
+      ],
+      "parent": null,
+      "constraints": []
+    }
+  ],
+  "scene": {
+    "fps": 24,
+    "frame": 0
+  },
+  "materialImages": {
+    "Cornea": [],
+    "hair": [
+      [
+        "Image Texture",
+        "Untitled"
+      ]
+    ],
+    "Material": [],
+    "Material.002": [],
+    "PBR Dielectric": [
+      [
+        "Image Texture",
+        "11967-diffuse.jpg.001"
+      ]
+    ],
+    "Pupil": [
+      [
+        "ImageTex",
+        "green_eye_diff.jpg.001"
+      ]
+    ],
+    "Sclera_and_Iris": [
+      [
+        "ImageTex.01",
+        "green_eye_diff.jpg.001"
+      ],
+      [
+        "ImageTex",
+        "green_eye_diff.jpg.001"
+      ]
+    ],
+    "skin": [
+      [
+        "Image Texture",
+        "Untitled"
+      ]
+    ]
+  },
+  "nla": [
+    {
+      "name": "[Action Stash]",
+      "strips": [
+        [
+          "Walk",
+          "Walk",
+          1.0,
+          28.0
+        ]
+      ]
+    },
+    {
+      "name": "[Action Stash].001",
+      "strips": [
+        [
+          "ArmatureAction",
+          "run",
+          1.0,
+          15.0
+        ]
+      ]
+    }
+  ]
+}

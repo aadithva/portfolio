@@ -199,6 +199,7 @@ export function initWorkspace() {
         },
         onError:message=>{if(attempt!==loadAttempt)return;ready=false;scene?.setEnabled(false);loader.hidden=true;failure.hidden=false;el('desk-error-message').textContent=message;skip.hidden=true;stage.dataset.ready='false';},
         onObject:(name,trigger)=>void objectAction(name,trigger),
+        onMeow:()=>{void audio.meow().then(played=>{if(played)mount.dataset.catMeows=String(Number(mount.dataset.catMeows??0)+1);}).catch(()=>notify('Audio is unavailable in this browser.'));},
         onHover:(label,x,y)=>{tooltip.hidden=!label||!!selected;if(label){tooltip.textContent=label;tooltip.style.left=`${Math.max(12,Math.min(x+17,stage.clientWidth-210))}px`;tooltip.style.top=`${Math.max(5,y-43)}px`;}}
       });
       await scene.load();

@@ -49,6 +49,7 @@ yarn-error.log*
 next-env.d.ts
 .gstack/
 .playwright-mcp/
+.playwright-cli/
 
 # local archives and agent tooling
 /.agents/

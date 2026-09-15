@@ -250,6 +250,20 @@ mounted vertically on the left wall with physical supports. The existing Expedit
 camera now resolves the actual model bounds. The source backup and review
 candidate remain in `artifacts/workspace/bicycle/`.
 
+## Balcony corner plant, September 15, 2026
+
+Added one rubber-plant-style floor plant in the desk-side exterior corner, behind
+the sliding glass. `balcony_plant` contains a rounded terracotta pot, inset soil,
+three stems and 18 curved leaves with thickness. Its origin is approximately
+`[-2.347594, -0.025, -1.121644]` in exported Y-up coordinates; the plant is about
+1.56 scene units tall. The pot rests on the exterior slab and evaluated geometry
+has no intersections with the door or balcony assembly. Existing scene objects
+were checked unchanged. `scripts/blender/add_balcony_plant.py` creates a backed-up,
+hash-checked candidate. The master and standard baked export include the plant.
+Backup, placement report and day/night/mobile captures are under
+`artifacts/workspace/balcony-plant/`. Mobile overview measures 204 draw calls and
+201,811 total model triangles; the existing scene budget remains exceeded.
+
 ## Retained older experiments
 
 `workspace-cycles.blend`, Cycles film frames, MP4s and poster images are retained

@@ -1,8 +1,8 @@
 {
   "file": "/models/workspace-saved.glb",
   "source": "artifacts/workspace/workspace.blend",
-  "revision": "1a59ac33a9b3",
-  "sourceRevision": "795d2cbe5d5f",
+  "revision": "9bcc8fe83837",
+  "sourceRevision": "2c9cef3c4c69",
   "lights": [
     {
       "name": "Desk ceiling warm fill",
@@ -145,7 +145,7 @@
   },
   "exposure": 0.0,
   "baked": true,
-  "bytes": 22834020,
-  "lightmapBytes": 507424,
-  "triangles": 193651
+  "bytes": 23251208,
+  "lightmapBytes": 488256,
+  "triangles": 201811
 }

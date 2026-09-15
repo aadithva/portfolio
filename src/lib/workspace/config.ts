@@ -25,7 +25,7 @@ export const views: Record<ViewId, CameraView> = {
 };
 // The mobile stage starts below the introduction. Favor the monitor and desk surface.
 export const mobileViews: Partial<Record<ViewId, CameraView>> = {
-  overview: { position: [.558, 3.439, 4.152], target: [-.17, 2.14, -1.0], fov: 39 },
+  overview: { position: [.558, 3.439, 4.8], target: [-.17, 1.15, -.45], fov: 46 },
   'desk-detail': { position: [.25, 2.55, 1.8], target: [0, 1.66, -1.1], fov: 39 },
   'shelf-detail': { position: [.1, 3.0, 1.8], target: [-.05, 2.7, -1.46], fov: 40 },
 };
