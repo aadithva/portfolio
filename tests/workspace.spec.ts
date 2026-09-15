@@ -805,6 +805,20 @@ test('a browser without WebGL still opens portfolio content',async({page})=>{
   await expect(page.locator('[data-content-section=about]')).toBeVisible();
 });
 
+test('supplied bicycle opens Expeditions and restores its keyboard target',async({page})=>{
+  await page.emulateMedia({reducedMotion:'reduce'});
+  await ready(page);
+  const bicycle=page.locator('[data-object=bicycle]');
+  await expect(bicycle).toHaveCount(1);
+  await bicycle.focus();await page.keyboard.press('Enter');
+  await expectPlainContent(page,'expeditions');
+  await expect(page).toHaveURL(/#desk-expeditions$/);
+  await expect(page.locator('#desk-canvas')).toHaveAttribute('data-view','expeditions');
+  await page.keyboard.press('Escape');
+  await expect(page.locator('#desk-content')).not.toBeVisible();
+  await expect(bicycle).toBeFocused();
+});
+
 test('Expeditions direct navigation supports keyboard, history and focus return without 3D',async({page})=>{
   await page.route('**/models/workspace-saved.glb*',route=>route.abort());
   await page.goto('/');

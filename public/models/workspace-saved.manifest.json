@@ -1,13 +1,40 @@
 {
   "file": "/models/workspace-saved.glb",
   "source": "artifacts/workspace/workspace.blend",
-  "revision": "55c88593f256",
-  "sourceRevision": "5abd3a979273",
+  "revision": "1a59ac33a9b3",
+  "sourceRevision": "795d2cbe5d5f",
   "lights": [
+    {
+      "name": "Desk ceiling warm fill",
+      "type": "AREA",
+      "energy": 65.0,
+      "lampRoot": null,
+      "color": [
+        1.0,
+        0.6800000071525574,
+        0.3400000035762787
+      ],
+      "position": [
+        0.0,
+        4.25,
+        -0.7
+      ],
+      "direction": [
+        0.0,
+        -1.0,
+        -0.0
+      ],
+      "size": 2.799999952316284,
+      "sizeY": 2.0999999046325684,
+      "shape": "RECTANGLE",
+      "angle": 0.7853981633974483,
+      "blend": 0.15
+    },
     {
       "name": "Monitor bounce",
       "type": "AREA",
       "energy": 77.21258544921875,
+      "lampRoot": null,
       "color": [
         0.36979392170906067,
         0.5249282121658325,
@@ -32,102 +59,80 @@
     {
       "name": "Red lamp practical",
       "type": "SPOT",
-      "energy": 112.99999237060547,
+      "energy": 70.0,
+      "lampRoot": "lamp_3",
       "color": [
         1.0,
         0.31566527485847473,
         0.054276466369628906
       ],
       "position": [
-        1.208,
-        1.376,
-        -0.138
+        1.078103,
+        1.356664,
+        0.001079
       ],
       "direction": [
-        -0.936913,
-        -0.12274,
-        -0.327306
+        -0.965399,
+        -0.258002,
+        0.037941
       ],
       "size": 0.1,
       "sizeY": 0.1,
       "shape": "DISK",
-      "angle": 0.7853981852531433,
-      "blend": 0.15000000596046448
+      "angle": 2.0245819091796875,
+      "blend": 0.8500000238418579
     },
     {
       "name": "Red lamp practical.001",
-      "type": "AREA",
-      "energy": 42.0,
+      "type": "SPOT",
+      "energy": 60.0,
+      "lampRoot": "lamp_2",
       "color": [
         1.0,
         0.6899999976158142,
         0.33000001311302185
       ],
       "position": [
-        1.208,
-        2.128,
-        -0.138
+        1.832548,
+        1.977684,
+        -0.20071
       ],
       "direction": [
-        -0.936913,
-        -0.12274,
-        -0.327306
+        0.522425,
+        -0.569571,
+        0.634556
       ],
-      "size": 0.41999998688697815,
-      "sizeY": 1.0,
+      "size": 0.1,
+      "sizeY": 0.1,
       "shape": "DISK",
-      "angle": 0.7853981633974483,
-      "blend": 0.15
+      "angle": 1.884955644607544,
+      "blend": 0.8500000238418579
     },
     {
       "name": "Red lamp practical.002",
       "type": "SPOT",
-      "energy": 42.0,
+      "energy": 100.0,
+      "lampRoot": "lamp_1",
       "color": [
         1.0,
         0.39681971073150635,
         0.0770018994808197
       ],
       "position": [
-        1.053532,
-        2.813051,
-        -0.104746
+        1.027544,
+        2.725461,
+        -0.361055
       ],
       "direction": [
-        -0.578509,
-        -0.813315,
-        0.062015
+        -0.563203,
+        -0.775821,
+        -0.284436
       ],
       "size": 0.1,
       "sizeY": 0.1,
       "shape": "DISK",
-      "angle": 0.7853981852531433,
-      "blend": 0.15000000596046448
-    },
-    {
-      "name": "Red lamp practical.003",
-      "type": "SPOT",
-      "energy": 42.0,
-      "color": [
-        1.0,
-        0.39681971073150635,
-        0.0770018994808197
-      ],
-      "position": [
-        1.187563,
-        1.293612,
-        0.509256
-      ],
-      "direction": [
-        -0.578509,
-        -0.813315,
-        0.062015
-      ],
-      "size": 0.1,
-      "sizeY": 0.1,
-      "shape": "DISK",
-      "angle": 0.7853981852531433,
-      "blend": 0.15000000596046448
+      "angle": 1.9547687768936157,
+      "blend": 0.8500000238418579
     }
   ],
   "world": {
@@ -140,7 +145,7 @@
   },
   "exposure": 0.0,
   "baked": true,
-  "bytes": 15986732,
-  "lightmapBytes": 1010888,
-  "triangles": 179562
+  "bytes": 22834020,
+  "lightmapBytes": 507424,
+  "triangles": 193651
 }

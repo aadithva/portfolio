@@ -1,5 +1,55 @@
 # Portfolio Agent Handoff
 
+## Matte surface finish and black bicycle, 15 September 2026
+
+The current master has material-specific matte roughness and fine surface grain
+across 85 materials. The red lamp uses a powder-coated finish; bicycle frame,
+rims and former brown tyre bands are neutral black. Original photographed
+artwork and chair maps are retained. Texture sources are under
+`public/textures/workspace/surface-detail/`; application and browser verification
+are under `artifacts/workspace/matte-materials/`.
+`apply_matte_materials.py` edits the saved master. `surface_detail_uv.py` adds
+world-scaled detail UVs, also used by the exporter for converted curves. The
+runtime now honors each mesh's `bakedUV` channel, since detail UVs occupy UV1
+and indirect lighting generally occupies UV2. Keep that mapping in later exports.
+
+## Current horizontal bicycle and fitted cradles, 15 September 2026
+
+The bicycle is now horizontal and wall-parallel on the lamp-side wall. It is
+20% larger than the preceding horizontal adjustment, shifted 0.80 units farther
+right along the wall, with tyre minimum height 0.50. All scaling is uniform.
+The lamp is clear in the desktop composition; the rear is intentionally cropped.
+Two braced, padded saddles now contact the actual upper frame tube, replacing
+the misplaced supports below the crank. `align_bicycle_frame_mount.py` samples
+the saved frame mesh to locate both underside contact points.
+The active master and web export include this correction. Backups, reports,
+desktop/laptop/mobile captures and a mount close-up are under
+`artifacts/workspace/bicycle-lamp-clearance/`. Earlier vertical-mount notes below
+are historical. Use the current master for subsequent edits.
+
+## Balcony door and smaller bicycle, 15 September 2026
+
+The master now includes a two-panel sliding balcony door in the bicycle's former
+left-wall position. The bicycle is on the right wall beside the red lamp, with
+its wheels perpendicular to the wall, front wheel up, on a black padded hook.
+The final user adjustment makes the bicycle and mount 15% smaller and lowers the
+rear tyre to 0.20 scene units above zero, about 12 cm above the floor surface.
+The room-extension and medal-placement edits made during this work were retained.
+Backups, validation and browser captures are in `artifacts/workspace/balcony-door/`.
+Use the current master and ordinary bake command for subsequent edits. The
+`workspace-balcony.blend` review candidate predates the final bicycle resize.
+
+## Current master, 14 September 2026
+
+Use `artifacts/workspace/workspace.blend` as the editable master and
+`npm run bake:workspace` to publish saved edits locally. It now includes the
+supplied office chair, photograph-based laptop texture, wall certificate, one
+Ride for Unity medal, and the supplied wall-mounted road bike. The older
+September 13 candidate instructions below are historical, not the current source.
+The bicycle source, backup, candidate, validation and screenshots are under
+`artifacts/workspace/bicycle/`; see `docs/workspace-bicycle-source.md`.
+The CRT replacement still needs its official source archive.
+
 ## User-authored Blender lighting
 
 Reference refinement completed on 2026-09-13. The homepage now uses the candidate

@@ -35,8 +35,8 @@ export const scenePalette = {
 };
 // Runtime presentation multipliers leave the authored Blender lights and baked assets intact.
 export const presentationLighting = {
-  exposure: .85, indirect: .05, practicals: .5, areaFill: .08, monitor: .1,
-  night: { hemisphere: .025, environment: .04 },
+  exposure: .85, indirect: .035, practicals: .18, areaFill: .08, monitor: .1, ceiling: .2,
+  night: { hemisphere: .005, environment: .012 },
   day: { hemisphere: .65, environment: .25 },
 };
 export type ObjectBinding = { label: string; section?: SectionId; achievement?: AchievementId; action?: string; motion: 'solid' | 'paper' | 'book' | 'metal' | 'plant' | 'chair' | 'lid'; };

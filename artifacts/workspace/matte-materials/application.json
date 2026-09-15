@@ -1,0 +1,431 @@
+{
+  "sourceSha256": "cedd26dec3f3f91f79179238d55c690710462b3eccd0b4698b996f3888b60d39",
+  "materials": [
+    {
+      "material": "About printed card",
+      "profile": "paper",
+      "black": false
+    },
+    {
+      "material": "Balcony \u00b7 brushed track aluminum",
+      "profile": "metal",
+      "black": false
+    },
+    {
+      "material": "Balcony \u00b7 charcoal railing",
+      "profile": "plastic",
+      "black": false
+    },
+    {
+      "material": "Balcony \u00b7 dark rubber seals",
+      "profile": "rubber",
+      "black": false
+    },
+    {
+      "material": "Balcony \u00b7 exterior stone",
+      "profile": "stone",
+      "black": false
+    },
+    {
+      "material": "Bicycle mount \u00b7 powder-coated steel",
+      "profile": "powder",
+      "black": false
+    },
+    {
+      "material": "Bicycle mount \u00b7 soft rubber",
+      "profile": "rubber",
+      "black": false
+    },
+    {
+      "material": "Blue",
+      "profile": "powder",
+      "black": true
+    },
+    {
+      "material": "Brushed aluminium",
+      "profile": "metal",
+      "black": false
+    },
+    {
+      "material": "Certificate \u00b7 Backing board",
+      "profile": "plastic",
+      "black": false
+    },
+    {
+      "material": "Certificate \u00b7 Charcoal stained timber",
+      "profile": "paper",
+      "black": false
+    },
+    {
+      "material": "Certificate \u00b7 Exact IIT Guwahati degree",
+      "profile": "plastic",
+      "black": false
+    },
+    {
+      "material": "Certificate \u00b7 Warm conservation mat",
+      "profile": "paper",
+      "black": false
+    },
+    {
+      "material": "Chair woven frame",
+      "profile": "plastic",
+      "black": false
+    },
+    {
+      "material": "Contact printed card",
+      "profile": "paper",
+      "black": false
+    },
+    {
+      "material": "Creator Micro encoder brushed metal",
+      "profile": "metal",
+      "black": false
+    },
+    {
+      "material": "Creator Micro exposed switch housings",
+      "profile": "plastic",
+      "black": false
+    },
+    {
+      "material": "Creator Micro frosted base",
+      "profile": "plastic",
+      "black": false
+    },
+    {
+      "material": "Creator Micro key coral",
+      "profile": "plastic",
+      "black": false
+    },
+    {
+      "material": "Creator Micro key cyan",
+      "profile": "plastic",
+      "black": false
+    },
+    {
+      "material": "Creator Micro key mint",
+      "profile": "plastic",
+      "black": false
+    },
+    {
+      "material": "Creator Micro key purple",
+      "profile": "plastic",
+      "black": false
+    },
+    {
+      "material": "Creator Micro key red",
+      "profile": "plastic",
+      "black": false
+    },
+    {
+      "material": "Creator Micro pale PCB",
+      "profile": "plastic",
+      "black": false
+    },
+    {
+      "material": "Creator Micro printed black",
+      "profile": "paper",
+      "black": false
+    },
+    {
+      "material": "Diet Coke aluminium label",
+      "profile": "metal",
+      "black": false
+    },
+    {
+      "material": "Dusty pink",
+      "profile": "plastic",
+      "black": false
+    },
+    {
+      "material": "Figma ochre",
+      "profile": "plastic",
+      "black": false
+    },
+    {
+      "material": "Floral mat \u00b7 green binding",
+      "profile": "paper",
+      "black": false
+    },
+    {
+      "material": "Floral mat \u00b7 tufted cotton",
+      "profile": "paper",
+      "black": false
+    },
+    {
+      "material": "Forest green",
+      "profile": "plastic",
+      "black": false
+    },
+    {
+      "material": "Lamp edge red",
+      "profile": "powder",
+      "black": false
+    },
+    {
+      "material": "Lamp enamel vermilion",
+      "profile": "powder",
+      "black": false
+    },
+    {
+      "material": "Laptop sticker collage",
+      "profile": "plastic",
+      "black": false
+    },
+    {
+      "material": "Leaf jade",
+      "profile": "plastic",
+      "black": false
+    },
+    {
+      "material": "Leaf sage",
+      "profile": "plastic",
+      "black": false
+    },
+    {
+      "material": "Leaf shaded",
+      "profile": "plastic",
+      "black": false
+    },
+    {
+      "material": "Limewashed plaster",
+      "profile": "plaster",
+      "black": false
+    },
+    {
+      "material": "Matte black rubber",
+      "profile": "rubber",
+      "black": false
+    },
+    {
+      "material": "Pegboard printed recesses",
+      "profile": "paper",
+      "black": false
+    },
+    {
+      "material": "Porcelain edges",
+      "profile": "powder",
+      "black": false
+    },
+    {
+      "material": "Potting soil",
+      "profile": "rubber",
+      "black": false
+    },
+    {
+      "material": "Reference Figma dense black packing foam",
+      "profile": "rubber",
+      "black": false
+    },
+    {
+      "material": "Reference Figma original lid artwork",
+      "profile": "paper",
+      "black": false
+    },
+    {
+      "material": "Reference Figma original side artwork",
+      "profile": "paper",
+      "black": false
+    },
+    {
+      "material": "Reference Figma original wordmark",
+      "profile": "plastic",
+      "black": false
+    },
+    {
+      "material": "Reference Figma white inner tray",
+      "profile": "plastic",
+      "black": false
+    },
+    {
+      "material": "Reference Figma yellow cardboard",
+      "profile": "paper",
+      "black": false
+    },
+    {
+      "material": "Sage green hardcover",
+      "profile": "paper",
+      "black": false
+    },
+    {
+      "material": "Satin brass",
+      "profile": "metal",
+      "black": false
+    },
+    {
+      "material": "Soft charcoal plastic",
+      "profile": "plastic",
+      "black": false
+    },
+    {
+      "material": "Terracotta clay",
+      "profile": "stone",
+      "black": false
+    },
+    {
+      "material": "Tile grout",
+      "profile": "plaster",
+      "black": false
+    },
+    {
+      "material": "Uncoated paper",
+      "profile": "paper",
+      "black": false
+    },
+    {
+      "material": "Unity medal \u00b7 Aged brass edge",
+      "profile": "metal",
+      "black": false
+    },
+    {
+      "material": "Unity medal \u00b7 Original Fit India ribbon",
+      "profile": "paper",
+      "black": false
+    },
+    {
+      "material": "Unity medal \u00b7 Original photographed relief",
+      "profile": "metal",
+      "black": false
+    },
+    {
+      "material": "Unity medal \u00b7 White ribbon reverse",
+      "profile": "paper",
+      "black": false
+    },
+    {
+      "material": "Walnut",
+      "profile": "paper",
+      "black": false
+    },
+    {
+      "material": "Warm cream accents",
+      "profile": "plastic",
+      "black": false
+    },
+    {
+      "material": "Warm limestone",
+      "profile": "stone",
+      "black": false
+    },
+    {
+      "material": "Warm powder-coated white",
+      "profile": "powder",
+      "black": false
+    },
+    {
+      "material": "Washed blue hardcover",
+      "profile": "paper",
+      "black": false
+    },
+    {
+      "material": "Xbox A green",
+      "profile": "plastic",
+      "black": false
+    },
+    {
+      "material": "Xbox B red",
+      "profile": "plastic",
+      "black": false
+    },
+    {
+      "material": "Xbox X blue",
+      "profile": "plastic",
+      "black": false
+    },
+    {
+      "material": "Xbox Y yellow",
+      "profile": "plastic",
+      "black": false
+    },
+    {
+      "material": "Xbox fine grip edge",
+      "profile": "plastic",
+      "black": false
+    },
+    {
+      "material": "Xbox glossy button resin",
+      "profile": "plastic",
+      "black": false
+    },
+    {
+      "material": "Xbox inset control wells",
+      "profile": "plastic",
+      "black": false
+    },
+    {
+      "material": "Xbox shell seam",
+      "profile": "plastic",
+      "black": false
+    },
+    {
+      "material": "Xbox textured charcoal",
+      "profile": "plastic",
+      "black": false
+    },
+    {
+      "material": "Xbox thumbstick rubber",
+      "profile": "rubber",
+      "black": false
+    },
+    {
+      "material": "Xbox warm white shell",
+      "profile": "plastic",
+      "black": false
+    },
+    {
+      "material": "Xbox white button graphics",
+      "profile": "plastic",
+      "black": false
+    },
+    {
+      "material": "light.orange",
+      "profile": "plastic",
+      "black": false
+    },
+    {
+      "material": "metal.black",
+      "profile": "plastic",
+      "black": true
+    },
+    {
+      "material": "metal.silver",
+      "profile": "metal",
+      "black": false
+    },
+    {
+      "material": "metal.silver2",
+      "profile": "metal",
+      "black": false
+    },
+    {
+      "material": "orange.metal",
+      "profile": "powder",
+      "black": true
+    },
+    {
+      "material": "rama",
+      "profile": "powder",
+      "black": true
+    },
+    {
+      "material": "seat.plastic",
+      "profile": "plastic",
+      "black": true
+    },
+    {
+      "material": "seat.skin",
+      "profile": "rubber",
+      "black": true
+    },
+    {
+      "material": "wheel.black",
+      "profile": "rubber",
+      "black": true
+    },
+    {
+      "material": "wheel.orange",
+      "profile": "rubber",
+      "black": true
+    }
+  ],
+  "textureFiles": 8
+}

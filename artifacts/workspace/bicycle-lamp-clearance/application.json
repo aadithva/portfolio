@@ -1,0 +1,29 @@
+{
+  "sourceSha256": "53c6cdea9dc58a1c1991a7e9d38ccf717f29fe75a48f9ae05eac0bf9b933b20b",
+  "candidateSha256": "26c4f5c34cae282d9ee3e3ca156df40f3475368790e1eddfc6b53a34f6bd2824",
+  "scaleMultiplier": 0.923076923076923,
+  "rightwardWallShift": -0.1,
+  "height": [
+    0.49999988079071045,
+    1.9984461069107056
+  ],
+  "wallSpan": [
+    2.7509864568710327,
+    5.249014377593994
+  ],
+  "uniformTransformScale": [
+    0.9230769276618958,
+    0.9230769276618958,
+    0.9230769276618958
+  ],
+  "collisions": {
+    "window": 0,
+    "chair": 0,
+    "workspace_right_wing": 0,
+    "lamp_1": 0,
+    "lamp_2": 0,
+    "lamp_3": 0,
+    "lamp_stand_and_base": 0
+  },
+  "unrelatedObjectsUnchanged": true
+}

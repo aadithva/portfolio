@@ -1,0 +1,172 @@
+{
+  "materials": [
+    {
+      "name": "Lamp enamel vermilion",
+      "normal": {
+        "index": 6,
+        "scale": 0.30000001192092896,
+        "texCoord": 1
+      },
+      "roughness": {
+        "index": 7,
+        "texCoord": 1
+      },
+      "color": [
+        0.6000000238418579,
+        0.035999998450279236,
+        0.017999999225139618,
+        1
+      ]
+    },
+    {
+      "name": "Lamp edge red",
+      "normal": {
+        "index": 4,
+        "scale": 0.30000001192092896,
+        "texCoord": 1
+      },
+      "roughness": {
+        "index": 5,
+        "texCoord": 1
+      },
+      "color": [
+        0.3100000023841858,
+        0.017999999225139618,
+        0.009999999776482582,
+        1
+      ]
+    },
+    {
+      "name": "rama",
+      "normal": {
+        "index": 28,
+        "scale": 0.30000001192092896,
+        "texCoord": 1
+      },
+      "roughness": {
+        "index": 29,
+        "texCoord": 1
+      },
+      "color": [
+        0.012000000104308128,
+        0.012000000104308128,
+        0.012000000104308128,
+        1
+      ]
+    },
+    {
+      "name": "wheel.orange",
+      "normal": {
+        "index": 44,
+        "scale": 0.20000000298023224,
+        "texCoord": 1
+      },
+      "roughness": {
+        "index": 45,
+        "texCoord": 1
+      },
+      "color": [
+        0.006000000052154064,
+        0.006000000052154064,
+        0.006000000052154064,
+        1
+      ]
+    },
+    {
+      "name": "wheel.black",
+      "normal": {
+        "index": 48,
+        "scale": 0.20000000298023224,
+        "texCoord": 1
+      },
+      "roughness": {
+        "index": 49,
+        "texCoord": 1
+      },
+      "color": [
+        0.006000000052154064,
+        0.006000000052154064,
+        0.006000000052154064,
+        1
+      ]
+    },
+    {
+      "name": "Warm powder-coated white",
+      "normal": {
+        "index": 18,
+        "scale": 0.30000001192092896,
+        "texCoord": 1
+      },
+      "roughness": {
+        "index": 19,
+        "texCoord": 1
+      },
+      "color": [
+        0.8199999928474426,
+        0.8050000071525574,
+        0.7549999952316284,
+        1
+      ]
+    },
+    {
+      "name": "Limewashed plaster",
+      "normal": {
+        "index": 8,
+        "scale": 0.3499999940395355,
+        "texCoord": 1
+      },
+      "roughness": {
+        "index": 9,
+        "texCoord": 1
+      },
+      "color": [
+        0.5699999928474426,
+        0.5149999856948853,
+        0.40799999237060547,
+        1
+      ]
+    }
+  ],
+  "results": [
+    {
+      "name": "desktop",
+      "errors": [],
+      "metrics": {
+        "realtimeShadows": "true",
+        "view": "overview",
+        "computerMode": "false",
+        "cameraNavigation": "enabled",
+        "cameraDragging": "false",
+        "cameraModified": "false",
+        "cameraTargetY": "1.700",
+        "cameraYaw": "0.00000",
+        "cameraPitch": "0.00000",
+        "cameraZoom": "1.00000",
+        "drawCalls": "772",
+        "triangles": "696666",
+        "pixelRatio": "1",
+        "geometryTriangles": "193651"
+      }
+    },
+    {
+      "name": "mobile",
+      "errors": [],
+      "metrics": {
+        "realtimeShadows": "false",
+        "view": "overview",
+        "computerMode": "false",
+        "cameraNavigation": "enabled",
+        "cameraDragging": "false",
+        "cameraModified": "false",
+        "cameraTargetY": "2.140",
+        "cameraYaw": "0.00000",
+        "cameraPitch": "0.00000",
+        "cameraZoom": "1.00000",
+        "drawCalls": "198",
+        "triangles": "179275",
+        "pixelRatio": "1",
+        "geometryTriangles": "193651"
+      }
+    }
+  ]
+}

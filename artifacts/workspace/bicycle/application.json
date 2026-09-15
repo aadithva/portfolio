@@ -1,0 +1,26 @@
+{
+  "sourceSha256": "5abd3a97927384af4f3df07c9e17e39c67f4971187dd5d9fc977a01c9d48b69d",
+  "candidateSha256": "6ee4cb7076c73b82f8f8830764b0de7514c9a718f46739cbfbcd261e6fabf017",
+  "unrelatedObjectsUnchanged": true,
+  "sourceTriangles": 382199,
+  "scale": 0.7562608635630603,
+  "wheelDiameterScene": 1.2051999999999998,
+  "wallClearance": 0.079815673828125,
+  "wallSpan": [
+    2.647400736808777,
+    4.421633839607239
+  ],
+  "intersections": {
+    "chair": 0,
+    "workspace_left_wing": 0,
+    "about": 0,
+    "contact": 0,
+    "monitor": 0,
+    "certificate_iitg": 0
+  },
+  "positionWeb": [
+    -1.909188151359558,
+    2.0999999046325684,
+    0.13700568675994873
+  ]
+}

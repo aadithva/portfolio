@@ -1,0 +1,12 @@
+{
+  "backup": "/Users/aadith/Projects/Portfolio/Website/artifacts/workspace/room-extension/source-before-extension.blend",
+  "wallExtension": 10,
+  "wallHeight": 10.08,
+  "floorWidth": 28,
+  "floorFront": 14,
+  "tilePitch": 1.1,
+  "changedVertices": {
+    "_static \u00b7 Limewashed plaster": 192,
+    "_static \u00b7 Warm powder-coated white": 96
+  }
+}

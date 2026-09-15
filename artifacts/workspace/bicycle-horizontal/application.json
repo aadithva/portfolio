@@ -1,0 +1,23 @@
+{
+  "wallSpan": [
+    2.5449174642562866,
+    4.355082988739014
+  ],
+  "height": [
+    1.381209373474121,
+    2.4670400619506836
+  ],
+  "wallDepth": [
+    0.12000024318695068,
+    0.6037061214447021
+  ],
+  "frontDirection": "toward lamp / room corner",
+  "intersections": {
+    "window": 0,
+    "chair": 0,
+    "workspace_right_wing": 0,
+    "lamp_1": 0,
+    "lamp_2": 0,
+    "lamp_3": 0
+  }
+}

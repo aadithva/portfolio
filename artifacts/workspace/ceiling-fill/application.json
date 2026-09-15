@@ -1,0 +1,22 @@
+{
+  "sourceSha256": "a44a84d1cab911351d2fa244725af6771984a6129ff06c1864e8c92944fa18cc",
+  "candidateSha256": "795d2cbe5d5f875308ce414b1a4b027552e95fc6e006b2d38b9d0282be279852",
+  "backup": "artifacts/workspace/ceiling-fill/source-before-fill-a44a84d1cab9.blend",
+  "light": "Desk ceiling warm fill",
+  "positionWeb": [
+    0,
+    4.25,
+    -0.7
+  ],
+  "size": [
+    2.8,
+    2.1
+  ],
+  "energy": 65,
+  "color": [
+    1,
+    0.68,
+    0.34
+  ],
+  "visibleFixture": false
+}

@@ -14,6 +14,8 @@ import bpy
 from mathutils import Vector
 
 ROOT = Path(__file__).resolve().parents[2]
+sys.path.insert(0,str(Path(__file__).resolve().parent))
+from surface_detail_uv import ensure_detail_uv
 SOURCE = ROOT / 'artifacts/workspace/workspace.blend'
 if '--source' in sys.argv:
     SOURCE=Path(sys.argv[sys.argv.index('--source')+1]).resolve()
@@ -34,6 +36,7 @@ for obj in scene.objects:
     light=obj.data
     lights.append({
         'name':obj.name, 'type':light.type, 'energy':light.energy,
+        'lampRoot':obj.get('lampRoot'),
         'color':list(light.color), 'position':web(obj.matrix_world.translation),
         'direction':web(obj.matrix_world.to_quaternion() @ Vector((0,0,-1))),
         'size':getattr(light,'size',.1), 'sizeY':getattr(light,'size_y',getattr(light,'size',.1)),
@@ -68,10 +71,11 @@ for obj in list(scene.objects):
         for modifier in list(obj.modifiers):
             try:bpy.ops.object.modifier_apply(modifier=modifier.name)
             except RuntimeError:pass
+        ensure_detail_uv(obj)
         fine_grip=any(material and material.name=='Xbox fine grip edge' for material in obj.data.materials)
-        if fine_grip or 'seamless ergonomic body' in obj.name or sum(len(p.vertices)-2 for p in obj.data.polygons)>5000:
+        if not obj.get('webOptimized') and (fine_grip or 'seamless ergonomic body' in obj.name or sum(len(p.vertices)-2 for p in obj.data.polygons)>1000):
             modifier=obj.modifiers.new('Web geometry reduction','DECIMATE')
-            modifier.ratio=.24 if fine_grip else .45 if 'seamless ergonomic body' in obj.name else .65 if obj.name.startswith('chair') else .85
+            modifier.ratio=.24 if fine_grip else .45 if 'seamless ergonomic body' in obj.name else .30 if obj.name.startswith('chair') else .60
             bpy.ops.object.modifier_apply(modifier=modifier.name)
 
 # Colored keycaps and printed controller glyphs can share one material each.
@@ -92,7 +96,7 @@ for obj in scene.objects:
         shared.node_tree.links.new(vertex.outputs['Color'],shader.inputs['Base Color'])
         color_batches[family]=shared
     obj.data.materials[0]=color_batches[family]
-preserved_meshes={'monitor_screen','window_glass','Chair breathable mesh'}
+preserved_meshes={'monitor_screen','window_glass','balcony_window_glass','Chair breathable mesh'}
 buckets={}
 for obj in scene.objects:
     if obj.type!='MESH' or obj.name in preserved_meshes or len(obj.data.materials)!=1:continue
@@ -105,7 +109,7 @@ for key,objects in buckets.items():
     bpy.context.view_layer.objects.active=objects[0];bpy.ops.object.join()
     objects[0].name=f'{key[0]} · {key[1]}'
 
-preserve={'monitor_screen','window_glass','Chair breathable mesh'}
+preserve=preserved_meshes
 groups={'room':[],'objects':[]}
 for obj in list(scene.objects):
     if obj.type!='MESH' or obj.name in preserve or obj.hide_render:continue

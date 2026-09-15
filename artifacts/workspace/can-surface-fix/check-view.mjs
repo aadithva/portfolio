@@ -1,0 +1,11 @@
+import {chromium} from '@playwright/test';
+const browser=await chromium.launch({channel:'chrome',headless:true});
+const page=await browser.newPage({viewport:{width:1440,height:1000},deviceScaleFactor:2});
+const errors=[];page.on('pageerror',e=>errors.push(e.message));
+await page.emulateMedia({reducedMotion:'reduce'});await page.goto('http://127.0.0.1:4322/');
+await page.waitForFunction(()=>document.querySelector('#desk-stage')?.dataset.ready==='true');
+await page.locator('[data-room-view=desk-detail]').click();
+await page.waitForTimeout(500);
+await page.screenshot({path:'artifacts/workspace/can-surface-fix/desk-detail.png'});
+await page.screenshot({path:'artifacts/workspace/can-surface-fix/can-closeup.png',clip:{x:990,y:590,width:160,height:190}});
+console.log('Page errors',errors);await browser.close();

@@ -1,0 +1,13 @@
+{
+  "sourceSha256": "7fbd544bcefc5ae1bdb31380973f7f50540ba48962fd5c14013695d3e2b41324",
+  "candidateSha256": "9ff4bab26a006ad545cd486532c5b06410f2d82f61160420d1b5390601e5d50a",
+  "backup": "artifacts/workspace/desktop-edge/source-before-edge-7fbd544bcefc.blend",
+  "oldSlabTriangles": 316,
+  "newSlabTriangles": 2436,
+  "perimeterSamples": 122,
+  "edgeRadius": 0.006,
+  "topHeight": 1.309999942779541,
+  "bottomHeight": 1.2090458869934082,
+  "nonManifoldEdges": 0,
+  "unrelatedObjectsUnchanged": true
+}

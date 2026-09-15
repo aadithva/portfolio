@@ -1,0 +1,41 @@
+{
+  "sourceSha256": "a1d7fae697c9ab9694595e6aed7925f24c31bebecd421eff4409550137e28454",
+  "candidateSha256": "89c6b2dd1a7bec95659cd3eda04291325e3831c8bf7c35b022c28514816620e4",
+  "backup": "artifacts/workspace/balcony-door/source-before-balcony-a1d7fae697c9.blend",
+  "unrelatedObjectsUnchanged": true,
+  "bicycleRightWallBounds": [
+    [
+      3.51482,
+      0.62111,
+      0.1024
+    ],
+    [
+      4.30518,
+      3.57889,
+      1.87663
+    ]
+  ],
+  "bicycleIntersections": {
+    "chair": 0,
+    "workspace_right_wing": 0,
+    "window": 0,
+    "lamp_1": 0,
+    "lamp_2": 0,
+    "lamp_3": 0,
+    "monitor": 0,
+    "certificate_iitg": 0
+  },
+  "doorOpening": {
+    "wallSpan": [
+      2.1,
+      4.4
+    ],
+    "height": 3.86,
+    "slidingOffset": 0.29
+  },
+  "bicyclePositionWeb": [
+    2.2662770748138428,
+    2.0999999046325684,
+    0.7132977247238159
+  ]
+}

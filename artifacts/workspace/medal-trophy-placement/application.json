@@ -1,0 +1,88 @@
+{
+  "sourceSha256": "6ee4cb7076c73b82f8f8830764b0de7514c9a718f46739cbfbcd261e6fabf017",
+  "candidateSha256": "fb6f6f512a0e6a9e48a7ad7398ff707ef330b7ee0c28e1a6c8a298d810ee1803",
+  "backup": "artifacts/workspace/medal-trophy-placement/source-before-placement-6ee4cb7076c7.blend",
+  "interactiveRoot": "medal_1",
+  "oldTransformBlender": [
+    [
+      1.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      1.0,
+      0.0,
+      1.2829999923706055
+    ],
+    [
+      0.0,
+      0.0,
+      1.0,
+      2.3789422512054443
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "newTransformBlender": [
+    [
+      0.7071068286895752,
+      -0.7071067094802856,
+      0.0,
+      1.0412555932998657
+    ],
+    [
+      0.7071067094802856,
+      0.7071068286895752,
+      0.0,
+      0.9048194289207458
+    ],
+    [
+      0.0,
+      0.0,
+      1.0,
+      2.4639997482299805
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "webRoot": [
+    1.041256,
+    2.464,
+    -0.904819
+  ],
+  "webBounds": [
+    [
+      1.0059,
+      2.1715,
+      -0.943003
+    ],
+    [
+      1.11826,
+      2.478,
+      -0.82824
+    ]
+  ],
+  "shelfTop": 2.4799997806549072,
+  "hookRestHeight": 2.4799997482299805,
+  "unrelatedPosesAndAllGeometryUnchanged": true,
+  "intersections": {
+    "trophy_1": 0,
+    "trophy_2": 0,
+    "plant_2": 0,
+    "lamp_1": 0,
+    "lamp_2": 0,
+    "lamp_3": 0,
+    "toy": 0,
+    "monitor": 0
+  }
+}

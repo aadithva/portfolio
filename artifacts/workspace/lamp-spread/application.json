@@ -1,0 +1,43 @@
+{
+  "sourceSha256": "c2bfb9243f5e442fb39cec8eda34a067981a69e8703571e153e7e5c9725111d9",
+  "backup": "artifacts/workspace/lamp-spread/source-before-spread-c2bfb9243f5e.blend",
+  "lights": [
+    {
+      "root": "lamp_3",
+      "before": {
+        "angle": 67.99999733881295,
+        "power": 42.0,
+        "blend": 0.6000000238418579
+      },
+      "angle": 116,
+      "power": 70,
+      "blend": 0.85,
+      "radius": 0.085
+    },
+    {
+      "root": "lamp_2",
+      "before": {
+        "angle": 57.99999933726732,
+        "power": 42.0,
+        "blend": 0.6000000238418579
+      },
+      "angle": 108,
+      "power": 60,
+      "blend": 0.85,
+      "radius": 0.085
+    },
+    {
+      "root": "lamp_1",
+      "before": {
+        "angle": 63.99999950423253,
+        "power": 113.0,
+        "blend": 0.6000000238418579
+      },
+      "angle": 112,
+      "power": 100,
+      "blend": 0.85,
+      "radius": 0.085
+    }
+  ],
+  "candidateSha256": "c0bd3766d9e2ebc3f647edb032e447755bcc07ef0255c8509395e36b711f8239"
+}

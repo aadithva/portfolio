@@ -1,6 +1,64 @@
 # Bicycle source and acquisition status
 
-Checked 13 September 2026. **No bicycle model, source texture, or licensed export has been acquired.** The exact requested model cannot yet be integrated into Blender or the website.
+## Current horizontal mounting and frame support
+
+The latest master uses a horizontal, wall-parallel bicycle, 20% larger than the
+earlier horizontal adjustment and moved 0.80 scene units farther right. Tyre
+bounds are 0.50–1.998 units high. The lamp no longer crosses the bicycle in the
+desktop overview, with intentional cropping of the rear at the right edge.
+
+Two rubber-lined U saddles support the actual upper frame tube. Their underside
+contact heights are 1.635 and 1.572, fitted by ray-casting the saved frame mesh.
+Short braced arms connect each cradle to a wall plate. The old misplaced rack
+below the crank was removed. `scripts/blender/align_bicycle_frame_mount.py`
+reproduces that fit without moving the bicycle or other room objects.
+Current screenshots and reports are in `artifacts/workspace/bicycle-lamp-clearance/`.
+
+## Revised mounting, 15 September 2026
+
+The same supplied model is now on the lamp-side right wall, using the user's
+wheel-hook reference. The front wheel is above the rear wheel, the wheel plane
+is perpendicular to the wall, and the frame projects into the room. A black
+padded hook and lower rubber pad replace the earlier side-profile supports.
+The final user-requested adjustment makes the assembly 15% smaller and places
+the lowest tyre point at 0.20 scene units, about 12 cm above the actual floor.
+The former bicycle position now contains a sliding balcony door.
+Current evidence is in `artifacts/workspace/balcony-door/`; the initial source
+provenance below still applies. Use `artifacts/workspace/workspace.blend` for edits.
+
+## Supplied model integrated, 14 September 2026
+
+The user supplied `/Users/aadith/Downloads/road-bike.zip`. It contains only
+`source/road_bike.fbx`, with 382,199 source triangles, material colors, and no
+image textures. This supplied file is the integration source; its creator and
+relationship to the older ChakkitPP listing below were not established by the archive.
+
+The original FBX is retained in `artifacts/workspace/bicycle/source/source/`.
+`scripts/blender/add_supplied_bicycle.py` creates a backed-up review candidate,
+checks unrelated geometry/transforms/material assignments and lights, and adds
+a vertical bike with a padded upper hook and lower wheel stabilizer. Uniform
+scale calibrates the original tyre diameter to 69 cm. The frame stays within
+the free left-wall span with 0.0798 scene units of minimum wall clearance.
+Triangle intersection checks against the chair, left shelf wing, About/Contact
+assemblies, monitor, and certificate returned zero intersections.
+
+The candidate was promoted to `artifacts/workspace/workspace.blend` after the
+source hash check. `npm run bake:workspace` updates the website normally.
+The supplied meshes retain their original editable geometry and non-destructive
+web modifiers. The exporter also reduces dense existing geometry on its copy,
+bringing the complete scene including the bike to 178,215 triangles. The tested
+mobile overview uses 199 draw calls with realtime shadows disabled.
+
+The `bicycle` root opens Expeditions through the existing binding. Keyboard
+activation and return focus have a dedicated browser test. Mobile retains the
+desk-focused overview; the header and guide also open Expeditions.
+
+Inspection, application report, candidate, source backup, Cycles renders, and
+desktop/mobile website screenshots are in `artifacts/workspace/bicycle/`.
+
+## Historical requested listing
+
+The following acquisition notes were recorded before the user supplied the FBX.
 
 ## Identity
 

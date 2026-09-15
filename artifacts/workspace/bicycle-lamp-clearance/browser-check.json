@@ -1,0 +1,17 @@
+[
+  {
+    "viewport": "desktop",
+    "errors": [],
+    "focusReturned": true
+  },
+  {
+    "viewport": "laptop",
+    "errors": [],
+    "focusReturned": true
+  },
+  {
+    "viewport": "mobile",
+    "errors": [],
+    "focusReturned": true
+  }
+]

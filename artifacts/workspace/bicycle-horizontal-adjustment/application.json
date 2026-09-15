@@ -1,0 +1,21 @@
+{
+  "scaleMultiplier": 1.15,
+  "lowered": 0.6,
+  "towardLamp": 0.25,
+  "height": [
+    0.7258907556533813,
+    1.9745960235595703
+  ],
+  "wallSpan": [
+    2.1591551303863525,
+    4.240845322608948
+  ],
+  "collisions": {
+    "window": 0,
+    "chair": 0,
+    "workspace_right_wing": 0,
+    "lamp_1": 0,
+    "lamp_2": 0,
+    "lamp_3": 0
+  }
+}

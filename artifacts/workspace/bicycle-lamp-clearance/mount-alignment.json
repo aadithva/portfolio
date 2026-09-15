@@ -1,0 +1,18 @@
+{
+  "sourceSha256": "26c4f5c34cae282d9ee3e3ca156df40f3475368790e1eddfc6b53a34f6bd2824",
+  "resultSha256": "447564c0855d858bc5e86794d3809b785f169c0cd8fe4bf424a1a4fd8028e7df",
+  "topTubeContacts": [
+    [
+      3.7799997329711914,
+      0.4654000997543335,
+      1.6351548433303833
+    ],
+    [
+      4.139999866485596,
+      0.4654000997543335,
+      1.572376012802124
+    ]
+  ],
+  "nominalPadContactGap": 0,
+  "unrelatedTransformsUnchanged": true
+}

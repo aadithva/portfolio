@@ -86,6 +86,22 @@ and moving keyboard-package cover before the ordinary bake/export workflow.
 
 ## Texture and lighting provenance
 
+The September 15 material pass adds seamless, seeded surface-detail maps to 85
+materials. These are fine normal and roughness textures, with separate levels
+for powder-coated paint, plastic, rubber, plaster, stone, paper and metal. The
+lamp keeps its red paint with roughness around 0.68 and reduced metallic/gloss
+response. The bicycle frame is neutral black, and both tyre sidewalls and rims
+are black. Original albedo artwork and existing office-chair textures remain.
+
+`scripts/blender/apply_matte_materials.py` creates the maps and applies them to
+the current saved scene. `surface_detail_uv.py` provides a separate, world-scaled
+`SurfaceDetail` UV layer without replacing artwork UVs. Curves receive the same
+mapping after export conversion. `scene.ts` uses the exported `bakedUV` index for
+indirect lighting rather than assuming UV1. The GLB verification script checks
+that the lamp, bicycle and architecture contain normal/roughness textures and
+that every baked mesh has the correct UV attribute. Evidence and day/night
+desktop/mobile captures are under `artifacts/workspace/matte-materials/`.
+
 The active laptop uses `laptop-closeup-albedo.jpg`, a 2048 × 1429 extraction from
 the user's newer 3213 × 5712 close-up. `extract_laptop_closeup.py` rectifies the
 four lid edges, orients the hinge at the rear, and keeps the supplied sticker
@@ -175,23 +191,64 @@ than hard-coded here where later model edits would make them stale.
 
 ## Bicycle and Expeditions addition
 
+### Current layout, 15 September 2026
+
+The latest bicycle revision is horizontal and wall-parallel. It is uniformly
+20% larger than the previous horizontal adjustment, shifted 0.80 units right
+along the wall, with its tyres at height 0.50. Two braced padded saddles are fitted
+directly beneath the upper frame tube. The previous low, detached supports have
+been replaced. See `artifacts/workspace/bicycle-lamp-clearance/` for the mount
+close-up, browser screenshots, contact report and placement collision checks.
+
+### Earlier vertical placement
+
+The bicycle now hangs on the right wall beside the red lamp. Its wheel plane is
+perpendicular to the wall, matching the supplied wheel-hook photograph. A black
+padded hook holds the front wheel and a small rubber pad receives the rear tyre.
+The final adjustment uniformly reduces the bicycle and mount by 15% and lowers
+the tyre bounds from 0.621–3.579 to 0.200–2.714 scene units.
+
+A two-panel sliding glass balcony door fills the old bicycle position on the
+left wall. It has a cut-through plaster/skirting opening, aluminum tracks, white
+frames, seals, pull handles, a slightly open leaf and a shallow exterior railing.
+The exterior backdrop follows the existing day/night setting. The door panels
+remain separately editable Blender assemblies.
+
+The September 15 width adjustment enlarges the opening from 2.30 to 4.00 scene
+units, about 1.32 m to 2.29 m at the desk scale. The desk-side jamb remains at wall
+coordinate 2.10; only the far edge moves, from 4.40 to 6.10. Both glass panels,
+tracks, lintel, threshold, exterior slab and backdrop extend to fit. Vertical
+stiles, seals and handles retain their thickness. Fifteen railing balusters keep
+approximately the original spacing. `scripts/blender/widen_balcony_door.py`
+creates a hash-checked candidate from the latest master and verifies the enlarged
+aperture with ray tests. Backup, report, Cycles view and desktop/mobile captures
+are in `artifacts/workspace/balcony-width/`. The exported revision is
+`d08387230502`; all four camera interaction tests passed.
+
+`scripts/blender/add_balcony_door.py` creates a backed-up candidate and checks the
+doorway aperture, bicycle clearance, and unchanged unrelated objects before its
+hash-guarded promotion. `scripts/blender/resize_mounted_bicycle.py` applies the
+subsequent size/height adjustment to the current master. Both refuse duplicate
+application. Captures and reports are in `artifacts/workspace/balcony-door/`.
+
+### Earlier bicycle integration
+
 The Expeditions HTML panel and `/expeditions` route use the two existing accounts
 in `src/data/adventures.ts`. Editable entries live in `src/data/expeditions.ts`.
 The new header and guide links also work without the bicycle, without WebGL and
 without JavaScript. No ride photos, dates or distances have been invented.
 
-The requested Road Bike by ChakkitPP has not been acquired or installed. The
-source Blender file and exported desk remain unchanged by this addition while
-the owner chooses between supplying a licensed file and an original model.
+The user's supplied `road-bike.zip` is now integrated into the master and website.
+It contains a road-bike FBX with material colors, rather than the texture package
+advertised by the earlier requested listing. See `workspace-bicycle-source.md`
+for the actual supplied-file provenance, fitting, and verification.
 `artifacts/workspace/bicycle/mount-plan.md` records the wall audit, a provisional
 vertical adult-bike placement, support locations and dedicated camera framing.
 
-The reserved interactive root is `bicycle`, mapped to section `expeditions`.
-The camera uses the current overview until that root exists. Once a model is
-available, fit its actual wheel, bar and saddle bounds to the mounting plan,
-add physical wall supports, validate clearances, save a backed-up Blender edit,
-and export the real asset. Do not treat the provisional camera or root binding
-as evidence that the bike is already in the scene.
+The active root is `bicycle`, mapped to section `expeditions`. It was initially
+mounted vertically on the left wall with physical supports. The existing Expeditions
+camera now resolves the actual model bounds. The source backup and review
+candidate remain in `artifacts/workspace/bicycle/`.
 
 ## Retained older experiments
 
@@ -199,3 +256,31 @@ as evidence that the bike is already in the scene.
 as separate experiments. They are not loaded by the current homepage.
 `public/models/workspace.glb` is the older unbaked export path; `export:workspace`
 updates that optional export only. The active homepage uses `workspace-saved.glb`.
+
+### Room extension, September 15, 2026
+
+Extended the saved corner walls and their baseboards another 10 units, raised the wall tops to 10.08 units, and rebuilt the limestone slab to span 28 units across and reach 14 units forward. Tile grout continues the original 1.1-unit pitch. Props and the existing window remain in place; balcony work is paused. The pre-extension scene is saved at `artifacts/workspace/room-extension/source-before-extension.blend`. `scripts/blender/extend_room.py` records the edit and refuses duplicate application. Rebuilt the served GLB and indirect lighting using `npm run bake:workspace`. Drag-limit screenshots are in `artifacts/workspace/room-extension/`. Workspace type checking and all four camera interaction tests passed.
+
+### Floral desk mat, September 15, 2026
+
+Added the supplied VATTENSKRUV floral mat as a thin shaped mesh beneath the desk and chair. The top-down product image supplies the actual floral texture; a traced 192-point silhouette preserves its rounded asymmetric outline, with green binding and subtle cotton bump. Authoring scripts are `scripts/blender/prepare_floral_mat.py` and `scripts/blender/add_floral_mat.py`. Source backup is `artifacts/workspace/floral-mat/source-before-mat.blend`; texture and outline are in `public/textures/workspace/floral-mat/`. Rebuild web lighting and GLB with `npm run bake:workspace`.
+
+### Horizontal bicycle mount, September 15, 2026
+
+Rotated the bicycle into the plane of its existing right wall with the front wheel and handlebars toward the lamp and room corner. Reduced its current scale to 72% so the horizontal bicycle fits beneath the window, and replaced the vertical wheel hook with two padded frame cradles. `scripts/blender/mount_bicycle_horizontal.py` saves a backup and checks evaluated geometry for collisions. The bicycle clears the wall by 0.12 units and has zero intersections with the window, chair, right shelf wing, and all three lamp heads. Backup, placement report, and review captures are in `artifacts/workspace/bicycle-horizontal/`. Rebuilt indirect lighting and the served GLB afterward.
+
+### Lower bicycle placement, September 15, 2026
+
+Enlarged the horizontal bicycle by 15%, lowered it by 0.60 units, and moved it 0.25 units toward the lamp. Its lowest point is now 0.726 units above the floor. Frame supports follow the adjustment. Evaluated geometry still has zero intersections with the lamp heads, window, chair, and right shelf wing. Script, backup, placement report, and captures are recorded under `scripts/blender/adjust_horizontal_bicycle.py` and `artifacts/workspace/bicycle-horizontal-adjustment/`.
+
+### Chair centering, September 15, 2026
+
+Moved the chair 0.42 units toward the desk center along X and 0.10 units closer to the desk. Preserved its rotation and height. The saved scene backup and placement report are in `artifacts/workspace/chair-centering/`; `scripts/blender/center_desk_chair.py` records the edit. Rebuilt the web GLB and lighting.
+
+### Diet Coke texture correction, September 15, 2026
+
+Replaced the original Arial placeholder artwork with print extracted from Coca-Cola India's official Diet Coke reference at `https://www.coca-cola.com/content/dam/onexp/in/en/home-page-test-img/brands/coca-cola/Diet-coke234-700.png`. Removed photographic shading from the silver background and corrected the cylinder UVs to use the full label height with a continuous seam. The silver base and nonmetallic ink now use separate metalness values. Scripts are `prepare_diet_coke_texture.py` and `fix_diet_coke_texture.py`; original scene backup and reference are in `artifacts/workspace/diet-coke-fix/`. New texture derivatives are `public/textures/workspace/diet-coke-label.webp` and `diet-coke-metalness.png`.
+
+### Can surface seam correction, September 15, 2026
+
+Removed 48 long torso faces from the aluminium body that overlapped the label cylinder at only 0.1 mm separation. Rebuilt the label wall as an open-ended 128-segment cylinder with radial smooth normals and continuous wrap UVs, avoiding smoothed cap normals and overlapping render surfaces. The lid, shoulder, base, and pull tab remain intact. `scripts/blender/fix_can_surface.py` records the change; backup, report, bake log, and close-up captures are in `artifacts/workspace/can-surface-fix/`.

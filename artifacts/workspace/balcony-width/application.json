@@ -1,0 +1,86 @@
+{
+  "sourceSha256": "5839de2d4af2aada497650ad0e67e05dd54b3ceb1aedbd977678d0663c9f3254",
+  "candidateSha256": "53c6cdea9dc58a1c1991a7e9d38ccf717f29fe75a48f9ae05eac0bf9b933b20b",
+  "backup": "artifacts/workspace/balcony-width/source-before-width-5839de2d4af2.blend",
+  "oldWidth": 2.3000000000000003,
+  "newWidth": 3.9999999999999996,
+  "deskSideEdge": 2.1,
+  "farEdge": 6.1,
+  "height": 3.86,
+  "railingBalusters": 15,
+  "apertureClearSamples": [
+    [
+      2.25,
+      0.14
+    ],
+    [
+      2.25,
+      1.8
+    ],
+    [
+      2.25,
+      3.6
+    ],
+    [
+      3.25,
+      0.14
+    ],
+    [
+      3.25,
+      1.8
+    ],
+    [
+      3.25,
+      3.6
+    ],
+    [
+      4.3,
+      0.14
+    ],
+    [
+      4.3,
+      1.8
+    ],
+    [
+      4.3,
+      3.6
+    ],
+    [
+      4.6,
+      0.14
+    ],
+    [
+      4.6,
+      1.8
+    ],
+    [
+      4.6,
+      3.6
+    ],
+    [
+      5.2,
+      0.14
+    ],
+    [
+      5.2,
+      1.8
+    ],
+    [
+      5.2,
+      3.6
+    ],
+    [
+      5.95,
+      0.14
+    ],
+    [
+      5.95,
+      1.8
+    ],
+    [
+      5.95,
+      3.6
+    ]
+  ],
+  "unrelatedObjectsUnchanged": true
+}

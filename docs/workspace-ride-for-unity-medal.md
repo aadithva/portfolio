@@ -15,12 +15,25 @@ The white ribbon has cloth thickness, slight folds and the original Fit India br
 
 ## Placement and dimensions
 
-- Attachment root in exported Y-up coordinates: `[0, 2.378942, -1.283]`.
-- Overall bounds: `[-0.0699, 2.086442, -1.309]` to `[0.0699, 2.392942, -1.23783]`.
+- On September 15, the medal moved from the central bridge to the outer end of
+  the trophy shelf, hanging down the cabinet side toward the red lamp.
+- Attachment root in exported Y-up coordinates: `[1.041256, 2.464, -0.904819]`.
+- Overall mesh bounds: `[1.0059, 2.1715, -0.943003]` to `[1.11826, 2.478, -0.82824]`.
+- The complete assembly turns with the shelf end. Its hook rests at the shelf's
+  `2.48` top height; the original ribbon, photo UVs and hanging pivot remain.
 - Shaped body: `0.1398 × 0.1464 × 0.006` scene units, about `8 × 8.4 cm` with `3.4 mm` thickness at the desk scale.
-- Clearance above the monitor screen: `0.107425` scene units.
 
-## Source and verification
+`scripts/blender/reposition_medal_trophy_shelf.py` creates the placement candidate
+and supports a hash-checked `--promote`. The backup, candidate, placement audit and
+browser captures are in `artifacts/workspace/medal-trophy-placement/`.
+Only the medal assembly's world pose changed. Geometry, material assignments,
+unrelated poses and light settings match the preceding master. Intersection checks
+against both trophies, the plant, lamp heads, toy and monitor returned zero.
+The active export is revision `c413227c7fca`, with 178,215 triangles.
+Desktop achievement/history checks, mobile medal taps and the geometry budget
+check passed after the move.
+
+## Original replacement source and verification
 
 `scripts/blender/replace_ride_for_unity_medal.py` opens the current saved Blender scene, backs it up, changes only the medal families, and writes a review candidate. All 463 unrelated objects retain their geometry, material assignments and transforms, including the right-side certificate frame and supplied ergonomic chair. Existing lights are unchanged.
 

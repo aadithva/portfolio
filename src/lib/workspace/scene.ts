@@ -179,7 +179,16 @@ export class DeskScene {
             if(surface.name==='Certificate · Anti-reflection glazing') {
               mesh.castShadow=false;mesh.receiveShadow=false;surface.depthWrite=false;
             }
-            const lightMap=this.bakedMaps.get(mesh.userData.bakedAtlas);
+            // Detail normals keep their own UV channel; the bake atlas can now
+            // follow it on UV2 rather than always occupying UV1.
+            const atlasName=mesh.userData.bakedAtlas;
+            const atlasChannel=mesh.userData.bakedUV===0?1:(mesh.userData.bakedUV??1);
+            const atlasKey=`${atlasName}:${atlasChannel}`;
+            let lightMap=this.bakedMaps.get(atlasKey);
+            if(!lightMap && this.bakedMaps.has(atlasName)) {
+              lightMap=this.bakedMaps.get(atlasName)!.clone();
+              lightMap.channel=atlasChannel;this.bakedMaps.set(atlasKey,lightMap);
+            }
             if(lightMap){surface.lightMap=lightMap;surface.lightMapIntensity=presentationLighting.indirect;surface.needsUpdate=true;}
           }
           if (/monitor_screen/.test(mesh.name)) { mesh.material = this.screenMaterial; this.screenMesh = mesh; }
@@ -223,6 +232,16 @@ export class DeskScene {
       const lampPositions=[1,2,3].map(index=>this.model!.getObjectByName(`lamp_${index}`)?.getWorldPosition(new THREE.Vector3()));
       for(const light of this.authoredLights) {
         if(!light.name.startsWith('Red lamp practical'))continue;
+        const rootName=light.userData.lampRoot as string | undefined;
+        const root=rootName?this.model.getObjectByName(rootName):undefined;
+        if(root && rootName) {
+          light.userData.lampIndex=Number(rootName.split('_')[1])-1;
+          // Keep both emitter and aim point on the physical shade, including
+          // its hover/click motion. attach preserves their exported world pose.
+          root.attach(light);
+          if(light instanceof THREE.SpotLight)root.attach(light.target);
+          continue;
+        }
         let nearest=0,distance=Infinity;
         lampPositions.forEach((position,index)=>{if(position && position.distanceToSquared(light.position)<distance){nearest=index;distance=position.distanceToSquared(light.position);}});
         light.userData.lampIndex=nearest;
@@ -273,9 +292,11 @@ export class DeskScene {
       }
       light.position.fromArray(source.position);
       light.name=source.name;
+      light.userData.lampRoot='lampRoot' in source?source.lampRoot:undefined;
       light.lookAt(light.position.clone().add(new THREE.Vector3(...source.direction)));
       light.userData.authoredIntensity=light.intensity;
       const presentationScale = source.name==='Monitor bounce' ? presentationLighting.monitor
+        : source.name==='Desk ceiling warm fill' ? presentationLighting.ceiling
         : source.type==='AREA' ? presentationLighting.areaFill : presentationLighting.practicals;
       light.userData.presentationIntensity=light.intensity*presentationScale;
       light.intensity=light.userData.presentationIntensity;
